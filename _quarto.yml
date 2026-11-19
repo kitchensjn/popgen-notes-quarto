@@ -1,0 +1,24 @@
+project:
+  type: book
+
+book:
+  title: "Population Genetics Notes"
+  author: "Graham Coop"
+  date: "1/13/2026"
+  chapters:
+    - index.qmd
+    - chapter-01-introduction.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    highlight-style: ally
+    theme: ally
+    axe:
+      output: document 
+  pdf:
+    documentclass: scrreprt
+  
+editor: visual
+
