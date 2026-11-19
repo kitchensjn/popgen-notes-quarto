@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Graham Coop">
-<meta name="dcterms.date" content="2026-01-13">
 
-<title>Population Genetics Notes</title>
+<title>Population and Quantitative Genetics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,42 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -67,7 +51,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./chapter-01-introduction.html" rel="next">
+<link href="./equation-sheet.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -75,9 +59,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a3b309dafe35d57c0beec3d45007f222.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-468b43a5444adb4913bafb0b3b0c703b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -105,7 +90,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script id="quarto-axe-checker-options" type="text/plain">eyJvdXRwdXQiOiJkb2N1bWVudCJ9</script>
 
 
 </head>
@@ -134,7 +118,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Population Genetics Notes</a> 
+      <a href="./">Population and Quantitative Genetics</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/cooplab/popgen-notes" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -152,10 +139,117 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-01-introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="./equation-sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equation Sheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allele-and-genotype-frequencies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Allele and Genotype Frequencies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./population-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Population Structure and Correlations Among Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./genetic-drift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Genetic Drift and Neutral Diversity</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./molecular-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Population Genetics of Divergence and Molecular Substitution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./neutral-diversity-and-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Neutral Diversity and Population Structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phenotypic-variation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./correlated-traits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlated Traits and the Response of Multiple Traits to Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./one-locus-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">One-Locus Models of Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./selection-mutation-migration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Interaction of Selection, Mutation, and Migration</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drift-and-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Impact of Genetic Drift on Selected Alleles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linked-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The Effects of Linked Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multiple-selected-loci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Interaction of Multiple Selected Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -165,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
-  <ul>
+  <ul class="collapse">
   <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
   </ul>
 </nav>
@@ -175,7 +269,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Population Genetics Notes</h1>
+<h1 class="title">Population and Quantitative Genetics</h1>
 </div>
 
 
@@ -189,12 +283,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 13, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -206,16 +294,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
-<p>This is a Quarto book.</p>
-<p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<p><em>Dedicated to my parents, partner, and children. Thank you for teaching me the true joy of descent with modification.</em></p>
+<p>This text is released under the Creative Commons Attribution 3.0 Unported License (<a href="http://creativecommons.org/licenses/by/3.0/" class="uri">http://creativecommons.org/licenses/by/3.0/</a>): you are free to reuse and remix this work, but please include an attribution to the original. The Quarto source in this repository was converted automatically from the LaTeX source at <a href="https://github.com/cooplab/popgen-notes" class="uri">https://github.com/cooplab/popgen-notes</a>; see <code>tools/convert.py</code>.</p>
+<p>Author: Graham Coop, Department of Evolution and Ecology &amp; Center for Population Biology, University of California, Davis (<code>gmcoop@ucdavis.edu</code>).</p>
+<p>This book was developed from my set of notes for the <a href="http://www-eve.ucdavis.edu/eve/pbg/">Population Biology graduate group</a> core class (PBG200A) and the undergraduate Population and Quantitative Genetics class (EVE102) at UC Davis. Thanks to the many students who’ve read these notes and suggested improvements. Thanks to Simon Aeschbacher, Vince Buffalo, Erin Calfee, and Michael Whitlock who read and extensively edited earlier drafts of these notes.</p>
+<p>To illustrate these notes, I’ve used old scientific and natural history illustrations, in part because they are out of copyright but mainly because they bring me joy. Many of the old images come from the <a href="https://www.biodiversitylibrary.org/">Biodiversity Heritage Library</a>, a consortium of natural history institutions that are digitizing their collections and making them freely available online. If you enjoy the images consider donating to the <a href="http://library.si.edu/donate-bhl">BHL</a>. Many of the data and simulation graphics in the book were prepared in R <span class="citation" data-cites="Rstats">(<a href="references.html#ref-Rstats" role="doc-biblioref">R 2018</a>)</span>; the code for each is linked from the caption of each figure. In many cases data were extracted from old figures using the <a href="https://automeris.io/WebPlotDigitizer/">WebPlotDigitizer</a> tool, so I advise re-extracting the data if you wish to use it for research purposes.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Rstats" class="csl-entry" role="listitem">
+R. 2018. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -623,8 +713,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapter-01-introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./equation-sheet.html" class="pagination-link">
+        <span class="nav-page-text">Equation Sheet</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -633,4 +723,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-</body></html>
+<script id="popgen-scroll-focus">
+(function(){function f(){document.querySelectorAll('figure.quarto-float-tbl > div, .column-page-right > div').forEach(function(d){
+ var s=d.scrollWidth>d.clientWidth+1; if(s){d.setAttribute('tabindex','0');d.setAttribute('role','region');d.setAttribute('aria-label','Scrollable table');}
+ else{d.removeAttribute('tabindex');}});}
+ window.addEventListener('load',f);window.addEventListener('resize',f);})();
+</script><script id="popgen-no-overlap">
+(function(){
+ var SEL='.column-margin.column-container > *, .margin-caption, .aside';
+ function R(e){var r=e.getBoundingClientRect();return {t:r.top+scrollY,b:r.bottom+scrollY,l:r.left,r:r.right};}
+ function run(){
+  var root=document.getElementById('quarto-document-content'); if(!root) return;
+  var items=[].filter.call(root.querySelectorAll(SEL),function(e){return e.offsetParent!==null && !e.parentElement.closest(SEL);});
+  items.forEach(function(e){e.style.marginTop='';});
+  var blk=[].filter.call(root.querySelectorAll('figure, table, pre, .column-page-right, .column-page, .column-screen, mjx-container[display="true"], .callout, .chapter-summary, blockquote'),
+    function(e){return e.offsetParent!==null && !e.closest(SEL) && !(e.parentElement.closest('figure,.column-page-right,.column-page,.callout') && e.tagName!=='FIGURE' && false);});
+  var last=0;
+  for(var pass=0;pass<3;pass++){
+   last=0; var moved=false;
+   items.forEach(function(it){
+    var r=R(it), top=r.t, h=r.b-r.t, need=Math.max(top,last), gap=8, again=true, n=0;
+    while(again && n++<40){
+     again=false;
+     blk.forEach(function(b){
+      if(it.contains(b)||b.contains(it)) return;
+      var q=R(b); if(q.r<=r.l+1||q.l>=r.r-1) return;
+      if(need<q.b+gap && need+h>q.t-1 && q.b>q.t){ if(need<q.b+gap){need=q.b+gap;again=true;} }
+     });
+    }
+    if(need>top+1){var cur=parseFloat(getComputedStyle(it).marginTop)||0; it.style.marginTop=(cur+need-top)+'px'; moved=true;}
+    var r2=R(it); last=r2.b+ (parseFloat(getComputedStyle(it).marginBottom)||0);
+   });
+   if(!moved) break;
+  }
+ }
+ var tm; function later(){clearTimeout(tm);tm=setTimeout(run,120);}
+ window.addEventListener('load',function(){later();
+   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(later);
+   if(window.MathJax&&MathJax.startup&&MathJax.startup.promise) MathJax.startup.promise.then(later);
+   [].forEach.call(document.images,function(i){if(!i.complete) i.addEventListener('load',later);});
+   setTimeout(later,1500);});
+ window.addEventListener('resize',later);
+ if(window.ResizeObserver) new ResizeObserver(later).observe(document.body);
+})();
+</script></body></html>

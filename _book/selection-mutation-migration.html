@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>11&nbsp; The Interaction of Selection, Mutation, and Migration – Population and Quantitative Genetics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./drift-and-selection.html" rel="next">
+<link href="./one-locus-selection.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-468b43a5444adb4913bafb0b3b0c703b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./selection-mutation-migration.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Interaction of Selection, Mutation, and Migration</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Population and Quantitative Genetics</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/cooplab/popgen-notes" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equation-sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equation Sheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allele-and-genotype-frequencies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Allele and Genotype Frequencies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./population-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Population Structure and Correlations Among Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./genetic-drift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Genetic Drift and Neutral Diversity</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./molecular-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Population Genetics of Divergence and Molecular Substitution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./neutral-diversity-and-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Neutral Diversity and Population Structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phenotypic-variation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./correlated-traits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlated Traits and the Response of Multiple Traits to Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./one-locus-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">One-Locus Models of Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./selection-mutation-migration.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Interaction of Selection, Mutation, and Migration</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drift-and-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Impact of Genetic Drift on Selected Alleles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linked-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The Effects of Linked Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multiple-selected-loci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Interaction of Multiple Selected Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#mutationselection-balance" id="toc-mutationselection-balance" class="nav-link active" data-scroll-target="#mutationselection-balance"><span class="header-section-number">11.1</span> Mutation–Selection Balance</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-Sel-Mut-Mig" class="quarto-section-identifier"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Interaction of Selection, Mutation, and Migration</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Genetic variation is the raw fuel of evolution. Without variation, natural selection would have nothing to act on to shape adaptive traits. However, variation can be deleterious.</p>
+<p>Mutation, broadly defined, is the ultimate source of all genetic variation and is constantly introducing new variation into all populations. However, mutation is random and so mutations that affect function are often damaging. Thus mutation will, in the absence of sufficiently strong selection, degrade pre-existing adaptations and undo the work of selection that has built up functional regions of DNA over time.</p>
+<p>Migration, the movement of individuals into a population, can also increase variation to the population as the individuals bring new alleles in from surrounding populations. Thus migration can be an important source of adaptive alleles, aiding their spread amongst populations within a species. Adaptive alleles can even spread between species if low levels of interbreeding occur. However, again, just like mutation, migration can disrupt adaptations. When populations are locally adapted migration amongst populations can introduce maladaptive alleles into well adapted populations. If this migration pressure is sufficiently strong, it can lead to the collapse of local adaptations, or even the collapse of species.</p>
+<p>In this chapter we’ll study some of the interplay between selection, migration, and mutation.</p>
+<section id="mutationselection-balance" class="level2 page-columns page-full" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="mutationselection-balance"><span class="header-section-number">11.1</span> Mutation–Selection Balance</h2>
+<p>Mutation is constantly introducing new alleles into the population. Therefore, variation can be maintained within a population not only if selection is balancing (e.g.&nbsp;through heterozygote advantage or fluctuating selection over time, as we have seen in the previous section), but also due to a balance between mutation introducing deleterious alleles and selection acting to purge these alleles from the population <span class="citation" data-cites="haldane1927mathematical Haldane:37">(<a href="references.html#ref-haldane1927mathematical" role="doc-biblioref">Haldane 1927</a>; <a href="references.html#ref-Haldane:37" role="doc-biblioref">Haldane 1937</a>)</span>. To study mutation-selection balance, we return to the model of directional selection, where allele <span class="math inline">\(A_1\)</span> is advantageous, i.e.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">genotype</th>
+<th style="text-align: center;"><span class="math inline">\(A_1A_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A_1A_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A_2A_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">absolute fitness</td>
+<td style="text-align: center;"><span class="math inline">\(W_{11}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\geq W_{12} \geq\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(W_{22}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">relative fitness</td>
+<td style="text-align: center;"><span class="math inline">\(w_{11}=1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(w_{12}=1-sh\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(w_{22}=1-s\)</span>.</td>
+</tr>
+</tbody>
+</table>
+<p>We’ll begin by considering the case where allele <span class="math inline">\(A_2\)</span> is not completely recessive (<span class="math inline">\(h&gt;0\)</span>), so that the heterozygotes suffer at least some disadvantage. We denote by <span class="math inline">\(\mu = \mu_{1\rightarrow2}\)</span> the mutation rate per generation from <span class="math inline">\(A_1\)</span> to the deleterious allele <span class="math inline">\(A_2\)</span>, and assume that there is no reverse mutation (<span class="math inline">\(\mu_{2\rightarrow1} = 0\)</span>). Let us assume that selection against <span class="math inline">\(A_2\)</span> is relatively strong compared to the mutation rate, so that it is justified to assume that <span class="math inline">\(A_2\)</span> is always rare, i.e.&nbsp;<span class="math inline">\(q_t = 1-p_t \ll 1\)</span>. Compared to previous sections, for mathematical clarity, we also switch from following the frequency <span class="math inline">\(p_t\)</span> of <span class="math inline">\(A_1\)</span> to following the frequency <span class="math inline">\(q_t\)</span> of <span class="math inline">\(A_2\)</span>. Of course, this is without loss of generality. The change in frequency of <span class="math inline">\(A_2\)</span> due to selection can be written as</p>
+<p><span id="eq-dirSelApprox"><span class="math display">\[\Delta_S q_t = \frac{ \overline{w}_2 - \overline{w}_1}{\overline{w}} p_t q_t  \approx  -hs q_t. \tag{11.1}\]</span></span></p>
+<p>This approximation can be found by assuming that <span class="math inline">\(q^2 \approx 0\)</span>, <span class="math inline">\(p \approx 1\)</span>, and that <span class="math inline">\(\overline{w} \approx w_1\)</span>. All of these assumptions make sense if <span class="math inline">\(q \ll 1\)</span>. From <a href="#eq-dirSelApprox" class="quarto-xref">Equation&nbsp;<span>11.1</span></a> we see that selection acts to reduce the frequency of <span class="math inline">\(A_2\)</span> (as both <span class="math inline">\(h\)</span> and <span class="math inline">\(s\)</span> are positive), and it does so geometrically across the generations. That is, if the initial frequency of <span class="math inline">\(A_2\)</span> is <span class="math inline">\(q_0\)</span>, then its frequency at time <span class="math inline">\(t\)</span> is approximately</p>
+<p><span id="eq-dirSelExplApprox"><span class="math display">\[q_t = q_0 (1 - hs)^t. \tag{11.2}\]</span></span></p>
+<p>We will now consider the change in frequency induced by mutation. Recalling that <span class="math inline">\(\mu\)</span> is the mutation rate from <span class="math inline">\(A_1\)</span> to <span class="math inline">\(A_2\)</span> per generation, the frequency of <span class="math inline">\(A_2\)</span> after mutation is</p>
+<p><span id="eq-selection-mutation-migration-1"><span class="math display">\[q^{\prime} =  \mu p_t + q_t = \mu(1 - q_t) + q_t. \tag{11.3}\]</span></span></p>
+<p>Assuming that <span class="math inline">\(\mu \ll 1\)</span> and that <span class="math inline">\(q \ll 1\)</span>, the change in the frequency of allele <span class="math inline">\(A_2\)</span> due to mutation (<span class="math inline">\(\Delta_M q_t\)</span>) can be approximated by</p>
+<p><span id="eq-mutApprox"><span class="math display">\[\Delta_M q_t = q^{\prime} - q_t =  \mu. \tag{11.4}\]</span></span></p>
+<p>Hence, when <span class="math inline">\(A_2\)</span> is rare and the mutation rate is low, mutation acts to linearly increase the frequency of the deleterious allele <span class="math inline">\(A_2\)</span>.</p>
+<p>If selection is to balance deleterious mutation, their combined effect over one generation has to be zero. Therefore, to find the mutation–selection equilibrium, we set</p>
+<p><span id="eq-selection-mutation-migration-2"><span class="math display">\[\Delta_M q_t + \Delta_S q_t = 0, \tag{11.5}\]</span></span></p>
+<p>insert eqns. (<a href="#eq-dirSelApprox" class="quarto-xref"><span>11.1</span></a>) and (<a href="#eq-mutApprox" class="quarto-xref"><span>11.4</span></a>), and solve for <span class="math inline">\(q\)</span> to obtain</p>
+<p><span id="eq-mut-sel-bal"><span class="math display">\[q_e = q_t = \frac{\mu}{hs}. \tag{11.6}\]</span></span></p>
+<p>We see that the frequency of the deleterious allele <span class="math inline">\(A_2\)</span> is balanced at a frequency equal to the mutation rate (<span class="math inline">\(\mu\)</span>) divided by the reduction in relative fitness in the heterozygote (<span class="math inline">\(hs\)</span>).</p>
+<p>It is worth pointing out that the fitness of the <span class="math inline">\(A_2A_2\)</span> homozygote has not entered this calculation, as <span class="math inline">\(A_2\)</span> is so rare that it is hardly ever found in the homozygous state. Therefore, if <span class="math inline">\(A_2\)</span> has any deleterious effect in a heterozygous state (i.e.&nbsp;if <span class="math inline">\(h&gt;0\)</span>), it is this effect that determines the frequency at which <span class="math inline">\(A_2\)</span> is maintained in the population. Also, note that by writing the total change in allele frequency as <span class="math inline">\(\Delta_M q_t + \Delta_S q_t\)</span> we have implicitly assumed that we can ignore terms of order <span class="math inline">\(\mu
+\times s\)</span>. That is, we have assumed that mutation and selection are both relatively weak. This assumption is valid under our prior assumption that both <span class="math inline">\(\mu\)</span> and <span class="math inline">\(s\)</span> are small.</p>
+<p>If an allele is truly recessive (although few likely are), we have <span class="math inline">\(h=0\)</span>, and so <a href="#eq-mut-sel-bal" class="quarto-xref">Equation&nbsp;<span>11.6</span></a> is not valid. However, we can make an argument similar to the one above to show that, for truly recessive alleles,</p>
+<p><span id="eq-recess-mut-sel-bal"><span class="math display">\[q_e = \sqrt{\frac{\mu}{s}}. \tag{11.7}\]</span></span></p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-katydid" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Oblong-winged katydid.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-katydid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/single_locus_selection/mutation_selection_balance/Pink_Katydid.png" class="img-fluid figure-img" style="width:100.0%" alt="Oblong-winged katydid.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-katydid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.1: Oblong-winged katydid. <span class="attribution">Field book of insects (1918). Lutz, F.E. . Illustrations by Edna L. Beutenmüller. Image from the <a href="https://www.flickr.com/photos/biodivlibrary/6244366674/in/album-72157627768739853/">Biodiversity Heritage Library</a>. Contributed by MBLWHOI Library. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">The analysis of these pink katydids is a nice example of early Mendelian reasoning in a wonderfully titled paper.<span class="citation" data-cites="Wheeler:07">(<a href="references.html#ref-Wheeler:07" role="doc-biblioref">Wheeler 1907</a>)</span></span></div></div>
+<div id="exr-selection-mutation-migration-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 11.1</strong></span> Oblong-winged katydids (<em>Amblycorypha oblongifolia</em>) are usually green. However, some are bright pink, thanks to an erythrism mutation . This pink condition is thought to be due to a dominant mutation (<a href="https://blogs.scientificamerican.com/running-ponies/in-north-american-katydids-green-isne28099t-the-dominant-colour-pink-is/">Crew, 2013</a>). Assume that roughly one in ten thousand katydids is bright pink and that the mutation rate at the gene underlying this condition is <span class="math inline">\(10^{-5}\)</span>. What is the relative fitness of heterozygotes for the pink mutation?</p>
+</div>
+<p><strong>The genetic load of deleterious alleles.</strong> What effect do such deleterious mutations at mutation–selection balance have on the population? It is common to quantify the effect of deleterious alleles in terms of a reduction of the mean relative fitness of the population. For a single site at which a deleterious mutation is segregating at frequency <span class="math inline">\(q_e = \mu/(hs)\)</span>, the population mean relative fitness is reduced to</p>
+<p><span id="eq-mut-load"><span class="math display">\[\overline{w} = 1- 2p_e q_e hs - q_e^2s \approx 1-2\mu. \tag{11.8}\]</span></span></p>
+<p>Somewhat remarkably, the drop in mean fitness due to a site segregating at mutation–selection balance is independent of the selection coefficient against the heterozygote; it depends only on the mutation rate <span class="citation" data-cites="Haldane:37">(<a href="references.html#ref-Haldane:37" role="doc-biblioref">Haldane 1937</a>)</span>. Intuitively this is because, given a fixed mutation rate, less deleterious alleles can rise to a higher equilibrium frequency, and thus contribute the same total load as more deleterious (rarer) alleles, but this load is spread across more individuals in the population. Note that this result applies only if the mutation is not totally recessive, i.e.&nbsp;if <span class="math inline">\(h &gt; 0\)</span>.</p>
+<div id="fig-LOF" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Left) The distribution of LOF alleles in 769 individuals from the Genome of the Netherlands project.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-LOF-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/single_locus_selection/LOF_variants/Neatherlands_LOF_variants.png" class="img-fluid figure-img" style="width:100.0%" alt="Left) The distribution of LOF alleles in 769 individuals from the Genome of the Netherlands project.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-LOF-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.2: <strong>Left)</strong> The distribution of LOF alleles in 769 individuals from the Genome of the Netherlands project. Data from <span class="citation" data-cites="francioli:14">Francioli et al. (<a href="references.html#ref-francioli:14" role="doc-biblioref">2014</a>)</span>. The average individual (red line) carries 144 LOF alleles. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/single_locus_selection/LOF_variants/Neatherlands_LOF_variants.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>A fitness reduction of <span class="math inline">\(2\mu\)</span> is very small, given that the mutation rate of a gene is usually on the order of <span class="math inline">\(10^{-5}\)</span>. However, if there are many loci segregating at mutation–selection balance, small fitness reductions can accumulate to a substantial so-called genetic load, a major cause of variation in fitness-related traits among individuals. To see how all of these loci contribute to variation in fitness consider the fact that the human genome contains over twenty thousand protein-coding genes, and many other functional regions, the vast majority of which will be subject to purifying selection against mutations that disrupt their function. In humans, most loss of function (LOF) variants, which severely disrupt a protein-coding gene, are found at low frequencies but each human genome typically carries over a hundred LOF variants <span class="citation" data-cites="macarthur:12 lek:16">(<a href="references.html#ref-macarthur:12" role="doc-biblioref">MacArthur et al. 2012</a>; <a href="references.html#ref-lek:16" role="doc-biblioref">Lek et al. 2016</a>)</span>. Not every LOF allele will be deleterious; some could even be advantageous. However, the combined load of these LOF alleles must on average lower our fitness, otherwise selection wouldn’t be removing them from the population. Each one of us carries a unique set of these LOF alleles, usually in a heterozygous state. We differ slightly in how many of these alleles we carry. For example, the left side of <a href="#fig-LOF" class="quarto-xref">Figure&nbsp;<span>11.2</span></a> shows the distribution of the number of LOF alleles carried by 769 individuals of Dutch ancestry. The individuals who carry fewer of these LOF alleles will on average likely have higher fitness than those individuals with more. We don’t yet know how much fitness variation this explains across individuals, nor do we know how most of these LOF alleles manifest their fitness consequences through disease and other mechanisms. However, it’s a reasonable guess that this variation in LOF alleles, presumably maintained by mutation-selection balance, is a major source of variation in fitness.</p>
+<section id="inbreeding-depression" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="inbreeding-depression">Inbreeding depression</h3>
+<p>All else being equal, <a href="#eq-mut-sel-bal" class="quarto-xref">Equation&nbsp;<span>11.6</span></a> suggests that mutations that have a smaller effect in the heterozygote can segregate at higher frequency under mutation–selection balance. As a consequence, alleles that have strongly deleterious effects in the homozygous state can still segregate at low frequencies in the population, as long as they do not have too strong a deleterious effect in heterozygotes. Thus, outbred populations may have many alleles with recessive deleterious effects segregating within them.</p>
+<div id="exr-selection-mutation-migration-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 11.2</strong></span> Assume that a deleterious allele has a relative fitness <span class="math inline">\(0.99\)</span> in heterozygotes and a relative fitness <span class="math inline">\(0.2\)</span> when present in the homozygote state. Assume that the deleterious allele is at a frequency <span class="math inline">\(10^{-3}\)</span> at birth and the genotype frequencies follow from HWE. Only considering the fitness effects of this locus, and measuring fitness relative to the most fit genotype, answer the following questions:<br>
+<strong>A)</strong> What is the average fitness of an individual in the population?<br>
+<strong>B)</strong> What is the average fitness of the child of a full-sib mating?</p>
+</div>
+<div id="fig-Silene-inbreeding" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Data showing inbreeding depression over different degrees of inbreeding in S.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Silene-inbreeding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/single_locus_selection/Silene_inbreeding_Richards/Silene_inbreeding_depression.png" class="img-fluid figure-img" style="width:75.0%" alt="Data showing inbreeding depression over different degrees of inbreeding in S.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Silene-inbreeding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.3: Data showing inbreeding depression over different degrees of inbreeding in <em>S. latifolia</em>. Each point is the mean seed germination rates for different family crosses. Data from <span class="citation" data-cites="richards:00">Richards (<a href="references.html#ref-richards:00" role="doc-biblioref">2000</a>)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/single_locus_selection/Silene_inbreeding_Richards/Silene_inbreeding_depression.R">here</a>.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Silene" class="quarto-float quarto-figure quarto-figure-center anchored" alt="White campion (S.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Silene-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/single_locus_selection/Silene_inbreeding_dep/Silene_latifolia_Sturm18.jpg" class="img-fluid figure-img" style="width:100.0%" alt="White campion (S.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Silene-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.4: White campion (<em>S. latifolia</em>). Deutschlands Flora in Abbildungen (1796). Johann Georg Sturm (Painter: Jacob Sturm). Public Domain, <a href="https://zh.wikipedia.org/wiki/File:Silene_latifolia_Sturm18.jpg">wikimedia</a>.
+</figcaption>
+</figure>
+</div></div><p>One consequence of segregating for low-frequency recessive deleterious alleles is that inbreeding can reduce fitness. In typically outbred populations, the mean fitness of individuals decreases with the inbreeding coefficient, i.e.&nbsp;so-called ’inbreeding depression’ is a common observation. This wide-spread observation dates back to systematic surveys of inbreeding depression by <span class="citation" data-cites="darwin:1876">Darwin (<a href="references.html#ref-darwin:1876" role="doc-biblioref">1876</a>)</span>. Inbreeding depression is likely primarily a consequence of being homozygous at many loci for alleles with recessive deleterious effects.</p>
+<p>One example of inbreeding depression is shown in <a href="#fig-Silene-inbreeding" class="quarto-xref">Figure&nbsp;<span>11.3</span></a>. White campion (<em>Silene latifolia</em>) is a dioecious flowering plant; dioecious means that the males and females are separate individuals. <span class="citation" data-cites="richards:00">Richards (<a href="references.html#ref-richards:00" role="doc-biblioref">2000</a>)</span> performed crosses to create offspring who were outbred, the offspring of half-sibs, full-sibs, and of two generations of full-sib mating. He measured their germination success, which is plotted in <a href="#fig-Silene-inbreeding" class="quarto-xref">Figure&nbsp;<span>11.3</span></a>. Note how the fitness of individuals declines with increased inbreeding.</p>
+<div id="fig-Decode-inbreeding" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Inbreeding depression for offspring lifespan in humans in Iceland.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Decode-inbreeding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/single_locus_selection/Decode_human_inbreeding/decode_inbreeding.png" class="img-fluid figure-img" style="width:80.0%" alt="Inbreeding depression for offspring lifespan in humans in Iceland.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Decode-inbreeding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.5: Inbreeding depression for offspring lifespan in humans in Iceland. Data from <span class="citation" data-cites="helgason2008association">(<a href="references.html#ref-helgason2008association" role="doc-biblioref">Helgason et al. 2008</a>)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/single_locus_selection/Decode_human_inbreeding/decode_inbreeding.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>We also see evidence for inbreeding depression in various human populations. For example, <span class="citation" data-cites="helgason2008association">Helgason et al. (<a href="references.html#ref-helgason2008association" role="doc-biblioref">2008</a>)</span> used the remarkable genealogical records in Iceland to look at the effects of inbreeding on various fitness components in humans. They saw that parents who were closer than 2nd cousins had children with reduced lifespans. However, these patterns were more complex for other fitness components with parents with immediate levels of relatedness having more descendants overall. More generally, studying inbreeding depression is challenging in humans because it can be difficult to differentiate the cultural and socio-economic effects frombiological effects on reproduction. Finally, it is important to note that societal views of inbreeding risks can be overblown compared to the actual risks and that these fears have often been used to stigmatize immigrant and rural poor communities <span class="citation" data-cites="paul2008s">(<a href="references.html#ref-paul2008s" role="doc-biblioref">Paul and Spencer 2008</a>)</span>.</p>
+<p><strong>Purging the inbreeding load.</strong> Populations that regularly inbreed over sustained periods of time are expected to partially purge this load of deleterious alleles. This is because such populations have exposed many of these alleles in a homozygous state, and so selection can more readily remove these alleles from the population.</p>
+<p>If the population has sustained inbreeding, such that individuals in the population have an inbreeding coefficient <span class="math inline">\(F\)</span>, deleterious alleles at each locus will find a new equilibrium frequency. Assuming the mutation-selection model, now with inbreeding, the equilibrium frequency is</p>
+<p><span id="eq-selection-mutation-migration-3"><span class="math display">\[q_e = \frac{\mu}{\big( h(1-F) + F \big) s} \tag{11.9}\]</span></span></p>
+<p>The frequency of the deleterious allele is decreased due to the allele now being expressed in homozygotes, and therefore exposed to selection, more often due to inbreeding. Thus, all else being equal, populations that have had a long-term history of close inbreeding will purge their load.</p>
+</section>
+<section id="migrationselection-balance" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="migrationselection-balance">Migration–selection balance</h3>
+<p>The influx of alleles carried by migrants from other populations can be an important source of genetic and phenotypic variation. Thus, one reason for the persistence of deleterious alleles in a population is that there is a constant influx of maladaptive alleles from other populations where these alleles are locally adaptive. Migration–selection balance seems unlikely to be as broad an explanation for the persistence of deleterious alleles genome-wide as mutation-selection balance. However, a brief discussion of such alleles is worthwhile, as it helps to inform our ideas about local adaptation, hybrid zones, and speciation.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Zinc-plant" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Sweet vernal grass (Anthoxanthum odoratum).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Zinc-plant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/single_locus_selection/Anthoxanthum_odoratum/19750531053_28f0b3b36e_z.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Sweet vernal grass (Anthoxanthum odoratum).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Zinc-plant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.6: Sweet vernal grass (<em>Anthoxanthum odoratum</em>). <span class="attribution">Billeder af nordens flora (1917). Mentz, A &amp; Ostenfeld, C H. Image from the <a href="https://www.flickr.com/photos/internetarchivebookimages/19750531053/in/photolist-wNFPcF-oeKFoD-oeqVrq-xjVkoi-xi5Y8c-whqJ7q-wEuf4k-wJ17N5-tomD7h-wJMXfh-xjM43c-u5erAM-xz2zWL-wH6Dsj-xhwUay-tB85tk-owe1TX-xzu6yj-x4Z1QU-xKkAg9-wR4LKK-xuCehm-xrBNQo-wHELGB-xmTvij-xkqKLC-xzu78f-wCuhJH-x4qfEM-x4p98v-x4n2fg-x3ZDt3-xkAEUP-womZdZ-woh4Wg-x3eR9U-wnUSax-xj2vfv-xf1qFH-x5g4HL-x6c1k4-x4pCYH-w6hCMt-wYM1uh-wZSoKj-w4AuK3-tn7aso-tyRsGC-tiuGr3-ow8wYz">Biodiversity Heritage Library</a>. Contributed by New York Botanical Garden. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p>Local adaptation can occur over a range of geographic scales. Local adaptation is relatively unimpeded by migration at broad geographically scales, where selection pressures change more slowly than distances over which individuals typically migrate over a number of generations. Adaptation can, however, potentially occur on much finer geographic scales, from kilometers down to meters in some species. On such small scales, dispersal is surely rapidly moving alleles between environments, but local adaptation is maintained by the continued action of selection. An example of adaptation at fine-scales is shown in <a href="#fig-Zinc-mine" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> . <span class="citation" data-cites="jain1966evolutionary">Jain and Bradshaw (<a href="references.html#ref-jain1966evolutionary" role="doc-biblioref">1966</a>)</span> studied the patterns of heavy-metal resistance in plants on mine tailings and in nearby meadows, a set of classic studies of population differences maintained by local adaptation to different soils.</p>
+<div id="fig-Zinc-mine" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Data showing the zinc tolerance of Anthoxanthum odoratum on and off of the Trelogan Mine, Flintshire, North Wales.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Zinc-mine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/single_locus_selection/Anthoxanthum_mines_Jain_Bradshaw/Anthoxanthum_zinc.png" class="img-fluid figure-img" style="width:100.0%" alt="Data showing the zinc tolerance of Anthoxanthum odoratum on and off of the Trelogan Mine, Flintshire, North Wales.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Zinc-mine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.7: Data showing the zinc tolerance of <em>Anthoxanthum odoratum</em> on and off of the Trelogan Mine, Flintshire, North Wales. The numbers along the top give the soil contamination of zinc in parts per million. Data from <span class="citation" data-cites="jain1966evolutionary">Jain and Bradshaw (<a href="references.html#ref-jain1966evolutionary" role="doc-biblioref">1966</a>)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/single_locus_selection/Anthoxanthum_mines_Jain_Bradshaw/Anthoxanthum_zinc_Jain_Bradshaw.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>Even at these very short geographically scales, over which seed and pollen will definitely move, we see strong local adaptation. Zinc-intolerant alleles are nearly absent from the mine tailings because they prevent plants from growing on these zinc-heavy soils; conversely, zinc-tolerant alleles do not spread into the meadow populations, likely due to some trade-off or fitness cost of zinc-tolerance.</p>
+<p>As a first pass at developing a model of local adaptation, let’s consider a haploid two-allele model with two different populations, see <a href="#fig-mig-sel-bal" class="quarto-xref">Figure&nbsp;<span>11.8</span></a>, where the relative fitnesses of our alleles are as follows</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">allele</th>
+<th style="text-align: center;"><span class="math inline">\(1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">population 1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1-s</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">population 2</td>
+<td style="text-align: center;">1-s</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p>As a simple model of migration, let’s suppose within a population a fraction of <span class="math inline">\(m\)</span> individuals are migrants from the other population, and <span class="math inline">\(1-m\)</span> individuals are from the same population.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-mig-sel-bal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Setup of a two-population haploid model of local adaptation.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mig-sel-bal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/mig_sel_balance_haploid.png" class="img-fluid figure-img" style="width:100.0%" alt="Setup of a two-population haploid model of local adaptation.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mig-sel-bal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.8: Setup of a two-population haploid model of local adaptation.
+</figcaption>
+</figure>
+</div></div><p>To quickly sketch an equilibrium solution to this scenario, we’ll take an approach analogous to our mutation-selection balance model. To do this, let’s assume that selection is strong compared to migration (<span class="math inline">\(s \gg m\)</span>), such that allele <span class="math inline">\(1\)</span> will be almost fixed in population <span class="math inline">\(1\)</span> and allele <span class="math inline">\(2\)</span> will be almost fixed in population <span class="math inline">\(2\)</span>. If that is the case, migration changes the frequency of allele <span class="math inline">\(2\)</span> in population <span class="math inline">\(1\)</span> (<span class="math inline">\(q_1\)</span>) by</p>
+<p><span id="eq-selection-mutation-migration-4"><span class="math display">\[\Delta_{Mig.} q_1 \approx m \tag{11.10}\]</span></span></p>
+<p>while as noted above <span class="math inline">\(\Delta_{S} q_1= -sq_1\)</span>, so that migration and selection are at an equilibrium when <span class="math inline">\(0 = \Delta_{S} q_1+
+\Delta_{Mig.}q_1\)</span>, i.e.&nbsp;an equilibrium frequency of allele <span class="math inline">\(2\)</span> in population <span class="math inline">\(1\)</span> of</p>
+<p><span id="eq-selection-mutation-migration-5"><span class="math display">\[q_{e,1} = \frac{m}{s} \tag{11.11}\]</span></span></p>
+<p>Here, migration is playing the role of mutation and so migration–selection balance (at least under strong selection) is analogous to mutation–selection balance.</p>
+<p>We can use this same model by analogy for the case of migration–selection balance in a diploid model. For the diploid case, we replace our haploid <span class="math inline">\(s\)</span> by the cost to heterozygotes <span class="math inline">\(hs\)</span> from our directional selection model, resulting in a diploid migration–selection balance equilibrium frequency of</p>
+<p><span id="eq-mig-sel-eq"><span class="math display">\[q_{e,1} = \frac{m}{hs} \tag{11.12}\]</span></span></p>
+<p>If selection is weaker and only of the order of migration <span class="math inline">\(s \approx
+m\)</span> our migration-selection polymorphism collapses, as selection can not maintain the difference in the face of gene flow. Under this situation, both populations are expected to have roughly the same frequency of the alleles. Migration has swamped out local adaptation.</p>
+<div id="fig-mig-sel-bal-mice" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Frequency of melanic mice on the lava flow, and at nearby locations (diamonds).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mig-sel-bal-mice-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/single_locus_selection/Rock_Pocket_mice/Rock_pocket_mice.png" class="img-fluid figure-img" style="width:80.0%" alt="Frequency of melanic mice on the lava flow, and at nearby locations (diamonds).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mig-sel-bal-mice-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.9: Frequency of melanic mice on the lava flow, and at nearby locations (diamonds). Frequency of <em>MC1R</em> melanic allele at same locations. Data from <span class="citation" data-cites="hoekstra2004ecological">Hoekstra et al. (<a href="references.html#ref-hoekstra2004ecological" role="doc-biblioref">2004</a>)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/single_locus_selection/Rock_Pocket_mice/Rock_pocket_mice.R">here</a>.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-chaetodipus" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two species from the genus Chaetodipus, pocket mice, formally known as Perognathus.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chaetodipus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/single_locus_selection/chaetodipus_pocket_mice/chaetodipus.png" class="img-fluid figure-img" style="width:100.0%" alt="Two species from the genus Chaetodipus, pocket mice, formally known as Perognathus.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chaetodipus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.10: Two species from the genus <em>Chaetodipus</em>, pocket mice, formally known as <em>Perognathus</em>. <span class="attribution">Wild animals of North America, intimate studies of big and little creatures of the mammal kingdom (1918), Nelson, E. W. Image from the <a href="https://www.flickr.com/photos/biodivlibrary/6217227436/in/photolist-x1RbyL-atoV7u-wLxcK5-otRwPb-ovD312-otT7XT-xo6AL1-xXACVH-xWJdrj-x4aerR-w7hgf4-wLxwW3-x5GDbx-x1RehS-w79qy1-x6XU6C-tAuQHM-w7hbgB-wLxXg3-x49K8g-w7hf9g-x71usx-wrkzJ9-oddZ1D-xXADKt-xYfW4F-w8hLZD">Biodiversity Heritage Library</a>. Contributed by American Museum of Natural History Library. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><div id="exr-selection-mutation-migration-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 11.3</strong></span> <span class="citation" data-cites="hoekstra2004ecological">Hoekstra et al. (<a href="references.html#ref-hoekstra2004ecological" role="doc-biblioref">2004</a>)</span> found that the dark <span class="math inline">\(D\)</span> allele was at <span class="math inline">\(3\%\)</span> frequency at the Tule Mountains study site. Using <span class="math inline">\(F_{ST}\)</span>-based approaches, for unlinked markers, they estimated that the per individual migration rate was <span class="math inline">\(m=7.0 \times
+10^{-4}\)</span> per generation between this site and the Pinacate lava flow. What is the selection coefficient acting against the dark <span class="math inline">\(D\)</span> allele at the Tule Mountains site?</p>
+</div>
+<p>As an example of fine-scale local adaptation due to a single locus, consider the case of the rock pocket mice adapting to lava flows. Throughout the deserts of the American Southwest there are old lava flows, where the rocks and soils are much dark than the surrounding desert. Many populations of small animals that live on these flows have evolved darker pigmentation to be cryptic against this dark substrate and better avoid visual predators. One example of such a locally adapted population are the rock pocket mice (<em>Chaetodipus intermedius</em>) who live on the Pinacate lava flow on the Arizona-Mexico border, studied by <span class="citation" data-cites="hoekstra2004ecological">Hoekstra et al. (<a href="references.html#ref-hoekstra2004ecological" role="doc-biblioref">2004</a>)</span>. These mice have much darker, more melanic pelts than the mice who live on nearby rocky outcrops (see <a href="#fig-mig-sel-bal-mice" class="quarto-xref">Figure&nbsp;<span>11.9</span></a>). <span class="citation" data-cites="nachman2003genetic">Nachman et al. (<a href="references.html#ref-nachman2003genetic" role="doc-biblioref">2003</a>)</span> determined that a dominant allele (<span class="math inline">\(D\)</span>) at <em>MC1R</em> is the primary determinant of this melanic phenotype. The frequency of this allele across study sites is shown in <a href="#fig-mig-sel-bal-mice" class="quarto-xref">Figure&nbsp;<span>11.9</span></a>. <span class="citation" data-cites="hoekstra2004ecological">Hoekstra et al. (<a href="references.html#ref-hoekstra2004ecological" role="doc-biblioref">2004</a>)</span> found that other, unlinked markers showed little differentiation over these populations, suggesting that the migration rate is high.</p>
+<div class="page-columns page-full"><p><strong>The width of a genetic cline.</strong> We can also extend these ideas beyond our discrete model to a model of a population spread out on a landscape where individuals migrate in a more continuous fashion. For simplicity, let’s assume a one dimensional habitat, where the habitat makes a sharp transition in the middle of our region. You could imagine this to be a set of populations sampled along a transect through some environmental transition. Our individuals disperse to live on average <span class="math inline">\(\sigma\)</span> miles away from where they were born (we can think of this as our individuals migrating a random displacement drawn from a normal distribution, with mean zero, and <span class="math inline">\(\sigma\)</span> being the standard deviation of this distribution).  We’ll think of a bi-allelic model where the homozygotes for allele 1 have an additive selective advantage <span class="math inline">\(s\)</span> over allele <span class="math inline">\(2\)</span> homozygotes to the east of our habitat transition (left of zero in <a href="#fig-cline-main" class="quarto-xref">Figure&nbsp;<span>11.11</span></a>). This flips to allele <span class="math inline">\(2\)</span> having the same advantage <span class="math inline">\(s\)</span> west of the transition (right of zero). If you’ve read this send Prof Coop a picture of the East and West Beast.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">“Upon an island hard to reach, the East Beast sits upon his beach. Upon the west beach sits the West Beast. Each beach beast thinks he’s the best beast.” – Theodor Seuss Geisel</span></div></div>
+<div id="fig-cline-main" class="quarto-float quarto-figure quarto-figure-center anchored" alt="An equilibrium cline in allele frequency (the frequency of allele 2, q(~) is shown).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cline-main-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/equilib_cline.png" class="img-fluid figure-img" style="width:70.0%" alt="An equilibrium cline in allele frequency (the frequency of allele 2, q(~) is shown).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cline-main-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.11: An equilibrium cline in allele frequency (the frequency of allele 2, <span class="math inline">\(q(~)\)</span> is shown). Our individuals dispersal an average distance of <span class="math inline">\(\sigma=1\)</span>miles per generation, and our allele <span class="math inline">\(2\)</span> has a relative fitness of <span class="math inline">\(1+s\)</span> and <span class="math inline">\(1-s\)</span> on either side of the environmental change at <span class="math inline">\(x=0\)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/cline.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>With this setup, we get an equilibrium distribution of our two alleles, where to the left of zero our allele <span class="math inline">\(2\)</span> is at higher frequency, while to the right of zero allele <span class="math inline">\(1\)</span> predominates. As we cross from the left to the right side of our range, the frequency of our allele <span class="math inline">\(2\)</span> decreases in a smooth cline. The frequency of allele <span class="math inline">\(2\)</span>, <span class="math inline">\(q(x)\)</span>, is shown as a function of location, <span class="math inline">\(x\)</span>, along the cline for a variety of selection coefficients (<span class="math inline">\(s\)</span>) in <a href="#fig-cline-main" class="quarto-xref">Figure&nbsp;<span>11.11</span></a>. The width of this cline, i.e.&nbsp;the geographic distance over which the allele frequency changes, depends on the relative strengths of dispersal and selection. If selection is strong compared to dispersal, then selection acts to remove maladaptive alleles much faster than migration acts to move alleles across the environmental transition. Thus the allele frequency transition would be very rapid, and the cline narrow, as we move across the environmental transition. In contrast, if individuals disperse long distances and selection is weak, many alleles are being moved back and forth over the environmental transition much faster than selection can act against these alleles and so the cline would be very wide.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-cline-tangent" class="quarto-float quarto-figure quarto-figure-center anchored" alt="An equilibrium cline in allele frequency from @fig-cline-main, s=0.01.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cline-tangent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/equilib_width_cline.png" class="img-fluid figure-img" style="width:100.0%" alt="An equilibrium cline in allele frequency from @fig-cline-main, s=0.01.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cline-tangent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.12: An equilibrium cline in allele frequency from <a href="#fig-cline-main" class="quarto-xref">Figure&nbsp;<span>11.11</span></a>, <span class="math inline">\(s=0.01\)</span>. Vertical lines show the cline width. The diagonal line show the tangent to the cline at its midpoint. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/cline.R">here</a>.
+</figcaption>
+</figure>
+</div></div><p>The width of our cline, i.e.&nbsp;the distance over which we make this shift from allele <span class="math inline">\(2\)</span> to allele <span class="math inline">\(1\)</span> predominating, can be defined in a number of different ways. One way to define the cline width, which is simple to define but perhaps hard to measure accurately, is via the slope (i.e.&nbsp;the tangent) of <span class="math inline">\(q(x)\)</span> at <span class="math inline">\(x=0\)</span>. See <a href="#fig-cline-tangent" class="quarto-xref">Figure&nbsp;<span>11.12</span></a>. Under this definition, the cline width is approximately</p>
+<p><span id="eq-cline-width"><span class="math display">\[0.6 \sigma/\sqrt{s} ~\textrm{miles}, \tag{11.13}\]</span></span></p>
+<p>note that the units are miles here just because we defined the average dispersal distance (<span class="math inline">\(\sigma\)</span>) in miles above. Thus the cline will be wider if individuals dispersal further, higher <span class="math inline">\(\sigma\)</span>, and if selection is weaker, smaller <span class="math inline">\(s\)</span>. The appendix at the end of this chapter, talks through the math underlying these ideas in more detail.</p>
+<div id="fig-cline-culex" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Allele frequency clines of two pesticide resistance alleles, at the Ace 1 and Ester genes, in the mosquito Culex pipiens.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cline-culex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/single_locus_selection/Culex_resistance/culex_resistance.png" class="img-fluid figure-img" style="width:100.0%" alt="Allele frequency clines of two pesticide resistance alleles, at the Ace 1 and Ester genes, in the mosquito Culex pipiens.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cline-culex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.13: Allele frequency clines of two pesticide resistance alleles, at the <em>Ace 1</em> and <em>Ester</em> genes, in the mosquito <em>Culex pipiens</em>. The dotted line shows where we move from pesticide-treated to untreated areas as we move away from the French coast. The dots show observed allele frequencies, the solid lines clines fit under a migration-selection balance model of a cline. These allele frequencies represent collections over two summers, the frequencies of the alleles are substantially reduced in the winter due to the reduced use of pesticides. Data from <span class="citation" data-cites="lenormand1999tracking">Lenormand et al. (<a href="references.html#ref-lenormand1999tracking" role="doc-biblioref">1999</a>)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/single_locus_selection/Culex_resistance/culex_resistance.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p><span class="citation" data-cites="lenormand1999tracking">Lenormand et al. (<a href="references.html#ref-lenormand1999tracking" role="doc-biblioref">1999</a>)</span> collected mosquitoes (<em>Culex pipiens</em>) in a north–south transect moving away from the Southern French coast. Areas near the coast were are treated with pesticides, and the mosquitos have evolved resistance, but areas just a few tens of kilometers from the coast were untreated. <span class="citation" data-cites="lenormand1999tracking">Lenormand et al. (<a href="references.html#ref-lenormand1999tracking" role="doc-biblioref">1999</a>)</span> estimated the frequency of two unlinked, pesticide-resistance alleles, and found them at high frequency near the coast but found that their frequencies declined rapidly moving inland. <span class="citation" data-cites="lenormand1999tracking">Lenormand et al. (<a href="references.html#ref-lenormand1999tracking" role="doc-biblioref">1999</a>)</span> fit migration-selection cline models to their data, similar to those in <a href="#fig-cline-main" class="quarto-xref">Figure&nbsp;<span>11.11</span></a>, with the pesticide-resistance alleles having an selection advantage (<span class="math inline">\(s\)</span>) in treated areas an a cost (<span class="math inline">\(c\)</span>) in untreated areas (they didn’t force the selective advantage and cost to be symmetric).</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-culex" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Mosquito (Culex pipiens).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-culex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/single_locus_selection/Culex_pipiens/Culex_pipiens.png" class="img-fluid figure-img" style="width:70.0%" alt="Mosquito (Culex pipiens).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-culex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.14: Mosquito (<em>Culex pipiens</em>). <span class="attribution">Domestic mosquitoes (1939). Bishopp, F. C. Image from the <a href="https://archive.org/stream/domesticmosquito186bish/#page/3/mode/1up">Biodiversity Heritage Library</a>. Contributed by U.S. Department of Agriculture, National Agricultural Library. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p>They estimated that a higher selective advantage for the <em>Ace 1</em> allele than<em>Ester</em> allele (<span class="math inline">\(s=0.33\)</span> and <span class="math inline">\(s=0.19\)</span> respectively) and a higher cost to the <em>Ace 1</em> allele than <em>Ester</em> allele in untreated areas (<span class="math inline">\(c=0.11\)</span> and <span class="math inline">\(c=07\)</span> respectively) potentially explaining the less extreme cline for <em>Ester</em> allele than the <em>Ace 1</em> allele. Despite these strong selection pressures, we still see a cline over tens of kilometers because dispersal is relatively high (<span class="math inline">\(\sigma=
+6.6\)</span>km per generation).</p>
+<p><strong>Hybrid zones.</strong> Local adaptation isn’t the only way that selection can generate strong spatial patterns. We can also see strong selection-driven clines when partially-reproductively isolated species spread back in to secondary contact they can hybridize bringing alleles together that may not work well with each other. One simple model of is to think about an under-dominant polymorphism, i.e.&nbsp;where the heterozygote has lower fitness. The two ancestral populations are alternatively fixed for the two fitter homozygote states, e.g.&nbsp;ancestral population 1 fixed <span class="math inline">\(A_1A_1\)</span> and ancestral population two the <span class="math inline">\(A_2 A_2\)</span>. The hybrid population forming at the mating edge between the two ancestral populations has a high frequency of the less fit heterozygotes. Thus hybrids are at a disadvantage, potentially acting to keep the two populations from collapsing into each other.</p>
+<div id="fig-grasshopper-cline" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The frequency of the southern neo-X chromosome moving along a valley transect (more southern locations to the right of the graph).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grasshopper-cline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/single_locus_selection/grasshopper_cline_barton_hewitt/grasshopper_cline_barton_hewitt.png" class="img-fluid figure-img" style="width:65.0%" alt="The frequency of the southern neo-X chromosome moving along a valley transect (more southern locations to the right of the graph).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grasshopper-cline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.15: The frequency of the southern neo-X chromosome moving along a valley transect (more southern locations to the right of the graph). This represents data from four different valleys in the French Alps over less then a kilometer, each point represents a sample of 20 males. The red curve is the fitted cline under a model of heterozygote disadvantage <span class="citation" data-cites="bazykin1969hypothetical">(<a href="references.html#ref-bazykin1969hypothetical" role="doc-biblioref">Bazykin 1969</a>)</span>. Data from <span class="citation" data-cites="barton1981chromosomal">Barton and Hewitt (<a href="references.html#ref-barton1981chromosomal" role="doc-biblioref">1981</a>)</span>, Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/single_locus_selection/grasshopper_cline_barton_hewitt/grasshopper_cline_barton_hewitt.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>Two previously isolated populations of the short-horned grasshopper <em>Podisma pedestris</em> have spread into secondary contact in the French Alps, probably after the last ice age. The population that has spread into the Alps from the south has a large section of novel X chromosome, due to a chromosomal fusion. This ‘neo-X’ is absent in the populations that spread from the North into the Alps. The two populations meet in many valleys running through the Alps, and repeatedly form a narrow hybrid zone, with the frequency of the neo-X chromosome forming a very steep cline transitioning in frequency over a few hundred meters <span class="citation" data-cites="barton1981chromosomal">(<a href="references.html#ref-barton1981chromosomal" role="doc-biblioref">Barton and Hewitt 1981</a>)</span>. One potential reason for this steep cline is that females who are heterozygous for the neo-X (neo-X/old-X) may have reduced fitness, consistent with an underdominant polymorphism. The neo-X allele cannot spread into the northern population as it cannot increase in frequency when rare. Conversely the northern population cannot displace the neo-X, as the old-X is at a disadvantage. This spatial distribution at this locus is a tension zone between the two populations, where neither allele can push the other out due to the low fitness of the hybrid.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-grasshoppers" class="quarto-float quarto-figure quarto-figure-center anchored" alt="7.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grasshoppers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/single_locus_selection/Grasshoppers/634px-Brockhaus_and_Efron_Encyclopedic_Dictionary_b56_402-0.jpg" class="img-fluid figure-img" style="width:100.0%" alt="7.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grasshoppers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.16: 7. <em>Podisma pedestris</em>, a species of short-horned grasshoppers; from a page illustrating <em>Orthoptera</em>. Illustration from Brockhaus and Efron Encyclopedic Dictionary (1890) Image <a href="https://commons.wikimedia.org/wiki/File:Brockhaus_and_Efron_Encyclopedic_Dictionary_b56_402-0.jpg">wikimedia</a>, public domain.
+</figcaption>
+</figure>
+</div></div><p>We can use our same continuous model of migration and selection to study this setup. Assuming that the homozygotes are equally fit, and that the heterozygotes relative fitness is reduced by a selection coefficent <span class="math inline">\(s_h\)</span>, the width of the cline is</p>
+<p><span id="eq-selection-mutation-migration-6"><span class="math display">\[\frac{\sigma}{\sqrt{s_h}} \tag{11.14}\]</span></span></p>
+<p>The stronger the selection the more abrupt the transition between the populations. These wingless grasshoppers move <span class="math inline">\(\sigma \sim 20\)</span> meters a generation. Thus a reduction in the relative fitness of the hybrid would be needed to explain this hybrid zone with a width of <span class="math inline">\(\sim
+800\)</span>m.</p>
+<p>More generally we can see tension zones arise when hybrids have reduced fitness compared to either species. For example, this can occur due to be due to bad epistatic interactions between alleles from each species. If selection is strong enough on hybrids, often because many loci are involved in incompatibilities between the species, the entire genome can be tied up in a tension zone between the two species.</p>
+</section>
+<section id="appendix-some-theory-of-the-spatial-distribution-of-allele-frequencies-under-deterministic-models-of-selection" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="appendix-some-theory-of-the-spatial-distribution-of-allele-frequencies-under-deterministic-models-of-selection">Appendix: Some theory of the spatial distribution of allele frequencies under deterministic models of selection</h3>
+<p>Imagine a continuous haploid population spread out along a line. Each individual disperses a random displacement <span class="math inline">\(\Delta x\)</span> from its birthplace to the location where it reproduces, where <span class="math inline">\(\Delta x\)</span> is drawn from the probability density <span class="math inline">\(g(\Delta x)\)</span>. To make life simple, we will assume that <span class="math inline">\(g(\Delta x)\)</span> is normally distributed with mean zero and standard deviation <span class="math inline">\(\sigma\)</span>, i.e.&nbsp;migration is unbiased and individuals migrate an average displacement of <span class="math inline">\(\sigma\)</span>.</p>
+<p>The frequency of allele <span class="math inline">\(2\)</span> at time <span class="math inline">\(t\)</span> in the population at spatial location <span class="math inline">\(x\)</span> is <span class="math inline">\(q(x,t)\)</span>. Assuming that only dispersal occurs, how does our allele frequency change in the next generation? Our allele frequency in the next generation at location <span class="math inline">\(x\)</span> reflects the migration from different locations in the proceeding generation. Our population at location <span class="math inline">\(x\)</span> receives a contribution <span class="math inline">\(g(\Delta x)q(x+\Delta x,t)\)</span> of allele <span class="math inline">\(2\)</span> from the population at location <span class="math inline">\(x+\Delta x\)</span>, such that the frequency of our allele at <span class="math inline">\(x\)</span> in the next generation is</p>
+<p><span id="eq-selection-mutation-migration-7"><span class="math display">\[q(x,t+1) = \int_{-\infty}^{\infty} g(\Delta
+x)q(x+\Delta x,t) d \Delta x. \tag{11.15}\]</span></span></p>
+<p>To obtain <span class="math inline">\(q(x+\Delta x,t)\)</span>, let’s take a Taylor series expansion of <span class="math inline">\(q(x, t)\)</span>:</p>
+<p><span id="eq-selection-mutation-migration-8"><span class="math display">\[q(x+\Delta x,t) = q(x,t) + \Delta x \frac{dq(x,t)}{dx}+ \tfrac{1}{2}(\Delta x)^2 \frac{d^2q(x,t)}{dx^2}+\cdots \tag{11.16}\]</span></span></p>
+<p>then</p>
+<p><span id="eq-selection-mutation-migration-9"><span class="math display">\[q(x,t+1) = q(x,t) +\left( \int_{-\infty}^{\infty} \Delta x g(\Delta x)
+  d \Delta x \right) \frac{dq(x,t)}{dx} + \tfrac{1}{2}\left( \int_{-\infty}^{\infty}(\Delta x)^2 g(\Delta x)
+  d \Delta x \right)  \frac{d^2q(x,t)}{dx^2}+\cdots \tag{11.17}\]</span></span></p>
+<p>Because <span class="math inline">\(g(~)\)</span> has a mean of zero, <span class="math inline">\(\int_{-\infty}^{\infty} \Delta x g(\Delta x) d
+\Delta x =0\)</span>, and has because <span class="math inline">\(g(~)\)</span> has variance <span class="math inline">\(\sigma^2\)</span>, <span class="math inline">\(\int_{-\infty}^{\infty}(\Delta
+x)^2 g(\Delta x) d \Delta x = \sigma^2\)</span>. All higher order terms in our Taylor series expansion cancel out (as all higher central moments of the normal distribution are zero). Looking at the change in allele frequency, <span class="math inline">\(\Delta q(x,t) = q(x,t+1)-q(x,t)\)</span>, so</p>
+<p><span id="eq-selection-mutation-migration-10"><span class="math display">\[\Delta q(x,t) = \frac{\sigma^2}{2} \frac{d^2q(x,t)}{dx^2} \tag{11.18}\]</span></span></p>
+<p>This is a diffusion equation, so that migration is acting to smooth out allele frequency differences with a diffusion constant of <span class="math inline">\(\tfrac{\sigma^2}{2}\)</span>. This is exactly analogous to the equation describing how a gas diffuses out to equal density, as both particles in a gas and our individuals of type <span class="math inline">\(2\)</span> are performing Brownian motion (blurring our eyes and seeing time as continuous).</p>
+<p>We will now introduce fitness differences into our model and set the relative fitnesses of allele <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> at location <span class="math inline">\(x\)</span> to be <span class="math inline">\(1\)</span> and <span class="math inline">\(1+s\gamma(x)\)</span>. To make progress in this model, we’ll have to assume that selection isn’t too strong, i.e.&nbsp;<span class="math inline">\(s \gamma(x) \ll 1\)</span> for all <span class="math inline">\(x\)</span>. The change in frequency of allele <span class="math inline">\(2\)</span> obtained within a generation due to selection is</p>
+<p><span id="eq-selection-mutation-migration-11"><span class="math display">\[q^{\prime}(x,t) - q(x,t) \approx s\gamma(x) q(x,t) \big( 1 - q(x,t) \big) \tag{11.19}\]</span></span></p>
+<p>i.e.&nbsp;logistic growth of our favoured allele at location <span class="math inline">\(x\)</span>. Putting our selection and migration terms together, we find the total change in allele frequency at location x in one generation is</p>
+<p><span id="eq-fisherKPP"><span class="math display">\[q(x,t+1) -
+q(x,t) = s\gamma(x) q(x,t) \big( 1 - q(x,t) \big)+\frac{\sigma^2}{2}
+\frac{d^2q(x,t)}{dx^2} \tag{11.20}\]</span></span></p>
+<p>In deriving this result we have ignored terms of the order of <span class="math inline">\(\sigma s\)</span>.</p>
+<div id="fig-cline" class="quarto-float quarto-figure quarto-figure-center anchored" alt="An equilibrium cline in allele frequency.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/equilib_cline.png" class="img-fluid figure-img" style="width:50.0%" alt="An equilibrium cline in allele frequency.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.17: An equilibrium cline in allele frequency. Our individuals dispersal an average distance of <span class="math inline">\(\sigma=1\)</span>km per generation, and our allele <span class="math inline">\(2\)</span> has a relative fitness of <span class="math inline">\(1+s\)</span> and <span class="math inline">\(1-s\)</span> on either side of the environmental change at <span class="math inline">\(x=0\)</span>.
+</figcaption>
+</figure>
+</div>
+<p><strong>The cline in allele frequency associated with a sharp environmental transition.</strong> To make progress, let’s consider a simple model of local adaptation where the environment abruptly changes. Specifically, we assume that <span class="math inline">\(\gamma(x)= 1\)</span> for <span class="math inline">\(x&lt;0\)</span> and <span class="math inline">\(\gamma(x)= -1\)</span> for <span class="math inline">\(x \geq 0\)</span>, i.e.&nbsp;our allele <span class="math inline">\(2\)</span> has a selective advantage at locations to the left of zero, while this allele is at a disadvantage to the right of zero. In this case we can get an equilibrium distribution of our two alleles, where to the left of zero our allele <span class="math inline">\(2\)</span> is at higher frequency, while to the right of zero allele <span class="math inline">\(1\)</span> predominates. As we cross from the left to the right side of our range, the frequency of our allele <span class="math inline">\(2\)</span> decreases in a smooth cline.</p>
+<p>Our equilibrium spatial distribution of allele frequencies can be found by setting the left-hand side of <a href="#eq-fisherKPP" class="quarto-xref">Equation&nbsp;<span>11.20</span></a> to zero to arrive at</p>
+<p><span id="eq-selection-mutation-migration-12"><span class="math display">\[s\gamma(x) q(x) \left( 1 - q(x) \right) = - \frac{\sigma^2}{2} \frac{d^2q(x)}{dx^2} \tag{11.21}\]</span></span></p>
+<p>We then could solve this differential equation with appropriate boundary conditions (<span class="math inline">\(q(-\infty)=1\)</span> and <span class="math inline">\(q(\infty) = 0\)</span>) to arrive at the appropriate functional form for our cline. While we won’t go into the solution of this equation here, we can note that by dividing our distance <span class="math inline">\(x\)</span> by <span class="math inline">\(\ell=\sigma/\sqrt{s}\)</span>, we can remove the effect of our parameters from the above equation. This compound parameter <span class="math inline">\(\ell\)</span> is the characteristic length of our cline, and it is this parameter which determines over what geographic scale we change from allele <span class="math inline">\(2\)</span> predominating to allele <span class="math inline">\(1\)</span> predominating as we move across our environmental shift.</p>
+<div class="chapter-summary">
+<p><strong>Chapter summary.</strong></p>
+<ul>
+<li><p>Deleterious variation can be maintained in the population by a balance of selection and mutation. If the mutations are not completely recessive, the equilibrium frequency of deleterious alleles is given by the ratio of mutation to the selection coefficient against heterozygotes (<span class="math inline">\(q_{eq}= {}^{\mu}\!/\!{}_{hs}\)</span>). The more recessive an allele the higher frequency it segregates under mutation-selection balance, all else being equal, as they better avoid selection in the heterozygote state.</p></li>
+<li><p>While the equilibrium frequency of alleles under mutation-selection balance at any one locus is low, there are many such loci in the genome such that every individual carries many deleterious alleles.</p></li>
+<li><p>As more recessive deleterious alleles segregate at higher frequency, inbred individuals are expected to have lower fitness than typical outbred individuals in the population as they are on average homozygous for recessive deleterious alleles.</p></li>
+<li><p>Divergent selection between populations can maintain allele frequency differences between populations in the face of migration. The constant influx of alleles by migration can maintain maladaptive alleles at low frequency in the face of selection leading to a migration selection balance, an analog to mutation selection balance.</p></li>
+<li><p>When strong selection pressures change over short geographical scales, we expect abrupt allele frequency clines at the selected loci. We also expect strong allele frequency clines in hybrid zones at loci underpinning hybrid fitness disadvantage.</p></li>
+</ul>
+</div>
+<div id="exr-selection-mutation-migration-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 11.4</strong></span> You are studying a gene causing partial infertility, due to errors during meiosis, in an outcrossing plant population. You estimate that <span class="math inline">\(5\%\)</span> of heterozygotes for knockout mutation in this gene are completely sterile, but <span class="math inline">\(95\%\)</span> of heterozygote individuals have normal fertility. Homozygotes for the knockout are often embryonic lethal due to errors in mitosis. The frequency at birth of knockouts for the gene is <span class="math inline">\({}^{1}\!/\!{}_{5000}\)</span>.<br>
+<strong>A)</strong> What is the knockout mutation rate at this gene?</p>
+<p><strong>B)</strong> You find a sister species which has had a high degree of inbreeding for many generations due to selfing. Do you expect to find the knockout allele at higher or lower frequency? Explain your answer.</p>
+</div>
+<div id="exr-selection-mutation-migration-5" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 11.5</strong></span> There’s an outbred population of mice living in a farmer’s field. Mutations occur at a gene called nurseryrhyme that cause a totally recessive form of blindness. These blind mice do not survive to reproduce as the farmer’s wife cuts off their tail (and other bits) with a carving knife. Surveying the field for baby mice you find that 3 in ten thousand mice are blind.<br>
+<strong>A</strong> Assuming that the population mates at random, what is the mutation rate of blindness causing alleles?<br>
+<strong>B</strong> Following more careful study you now find that there is actually a <span class="math inline">\(20
+\%\)</span> reduction in the viability of heterozygotes for these mutations. What would you now estimate as the mutation rate for this gene? <strong>C)</strong> Explain how and why your answers differ?</p>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-barton1981chromosomal" class="csl-entry" role="listitem">
+Barton, N., and G. Hewitt. 1981. A chromosomal cline in the grasshopper podisma pedestris. Evolution 1008–1018. JSTOR.
+</div>
+<div id="ref-bazykin1969hypothetical" class="csl-entry" role="listitem">
+Bazykin, A. 1969. Hypothetical mechanism of speciation. Evolution 23:685–687. Wiley Online Library.
+</div>
+<div id="ref-darwin:1876" class="csl-entry" role="listitem">
+Darwin, C. 1876. The effect of cross and self fertilization in the vegetable kingdom: murray. London, UK.
+</div>
+<div id="ref-francioli:14" class="csl-entry" role="listitem">
+Francioli, L. C., A. Menelaou, S. L. Pulit, F. Van Dijk, P. F. Palamara, C. C. Elbers, P. B. Neerincx, K. Ye, V. Guryev, W. P. Kloosterman, and others. 2014. Whole-genome sequence variation, population structure and demographic history of the dutch population. Nature genetics 46:818. Nature Publishing Group.
+</div>
+<div id="ref-haldane1927mathematical" class="csl-entry" role="listitem">
+Haldane, J. B. S. 1927. A mathematical theory of natural and artificial selection, part v: Selection and mutation. Pp. 838–844 <em>in</em> Mathematical proceedings of the cambridge philosophical society. Cambridge University Press.
+</div>
+<div id="ref-Haldane:37" class="csl-entry" role="listitem">
+Haldane, J. B. S. 1937. <a href="https://doi.org/10.1086/280722">The effect of variation of fitness</a>. The American Naturalist 71:337–349.
+</div>
+<div id="ref-helgason2008association" class="csl-entry" role="listitem">
+Helgason, A., S. Pálsson, D. F. Gubjartsson, K. Stefánsson, and others. 2008. An association between the kinship and fertility of human couples. Science 319:813–816. American Association for the Advancement of Science.
+</div>
+<div id="ref-hoekstra2004ecological" class="csl-entry" role="listitem">
+Hoekstra, H. E., K. E. Drumm, and M. W. Nachman. 2004. Ecological genetics of adaptive color polymorphism in pocket mice: Geographic variation in selected and neutral genes. Evolution 58:1329–1341. Wiley Online Library.
+</div>
+<div id="ref-jain1966evolutionary" class="csl-entry" role="listitem">
+Jain, S., and A. D. Bradshaw. 1966. Evolutionary divergence among adjacent plant populations i. The evidence and its theoretical analysis. Heredity 21:407. Nature Publishing Group.
+</div>
+<div id="ref-lek:16" class="csl-entry" role="listitem">
+Lek, M., K. J. Karczewski, E. V. Minikel, K. E. Samocha, E. Banks, T. Fennell, A. H. O’Donnell-Luria, J. S. Ware, A. J. Hill, B. B. Cummings, and others. 2016. Analysis of protein-coding genetic variation in 60,706 humans. Nature 536:285. Nature Publishing Group.
+</div>
+<div id="ref-lenormand1999tracking" class="csl-entry" role="listitem">
+Lenormand, T., D. Bourguet, T. Guillemaud, and M. Raymond. 1999. Tracking the evolution of insecticide resistance in the mosquito culex pipiens. Nature 400:861. Nature Publishing Group.
+</div>
+<div id="ref-macarthur:12" class="csl-entry" role="listitem">
+MacArthur, D. G., S. Balasubramanian, A. Frankish, N. Huang, J. Morris, K. Walter, L. Jostins, L. Habegger, J. K. Pickrell, S. B. Montgomery, and others. 2012. A systematic survey of loss-of-function variants in human protein-coding genes. Science 335:823–828. American Association for the Advancement of Science.
+</div>
+<div id="ref-nachman2003genetic" class="csl-entry" role="listitem">
+Nachman, M. W., H. E. Hoekstra, and S. L. D’Agostino. 2003. The genetic basis of adaptive melanism in pocket mice. Proceedings of the National Academy of Sciences 100:5268–5273. National Acad Sciences.
+</div>
+<div id="ref-paul2008s" class="csl-entry" role="listitem">
+Paul, D. B., and H. G. Spencer. 2008. <span>“It’s ok, we’re not cousins by blood”</span>: The cousin marriage controversy in historical perspective. PLoS Biol 6:e320. Public Library of Science.
+</div>
+<div id="ref-richards:00" class="csl-entry" role="listitem">
+Richards, C. M. 2000. Inbreeding depression and genetic rescue in a plant metapopulation. The American Naturalist 155:383–394. The University of Chicago Press.
+</div>
+<div id="ref-Wheeler:07" class="csl-entry" role="listitem">
+Wheeler, W. M. 1907. <a href="http://www.jstor.org/stable/2454781">Pink insect mutants</a>. The American Naturalist 41:773–780. [University of Chicago Press, American Society of Naturalists].
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./one-locus-selection.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">One-Locus Models of Selection</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./drift-and-selection.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Impact of Genetic Drift on Selected Alleles</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script id="popgen-scroll-focus">
+(function(){function f(){document.querySelectorAll('figure.quarto-float-tbl > div, .column-page-right > div').forEach(function(d){
+ var s=d.scrollWidth>d.clientWidth+1; if(s){d.setAttribute('tabindex','0');d.setAttribute('role','region');d.setAttribute('aria-label','Scrollable table');}
+ else{d.removeAttribute('tabindex');}});}
+ window.addEventListener('load',f);window.addEventListener('resize',f);})();
+</script><script id="popgen-no-overlap">
+(function(){
+ var SEL='.column-margin.column-container > *, .margin-caption, .aside';
+ function R(e){var r=e.getBoundingClientRect();return {t:r.top+scrollY,b:r.bottom+scrollY,l:r.left,r:r.right};}
+ function run(){
+  var root=document.getElementById('quarto-document-content'); if(!root) return;
+  var items=[].filter.call(root.querySelectorAll(SEL),function(e){return e.offsetParent!==null && !e.parentElement.closest(SEL);});
+  items.forEach(function(e){e.style.marginTop='';});
+  var blk=[].filter.call(root.querySelectorAll('figure, table, pre, .column-page-right, .column-page, .column-screen, mjx-container[display="true"], .callout, .chapter-summary, blockquote'),
+    function(e){return e.offsetParent!==null && !e.closest(SEL) && !(e.parentElement.closest('figure,.column-page-right,.column-page,.callout') && e.tagName!=='FIGURE' && false);});
+  var last=0;
+  for(var pass=0;pass<3;pass++){
+   last=0; var moved=false;
+   items.forEach(function(it){
+    var r=R(it), top=r.t, h=r.b-r.t, need=Math.max(top,last), gap=8, again=true, n=0;
+    while(again && n++<40){
+     again=false;
+     blk.forEach(function(b){
+      if(it.contains(b)||b.contains(it)) return;
+      var q=R(b); if(q.r<=r.l+1||q.l>=r.r-1) return;
+      if(need<q.b+gap && need+h>q.t-1 && q.b>q.t){ if(need<q.b+gap){need=q.b+gap;again=true;} }
+     });
+    }
+    if(need>top+1){var cur=parseFloat(getComputedStyle(it).marginTop)||0; it.style.marginTop=(cur+need-top)+'px'; moved=true;}
+    var r2=R(it); last=r2.b+ (parseFloat(getComputedStyle(it).marginBottom)||0);
+   });
+   if(!moved) break;
+  }
+ }
+ var tm; function later(){clearTimeout(tm);tm=setTimeout(run,120);}
+ window.addEventListener('load',function(){later();
+   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(later);
+   if(window.MathJax&&MathJax.startup&&MathJax.startup.promise) MathJax.startup.promise.then(later);
+   [].forEach.call(document.images,function(i){if(!i.complete) i.addEventListener('load',later);});
+   setTimeout(later,1500);});
+ window.addEventListener('resize',later);
+ if(window.ResizeObserver) new ResizeObserver(later).observe(document.body);
+})();
+</script></body></html>

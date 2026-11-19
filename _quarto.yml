@@ -1,24 +1,72 @@
 project:
   type: book
+  output-dir: _book
+  post-render: tools/postrender.py
 
 book:
-  title: "Population Genetics Notes"
+  title: "Population and Quantitative Genetics"
   author: "Graham Coop"
-  date: "1/13/2026"
+  repo-url: https://github.com/cooplab/popgen-notes
   chapters:
     - index.qmd
-    - chapter-01-introduction.qmd
+    - equation-sheet.qmd
+    - introduction.qmd
+    - allele-and-genotype-frequencies.qmd
+    - population-structure.qmd
+    - genetic-drift.qmd
+    - molecular-evolution.qmd
+    - neutral-diversity-and-structure.qmd
+    - phenotypic-variation.qmd
+    - response-to-selection.qmd
+    - correlated-traits.qmd
+    - one-locus-selection.qmd
+    - selection-mutation-migration.qmd
+    - drift-and-selection.qmd
+    - linked-selection.qmd
+    - multiple-selected-loci.qmd
+    - references.qmd
+  appendices:
+    - math-background.qmd
 
 bibliography: references.bib
+csl: evolution.csl
+
+crossref:
+  exr-title: "Question"
+  exr-prefix: "Question"
+  chapters: true
+  appendix-title: "Appendix"
 
 format:
   html:
-    highlight-style: ally
-    theme: ally
-    axe:
-      output: document 
+    theme: [cosmo, popgen.scss]
+    reference-location: margin
+    toc: true
+    toc-depth: 2
+    number-depth: 2
+    fig-responsive: true
   pdf:
-    documentclass: scrreprt
-  
-editor: visual
-
+    documentclass: scrbook
+    classoption: oneside
+    pdf-engine: xelatex
+    reference-location: block
+    include-in-header:
+      text: |
+        % scrbook (KOMA-Script) drops the old font switches that the book's math uses
+        \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+        \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+        \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+        \DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+        \DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+        % No overlaps: the sidenotes package places margin items at fixed offsets (they collide with
+        % each other and with wide floats). Use LaTeX's own stacking \marginpar instead, and keep
+        % wide floats inside the text block so they never run under the margin column.
+        \usepackage{environ}
+        \setlength{\marginparpush}{6pt}
+        \makeatletter
+        \AtBeginDocument{%
+          \renewcommand{\marginnote}[2][]{\marginpar{\raggedright #2}}%
+          \RenewEnviron{marginfigure}[1][]{\begin{figure}[htbp]\centering\begin{minipage}{0.7\linewidth}\setlength{\textheight}{0.38\textheight}\BODY\end{minipage}\end{figure}}%
+          \RenewDocumentEnvironment{figure*}{ O{htbp} }{\begin{figure}[#1]\setlength{\tabcolsep}{2pt}\scriptsize}{\end{figure}}%
+        }
+        \makeatother

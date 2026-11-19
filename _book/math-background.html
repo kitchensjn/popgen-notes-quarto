@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Appendix A — An Introduction to Mathematical Concepts – Population and Quantitative Genetics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-468b43a5444adb4913bafb0b3b0c703b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./math-background.html">Appendices</a></li><li class="breadcrumb-item"><a href="./math-background.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Population and Quantitative Genetics</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/cooplab/popgen-notes" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equation-sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equation Sheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allele-and-genotype-frequencies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Allele and Genotype Frequencies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./population-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Population Structure and Correlations Among Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./genetic-drift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Genetic Drift and Neutral Diversity</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./molecular-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Population Genetics of Divergence and Molecular Substitution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./neutral-diversity-and-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Neutral Diversity and Population Structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phenotypic-variation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./correlated-traits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlated Traits and the Response of Multiple Traits to Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./one-locus-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">One-Locus Models of Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./selection-mutation-migration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Interaction of Selection, Mutation, and Migration</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drift-and-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Impact of Genetic Drift on Selected Alleles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linked-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The Effects of Linked Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multiple-selected-loci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Interaction of Multiple Selected Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math-background.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-calculus" id="toc-sec-calculus" class="nav-link active" data-scroll-target="#sec-calculus"><span class="header-section-number">A.1</span> Calculus</a></li>
+  <li><a href="#probability" id="toc-probability" class="nav-link" data-scroll-target="#probability"><span class="header-section-number">A.2</span> Probability</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./math-background.html">Appendices</a></li><li class="breadcrumb-item"><a href="./math-background.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Appendix A — An Introduction to Mathematical Concepts</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">From Haldane’s entertaining response to Mayr’s criticism of population genetics. <span class="citation" data-cites="haldane1964defense">(<a href="references.html#ref-haldane1964defense" role="doc-biblioref">Haldane 1964</a>)</span>.</span></div></div>
+<blockquote class="blockquote">
+<p>“Now, in the first place I deny that the mathematical theory of population genetics is at all impressive, [… We] made simplifying assumptions which allowed us to pose problems soluble by the elementary mathematics at our disposal, and even then did not always fully solve the simple problems we set ourselves. Our mathematics may impress zoologists but do not greatly impress mathematicians.”–<span class="citation" data-cites="haldane1964defense">Haldane (<a href="references.html#ref-haldane1964defense" role="doc-biblioref">1964</a>)</span></p>
+</blockquote>
+<p>Throughout these notes we make use of mathematical concepts, many of which are based in probability theory and statistics. Here we briefly review some of these concepts. The wikipedia pages on statistics and math topics are often excellent introductions and worth consulting if you want to know more. Parts of this primer were originally written by Sebastian Schreiber and myself. Some of these concepts may go beyond what you have covered in previous courses. The notes do not rely on you knowing all of these results, but I’ll refer to this appendix when these concepts first come up in the main body of the notes. To answer the questions in the first chapter you will need to know some basic rules of probability, so reviewing Sections <a href="#sec-rules-prob" class="quarto-xref"><span>A.2.2</span></a> and <a href="#sec-rv" class="quarto-xref"><span>A.2.1</span></a> below would be a good place to start.</p>
+<section id="sec-calculus" class="level2 page-columns page-full" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="sec-calculus"><span class="header-section-number">A.1</span> Calculus</h2>
+<p>In evolutionary genetics we’re often interested in how quantities change over time, and so we’re interested in the rate of change over time. This particular obsession is shared with much of science and so the concepts we make use of appear in many other fields. The <em>derivative</em> <span class="math inline">\(f'(a)\)</span> of a function <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=a\)</span> represents the instantaneous rate of change of the function, <span class="math inline">\(\frac{df(x)}{dx}\)</span>, at <span class="math inline">\(x=a\)</span> or, equivalently, the slope of the graph of the function at <span class="math inline">\(x=a\)</span>. A derivative of zero indicates a local maxima, minima, or saddle point of the function. An example is shown in <a href="#fig-derivative" class="quarto-xref">Figure&nbsp;<span>A.1</span></a>, note how each maxima/minima of <span class="math inline">\(f(x)\)</span> corresponds to a value of zero of <span class="math inline">\(f'(a)\)</span>.</p>
+<div id="fig-derivative" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top) An example function, f(x) = x -(^5!/!_6)x^3 - (^1!/!_3) x^4, Middle) its derivative f'(x) = 1 - 3(^5!/!_6) x^2 -4 (^1!/!_3) x^3, and Bottom its second derviative f''(x) = - 2 x 3(^5!/!_6) x - 3x 4 (^1!/!_3) x^2 C...">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-derivative-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/math_background/calc_pics/Derivat_all_3.png" class="img-fluid figure-img" style="width:80.0%" alt="Top) An example function, f(x) = x -(^5!/!_6)x^3 - (^1!/!_3) x^4, Middle) its derivative f'(x) = 1 - 3(^5!/!_6) x^2 -4 (^1!/!_3) x^3, and Bottom its second derviative f''(x) = - 2 x 3(^5!/!_6) x - 3x 4 (^1!/!_3) x^2 C...">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-derivative-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.1: <strong>Top)</strong> An example function, <span class="math inline">\(f(x) = x -({}^{5}\!/\!{}_{6})x^3  -
+   ({}^{1}\!/\!{}_{3}) x^4\)</span>, <strong>Middle)</strong> its derivative <span class="math inline">\(f'(x) = 1
+   - 3({}^{5}\!/\!{}_{6}) x^2 -4 ({}^{1}\!/\!{}_{3}) x^3\)</span>, and <strong>Bottom</strong> its second derviative <span class="math inline">\(f''(x) =   - 2 \times 3({}^{5}\!/\!{}_{6}) x -
+   3\times 4 ({}^{1}\!/\!{}_{3}) x^2\)</span> Code <a href="https://github.com/cooplab/popgen-notes/blob/master/math_background/Calc_background.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>To give a physical example, imagine that the derivative of position with respect to time gives the (instantaneous) speed of a car. Think of the top panel of <a href="#fig-derivative" class="quarto-xref">Figure&nbsp;<span>A.1</span></a> as showing a car driving up and down an alley, with <span class="math inline">\(f(x)\)</span> giving the car’s position at time <span class="math inline">\(x\)</span>. The bottom panel shows the car’s speed, with the sign (i.e.&nbsp;<span class="math inline">\(+\)</span> or <span class="math inline">\(-\)</span>) of the derivative giving the direction of movement. Moving from left along the <span class="math inline">\(x\)</span> (time) axis, in time period A our car is moving up the alley (page), the speed is positive (i.e.&nbsp;<span class="math inline">\(f'(a)&gt;0\)</span>). In the time period B, the car is reversing down the alley, its speed is negative (<span class="math inline">\(f'(a)&lt;0\)</span> ). As we move from A to B the car is beginning to slow down, i.e.&nbsp;the derivative gets small in magnitude, as it’s going to reverse direction at time indicated by the first dotted line at the point. At the dotted line between A and B, we are at the moment when the car is changing direction, the car is stationary, its speed is zero (i.e.&nbsp;<span class="math inline">\(f'(a)=0\)</span> ).</p>
+<p>We’ll sometimes want to know about the <em>second derivative</em> of <span class="math inline">\(f\)</span>, denoted by <span class="math inline">\(f''(a)\)</span> or <span class="math inline">\(\frac{d^2f(a)}{d^2x}\)</span>. The second derivative measures the rate at which the first derivative is changing i.e.&nbsp;the concavity/convexity of the function. See <a href="#fig-derivative" class="quarto-xref">Figure&nbsp;<span>A.1</span></a>. In our physical example, the second derivative with respect to time is the (instantaneous) acceleration of the car, as it is the rate of change in the speed of the car (signed by whether it’s accelerating in a positive or negative direction). One useful property of the second derivative is that it is positive at local maxima of the function, and negative for local minima of the function.</p>
+<section id="sec-taylor-series" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-taylor-series">Approximating functions by Taylor Series.</h3>
+<p>A wonderful thing about derivatives is that they allow us to approximate complicated, nonlinear functions by linear functions (this is called a first-order Taylor approximation). Namely, a <em>first order approximation</em> of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=a\)</span> is given by</p>
+<p><span id="eq-math-background-1"><span class="math display">\[f(x) \approx f(a)+f'(a)(x-a) \mbox{ for $x$ near $a$} \tag{A.1}\]</span></span></p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-FigTaylor-1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Our function from the top panel of @fig-derivative approximated by first-order Taylor approximations (red lines) at a variety of points a (solid dots).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigTaylor-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/math_background/calc_pics/Taylor_1.png" class="img-fluid figure-img" style="width:100.0%" alt="Our function from the top panel of @fig-derivative approximated by first-order Taylor approximations (red lines) at a variety of points a (solid dots).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigTaylor-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.2: Our function from the top panel of <a href="#fig-derivative" class="quarto-xref">Figure&nbsp;<span>A.1</span></a> approximated by first-order Taylor approximations (red lines) at a variety of points <span class="math inline">\(a\)</span> (solid dots). Note how the approximation breaks down away from the dot; we stop plotting the approximation a little away from the dot for easy of presentation. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/math_background/Calc_background.R">here</a>.
+</figcaption>
+</figure>
+</div></div><p>Returning to our car example, this corresponds to trying to guess the past or future position of the car extrapolating from its current location and speed. We’ll do well when the car is traveling at a relatively constant speed, i.e.&nbsp;isn’t accelerating or deccelerating too fast.</p>
+<p>Two common first-order Taylor approximations that we’ll encounter throughout the notes are</p>
+<p><span id="eq-Taylor-exp"><span class="math display">\[\begin{aligned}
+\exp(x)&amp;\approx  1+x \mbox{ for $x$ near $0$}  \\
+(1-x)^k &amp;\approx   1-k\,x \mbox{ for $x$ near $0$}
+\end{aligned} \tag{A.2}\]</span></span></p>
+<p>where <span class="math inline">\(\exp\)</span> is (natural) exponential function. We’ll also use the Taylor approximation given by <a href="#eq-Taylor-exp" class="quarto-xref">Equation&nbsp;<span>A.2</span></a> as a trick to write</p>
+<p><span id="eq-Taylor-geo"><span class="math display">\[\begin{aligned}
+     (1+x)^L \approx  \exp\left( L x\right)  \mbox{ for $x$ near $0$,}  
+\end{aligned} \tag{A.3}\]</span></span></p>
+<p>which allows us to move from a geometric decay to an exponential decay. As a generalization of this, we’ll approximate the product</p>
+<p><span id="eq-Taylor-prod"><span class="math display">\[\begin{aligned}
+   \prod_{i=1}^L (1+x_i) \approx  \exp\left( \sum_{i=1}^L x_i\right)
+                                   \mbox{if all $x_i$ are near $0$,}  
+\end{aligned} \tag{A.4}\]</span></span></p>
+<p>Where <span class="math inline">\(\prod_{i=1}^L\)</span> is the product of elements running from <span class="math inline">\(i=1\)</span> to <span class="math inline">\(L\)</span> and <span class="math inline">\(\sum_{i=1}^L\)</span> is the sum of entries from <span class="math inline">\(i=1\)</span> to <span class="math inline">\(L\)</span>. This approximation is useful as it allows us move from a product to thinking about a sum (where averages are easier to think about).</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-FigTaylor-2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Our function from the top panel of @fig-derivative approximated by second-order Taylor approximations (red lines) at a variety of points a (solid dots).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigTaylor-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/math_background/calc_pics/Taylor_2.png" class="img-fluid figure-img" style="width:100.0%" alt="Our function from the top panel of @fig-derivative approximated by second-order Taylor approximations (red lines) at a variety of points a (solid dots).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigTaylor-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.3: Our function from the top panel of <a href="#fig-derivative" class="quarto-xref">Figure&nbsp;<span>A.1</span></a> approximated by second-order Taylor approximations (red lines) at a variety of points <span class="math inline">\(a\)</span> (solid dots). Code <a href="https://github.com/cooplab/popgen-notes/blob/master/math_background/Calc_background.R">here</a>.
+</figcaption>
+</figure>
+</div></div><p>We’ll sometimes want more accuracy and so use a <em>second order approximation</em>, i.e.&nbsp;we will approximate the graph of a function with a parabola instead of a line (see <a href="#fig-FigTaylor-2" class="quarto-xref">Figure&nbsp;<span>A.3</span></a>). This is often useful when examining the effects of stochasticity on some process. These second-order Taylor approximations take the form:</p>
+<p><span id="eq-math-background-2"><span class="math display">\[f(x)\approx f(a)+f'(a)(x-a)+f''(a)(x-a)^2/2 \tag{A.5}\]</span></span></p>
+<p>where <span class="math inline">\(f''(a)\)</span> denotes the <em>second derivative</em> of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=a\)</span>. In our car example, this is equivalent to predicting the location of the car from its speed <em>a</em>nd acceleration.</p>
+<p>One place this second order approximation is useful is for the <span class="math inline">\(\log\)</span> function and yields</p>
+<p><span id="eq-Taylor-log-2nd"><span class="math display">\[\log(1+x)\approx x-x^2/2 \mbox{ for $x$ near $0$}. \tag{A.6}\]</span></span></p>
+</section>
+<section id="integrals" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="integrals">Integrals</h3>
+<p>Regarding <em>integrals</em> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, just remember that they represent the <em>signed area</em> “under” the graph of <span class="math inline">\(y=f(x)\)</span> over the interval <span class="math inline">\([a,b]\)</span>. The integral is found by taking the limit of the summed area under the curve in each bin <span class="math inline">\(dx\)</span> as the bin size goes to zero. An example is shown in <a href="#fig-Integral-eg" class="quarto-xref">Figure&nbsp;<span>A.4</span></a>.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Integral-eg" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Our function from the top panel of @fig-derivative.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Integral-eg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/math_background/calc_pics/Integral_eg.png" class="img-fluid figure-img" style="width:100.0%" alt="Our function from the top panel of @fig-derivative.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Integral-eg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.4: Our function from the top panel of <a href="#fig-derivative" class="quarto-xref">Figure&nbsp;<span>A.1</span></a>. The integral of <span class="math inline">\(f(x)\)</span> from <span class="math inline">\(x=-0.5\)</span> to <span class="math inline">\(1\)</span>, <span class="math inline">\(\int_{-0.5}^1 f(x)\,dx\)</span> is the signed area “under” our curve and so is the red area minus the blue area. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/math_background/Calc_background.R">here</a>.
+</figcaption>
+</figure>
+</div></div></section>
+</section>
+<section id="probability" class="level2 page-columns page-full" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="probability"><span class="header-section-number">A.2</span> Probability</h2>
+<p>Evolution is fundamentally a random process. Which individuals live, die, and reproduce in any given moment is far from predictable. The randomness of Mendelian transmission, what genetic material is transmitted to the next generation, reflects randomness at the molecular and cellular level. While this makes it impossible to predict the outcome for a given individual we can speak of average outcomes and the statistical properties of evolutionary processes. Indeed evolution is a statistical process, evolution occurs because some types of individuals, and alleles, on average leave more offspring to subsequent generations. Thus to understand the details of models of evolutionary change we will have to understand something about probability and statistics.</p>
+<section id="sec-rv" class="level3">
+<h3 class="anchored" data-anchor-id="sec-rv">Random Variables</h3>
+<p>A <em>random variable</em> <span class="math inline">\(X\)</span>, roughly, is a variable that takes on values drawn randomly from some probability distribution. There are two major types of random variables, discrete and continuous. For a discrete random variable, think of it as a person calling out numbers by drawing them randomly out of a hat with some distribution of numbered slips of paper. We use uppercase <span class="math inline">\(X\)</span> to think about the number that might be drawn (before it is drawn) and lowercase <span class="math inline">\(x\)</span> to denote the number that is actually drawn. <em>Discrete random variables</em> take on a countable number of values, say <span class="math inline">\(x_1,x_2,\dots\)</span>, with some probabilities <span class="math inline">\(p_1,p_2,\dots\)</span>. We can denote this assumption as <span class="math display">\[\mathbb{P}[X=x_i]=p_i \mbox{ ``the probability that $X$ equals $x_i$ is $p_i$''}\]</span></p>
+<p><em>Continuous random variables</em>, which can take on values in a continuum, are characterized by their <em>probability density function</em> <span class="math inline">\(p(x)\)</span> i.e.&nbsp;a function that satisfies <span class="math inline">\(p(x)\ge 0\)</span> for all <span class="math inline">\(x\)</span> and <span class="math inline">\(\int_{-\infty}^\infty p(x)\,dx =1\)</span>. For example, think about the precise time of day a baby is born in a hospital (not just the hour or the minute, where discrete random variables would suffice, but the precise moment). For these variables, <span class="math display">\[\mathbb{P}[a\le X\le b] = \int_a^b p(x)\,dx \mbox{ ``the probability that $X$ is interval $[a,b]$ equals the area under the curve $p(x)$ from $a$ to $b$''}\]</span> for example, we could ask the probability that a baby was born somewhere between midnight and 12.18am.</p>
+</section>
+<section id="sec-rules-prob" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-rules-prob">Basic Rules of Probability</h3>
+<p>Imagine a fairground game where you reach into a box and pull out an egg. There are 100 eggs in the box, 57 of them are empty. Forty three have a toy in them. There are eggs with a stuffed dog toy, eggs with a cat toy, eggs with a lizard toy, eggs with both a dog and cat toy in them. The counts of each type of egg are shown in <a href="#fig-Venn-toys" class="quarto-xref">Figure&nbsp;<span>A.5</span></a>.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Venn-toys" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Venn diagram of fairground game toys, there are a hundred eggs in total, including 57 eggs with no prize that are not shown.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Venn-toys-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/math_background/dist_pics/Venn_toys.png" class="img-fluid figure-img" style="width:100.0%" alt="Venn diagram of fairground game toys, there are a hundred eggs in total, including 57 eggs with no prize that are not shown.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Venn-toys-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.5: Venn diagram of fairground game toys, there are a hundred eggs in total, including 57 eggs with no prize that are not shown. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/math_background/Math-background.R">here</a>.
+</figcaption>
+</figure>
+</div></div><div id="exr-math-background-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question A.1</strong></span> You reach into the box and pull out one egg:<br>
+<strong>i)</strong> For each egg type (dog alone, cat alone, lizard, dog+cat, and no prize), what is the probability that you get an egg of that type? What do these probabilities sum to?<br>
+<strong>ii)</strong> What’s the probability of getting an egg with a dog? What is the probability of getting an egg with a dog in it <em>or</em> an egg without a dog in it.<br>
+<strong>iii)</strong> What’s the probability of getting an egg with a dog in it <em>or</em> an egg with a lizard.</p>
+</div>
+<p>These questions above illustrate the principle that if events A &amp; B are mutually exclusive then <span class="math inline">\(\mathbb{P}(\textrm{A or B}) = \mathbb{P}(\textrm{A}) + \mathbb{P}(\textrm{B})\)</span>, following from these <span class="math inline">\(\mathbb{P}(\textrm{A or not A}) = \mathbb{P}(\textrm{A}) + \mathbb{P}(\textrm{not A}) =
+1\)</span>. What is the probability of getting an egg with a dog <em>or</em> a cat? Well, for events that are not mutually exclusive we need to discount the sum of the probabilities by their overlap, giving</p>
+<p><span id="eq-math-background-3"><span class="math display">\[\mathbb{P}(\textrm{A or B}) = \mathbb{P}(\textrm{A}) +\mathbb{P}(\textrm{B}) - \mathbb{P}(\textrm{A \&amp; B}). \tag{A.7}\]</span></span></p>
+<p>We call <span class="math inline">\(\mathbb{P}(\textrm{A \&amp; B})\)</span> the joint probability of A &amp; B.</p>
+<div id="exr-math-background-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question A.2</strong></span> What is the probability <span class="math inline">\(\mathbb{P}(\textrm{dog or cat})\)</span>?</p>
+</div>
+<p><strong>Conditional probability.</strong> We often want to know the <em>conditional probability</em>, the probability of an event conditional on some other particular event. For example, the conditional probability of getting a cat toy given that I’ve pulled out an egg containing a dog (recall that ten of the hundred eggs contain both a dog and a cat toy.). We write this as <span class="math inline">\(\mathbb{P}(\textrm{cat} | \textrm{dog})\)</span>, where we read <span class="math inline">\(|
+\textrm{dog}\)</span> as ‘given dog’ or ‘conditional on dog’. The rule of conditional probabilities is that</p>
+<p><span id="eq-cond-prob"><span class="math display">\[\mathbb{P}(\textrm{A} | \textrm{B}) = \frac{\mathbb{P}(\textrm{A \&amp; B} )}{\mathbb{P}(\textrm{B})} \tag{A.8}\]</span></span></p>
+<p>we can now answer</p>
+<div id="exr-cond" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question A.3</strong></span> What is <span class="math inline">\(\mathbb{P}(\textrm{cat} | \textrm{dog})\)</span>?<br>
+Explain the underlying intuition of your answer?</p>
+</div>
+<p>By rearranging eqn , we obtain the rule that</p>
+<p><span id="eq-math-background-4"><span class="math display">\[\mathbb{P}(\textrm{A \&amp; B}) = \mathbb{P}(\textrm{A} | \textrm{B}) \mathbb{P}(\textrm{B}) . \tag{A.9}\]</span></span></p>
+<p>Thus we can always obtain the joint probability of A &amp; B by multiplying the conditional probability by the probability of the event we are conditioning on. Equivalently, we could have computed the joint probability as</p>
+<p><span id="eq-math-background-5"><span class="math display">\[\mathbb{P}(\textrm{A \&amp; B}) = \mathbb{P}(\textrm{B} | \textrm{A}) \mathbb{P}(\textrm{A}) . \tag{A.10}\]</span></span></p>
+<p>these two ways of writing the same thing will come in useful in just a moment.</p>
+<p><strong>The law of total probability.</strong> The total probability of an event can be obtained by summing over all of the <span class="math inline">\(L\)</span> mutually exclusive ways that A can happen</p>
+<p><span id="eq-law-tot-prob"><span class="math display">\[\mathbb{P}(\textrm{A})  = \sum_{i=1}^L \mathbb{P}(\textrm{A \&amp; B$_i$}) = \sum_{i=1}^L \mathbb{P}(\textrm{A} | \textrm{B}_i) \mathbb{P}(\textrm{B}_i) \tag{A.11}\]</span></span></p>
+<p>where <span class="math inline">\(\textrm{B}_1,~\cdots,~\textrm{B}_L\)</span> give the mutually exclusive events that can occur alongside our event <span class="math inline">\(\textrm{B}\)</span>. This is the <em>law of total probability</em>. For example, we can write the probability of obtaining a cat as</p>
+<p><span id="eq-math-background-6"><span class="math display">\[\mathbb{P}(\textrm{cat}) = \mathbb{P}(\textrm{cat \&amp; dog}) + \mathbb{P}(\textrm{cat \&amp; not dog}). \tag{A.12}\]</span></span></p>
+<p><strong>Independence.</strong> Two events are <em>independent</em> of each other if</p>
+<p><span id="eq-basic-indie"><span class="math display">\[\mathbb{P}(\textrm{A \&amp; B}) = \mathbb{P}(\textrm{A}) \mathbb{P}(\textrm{B}) \tag{A.13}\]</span></span></p>
+<p>this requirement implies independence because the conditional and unconditional probabilities are equal, <span class="math inline">\(P(\textrm{A}) = P(\textrm{A} | \textrm{B})\)</span>, i.e.&nbsp;I learn nothing about the event <span class="math inline">\(\textrm{A}\)</span> from the event <span class="math inline">\(\textrm{B}\)</span> having occurred. For example, if I draw two eggs with replacement from the box the probability of getting a lizard then a dog is <span class="math inline">\(\mathbb{P}(\textrm{lizard then dog}) =
+\mathbb{P}(\textrm{lizard}) \mathbb{P}(\textrm{dog})\)</span>.</p>
+<p><strong>Bayes Rule.</strong> We often want to reverse of conditional probability statements, i.e.&nbsp;turn the statement of <span class="math inline">\(P(\textrm{B} | \textrm{A})\)</span> into the statement of <span class="math inline">\(P(\textrm{A} |
+\textrm{B})\)</span>. We have two different ways of expressing the joint probability in terms of conditional probabilities. Because they each equal the joint probability, they are equal to each other, meaning</p>
+<p><span id="eq-two-joint-probs"><span class="math display">\[\mathbb{P}(\textrm{B} | \textrm{A}) \mathbb{P}(\textrm{A}) =  \mathbb{P}(\textrm{A} | \textrm{B}) \mathbb{P}(\textrm{B}) . \tag{A.14}\]</span></span></p>
+<p>Rearranging <a href="#eq-two-joint-probs" class="quarto-xref">Equation&nbsp;<span>A.14</span></a> we obtain</p>
+<p><span id="eq-Bayes-Rule"><span class="math display">\[\mathbb{P}(\textrm{B} | \textrm{A}) =  \frac{\mathbb{P}(\textrm{A} | \textrm{B}) \mathbb{P}(\textrm{B}) }{\mathbb{P}(\textrm{A})} \tag{A.15}\]</span></span></p>
+<p><a href="#eq-Bayes-Rule" class="quarto-xref">Equation&nbsp;<span>A.15</span></a> is also called <em>“Bayes’ Rule”</em> or <em>“Bayes’ Theorem,”</em> and it which allows us to reverse the variable we condition on.</p>
+<div id="exr-math-background-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question A.4</strong></span> Use Bayes’ rule to calculate <span class="math inline">\(\mathbb{P}(\textrm{dog} | \textrm{cat})\)</span> from the conditional probability you calculated in <a href="#exr-cond" class="quarto-xref">Question&nbsp;<span>A.3</span></a>.</p>
+</div>
+</section>
+<section id="sec-appendix-expectation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-appendix-expectation">Expectation of a Random Variable</h3>
+<p>The <em>expectation of a random variable</em> is the point at which the distribution is “balanced”. For discrete random variables it is given by</p>
+<p><span id="eq-math-background-7"><span class="math display">\[\mu = \mathbb{E}[X]=p_1x_1+p_2x_2+\dots + \tag{A.16}\]</span></span></p>
+<div class="page-columns page-full"><p> The average outcome <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> over a set of independent events is an estimate of the mean <span class="math inline">\(\hat{\mu}\)</span>, where the hat denotes that it is an estimate. A more precise interpretation of the relationship between the average and the expectation is given by the law of large numbers described below. For a continuous random variable,</p><div class="no-row-height column-margin column-container"><span class="margin-aside">According to Pascal, the expectation is the excitement a gambler feels when placing a bet i.e.&nbsp;each term in the sum equals the probability of winning times the amount won. Apparently Pascal knew some unusually rational gamblers.</span><div id="fn1"><p><sup>1</sup>&nbsp;Recalling that we compute average, the sample mean, of a set of numbers <span class="math inline">\(X_1,\cdots,X_L\)</span> as</p>
+<p><span id="eq-math-background-8"><span class="math display">\[\bar{X} =\frac{1}{L} \sum_{i=1}^L X_i \tag{A.17}\]</span></span></p>
+<p>where the bar over the <span class="math inline">\(X\)</span> denotes that it is the average value of <span class="math inline">\(X\)</span>.</p></div></div></div>
+<p><span id="eq-math-background-9"><span class="math display">\[\mathbb{E}[X]=\int x\,p(x)\,dx. \tag{A.18}\]</span></span></p>
+<p>For any “reasonable” function, one can define <span class="math inline">\(\mathbb{E}[f(X)]\)</span> by</p>
+<p><span id="eq-math-background-10"><span class="math display">\[\mathbb{E}[f(X)]=p_1f(x_1)+p_2 f(x_2)+\dots \tag{A.19}\]</span></span></p>
+<p>for discrete random variables and</p>
+<p><span id="eq-math-background-11"><span class="math display">\[\mathbb{E}[f(X)]=\int f(x)p(x)\,dx \tag{A.20}\]</span></span></p>
+<p>for continuous random variables.</p>
+<p>A particularly important choice of <span class="math inline">\(f\)</span> is <span class="math inline">\(f(x)=(x-\mu)\)</span>. In this case,</p>
+<p><span id="eq-math-background-12"><span class="math display">\[\sigma^2 = \mathbb{E}[(X-\mu)^2]= \mathbb{E}[X^2]-\mu^2 \tag{A.21}\]</span></span></p>
+<p>is the <em>variance of <span class="math inline">\(X\)</span></em> which measures the mean deviation squared around the mean i.e.&nbsp;“the spread around the mean”. <span class="math inline">\(\sigma\)</span> (i.e.&nbsp;the square root of the variance) is the standard deviation of <span class="math inline">\(X\)</span>. We can compute the sample variance as</p>
+<p><span id="eq-sample-var"><span class="math display">\[\begin{aligned}
+  \widehat{\sigma^2}  &amp;= \frac{1}{L-1} \sum_{i=1}^L (X_i -
+                        \bar{X})^2  
+\end{aligned} \tag{A.22}\]</span></span></p>
+<p>Note that the units of our variance will be the units of <span class="math inline">\(X^2\)</span>, e.g.&nbsp;if <span class="math inline">\(X\)</span> is height measurements in cm the variance will have units cm<span class="math inline">\(^2\)</span>. One reason that the standard deviation is a more intuitive than the variance is that its units are the same as <span class="math inline">\(X\)</span>, e.g.&nbsp;cms.</p>
+<p>Another important choice of <span class="math inline">\(f\)</span> is <span class="math inline">\(f(x)=\log x\)</span>. Provided that <span class="math inline">\(X\)</span> is positive, <span class="math inline">\(\exp(\mathbb{E}[\log X])\)</span> corresponds to the <em>geometric mean of <span class="math inline">\(X\)</span></em>. Alternatively <span class="math inline">\(1/\mathbb{E}[1/X]\)</span> corresponds to the <em>harmonic mean of <span class="math inline">\(X\)</span></em>.</p>
+<div id="exr-math-background-5" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question A.5</strong></span> Your friend offers you a wager on the outcome of one round of playing the fairground egg game. She’ll give you: <span class="math inline">\(\$1\)</span> for a only dog, <span class="math inline">\(\$2\)</span> for a only cat <span class="math inline">\(\$5\)</span> for an egg with a cat and a dog, and <span class="math inline">\(\$4\)</span> for a lizard. However, she’ll take <span class="math inline">\(\$1\)</span> from you if you get an empty egg. What is your expected payout?</p>
+</div>
+<p><strong>Some Useful Properties of Expectations.</strong> One of most useful mathematical properties of the expectation is its linearity, in that the expectation of a linear function of random variables is the linear function applied to the expectation, i.e.</p>
+<p><span id="eq-linearity-expectation"><span class="math display">\[\mathbb{E}[aX+bY+c]= a\mathbb{E}[X] + b \mathbb{E}[Y] +c \tag{A.23}\]</span></span></p>
+<p>where <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are random variables, and <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> are constants. This holds regardless of whether <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent. Note, that our multipliers (<span class="math inline">\(a\)</span> &amp; <span class="math inline">\(b\)</span>) must be constant, as this does not hold for the expectation of products of random variables. One sensible property of the linearity is the units of the mean is the same as our observation, for example if we change our measure height of adult height from inches to cm, the unit our mean also changes from inches to cm (as this change just involves multipling by a number).</p>
+<p>Using our linearity of expectations, we can obtain an analogous result for the variance</p>
+<p><span id="eq-general-var-decomp"><span class="math display">\[Var[aX+bY+c]= a^2Var[X] + b^2 Var[Y]  + 2ab Cov(X,Y) \tag{A.24}\]</span></span></p>
+<p>we’ll discuss covariances (the <span class="math inline">\(Cov\)</span> term) below. Note that the constant <span class="math inline">\(c\)</span> has disappeared as the variance is a statement about the spread of the points around the mean, and so it doesn’t matter how we shift the mean.</p>
+<p>We are often interested in the expectation of a random variable <span class="math inline">\(X\)</span> conditional on some event <span class="math inline">\(Y=y\)</span>, this <em>conditional expectation</em> is</p>
+<p><span id="eq-math-background-13"><span class="math display">\[\mathbb{E}[X|Y=y] = \sum_{i=1}^L x_i \mathbb{P}(X=x_i|Y=y) \tag{A.25}\]</span></span></p>
+<p>summing over the <span class="math inline">\(L\)</span> possible values <span class="math inline">\(X\)</span> could take. For example, we could ask the expected payoff of your friend’s wager conditional on knowing that you have an egg with a dog in it. With the analogous expression for continuous random variables replacing the sum with an integral.</p>
+<p>We can recover our total expectation from the conditional expectations by taking the sum of our conditional expectation over the values that <span class="math inline">\(Y\)</span> could take, weighting each by their probability</p>
+<p><span id="eq-tot-exptation-def"><span class="math display">\[\mathbb{E}[X] = \sum_{j=1}^M \mathbb{E}[X|Y=y_j] \mathbb{P}(Y=y_j) \tag{A.26}\]</span></span></p>
+<p>this is the law of total expectation, the analog to the law of total probability (<a href="#eq-law-tot-prob" class="quarto-xref">Equation&nbsp;<span>A.11</span></a>). We can write this law more generally as <span class="math inline">\(\mathbb{E} \big[\mathbb{E}[X|Y]\big]\)</span>, i.e.&nbsp;we are taking the expectation of our conditional expectation over <span class="math inline">\(Y\)</span>.</p>
+</section>
+<section id="discrete-random-variable-distributions." class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="discrete-random-variable-distributions.">Discrete Random Variable Distributions.</h3>
+
+<div class="no-row-height column-margin column-container"><div id="fig-binomial" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Binomial distribution for a sample of n=10 and n=100, the vetical lines show the means np.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-binomial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/math_background/dist_pics/Binomial.png" class="img-fluid figure-img" style="width:100.0%" alt="Binomial distribution for a sample of n=10 and n=100, the vetical lines show the means np.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-binomial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.6: Binomial distribution for a sample of <span class="math inline">\(n=10\)</span> and <span class="math inline">\(n=100\)</span>, the vetical lines show the means <span class="math inline">\(np\)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/math_background/Math-background.R">here</a>.
+</figcaption>
+</figure>
+</div></div><p>Important discrete random variables include</p>
+<ul>
+<li><p><strong>Binomial</strong> random variables count the number <span class="math inline">\(X\)</span> of heads when flipping a coin <span class="math inline">\(n\)</span> times whose probability of being heads is <span class="math inline">\(p\)</span>. In which case,</p>
+<p><span id="eq-binomial-dist"><span class="math display">\[p_i = \frac{n!}{i!(n-i)!} p^i (1-p)^{n-i} \qquad 0\le i \le n. \tag{A.27}\]</span></span></p>
+<p>For a binomial random variable,</p>
+<p><span id="eq-math-background-14"><span class="math display">\[\mathbb{E}[X]=np \textrm{, and } \sigma^2=np(1-p). \tag{A.28}\]</span></span></p>
+<p>Examples are shown in <a href="#fig-binomial" class="quarto-xref">Figure&nbsp;<span>A.6</span></a>, Note how the mass of the distribution becomes more centered on the mean for larger sample sizes, as the standard deviation increases only as <span class="math inline">\(\sqrt{n}\)</span>. Another way that we can write that our observation <span class="math inline">\(i\)</span> is drawn from the binomial distribution is <span class="math inline">\(i \sim
+\textrm{Binomial}(p,n)\)</span>, where <span class="math inline">\(i \sim\)</span> is read as “<span class="math inline">\(i\)</span> is distributed as”. we will use the <span class="math inline">\(\sim\)</span> notation as short hand for the distribution of random variable in the notes.</p></li>
+<li><p><strong>Geometric</strong> random variables count the total number of flips <span class="math inline">\(X\)</span> before seeing a heads on a coin with probability <span class="math inline">\(p\)</span> of being heads. In which case,</p>
+<p><span id="eq-geometric-def"><span class="math display">\[p_i =p (1-p)^{i-1} \qquad i=1,2,\dots \tag{A.29}\]</span></span></p>
+
+<p>For a geometric random variable <span class="math inline">\(\mathbb{E}[X]=1/p\)</span>; if our coin is fair <span class="math inline">\(p={}^{1}\!/\!{}_{2}\)</span> we wait two flips for a head on average while if the coin-flip is very biased against heads <span class="math inline">\(p \ll 1\)</span> we can be waiting a very long time. The variance of a geometric random variable is <span class="math inline">\(\sigma^2 ={}^{1-p}\!/\!{}_{p^2}\)</span>, which means that the mass of the distribution is much more spread out if we consider the waiting time for rare events. See <a href="#fig-geometric" class="quarto-xref">Figure&nbsp;<span>A.7</span></a> for examples of the distribution.</p></li>
+<li><p><strong>Poisson</strong> random variables count the <span class="math inline">\(i\)</span> events that occur in a fixed interval of time or space (<span class="math inline">\(t\)</span>), when these events occur independently of each other and of time. If <span class="math inline">\(\lambda\)</span> events are expected to occur in this interval, then</p>
+<p><span id="eq-math-background-15"><span class="math display">\[p_i = \lambda^i e^{-\lambda}/i! \tag{A.30}\]</span></span></p>
+
+<p>For a random Poisson variable <span class="math inline">\(\mathbb{E}[X]=\lambda\)</span> and <span class="math inline">\(\sigma^2 =
+\lambda\)</span>.</p>
+<p>The form of this is less intuitive than that of the binomial. However, the Poisson is actually a limiting case of the binomial. Think of setting up a game of chance, where there’s a very large number of coin flips (<span class="math inline">\(n \rightarrow \infty\)</span>), but you’ve set the chance of heads on a single coin flip is very low (<span class="math inline">\(p = {}^{\lambda}\!/\!{}_{n} \rightarrow 0\)</span>, where <span class="math inline">\(\lambda\)</span> is a constant). Under these conditions you’d still expect some heads (<span class="math inline">\(np =\lambda\)</span>), and the distribution of the number of heads is Poisson.</p>
+<p>To see this we substitute <span class="math inline">\(p={}^{\lambda}\!/\!{}_{n}\)</span> into our binomial probability and take the limit as <span class="math inline">\(n \to \infty\)</span></p>
+<p><span id="eq-bionom-to-poiss"><span class="math display">\[\begin{aligned}
+   p_i &amp;= \frac{n!}{i!(n-i)!} p^i (1-p)^{n-i} \\
+         &amp;= \lim_{n\to\infty} \frac{n(n-1)\ldots
+         (n-i-1)}{i!} \left(  \frac{\lambda}{n}\right)^i \left(1-
+         \frac{\lambda}{n}\right)^{n-i} \\
+   &amp; = \lim_{n\to\infty} \frac{n^i}{i!} \frac{\lambda^i}{n^i} \left(
+     1-\frac{\lambda}{n}\right)^n \\
+&amp;=  \lim_{n\to\infty} \frac{\lambda^i}{i!} e^{-\lambda}  
+\end{aligned} \tag{A.31}\]</span></span></p>
+<p>The third line assumes that <span class="math inline">\(n-i \approx n\)</span>, which holds for <span class="math inline">\(n \gg
+i\)</span>, and the forth line uses our exponential approximation given by <a href="#eq-Taylor-geo" class="quarto-xref">Equation&nbsp;<span>A.3</span></a>.</p>
+<p>See <a href="#fig-poisson" class="quarto-xref">Figure&nbsp;<span>A.8</span></a> to see how well they match. Therefore, the Poisson represents a limit of the binomial for rare events.</p></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fig-geometric" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Geometric distribution for different probabilities of success (p).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-geometric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/math_background/dist_pics/Geometric.png" class="img-fluid figure-img" style="width:100.0%" alt="Geometric distribution for different probabilities of success (p).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-geometric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.7: Geometric distribution for different probabilities of success (<span class="math inline">\(p\)</span>). The vertical lines show the means <span class="math inline">\(1/p\)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/math_background/Math-background.R">here</a>.
+</figcaption>
+</figure>
+</div><div id="fig-poisson" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Poisson distribution with different means (lambda).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-poisson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/math_background/dist_pics/Poisson.png" class="img-fluid figure-img" style="width:100.0%" alt="Poisson distribution with different means (lambda).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-poisson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.8: Poisson distribution with different means (<span class="math inline">\(\lambda\)</span>). the vetical lines show the means. The lighter coloured lines show a binomial with <span class="math inline">\(n=100\)</span> and <span class="math inline">\(p={}^{\lambda}\!/\!{}_{n}\)</span> to illustrate how well the Poisson approximates the bionomial for rare events. (It’s hard to see them as they are close together!) Code <a href="https://github.com/cooplab/popgen-notes/blob/master/math_background/Math-background.R">here</a>.
+</figcaption>
+</figure>
+</div></div></section>
+<section id="continuous-random-variable-distributions." class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="continuous-random-variable-distributions.">Continuous Random Variable Distributions.</h3>
+<p>Important continuous random variables include</p>
+<ul>
+<li><p><strong>Uniform</strong> random variables correspond to “randomly” choosing a number in an interval, say <span class="math inline">\([a,b]\)</span>. The pdf for a uniform is</p>
+<p><span id="eq-math-background-16"><span class="math display">\[p(x)=\frac{1}{b-a} \mbox{ for }x\in[a,b]\mbox{ and } 0 \mbox{ otherwise.} \tag{A.32}\]</span></span></p>
+<p>For a uniform random variable <span class="math inline">\(\mathbb{E}[X]=(a+b)/2\)</span>.</p></li>
+<li><p><strong>Exponential</strong> random variables with rate parameter <span class="math inline">\(\lambda&gt;0\)</span> correspond to the waiting time for an event which occurs with probability <span class="math inline">\(\lambda \Delta t\)</span> over a time interval of length <span class="math inline">\(\Delta t\)</span>. For these random variables</p>
+<p><span id="eq-exp-rv-def"><span class="math display">\[p(x)= \lambda \exp(-\lambda x) \mbox{ for }x\ge 0 \mbox{ and } 0
+\mbox{ otherwise.} \tag{A.33}\]</span></span></p>
+<p>For an exponential random variable <span class="math inline">\(\mathbb{E}[X]=1/\lambda\)</span>. </p></li>
+<li><p><strong>Normal</strong> random variables have the “bell-shaped” or “Gaussian” shaped distribution. They are characterized by two parameters, the mean <span class="math inline">\(\mu\)</span> and the standard deviation <span class="math inline">\(\sigma\)</span>, and</p>
+<p><span id="eq-math-background-17"><span class="math display">\[p(x)=\frac{1}{\sigma\sqrt{2\pi}}\exp(-(x-\mu)^2/(2\sigma^2)). \tag{A.34}\]</span></span></p>
+<p>For a normal random variable <span class="math inline">\(\mathbb{E}[X]=\mu\)</span>.</p></li>
+</ul>
+<div class="no-row-height column-margin column-container"><span class="margin-aside">The Exponential distribution is the continuous-time version of the Geometric distribution. Informally this can be seen by considering the trials in the geometric distribution as corresponding to narrow time-intervals, where the probability of success is small. Then we can use our exponential approximation to the geometric probability (<a href="#eq-Taylor-geo" class="quarto-xref">Equation&nbsp;<span>A.3</span></a>).</span></div></section>
+<section id="sec-multi-RV" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-multi-RV">Multiple random variables</h3>
+<p><strong>Covariance and Independence.</strong> To fully specify multiple random variables, say <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, one needs to know their joint distribution. For example, if <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are discrete random variables taking on the values <span class="math inline">\(x_1,x_2,x_3,\dots\)</span>, then the joint distribution is given by</p>
+<p><span id="eq-math-background-18"><span class="math display">\[p_{i,j}=\mathbb{P}[X=x_i,Y=x_j] \mbox{ `` the probability that $X$ equals $x_1$ and $Y$ equals $x_2$''} \tag{A.35}\]</span></span></p>
+<p>for all <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, see also our discussion around <a href="#eq-basic-indie" class="quarto-xref">Equation&nbsp;<span>A.13</span></a>.</p>
+<p>Alternatively, if <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are continuous random variables, then the joint distribution is a function of the form <span class="math inline">\(p(x,y)\)</span> which satisfies</p>
+<p><span id="eq-math-background-19"><span class="math display">\[\mathbb{P}[a\le X\le b, c\le Y\le d]= \int_a^b \int_c^d p(x,y)\,dx~dy. \tag{A.36}\]</span></span></p>
+<p>where <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are said to be independent if we can write the joint density as a product of the probability density functions</p>
+<p><span id="eq-math-background-20"><span class="math display">\[p(x,y) = p(x) p(y). \tag{A.37}\]</span></span></p>
+<p>Given any function <span class="math inline">\(f(x,y)\)</span> of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, one can define the expectation <span class="math inline">\(\mathbb{E}[f(X,Y)]\)</span> by integrating with respect to the distribution. Namely,</p>
+<p><span id="eq-math-background-21"><span class="math display">\[s
+\mathbb{E}[f(X,Y)]=\int \int f(x,y)p(x,y)\,dxdy \mbox{ for continuous case and } \sum_i \sum_j f(x_i,x_j) p_{i,j} \mbox{ in discrete case} \tag{A.38}\]</span></span></p>
+<p>The <em>covariance</em> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is given by</p>
+<p><span id="eq-def-covar"><span class="math display">\[Cov(X,Y) = \mathbb{E}[(X-\mu_X)(Y-\mu_Y)]=\mathbb{E}[XY]-\mu_X\mu_Y. \tag{A.39}\]</span></span></p>
+<p><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are said to <em>uncorrelated</em> if their covariance equals zero. If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then they are guaranteed to be uncorrelated, but it is possible to construct <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> to be uncorrelated but not independent.</p>
+<p><strong>Binary variable correlations.</strong> One application of our covariance formula is to two binary variables, for example taking values <span class="math inline">\(A/a\)</span> and <span class="math inline">\(B/b\)</span>. Let’s set <span class="math inline">\(X=1\)</span> if <span class="math inline">\(A\)</span>, and <span class="math inline">\(X=0\)</span> otherwise, and <span class="math inline">\(Y=1\)</span> if <span class="math inline">\(B\)</span>. For example, you could imagine drawing a once from a deck of cards and <span class="math inline">\(A\)</span> being the event of drawing an queen or a jack, with <span class="math inline">\(a\)</span> being any other type of card, and <span class="math inline">\(B\)</span> being that the card is a heart and <span class="math inline">\(b\)</span> it being any other suit. So <span class="math inline">\(XY=1\)</span> if our card is a Queen or Jack of Hearts, and zero otherwise. Then</p>
+<p><span id="eq-binary-covar"><span class="math display">\[\begin{aligned}
+  \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] &amp;= \mathbb{P}(X=A,~Y=B) -  \mathbb{P}(X=A) \mathbb{P}(Y=B) \\
+                        &amp; = p_{AB} - p_{A} p_{B}
+\end{aligned} \tag{A.40}\]</span></span></p>
+<p>where <span class="math inline">\(p_{AB}\)</span> is the frequency of <span class="math inline">\(AB\)</span>, eg. the proportion of cards that are the Queen or Jack of hearts in our deck, and <span class="math inline">\(p_{A}\)</span> is the (marginal) frequency of <span class="math inline">\(B\)</span>, e.g.&nbsp;the proportion of (and similarly for <span class="math inline">\(p_{A}\)</span>).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="tbl-thing1thing2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-thing1thing2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;A.1: Counts of the appearances of Thing 1 and Thing 2 over the 31 pages of The Cat in the Hat <span class="citation" data-cites="dr._seuss_cat_1957">(<a href="references.html#ref-dr._seuss_cat_1957" role="doc-biblioref">Seuss 1957</a>)</span>. (Counts are approximate and disagreements were adjudicated by 4 year old.)
+</figcaption>
+<div aria-describedby="tbl-thing1thing2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Thing 1</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Thing 2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Absent</td>
+<td style="text-align: left;">Present</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Absent</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Present</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div></div><div id="exr-math-background-6" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question A.6</strong></span> What is the covariance of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in our deck of cards example?<br>
+What is the covariance of the presence of Thing 1 and 2 in The Cat in the Hat (<a href="#tbl-thing1thing2" class="quarto-xref">Table&nbsp;<span>A.1</span></a>)?<br>
+Calculate the correlation for each of the above.</p>
+</div>
+<p><strong>Sample Covariance and Correlation.</strong> We can calculate the <em>sample covariance</em> for <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> of a set of observations of <span class="math inline">\(X_1, \cdots, X_L\)</span> and <span class="math inline">\(Y_1, \cdots, Y_L\)</span>, where these observations are paired <span class="math inline">\((X_i,~Y_i)\)</span> asx</p>
+<p><span id="eq-math-background-22"><span class="math display">\[\begin{aligned}
+\widehat{\sigma_{XY}^2}  &amp;= \frac{1}{L-1} \sum_{i=1}^L (X_i -
+                            \bar{X}) (Y_i - \bar{Y})  
+\end{aligned} \tag{A.41}\]</span></span></p>
+<p>this captures the extent to which two sets of numbers covary. For example, the running speeds of kids in a race at age 8 and 9 positively covary. Example datasets are shown in <a href="#fig-Covar-egs" class="quarto-xref">Figure&nbsp;<span>A.9</span></a>.</p>
+<div id="fig-Covar-egs" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" alt="Examples of datasets where pairs of variables show varying degrees of covariance, the sample correlation (rho_XY) is shown in the top corner.">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-Covar-egs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="images/math_background/dist_pics/Covar.png" class="img-fluid figure-img column-page-right" style="width:80.0%" alt="Examples of datasets where pairs of variables show varying degrees of covariance, the sample correlation (rho_XY) is shown in the top corner.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Covar-egs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.9: Examples of datasets where pairs of variables show varying degrees of covariance, the sample correlation (<span class="math inline">\(\widehat{\rho_{XY}}\)</span>) is shown in the top corner. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/math_background/Math-background.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>To move covariances to a more understandable scale we can divide through by the product of the standard deviations</p>
+<p><span id="eq-def-corr"><span class="math display">\[Cor(X,~Y) =\rho_{XY} = \frac{{\sigma_{XY}}}{\sigma_{X} \sigma_{X}} \tag{A.42}\]</span></span></p>
+<p>this is the <em>correlation</em> of our variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, if we calculate it for our sample it is our <em>sample correlation</em>. A correlation can range between <span class="math inline">\(1\)</span>, perfectly correlated, to <span class="math inline">\(-1\)</span> perfectly negatively correlated. If <span class="math inline">\(\rho_{XY} =0\)</span> the variables are said to be uncorrelated.</p>
+<p><strong>Fitting a linear regression using least squares.</strong> We often want to approximate the relationship between our two variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> by the best fitting linear relationship predicting <span class="math inline">\(Y\)</span> value from their observed <span class="math inline">\(X\)</span> value. For example, think of a linear prediction of a child’s weight from their height. See <a href="#fig-Regression-eg" class="quarto-xref">Figure&nbsp;<span>A.10</span></a> for an example plot. To do this we can think of approximating the <span class="math inline">\(Y_i\)</span> that accompanies the <span class="math inline">\(X_i\)</span> value for the <span class="math inline">\(i^{th}\)</span> pair of data points by</p>
+<p><span id="eq-def-linear-regression"><span class="math display">\[Y_i \approx a+ b X_i \tag{A.43}\]</span></span></p>
+<p>where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are the intercept and slope of a line.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Regression-eg" class="quarto-float quarto-figure quarto-figure-center anchored" alt="An example of a linear regression with best fitting least-squares line.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Regression-eg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/math_background/dist_pics/Linear_regression.png" class="img-fluid figure-img" style="width:100.0%" alt="An example of a linear regression with best fitting least-squares line.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Regression-eg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.10: An example of a linear regression with best fitting least-squares line. The sample variance and covariance are given, so that you can see for yourself that the best fitting slope is just the ratio of these two. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/math_background/Math-background.R">here</a>.
+</figcaption>
+</figure>
+</div></div><p>What is the best fitting line? One common definition of the optimal fit is the choice of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> that minimize the squared error between the observed (<span class="math inline">\(Y\)</span>) and their predicted values, i.e.</p>
+<p><span id="eq-math-background-23"><span class="math display">\[\sum_{i=1}^L  (Y_i  - a -  b X_i )^2 \tag{A.44}\]</span></span></p>
+<p>here <span class="math inline">\((Y_i  - a -  b X_i)^2\)</span> is the squared residual error, the square of the length of the dotted lines in <a href="#fig-Regression-eg" class="quarto-xref">Figure&nbsp;<span>A.10</span></a>. The best fitting slope, i.e.&nbsp;that with least squared error, is</p>
+<p><span id="eq-slope-linear-reg"><span class="math display">\[b = {}^{ \widehat{\sigma_{XY}^2}}\!/\!{}_{ \widehat{\sigma_{X}^2}} \tag{A.45}\]</span></span></p>
+<p>i.e.&nbsp;the sample covariance of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> divided by the sample variance of <span class="math inline">\(X\)</span>. Thus the slope will be of the same sign as the covariance, and will be larger in magnitude when the covariance of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is a large proportion of the variance of <span class="math inline">\(X\)</span>.</p>
+<p>This least squares fit is the solution to the linear regression</p>
+<p><span id="eq-math-background-24"><span class="math display">\[Y_i \sim a+ b X_i + \epsilon_i \tag{A.46}\]</span></span></p>
+<p>where the errors (<span class="math inline">\(\epsilon_i\)</span>) are uncorrelated across data points with an expectation of zero and constant but unknown variance. These assumptions would hold for example if <span class="math inline">\(\epsilon_i \sim \textrm{Normal}(0,\sigma)\)</span>.</p>
+<p>We often want to include additional terms in our regression, or have more complicated error structures, but these extensions can usually be understood as simple extensions of this machinery. For example, least-squares can also be used to fit a non-linear function of <span class="math inline">\(X\)</span>, <span class="math inline">\(f(X,~\Omega)\)</span>, where we minimize</p>
+<p><span id="eq-math-background-25"><span class="math display">\[\sum_{i=1}^L  (Y_i  -f(X_i; ~\Omega ))^2 \tag{A.47}\]</span></span></p>
+<p>over our choices of parameters <span class="math inline">\(\Omega\)</span>. Often there is no analytical solution, i.e.&nbsp;no equivalent of <a href="#eq-slope-linear-reg" class="quarto-xref">Equation&nbsp;<span>A.45</span></a>, and the answer must be found computationally exploring over choices of <span class="math inline">\(\Omega\)</span> (using tools available in R and other programming languages). Throughout the book we use non-linear least squares to fit various models to data.</p>
+<p><strong>Useful Properties of Covariances.</strong> Following from the linearity of expectation, <a href="#eq-linearity-expectation" class="quarto-xref">Equation&nbsp;<span>A.23</span></a>, if we rescale <span class="math inline">\(X\)</span> to <span class="math inline">\(mX+n\)</span> and <span class="math inline">\(Y\)</span> to <span class="math inline">\(oY+p\)</span> then</p>
+<p><span id="eq-math-background-26"><span class="math display">\[Cov(mX+n,~oY+p) = (mo) Cov(X,Y) \tag{A.48}\]</span></span></p>
+<p>Such linear transforms leaves our correlation unaffected, as it cancels out of the top and bottom of <a href="#eq-def-corr" class="quarto-xref">Equation&nbsp;<span>A.42</span></a>.</p>
+</section>
+<section id="sec-useful-limits" class="level3">
+<h3 class="anchored" data-anchor-id="sec-useful-limits">Useful Limits.</h3>
+<p><strong>Law of Large Numbers.</strong> If <span class="math inline">\(X_1,X_2,\dots\)</span> are a sequence of independent random variables (i.e.&nbsp;“the outcomes of a sequence of independent experiments) with common expectation <span class="math inline">\(\mu= \mathbb{E}[X_i]\)</span>, then</p>
+<p><span id="eq-math-background-27"><span class="math display">\[\frac{X_1+\dots +X_n}{n} \to \mu \mbox{ as }n\to \infty \mbox{ with
+  probability one.} \tag{A.49}\]</span></span></p>
+<p>Hence, LLN implies that if you repeat a bunch of experiments and take the average outcome (<span class="math inline">\(\bar{X}\)</span>) from the experiments, the value you get is likely to be close the expected outcome of the experiment.</p>
+<p>Of course, in the real world, we can only perform a finite number of experiments in which case it is useful to have a sense of how much variation there will be in the average outcome. The central theorem is the key tool for understanding this variation.</p>
+<p><strong>Central Limit Theorem.</strong> If <span class="math inline">\(X_1,X_2,\dots\)</span> are a sequence of independent random variables (i.e.&nbsp;“the outcomes of a sequence of independent experiments) with common expectation <span class="math inline">\(\mu= \mathbb{E}[X_i]\)</span> and variance <span class="math inline">\(\sigma^2\)</span>, then</p>
+<p><span id="eq-math-background-28"><span class="math display">\[\frac{X_1+\dots +X_n-\mu \,n }{\sqrt{n}\sigma} \to \mbox{ normal distribution with mean $0$ and variance $1$ as $n\to \infty$ } \tag{A.50}\]</span></span></p>
+<p>Hence, for <span class="math inline">\(n\)</span> large enough <span class="math inline">\(X_1+\dots+X_n\)</span> is approximately normally distributed with mean <span class="math inline">\(\mu\,n\)</span> and variance <span class="math inline">\(\sigma^2 n\)</span>. This is one of the reasons the normal distribution is so useful, many outcomes (e.g.&nbsp;phenotypes) have an approximately normal distribution as they are the combined outcome of many (somewhat) independent quantities.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-haldane1964defense" class="csl-entry" role="listitem">
+Haldane, J. B. S. 1964. A defense of beanbag genetics. Perspectives in Biology and Medicine 7:343–360. Johns Hopkins University Press.
+</div>
+<div id="ref-dr._seuss_cat_1957" class="csl-entry" role="listitem">
+Seuss, Dr. 1957. The cat in the hat. Houghton Mifflin, Boston.
+</div>
+</div>
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./references.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">References</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script id="popgen-scroll-focus">
+(function(){function f(){document.querySelectorAll('figure.quarto-float-tbl > div, .column-page-right > div').forEach(function(d){
+ var s=d.scrollWidth>d.clientWidth+1; if(s){d.setAttribute('tabindex','0');d.setAttribute('role','region');d.setAttribute('aria-label','Scrollable table');}
+ else{d.removeAttribute('tabindex');}});}
+ window.addEventListener('load',f);window.addEventListener('resize',f);})();
+</script><script id="popgen-no-overlap">
+(function(){
+ var SEL='.column-margin.column-container > *, .margin-caption, .aside';
+ function R(e){var r=e.getBoundingClientRect();return {t:r.top+scrollY,b:r.bottom+scrollY,l:r.left,r:r.right};}
+ function run(){
+  var root=document.getElementById('quarto-document-content'); if(!root) return;
+  var items=[].filter.call(root.querySelectorAll(SEL),function(e){return e.offsetParent!==null && !e.parentElement.closest(SEL);});
+  items.forEach(function(e){e.style.marginTop='';});
+  var blk=[].filter.call(root.querySelectorAll('figure, table, pre, .column-page-right, .column-page, .column-screen, mjx-container[display="true"], .callout, .chapter-summary, blockquote'),
+    function(e){return e.offsetParent!==null && !e.closest(SEL) && !(e.parentElement.closest('figure,.column-page-right,.column-page,.callout') && e.tagName!=='FIGURE' && false);});
+  var last=0;
+  for(var pass=0;pass<3;pass++){
+   last=0; var moved=false;
+   items.forEach(function(it){
+    var r=R(it), top=r.t, h=r.b-r.t, need=Math.max(top,last), gap=8, again=true, n=0;
+    while(again && n++<40){
+     again=false;
+     blk.forEach(function(b){
+      if(it.contains(b)||b.contains(it)) return;
+      var q=R(b); if(q.r<=r.l+1||q.l>=r.r-1) return;
+      if(need<q.b+gap && need+h>q.t-1 && q.b>q.t){ if(need<q.b+gap){need=q.b+gap;again=true;} }
+     });
+    }
+    if(need>top+1){var cur=parseFloat(getComputedStyle(it).marginTop)||0; it.style.marginTop=(cur+need-top)+'px'; moved=true;}
+    var r2=R(it); last=r2.b+ (parseFloat(getComputedStyle(it).marginBottom)||0);
+   });
+   if(!moved) break;
+  }
+ }
+ var tm; function later(){clearTimeout(tm);tm=setTimeout(run,120);}
+ window.addEventListener('load',function(){later();
+   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(later);
+   if(window.MathJax&&MathJax.startup&&MathJax.startup.promise) MathJax.startup.promise.then(later);
+   [].forEach.call(document.images,function(i){if(!i.complete) i.addEventListener('load',later);});
+   setTimeout(later,1500);});
+ window.addEventListener('resize',later);
+ if(window.ResizeObserver) new ResizeObserver(later).observe(document.body);
+})();
+</script></body></html>

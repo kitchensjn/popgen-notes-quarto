@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Allele and Genotype Frequencies – Population and Quantitative Genetics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./population-structure.html" rel="next">
+<link href="./introduction.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-468b43a5444adb4913bafb0b3b0c703b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./allele-and-genotype-frequencies.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Allele and Genotype Frequencies</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Population and Quantitative Genetics</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/cooplab/popgen-notes" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equation-sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equation Sheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allele-and-genotype-frequencies.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Allele and Genotype Frequencies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./population-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Population Structure and Correlations Among Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./genetic-drift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Genetic Drift and Neutral Diversity</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./molecular-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Population Genetics of Divergence and Molecular Substitution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./neutral-diversity-and-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Neutral Diversity and Population Structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phenotypic-variation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./correlated-traits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlated Traits and the Response of Multiple Traits to Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./one-locus-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">One-Locus Models of Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./selection-mutation-migration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Interaction of Selection, Mutation, and Migration</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drift-and-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Impact of Genetic Drift on Selected Alleles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linked-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The Effects of Linked Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multiple-selected-loci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Interaction of Multiple Selected Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#allele-frequencies" id="toc-allele-frequencies" class="nav-link active" data-scroll-target="#allele-frequencies"><span class="header-section-number">2.1</span> Allele frequencies</a></li>
+  <li><a href="#allele-sharing-among-related-individuals-and-identity-by-descent" id="toc-allele-sharing-among-related-individuals-and-identity-by-descent" class="nav-link" data-scroll-target="#allele-sharing-among-related-individuals-and-identity-by-descent"><span class="header-section-number">2.2</span> Allele sharing among related individuals and Identity by Descent</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Allele and Genotype Frequencies</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In this chapter we will work through how the basics of Mendelian genetics play out at the population level in sexually reproducing organisms.</p>
+<div class="page-columns page-full"><p>Loci and alleles are the basic currency of population genetics–and indeed of genetics.  A locus may be an entire gene, or a single nucleotide base pair such as A-T. At each locus, there may be multiple genetic variants segregating in the population—these different genetic variants are known as <em>alleles</em>. If all individuals in the population carry the same allele, we say that the locus is <em>monomorphic</em>; at this locus there is no genetic variability in the population. If there are multiple alleles in the population at a locus, we say that this locus is <em>polymorphic</em> (this is sometimes referred to as a segregating site).</p><div class="no-row-height column-margin column-container"><span class="margin-aside">A <em>locus</em> (plural: <em>loci</em>) is a specific spot in the genome. The term allele was coined by <a href="https://en.wikipedia.org/wiki/Edith_Rebecca_Saunders">Edith Rebecca Saunders</a> and William Bateson in 1902 in their paper “The facts of heredity in the light of Mendel’s discovery” .</span></div></div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-dros" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Drosophila melanogaster holds a special place in the history of genetics and population genetics.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/alleles_genotypes/Drosophila_mel/Drosophila_mel_mutants.jpg" class="img-fluid figure-img" style="width:80.0%" alt="Drosophila melanogaster holds a special place in the history of genetics and population genetics.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: <em>Drosophila melanogaster</em> holds a special place in the history of genetics and population genetics. From Morgan’s fly room discovering the principals of genetics to Dobzhansky’s early work on natural genetic variation. <span class="attribution">Contributions to the genetics of <em>Drosophila melanogaster</em> (1919). Morgan T.H., Bridges C.B., Sturtevant A. H. Image from the <a href="https://www.biodiversitylibrary.org/page/805594#page/147/mode/1up">Biodiversity Heritage Library</a>. Contributed by MBLWHOI Library. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p><a href="#tbl-ADH" class="quarto-xref">Table&nbsp;<span>2.1</span></a> shows a small stretch of orthologous sequence for the ADH locus from samples from <em>Drosophila melanogaster</em>, <em>D. simulans</em>, and <em>D. yakuba</em>. <em>D. melanogaster</em> and <em>D. simulans</em> are sister species and <em>D. yakuba</em> is a close outgroup to the two. Each column represents a single haplotype from an individual (the individuals are diploid but were inbred so they’re homozygous for their haplotype). Only sites that differ among individuals of the three species are shown. Site <span class="math inline">\(834\)</span> is an example of a polymorphism; some <em>D. simulans</em> individuals carry a <span class="math inline">\(C\)</span> allele while others have a <span class="math inline">\(T\)</span>. <em>Fixed differences</em> are sites that differ between the species but are monomorphic within the species. Site <span class="math inline">\(781\)</span> is an example of a fixed difference between <em>D. melanogaster</em> and the other two species.</p>
+<p>We can also annotate the alleles and loci in various ways. For example, position <span class="math inline">\(781\)</span> is a non-synonymous fixed difference. We call the less common allele at a polymorphism the <em>minor allele</em> and the common allele the <em>major allele</em>, e.g.&nbsp;at site <span class="math inline">\(1068\)</span> the <span class="math inline">\(T\)</span> allele is the minor allele in <em>D. melanogaster</em>. We call the more evolutionarily recent of the two alleles the <em>derived allele</em> and the older of the two the <em>ancestral allele</em>. We infer that the <span class="math inline">\(T\)</span> allele at site 1068 is the derived allele because the <span class="math inline">\(C\)</span> is found in both other species, suggesting that the <span class="math inline">\(T\)</span> allele arose via a <span class="math inline">\(C \rightarrow T\)</span> mutation.</p>
+<div class="column-page-right">
+<div id="tbl-ADH" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ADH-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1: Variable sites in exons 2 and 3 of the ADH gene in <em>Drosophila</em> <span class="citation" data-cites="mcdonald:91">McDonald and Kreitman (<a href="references.html#ref-mcdonald:91" role="doc-biblioref">1991</a>)</span>. The first column (pos.) gives the position in the gene; exon 2 begins at position <span class="math inline">\(778\)</span> and we’ve truncated the dataset at site <span class="math inline">\(1175\)</span>. The second column gives the consensus nucleotide (con.), i.e.&nbsp;the most common base at that position; individuals with nucleotides that match the consensus are marked with a dash. The first columns of sequence (a-l) are from <em>D. melanogaster</em>; the next columns (a-f) give sequences from <em>D. simulans</em>, and the final set of columns (a-l ) from <em>D. yakuba</em>. The last column shows whether the difference is a non-synonymous (N) or synonymous (S) change.
+</figcaption>
+<div aria-describedby="tbl-ADH-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 3%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">pos.</th>
+<th style="text-align: center;">con.</th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">d</th>
+<th style="text-align: center;">e</th>
+<th style="text-align: center;">f</th>
+<th style="text-align: center;">g</th>
+<th style="text-align: center;">h</th>
+<th style="text-align: center;">i</th>
+<th style="text-align: center;">j</th>
+<th style="text-align: center;">k</th>
+<th style="text-align: center;">l</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">d</th>
+<th style="text-align: center;">e</th>
+<th style="text-align: center;">f</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">d</th>
+<th style="text-align: center;">e</th>
+<th style="text-align: center;">f</th>
+<th style="text-align: center;">g</th>
+<th style="text-align: center;">h</th>
+<th style="text-align: center;">i</th>
+<th style="text-align: center;">j</th>
+<th style="text-align: center;">k</th>
+<th style="text-align: center;">l</th>
+<th style="text-align: center;">NS/S</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">781</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">NS</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">789</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">808</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">NS</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">816</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">834</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">859</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">NS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">867</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">870</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">950</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">974</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">983</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1019</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1031</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1034</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1043</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1068</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1089</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">NS</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1101</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">NS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1127</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1131</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1160</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">S</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<div id="exr-allele-and-genotype-frequencies-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.1</strong></span> <strong>A)</strong> How many segregating sites does the sample from <em>D. simulans</em> have in the ADH gene?<br>
+<strong>B)</strong> How many fixed differences are there between <em>D. melanogaster</em> and <em>D. yakuba</em>?</p>
+</div>
+<section id="allele-frequencies" class="level2 page-columns page-full" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="allele-frequencies"><span class="header-section-number">2.1</span> Allele frequencies</h2>
+<p>Allele frequencies are a central unit of population genetics analysis, but from diploid individuals we only get to observe genotype counts. Our first task then is to calculate allele frequencies from genotype counts. Consider a diploid autosomal locus segregating for two alleles (<span class="math inline">\(A_1\)</span> and <span class="math inline">\(A_2\)</span>). We’ll use these arbitrary labels for our alleles, merely to keep this general. Let <span class="math inline">\(N_{11}\)</span> and <span class="math inline">\(N_{12}\)</span> be the number of <span class="math inline">\(A_1A_1\)</span> homozygotes and <span class="math inline">\(A_1A_2\)</span> heterozygotes, respectively. Moreover, let <span class="math inline">\(N\)</span> be the total number of diploid individuals in the population. We can then define the relative frequencies of <span class="math inline">\(A_1A_1\)</span> and <span class="math inline">\(A_1A_2\)</span> genotypes as <span class="math inline">\(f_{11} = N_{11}/N\)</span> and <span class="math inline">\(f_{12} = N_{12}/N\)</span>, respectively. The frequency of allele <span class="math inline">\(A_1\)</span> in the population is then given by</p>
+<p><span id="eq-allele-and-genotype-frequencies-1"><span class="math display">\[p = \frac{2 N_{11} + N_{12}}{2N} = f_{11} + \frac{1}{2} f_{12}. \tag{2.1}\]</span></span></p>
+<p>Note that this follows directly from how we count alleles given individuals’ genotypes, and holds independently of Hardy–Weinberg proportions and equilibrium (discussed below). The frequency of the alternate allele (<span class="math inline">\(A_2\)</span>) is then just <span class="math inline">\(q=1-p\)</span>.</p>
+<section id="measures-of-genetic-variability" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="measures-of-genetic-variability">Measures of genetic variability</h3>
+<p><strong>Nucleotide diversity (<span class="math inline">\(\pi\)</span>).</strong> One common measure of genetic diversity is the average number of single nucleotide differences between haplotypes chosen at random from a sample. This is called <em>nucleotide diversity</em> and is often denoted by <span class="math inline">\(\pi\)</span>. For example, we can calculate <span class="math inline">\(\pi\)</span> for our ADH locus from <a href="#tbl-ADH" class="quarto-xref">Table&nbsp;<span>2.1</span></a> above: we have 6 sequences from <em>D. simulans</em> (a-f), there’s a total of 15 ways of pairing these sequences, and</p>
+<p><span id="eq-allele-and-genotype-frequencies-2"><span class="math display">\[\pi=\frac{1}{15} \big( (2 + 1 + 1 + 1 + 0 ) + (3 + 3 + 3 + 2 ) +(0 + 0 + 1) + (0 + 1) + (1)  \big)=1.2\overline{6} \tag{2.2}\]</span></span></p>
+<p>where the first bracketed term gives the pairwise differences between a and b-f, the second bracketed term the differences between b and c-f and so on.</p>
+<p>Our <span class="math inline">\(\pi\)</span> measure will depend on the length of sequence it is calculated for. Therefore, <span class="math inline">\(\pi\)</span> is usually normalized by the length of sequence, to be a per site (or per base) measure. For example, our ADH sequence covers <span class="math inline">\(397\)</span>bp of DNA and so <span class="math inline">\(\pi = 1.2\overline{6}/397=0.0032\)</span> per site in <em>D. simulans</em> for this region. Note that we could also calculate <span class="math inline">\(\pi\)</span> per synonymous site (or non-synonymous). For synonymous site <span class="math inline">\(\pi\)</span>, we would count up number of synonymous differences between our pairs of sequences, and then divide by the total number of sites where a synonymous change could have occurred.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Technically we would need to divide by the total number of possible point mutations that would result in a synonymous change; this is because some mutational changes at a particular nucleotide will result in a non-synonymous or synonymous change depending on the base-pair change.</p></div></div><p><strong>Number of segregating sites.</strong> Another measure of genetic variability is the total number of sites that are polymorphic (segregating) in our sample. One issue is that the number of segregating sites will grow as we sequence more individuals (unlike <span class="math inline">\(\pi\)</span>). Later in the course, we’ll talk about how to standardize the number of segregating sites for the number of individuals sequenced (see <a href="genetic-drift.html#eq-watterson-theta" class="quarto-xref">Equation&nbsp;<span>4.34</span></a>).</p>
+<p><strong>The frequency spectrum.</strong> We also often want to compile information about the frequency of alleles across sites. We call alleles that are found once in a sample <em>singletons</em>, alleles that are found twice in a sample <em>d</em>oubletons, and so on. We count up the number of loci where an allele is found <span class="math inline">\(i\)</span> times out of <span class="math inline">\(n\)</span>, e.g.&nbsp;how many singletons are there in the sample, and this is called the <em>frequency spectrum</em>. We’ll want to do this in some consistent manner, such as calculating the frequency spectrum of the minor allele or the derived allele.</p>
+<div id="exr-allele-and-genotype-frequencies-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.2</strong></span> How many minor-allele singletons are there in <em>D. simulans</em> in the ADH region? [Defining minor allele just within <em>D. simulans</em>.]</p>
+</div>
+<p><strong>Levels of genetic variability across species.</strong> Two observations have puzzled population geneticists since the inception of molecular population genetics. The first is the relatively high level of genetic variation observed in most obligately sexual species. This first observation, in part, drove the development of the Neutral theory of molecular evolution, the idea that much of this molecular polymorphism may simply reflect a balance between genetic drift and mutation. The second observation is the relatively narrow range of polymorphism across species with vastly different census sizes. This observation represented a puzzle as the Neutral theory predicts that levels of genetic diversity should scale with population size. Much effort in theoretical and empirical population genetics has been devoted to trying to reconcile models with these various observations. We’ll return to discuss these ideas throughout our course.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-ciona" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Sea Squirt (Ciona intestinalis).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ciona-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/alleles_genotypes/Ciona_intestinalis/21016139168_2a8a57ded3_z.jpg" class="img-fluid figure-img" style="width:80.0%" alt="Sea Squirt (Ciona intestinalis).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ciona-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Sea Squirt (<em>Ciona intestinalis</em>). <span class="attribution">Einleitung in die vergleichende gehirnphysiologie und Vergleichende psychologie. Loeb, J. 1899. Image from the <a href="https://www.flickr.com/photos/internetarchivebookimages/21016139168/in/photolist-y28cZ3-xatkQu-w6Ki9C-wLcTJy-tLanR7-wKRZbh-w79C6u-toKNq1-u3ojn3-y8KsPP-xK7CZj-bu2usR-wLkfdM-wbkfau-x8n51o-ygpRAN-xMgGnk-towSTe-xQtix3-xMrift-wQoMNq-y51RxU-xPH4Cu-x4uB1v-xPGVFs-x4GN5a-y6rT8N-y6Aous-y7jV9n-yb6s66-x7F6Wh-y7upRp-xkz9VY-u1qerd-wYE4Cz-y5aH2Y-y7uJpM-xPSvFU-y6ALo7-xPZ3FM-xPHUef-yaa3dw-xPSKSC-w7A1aj-x4bgsH-tLas4q-x1e1dv-w7BkZB-xrQxFJ-y8acDr">Biodiversity Heritage Library</a>. Contributed by MBLWHOI Library. No known copyright restrictions.</span>
+</figcaption>
+</figure>
+</div></div><p>The first observations of molecular genetic diversity within natural populations were made from surveys of allozyme data, but we can revisit these general patterns with modern data. For example, <span class="citation" data-cites="leffler:12">Leffler et al. (<a href="references.html#ref-leffler:12" role="doc-biblioref">2012</a>)</span> compiled data on levels of within-population, autosomal nucleotide diversity (<span class="math inline">\(\pi\)</span>) for 167 species across 14 phyla from non-coding and synonymous sites (<a href="#fig-Leffer" class="quarto-xref">Figure&nbsp;<span>2.3</span></a>). The species with the lowest levels of <span class="math inline">\(\pi\)</span> in their survey was Lynx, with <span class="math inline">\(\pi = 0.01\%\)</span>, i.e.&nbsp;only <span class="math inline">\(1/10000\)</span> bases differed between two sequences. In contrast, some of the highest levels of diversity were found in <em>Ciona savignyi</em>, Sea Squirts, where a remarkable <span class="math inline">\(1/12\)</span> bases differ between pairs of sequences. This <span class="math inline">\(800\)</span>-fold range of diversity seems impressive, but census population sizes have a much larger range.</p>
+<div id="fig-Leffer" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" alt="Levels of autosomal nucleotide diversity for 167 species across 14 phyla.">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-Leffer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="images/Journal_figs/alleles_genotypes/Leffer_riddle/Leffer_riddle_diversity.png" class="img-fluid figure-img column-page-right" style="width:100.0%" alt="Levels of autosomal nucleotide diversity for 167 species across 14 phyla.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Leffer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Levels of autosomal nucleotide diversity for 167 species across 14 phyla. Figure 1 from <span class="citation" data-cites="leffler:12">Leffler et al. (<a href="references.html#ref-leffler:12" role="doc-biblioref">2012</a>)</span>, licensed under CC BY 4.0. Points are ranked by their <span class="math inline">\(\pi\)</span>, and coloured by their phylum. Note the log-scale.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Lynx" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Eurasian Lynx (Lynx lynx).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Lynx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/alleles_genotypes/Lynx/20731949565_8a065700af_z.jpg" class="img-fluid figure-img" style="width:80.0%" alt="Eurasian Lynx (Lynx lynx).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Lynx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: Eurasian Lynx (<em>Lynx lynx</em>). <span class="attribution">An introduction to the study of mammals living and extinct. Flower, W.H. and Lydekker, R. 1891. Image from the <a href="https://www.flickr.com/photos/internetarchivebookimages/20731949565/in/photolist-x5Jzv2-x6QVyp-xir9rH-wYHrQD-wPn1sP-w9PsqY-xDcqri-sMcQoB-trrkVd-x6Nx1H-wPea7N-sM28N9-tJ3zsp-xneVdx-wGJRtQ-xnfHZ8-wPfga7-xCUPrN-x7kXDV-xmAb9E-xm3x4k-xBoSKb-wGTgyB-xBoSbf-wGGvzA-xmzYTJ-oeKJcH-xA1Ffr-xA1Eji-xqWTQZ-xF4Lru-oxJfrH-x7ojSn-xra8zP-wGGibY-xgb21y-xY1jH9-xY1iyf-wGHxTS-wGQEoR-xmtPQh-x8uFKK-xdTkoU-wPggQf-wPfvHN-wPfc27-w9YnGF-wPeauS-wPiVxK-w6aiSi">Biodiversity Heritage Library</a>. Contributed by Cornell University Library. No known copyright restrictions.</span>
+</figcaption>
+</figure>
+</div></div></section>
+<section id="hardyweinberg-proportions" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="hardyweinberg-proportions">Hardy–Weinberg proportions</h3>
+<p>Imagine a population mating at random with respect to genotypes, i.e.&nbsp;no inbreeding, no assortative mating, no population structure, and no sex differences in allele frequencies. The frequency of allele <span class="math inline">\(A_1\)</span> in the population at the time of reproduction is <span class="math inline">\(p\)</span>. An <span class="math inline">\(A_1A_1\)</span> genotype is made by reaching out into our population and independently drawing two <span class="math inline">\(A_1\)</span> allele gametes to form a zygote. Therefore, the probability that an individual is an <span class="math inline">\(A_1A_1\)</span> homozygote is <span class="math inline">\(p^2\)</span>. This probability is also the expected frequencies of the <span class="math inline">\(A_1A_1\)</span> homozygote in the population. The expected frequency of the three possible genotypes are</p>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">Throughout this chapter we’ll be making use of the basic rules of probability to find the probabilities of combinations of events, e.g.&nbsp;the alleles found in an individual, see <a href="math-background.html#sec-rules-prob" class="quarto-xref"><span>Section A.2.2</span></a> for a refresher.</span></div></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(f_{11}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f_{12}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f_{22}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(p^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2pq\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(q^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>i.e.&nbsp;their Hardy-Weinberg expectations <span class="citation" data-cites="hardy1908mendelian weinberg1908ber">(<a href="references.html#ref-hardy1908mendelian" role="doc-biblioref">Hardy et al. 1908</a>; <a href="references.html#ref-weinberg1908ber" role="doc-biblioref">Weinberg 1908</a>)</span>. Note that we only need to assume random mating with respect to our focal allele in order for these expected frequencies to hold in the zygotes forming the next generation. Evolutionary forces, such as selection, change allele frequencies within generations, but do not change this expectation for new zygotes, as long as <span class="math inline">\(p\)</span> is the frequency of the <span class="math inline">\(A_1\)</span> allele in the population at the time when gametes fuse. We only need the assumptions of no migration, selection, and mutation in order for these Hardy-Weinberg expectations of genotypes to represent a long term equilibrium.</p>
+<div id="exr-allele-and-genotype-frequencies-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.3</strong></span> On the coastal islands of British Columbia there is a subspecies of black bear (<em>Ursus americanus kermodei</em>, Kermode’s bear). Many members of this black bear subspecies are white; they’re sometimes called spirit bears. These bears aren’t hybrids with polar bears, nor are they albinos. They are homozygotes for a recessive change at the MC1R gene. Individuals who are <span class="math inline">\(GG\)</span> at this SNP are white, while <span class="math inline">\(AA\)</span> and <span class="math inline">\(AG\)</span> individuals are black.</p>
+<p>Below are the genotype counts for the MC1R polymorphism in a sample of bears from British Columbia’s island populations from <span class="citation" data-cites="RITLAND:01">Ritland et al. (<a href="references.html#ref-RITLAND:01" role="doc-biblioref">2001</a>)</span>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(AA\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(AG\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(GG\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">21</td>
+</tr>
+</tbody>
+</table>
+<p>What are the expected frequencies of the three genotypes under HW?</p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Kermodes-bear" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Kermode’s bear (Ursus americanus kermodei).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Kermodes-bear-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/alleles_genotypes/Kermode_bear/EIiK2dsWoAAmUOf.jpeg" class="img-fluid figure-img" style="width:100.0%" alt="Kermode’s bear (Ursus americanus kermodei).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Kermodes-bear-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.5: Kermode’s bear (<em>Ursus americanus kermodei</em>). It’s possible that this morph is favoured as the salmon these bears eat have a harder time seeing the light morph <span class="citation" data-cites="klinka2009adaptive">(<a href="references.html#ref-klinka2009adaptive" role="doc-biblioref">Klinka and Reimchen 2009</a>)</span>. The adaptive value of tasting like cinnamon is unknown. <span class="attribution">Field book of North American mammals; descriptions of every mammal known north of the Rio Grande. Anthony, (1928) H. E. Image from the <a href="https://www.biodiversitylibrary.org/item/38166#page/115/mode/1up">Biodiversity Heritage Library</a>. Contributed by MBLWHOI Library. No known copyright restrictions.</span>
+</figcaption>
+</figure>
+</div></div><p>See <a href="#fig-HWE-CEU-YRI" class="quarto-xref">Figure&nbsp;<span>2.6</span></a> for a nice empirical demonstration of Hardy–Weinberg proportions. The mean frequency of each genotype closely matches its HW expectations, and much of the scatter of the dots around the expected line is due to our small sample size (<span class="math inline">\(\sim
+60\)</span> individuals). While HW often seems like a silly model, it often holds remarkably well within populations. This is because individuals don’t mate at random, but they do mate at random with respect to their genotype at most of the loci in the genome.</p>
+<div id="exr-allele-and-genotype-frequencies-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.4</strong></span> You are investigating a locus with three alleles, A, B, and C, with allele frequencies <span class="math inline">\(p_A\)</span>, <span class="math inline">\(p_B\)</span>, and <span class="math inline">\(p_C\)</span>. What fraction of the population is expected to be homozygotes under Hardy–Weinberg?</p>
+</div>
+<p>Microsatellites are regions of the genome where individuals vary for the number of copies of some short DNA repeat that they carry. These regions are often highly variable across individuals, making them a suitable way to identify individuals from a DNA sample. This so-called DNA fingerprinting has a range of applications from establishing paternity and identifying human remains to matching individuals to DNA samples from a crime scene. The FBI make use of the CODIS database<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. The CODIS database contains the genotypes of over 13 million people, most of whom have been convicted of a crime. Most of the profiles record genotypes at 13 microsatellite loci that are tetranucleotide repeats (since 2017, 20 sites have been genotyped).</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;CODIS: Combined DNA Index System</p></div></div><p>The allele counts for two loci (D16S539 and TH01) are shown in table <a href="#tbl-CODIS-1" class="quarto-xref"><span>2.2</span></a> and <a href="#tbl-CODIS-2" class="quarto-xref"><span>2.3</span></a> for a sample of 155 people of European ancestry. You can assume these two loci are on different chromosomes.</p>
+<div id="tbl-CODIS-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-CODIS-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.2: Data for 155 Europeans at the D16S539 microsatellite from CODIS from <span class="citation" data-cites="algee:16">Algee-Hewitt et al. (<a href="references.html#ref-algee:16" role="doc-biblioref">2016</a>)</span>. The top row gives the number of tetranucleotide repeats for each allele, the bottom row gives the sample counts.
+</figcaption>
+<div aria-describedby="tbl-CODIS-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">allele name</th>
+<th style="text-align: center;">80</th>
+<th style="text-align: center;">90</th>
+<th style="text-align: center;">100</th>
+<th style="text-align: center;">110</th>
+<th style="text-align: center;">120</th>
+<th style="text-align: center;">121</th>
+<th style="text-align: center;">130</th>
+<th style="text-align: center;">140</th>
+<th style="text-align: center;">150</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">allele count</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">97</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><span id="tbl-CODIS-1"></span></p>
+<div id="tbl-CODIS-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-CODIS-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.3: Same as <a href="#tbl-CODIS-1" class="quarto-xref"><span>2.2</span></a> but for the TH01 microsatellite.
+</figcaption>
+<div aria-describedby="tbl-CODIS-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">allele name</th>
+<th style="text-align: center;">60</th>
+<th style="text-align: center;">70</th>
+<th style="text-align: center;">80</th>
+<th style="text-align: center;">90</th>
+<th style="text-align: center;">93</th>
+<th style="text-align: center;">100</th>
+<th style="text-align: center;">110</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">allele counts</td>
+<td style="text-align: center;">84</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">67</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><span id="tbl-CODIS-2"></span></p>
+<div id="exr-CODIS" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.5</strong></span> You extract a DNA sample from a crime scene. The genotype is 100/80 at the D16S539 locus and 70/93 at TH01.</p>
+<p><strong>A)</strong> You have a suspect in custody. Assuming this suspect is innocent and of European ancestry, what is the probability that their genotype would match this profile by chance (a false-match probability)?<br>
+<strong>B)</strong> The FBI uses <span class="math inline">\(\geq\)</span> 13 markers. Why is this higher number necessary to make the match statement convincing evidence in court?<br>
+<strong>C)</strong> An early case that triggered debate among forensic geneticists was a crime among the Abenaki, a Native American community in Vermont <span class="citation" data-cites="lewontin:94">(see <a href="references.html#ref-lewontin:94" role="doc-biblioref">Lewontin 1994</a> for discussion)</span>. There was a DNA sample from the crime scene, and the perpetrator was thought likely to be a member of the Abenaki community. Given that allele frequencies vary among populations, why would people be concerned about using data from a non-Abenaki population to compute a false match probability?</p>
+</div>
+<div id="fig-HWE-CEU-YRI" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Demonstrating Hardy–Weinberg proportions using 10,000 SNPs from the HapMap European (CEU) and African (YRI) populations.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-HWE-CEU-YRI-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/CEU_YRI_separately_HWE.png" class="img-fluid figure-img" style="width:100.0%" alt="Demonstrating Hardy–Weinberg proportions using 10,000 SNPs from the HapMap European (CEU) and African (YRI) populations.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-HWE-CEU-YRI-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.6: Demonstrating Hardy–Weinberg proportions using 10,000 SNPs from the HapMap European (CEU) and African (YRI) populations. Within each of these populations the allele frequency against the frequency of the 3 genotypes; each SNP is represented by 3 different coloured points. The solid lines show the mean genotype frequency. The dashed lines show the predicted genotype frequency from Hardy–Weinberg equilibrium. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/HWE_exercise/HWE_HAPMAP.R">here</a>. Blog post on figure <a href="http://gcbias.org/2011/10/13/population-genetics-course-resources-Hardy--Weinberg-eq/">here</a>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="assortative-mating" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="assortative-mating">Assortative mating</h3>
+<p>One major violation of the assumptions of Hardy Weinberg is non-random mating with respect to the genotype at a locus. One way that individuals can mate non-randomly is if individuals choose to mate based on a phenotype determined by (in part) the genotype at a locus. This non-random mating can be between: 1) individuals with similar phenotype, so called positive assortative mating or 2) individuals with dissimilar phenotypes, negative assortative mating or disassortative mating. Here we’ll briefly discuss a couple of real examples of assortative mating to make sure we’re all on the same page. We’ll encounter other forms of non-random mating, due to inbreeding and population structure, in the next few chapters.</p>
+<div id="fig-Heliconius-Merrill-assort" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Wing pattern phenotypes of top, H.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Heliconius-Merrill-assort-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/alleles_genotypes/Heliconius_Merrill_assort_mating/labeled_trimmed_Heliconius_Merrill_assort_mating.png" class="img-fluid figure-img" style="width:100.0%" alt="Wing pattern phenotypes of top, H.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Heliconius-Merrill-assort-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.7: Wing pattern phenotypes of top, <em>H. cydno chioneus</em> (left), <em>H. melpomene rosina</em> (right), their nonmimetic first-generation hybrid (center); and bottom, their sympatric comimics H. sapho sapho (left) and H. erato demophoon (right). Figure and caption modified from <span class="citation" data-cites="merrill2019genetic">Merrill et al. (<a href="references.html#ref-merrill2019genetic" role="doc-biblioref">2019</a>)</span>, licensed under CC BY 4.0.
+</figcaption>
+</figure>
+</div>
+<p>Positive assortative mating on the basis of a phenotype can create an excess of homozygotes. Heliconius butterflies are famous for their mimicry, where poisonous pairs of distantly related species mimic each others’ bright colour patterns and so share the benefits of being avoided by visual predators (Müllerian mimics). <em>H. melpomene rosina</em> and <em>H. cydno chioneus</em> are closely related species that co-occur in central Panama, but mimic different other co-occuring species (<a href="#fig-Heliconius-Merrill-assort" class="quarto-xref">Figure&nbsp;<span>2.7</span></a> ). These differences in colouration pattern are due to a few loci with large phenotypic effects. The two species can hybridize and produce viable F1 hybrids. These F1 hybrids are heterozygotes at the colour loci, and their intermediate appearance means that they’re poor mimics and so are quickly eaten by predators. However, these heterzygote (F1) hybrids are very rare in nature <span class="math inline">\(&lt; {}^{1}\!/\!{}_{1000}\)</span>, as the parental species show strong positive assortatively mating based on colour pattern, based on genetic differences in mate preference <span class="citation" data-cites="merrill2019genetic">Merrill et al. (<a href="references.html#ref-merrill2019genetic" role="doc-biblioref">2019</a>)</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-White-throated-sparrows" class="quarto-float quarto-figure quarto-figure-center anchored" alt="White-throated sparrows (Zonotrichia albicollis) with a white morph (bottom, male) and tan morph (top, female).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-White-throated-sparrows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/alleles_genotypes/White_throated_sparrow/white_throated_sparrow.jpg" class="img-fluid figure-img" style="width:100.0%" alt="White-throated sparrows (Zonotrichia albicollis) with a white morph (bottom, male) and tan morph (top, female).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-White-throated-sparrows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.8: White-throated sparrows (<em>Zonotrichia albicollis</em>) with a white morph (bottom, male) and tan morph (top, female). The difference between the morphs wasn’t fully appreciated until the 1960’s <span class="citation" data-cites="lowther1961polymorphism">(<a href="references.html#ref-lowther1961polymorphism" role="doc-biblioref">Lowther 1961</a>)</span>, previously birders thought the tan morphs were just young or females individuals (so Audubon’s male and female labels may well by wrong). There are also a number of behavioural differences, with both sexes of the white-striped morph invest more in territorial defense and the tan-striped morphs more parental care. From John James Audubon’s Birds of America (1827). Image from <a href="https://www.audubon.org/birds-of-america/white-throated-sparrow">Audubon.org</a>, public domain.
+</figcaption>
+</figure>
+</div></div><p>Disassortative mating, mating of unlike individuals, can lead to an excess of heterozygotes and a deficit of homozygotes. One example of very strong disassortative mating is offered by white-throated sparrows (<em>Zonotrichia albicollis</em>). In white-throated sparrows, there is a white-striped and a tan-striped morph, with female and male white-striped morphs have a much brighter white stripe and throat. There is very strong disassortative mating in this system, with 1099 out of 1116 nesting pairs consisting of one tan- and one white-striped morph and only 17 of these nesting pairs being different morphs <span class="citation" data-cites="tuttle2016divergence">(<a href="references.html#ref-tuttle2016divergence" role="doc-biblioref">Tuttle et al. 2016</a>)</span>. The difference between these morphs has a simple inheritance pattern, with white being due to a single dominant allele (called 2m) and tan colour from a recessive allele called 2. Thus strong disassortative mating has a strong effect on the genotype frequencies:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Tan</th>
+<th style="text-align: center;">White</th>
+<th style="text-align: center;">(Super)White</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2/2</td>
+<td style="text-align: center;">2/2m</td>
+<td style="text-align: center;">2m/2m</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">978</td>
+<td style="text-align: center;">1011</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<p>There are almost no 2m homozygotes (so called Super white individuals) despite the 2m allele being common in the population <span class="citation" data-cites="tuttle2016divergence">(data from <a href="references.html#ref-tuttle2016divergence" role="doc-biblioref">Tuttle et al. 2016</a> table S1)</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-cauliflower-mushroom" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cauliflower mushrooms (Sparassis crispa) parasitize tree roots and form these amazing, edible fruiting bodies, which can weigh in at up to 30lb and apparently taste like noodles.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cauliflower-mushroom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/alleles_genotypes/Sparassis_crispa/Sparassis_crispa_cauliflower_mushroom.png" class="img-fluid figure-img" style="width:100.0%" alt="Cauliflower mushrooms (Sparassis crispa) parasitize tree roots and form these amazing, edible fruiting bodies, which can weigh in at up to 30lb and apparently taste like noodles.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cauliflower-mushroom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.9: Cauliflower mushrooms (<em>Sparassis crispa</em>) parasitize tree roots and form these amazing, edible fruiting bodies, which can weigh in at up to 30lb and apparently taste like noodles. In a collection of 18 fruiting bodies from a <em>Sparassis</em> population, all individuals were heterozygotes for mating type and 17 different mating types were genetically identified <span class="citation" data-cites="james2015mushrooms martin1978decay">(<a href="references.html#ref-martin1978decay" role="doc-biblioref">Martin and Gilbertson 1978</a>; <a href="references.html#ref-james2015mushrooms" role="doc-biblioref">James 2015</a>)</span>. <span class="attribution">Atlas champignons comestibles et vénéneux (1891 ). Dufour, L Image from the <a href="https://www.biodiversitylibrary.org/page/3270858#page/225/mode/1up">Biodiversity Heritage Library</a>. Contributed by New York Botanical Garden. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p>Another important example of disassortative mating are mating type systems, which are present in many fungi, algae, and protozoa. Gametes of the same species can only fuse to form a zygote if they differ in mating type. The mating type of gametes is genetically controled by a mating type locus, and so individuals are nearly always heterozygous at this locus. In some groups of organisms, there are just two different alleles, in other clades these loci have tens or hundreds of alleles.</p>
+</section>
+</section>
+<section id="allele-sharing-among-related-individuals-and-identity-by-descent" class="level2 page-columns page-full" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="allele-sharing-among-related-individuals-and-identity-by-descent"><span class="header-section-number">2.2</span> Allele sharing among related individuals and Identity by Descent</h2>
+<p>All of the individuals in a population are related to each other by a giant pedigree (family tree). For most pairs of individuals in a population these relationships are very distant (e.g.&nbsp;distant cousins), while some individuals will be more closely related (e.g.&nbsp;sibling/first cousins). All individuals are related to one another by varying levels of relatedness, or <em>kinship</em>. Related individuals can share alleles that have both descended from the shared common ancestor. To be shared, these alleles must be inherited through all meioses connecting the two individuals (e.g.&nbsp;surviving the <span class="math inline">\({}^{1}\!/\!{}_{2}\)</span> probability of segregation each meiosis). As closer relatives are separated by fewer meioses, closer relatives share more alleles. In <a href="#fig-IBD-cousins-chr-cartoon" class="quarto-xref">Figure&nbsp;<span>2.10</span></a> we show the sharing of chromosomal regions between two cousins. As we’ll see, many population and quantitative genetic concepts rely on how closely related individuals are, and thus we need some way to quantify the degree of kinship among individuals.</p>
+<div id="fig-IBD-cousins-chr-cartoon" class="quarto-float quarto-figure quarto-figure-center anchored" alt="First cousins sharing a stretch of chromosome identical by descent.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-IBD-cousins-chr-cartoon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/Cousins_IBD_chromo_cartoon.png" class="img-fluid figure-img" style="width:75.0%" alt="First cousins sharing a stretch of chromosome identical by descent.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-IBD-cousins-chr-cartoon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.10: First cousins sharing a stretch of chromosome identical by descent. The different grandparental diploid chromosomes are coloured so we can track them and recombinations between them across the generations. Notice that the identity by descent between the cousins persists for a long stretch of chromosome due to the limited number of generations for recombination. The squares represent males and circles females.
+</figcaption>
+</figure>
+</div>
+<p>We will define two alleles to be identical by descent (IBD) if they are identical due to transmission from a common ancestor in the past few generations<span class="citation" data-cites="cotterman:40 malecot:48">(<a href="references.html#ref-cotterman:40" role="doc-biblioref">Cotterman 1940</a>; <a href="references.html#ref-malecot:48" role="doc-biblioref">Malécot 1948</a>)</span>. For the moment, we ignore mutation, and we will be more precise about what we mean by ‘past few generations’ later on. For example, parent and child share exactly one allele identical by descent at a locus, assuming that the two parents of the child are randomly mated individuals from the population. In <a href="#fig-IBD-cousins-cartoon" class="quarto-xref">Figure&nbsp;<span>2.16</span></a>, I show a pedigree demonstrating some configurations of IBD.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-IBD-0-1-2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A pair of diploid individuals (i and j) sharing 0, 1, or 2 alleles IBD where lines show the sharing of alleles by descent (e.g.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-IBD-0-1-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/sharing_relatives/IBD_0_1_2.png" class="img-fluid figure-img" style="width:75.0%" alt="A pair of diploid individuals (i and j) sharing 0, 1, or 2 alleles IBD where lines show the sharing of alleles by descent (e.g.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-IBD-0-1-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.11: A pair of diploid individuals (i and j) sharing 0, 1, or 2 alleles IBD where lines show the sharing of alleles by descent (e.g.&nbsp;from a shared ancestor).
+</figcaption>
+</figure>
+</div></div><div class="page-columns page-full"><p> One summary of how related two individuals (let’s call them <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>) are is the probability that our pair of individuals share 0, 1, or 2 alleles identical by descent (see <a href="#fig-IBD-0-1-2" class="quarto-xref">Figure&nbsp;<span>2.11</span></a>). We denote these identity-by-descent probabilities by <span class="math inline">\(r_0\)</span>, <span class="math inline">\(r_1\)</span>, and <span class="math inline">\(r_2\)</span> respectively. See <a href="#tbl-IBDprobs" class="quarto-xref">Table&nbsp;<span>2.4</span></a> for some examples. We can also interpret these probabilities as genome-wide averages. For example, on average, at a quarter of all their autosomal loci full-sibs share zero alleles identical by descent.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">Here we’ll focus on IBD of outbred individuals. Dealing with sharing between inbred individuals requires <span class="math inline">\(6\)</span> more identity-by-descent <span class="math inline">\(r\)</span> coefficients, which honestly makes my head spin.</span></div></div>
+<p>One summary of relatedness that will be important is the probability that two alleles (I &amp; J) picked at random, one from each of the two different individuals <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, are identical by descent (<span class="math inline">\(P(\text{I\&amp;J IBD})\)</span>). We call this quantity the <em>coefficient of kinship</em> of individuals <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, and denote it by <span class="math inline">\(F_{ij}\)</span>. It is calculated as</p>
+<p><span id="eq-coeffkinship-step"><span class="math display">\[\begin{aligned}F_{ij} &amp;= \mathbb{P}(\text{I\&amp;J IBD}) \\ &amp;= \mathbb{P}(\text{I\&amp;J IBD} |~ \text{i\&amp;j 0 IBD})\, \mathbb{P}(\text{i\&amp;j 0 IBD}) \\ &amp;\quad + \mathbb{P}(\text{I\&amp;J IBD} |~ \text{i\&amp;j 1 IBD})\, \mathbb{P}(\text{i\&amp;j 1 IBD}) \\ &amp;\quad + \mathbb{P}(\text{I\&amp;J IBD} |~ \text{i\&amp;j 2 IBD})\, \mathbb{P}(\text{i\&amp;j 2 IBD})\end{aligned} \tag{2.3}\]</span></span></p>
+<p><span id="eq-coeffkinship"><span class="math display">\[F_{ij} = 0 \times r_0 + \frac{1}{4} r_1 + \frac{1}{2} r_2. \tag{2.4}\]</span></span></p>
+<p>In the above step, <a href="#eq-coeffkinship-step" class="quarto-xref">Equation&nbsp;<span>2.3</span></a>, we’re summing the conditional probability of alleles <span class="math inline">\(I\)</span> &amp; <span class="math inline">\(J\)</span> being IBD over whether our individuals <span class="math inline">\(i\)</span> &amp; <span class="math inline">\(j\)</span> share <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, or <span class="math inline">\(2\)</span> alleles IBD, an example of using the Law of Total Probability (see Appendix <a href="math-background.html#eq-law-tot-prob" class="quarto-xref">Equation&nbsp;<span>A.11</span></a>). We’ve then, in <a href="#eq-coeffkinship" class="quarto-xref">Equation&nbsp;<span>2.4</span></a>, used the fact that we can calculate our condition probabilities of I &amp; J being IBD using the rules of Mendelian transmision. Consider the probability <span class="math inline">\(\mathbb{P}(\text{I\&amp;J IBD} |~ \text{i\&amp;j  1 IBD})\)</span>, i.e.&nbsp;that our pair of alleles (<span class="math inline">\(I\)</span> &amp; <span class="math inline">\(J\)</span>) drawn from individuals <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> are IBD given that <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> share one allele IBD, this is a <span class="math inline">\({}^{1}\!/\!{}_{4}\)</span> as we need to draw the allele that is IBD from both <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, i.e.&nbsp;drawing both black alleles in the middle panel of <a href="#fig-IBD-0-1-2" class="quarto-xref">Figure&nbsp;<span>2.11</span></a>, which happens with probability <span class="math inline">\({}^{1}\!/\!{}_{2} \times {}^{1}\!/\!{}_{2}\)</span>. The coefficient of kinship will appear multiple times, in both our discussion of inbreeding and in the context of phenotypic resemblance between relatives.</p>
+<div class="column-page-right">
+<div id="tbl-IBDprobs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-IBDprobs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.4: Probability that two individuals (<span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>) of a given relationship share 0, 1, or 2 alleles identical by descent on the autosomes. <span class="math inline">\(^{*}\)</span>Assuming that our individuals are outbred and that this the only close relationship the pair shares.
+</figcaption>
+<div aria-describedby="tbl-IBDprobs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 16%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Relationship (i,j)<span class="math inline">\(^{*}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\mathbb{P}(\text{i\&amp;j  0 IBD})\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\mathbb{P}(\text{i\&amp;j  1 IBD})\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(P(\text{i\&amp;j  2 IBD})\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\mathbb{P}(\text{I\&amp;J IBD} )\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Relationship (i,j)<span class="math inline">\(^{*}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(r_0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(r_1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(r_2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(F_{ij}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">parent–child</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{4}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">full siblings</td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{4}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{4}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{4}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Monozygotic twins</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{2}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(1^{st}\)</span> cousins</td>
+<td style="text-align: center;"><span class="math inline">\({}^{3}\!/\!{}_{4}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{4}\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{16}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<div id="exr-allele-and-genotype-frequencies-6" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.6</strong></span> What are <span class="math inline">\(r_0\)</span>, <span class="math inline">\(r_1\)</span>, and <span class="math inline">\(r_2\)</span> for <span class="math inline">\({}^{1}\!/\!{}_{2}\)</span> sibs? (<span class="math inline">\({}^{1}\!/\!{}_{2}\)</span> sibs share one parent but not the other).</p>
+</div>
+<div id="exr-allele-and-genotype-frequencies-7" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.7</strong></span> Explain in words why <span class="math inline">\(\mathbb{P}(\text{I\&amp;J IBD} |~ \text{i\&amp;j  2 IBD}) = {}^{1}\!/\!{}_{2}\)</span>.</p>
+</div>
+<p><strong>Genotypic sharing between pairs of individuals.</strong> Our <span class="math inline">\(r\)</span> coefficients are going to have various uses. For example, they allow us to calculate the probability of the genotypes of a pair of relatives. Consider a biallelic locus where allele <span class="math inline">\(A_1\)</span> is at frequency <span class="math inline">\(p\)</span>, and two individuals who have IBD allele sharing probabilities <span class="math inline">\(r_0\)</span>, <span class="math inline">\(r_1\)</span>, <span class="math inline">\(r_2\)</span>. What is the overall probability that these two individuals are both homozygous for allele 1? Well that’s</p>
+<p><span class="math display">\[\begin{aligned}
+  \mathbb{P}(\textrm{both } A_1 A_1) = &amp; \mathbb{P}(\textrm{both } A_1 A_1 | \text{0 alleles IBD}) \mathbb{P}(\text{0 alleles IBD})  \\
+  &amp; + \mathbb{P}(\textrm{both } A_1 A_1 | \text{1 allele IBD}) \mathbb{P}(\text{1 allele IBD})  \\
+  &amp;+ \mathbb{P}(\textrm{both } A_1 A_1 | \text{2 alleles IBD}) \mathbb{P}(\text{2 alleles IBD})
+\end{aligned}\]</span></p>
+<p>Or, in our <span class="math inline">\(r_0\)</span>, <span class="math inline">\(r_1\)</span>, <span class="math inline">\(r_2\)</span> notation:</p>
+<p><span id="eq-initial-relly-IBD-calc"><span class="math display">\[\begin{aligned}
+  \mathbb{P}(\textrm{both } A_1 A_1) = &amp; \mathbb{P}(\textrm{both } A_1 A_1 | \text{0 alleles IBD}) r_0  \\
+  &amp; + \mathbb{P}(\textrm{both } A_1 A_1 |
+  \text{1 alleles IBD}) r_1  \\
+  &amp; + \mathbb{P}(\textrm{both } A_1 A_1 | \text{2 alleles IBD}) r_2
+\end{aligned} \tag{2.5}\]</span></span></p>
+<p>If our pair of relatives share <span class="math inline">\(0\)</span> alleles IBD, then the probability that they are both homozygous is <span class="math inline">\(\mathbb{P}(\textrm{both } A_1 A_1 |
+\text{0 alleles IBD}) =p^2 \times p^2\)</span>, as all four alleles represent independent draws from the population. If they share <span class="math inline">\(1\)</span> allele IBD, then the shared allele is of type <span class="math inline">\(A_1\)</span> with probability <span class="math inline">\(p\)</span>, and then the other non-IBD allele, in both relatives, also needs to be <span class="math inline">\(A_1\)</span> which happens with probability <span class="math inline">\(p^2\)</span>, so <span class="math inline">\(\mathbb{P}(\textrm{both } A_1 A_1 |
+\text{1 alleles IBD})=p \times p^2\)</span>. Finally, our pair of relatives can share two alleles IBD, in which case <span class="math inline">\(\mathbb{P}(\textrm{both } A_1 A_1 | \text{2 alleles IBD})
+= p^2\)</span>, because if one of our individuals is homozygous for the <span class="math inline">\(A_1\)</span> allele, both individuals will be. Putting this all together our <a href="#eq-initial-relly-IBD-calc" class="quarto-xref">Equation&nbsp;<span>2.5</span></a> becomes</p>
+<p><span id="eq-IBD-relly-calc"><span class="math display">\[\mathbb{P}(\textrm{both } A_1 A_1) = p^4 r_0 + p^3 r_1 + p^2 r_2 \tag{2.6}\]</span></span></p>
+<p>Note that for specific cases we could also calculate this by summing over all the possible genotypes their shared ancestor(s) had; however, that would be much more involved and not as general as the form we have derived here.</p>
+<p>We can write out terms like <a href="#eq-IBD-relly-calc" class="quarto-xref">Equation&nbsp;<span>2.6</span></a> for all of the possible configurations of genotype sharing/non-sharing between a pair of individuals. Based on this we can write down the expected number of polymorphic sites where our individuals are observed to share 0, 1, or 2 alleles.</p>
+<div id="exr-allele-and-genotype-frequencies-8" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.8 (Trickier question.)</strong></span> The genotype of our suspect in <a href="#exr-CODIS" class="quarto-xref">Question&nbsp;<span>2.5</span></a> turns out to be 100/80 for D16S539 and 70/80 at TH01. The suspect is not a match to the DNA from the crime scene; however, they could be a sibling.</p>
+<p>Calculate the joint probability of observing the genotype from the crime and our suspect:<br>
+<strong>A)</strong> Assuming that they share no close relationship.</p>
+<p><strong>B)</strong> Assuming that they are full sibs.</p>
+<p><strong>C)</strong> Briefly explain your findings.</p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-FSJ" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Florida Scrub-Jays (Aphelocoma coerulescens).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FSJ-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/alleles_genotypes/Florida_scrub_jay/8576533889_3a131ffc4c_z.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Florida Scrub-Jays (Aphelocoma coerulescens).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FSJ-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.12: Florida Scrub-Jays (<em>Aphelocoma coerulescens</em>). <span class="attribution">The birds of America : from drawings made in the United States and their territories. 1880. Audubon J.J. Image from the <a href="https://www.biodiversitylibrary.org/page/40447048#page/169/mode/1up">Biodiversity Heritage Library</a>. Contributed by Smithsonian Libraries. Licensed under CC BY-2.0.</span>
+</figcaption>
+</figure>
+</div></div><p>There’s a variety of ways to estimate the relationships among individuals using genetic data. An example of using allele sharing to identify relatives is offered by the work of Nancy Chen <span class="citation" data-cites="chen:16 Aguillon:17">(in collaboration with Stepfanie Aguillon, see <a href="references.html#ref-chen:16" role="doc-biblioref">Chen et al. 2016</a>; <a href="references.html#ref-Aguillon:17" role="doc-biblioref">Aguillon 2017</a>)</span>. <span class="citation" data-cites="chen:16">Chen et al. (<a href="references.html#ref-chen:16" role="doc-biblioref">2016</a>)</span> has collected genotyping data from thousands of Florida Scrub Jays at over ten thousand loci. These Jays live at the Archbold field site, and have been carefully monitored for many decades allowing the pedigree of many of the birds to be known. Using these data, she estimates allele frequencies at each locus. Then by equating the observed number of times that a pair of individuals share <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, or <span class="math inline">\(2\)</span> alleles to the theoretical expectation, she estimates the probability of <span class="math inline">\(r_0\)</span>, <span class="math inline">\(r_1\)</span>, and <span class="math inline">\(r_2\)</span> for each pair of birds. A plot of these are shown in <a href="#fig-FSJ-IBD" class="quarto-xref">Figure&nbsp;<span>2.13</span></a>, showing how well the estimates match those known from the pedigree.</p>
+<div id="fig-FSJ-IBD" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Estimated coefficient of kinship from Florida Scrub Jays.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FSJ-IBD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/FSJ_IBD.jpg" class="img-fluid figure-img" style="width:75.0%" alt="Estimated coefficient of kinship from Florida Scrub Jays.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FSJ-IBD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.13: Estimated coefficient of kinship from Florida Scrub Jays. Each point is a pair of individuals, plotted by their estimated IBD (<span class="math inline">\(r_1\)</span> and <span class="math inline">\(r_2\)</span>) from their genetic data. The points are coloured by their known pedigree relationships. Note that most pairs have low kinship, and no recent genealogical relationship, and so appear as black points in the lower left corner. Thanks to Nancy Chen for supplying the data. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/FSJ_IBD/FSJ_IBD_plotting.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p><strong>Sharing of genomic blocks among relatives.</strong></p>
+<div id="fig-first-cousin-IBD" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A simulation of sharing between first cousins.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-first-cousin-IBD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/sharing_relatives/First_cousin_overlap.png" class="img-fluid figure-img" style="width:100.0%" alt="A simulation of sharing between first cousins.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-first-cousin-IBD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.14: A simulation of sharing between first cousins. The regions of your grandmother’s 22 autosomes that you inherited are coloured red, those that your cousins inherited are coloured blue. In the third panel we show the overlapping genomic regions in purple, these regions will be IBD in you and your cousin. If you are full first cousins, you will also have shared genomic regions from your shared grandfather, not shown here. Details about how we made these simulations <a href="https://gcbias.org/2013/12/02/how-many-genomic-blocks-do-you-share-with-a-cousin/">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>We can more directly see the sharing of the genome among close relatives using high-density SNP genotyping arrays. In <a href="#fig-first-cousin-IBD" class="quarto-xref">Figure&nbsp;<span>2.14</span></a> we show a simulation of first cousins’ genomic sharing from their shared grandmother. Colored purple are regions where they have matching genomic material, due to having inherited it IBD from their shared grandmother.</p>
+<p>First cousins will share at least one allele of your genotype at all of the polymorphic loci in these purple regions. There’s a range of methods to detect such sharing. One way is to look for unusually long stretches of the genome where two individuals are never homozygous for different alleles. By identifying pairs of individuals who share an unusually large number of such putative IBD blocks, we can hope to identify unknown relatives in genotyping datasets. In fact, companies like 23&amp;me and Ancestry.com use signals of IBD to help identify family ties.</p>
+<p>As another example, consider the case of third cousins. You share one of eight sets of great-great-grandparents with each of your (likely many) third cousins. On average, you and each of your third cousins each inherit one-sixteenth of your genome from each of those two great-great-grandparents. This turns out to imply that on average, a little less than one percent of your and your third cousin’s genomes (<span class="math inline">\(2 \times (1/16)^2 =0.78\%\)</span>) will be identical by virtue of descent from those shared ancestors. A simulated example where third cousins share blocks of their genome (on chromosome 16 and 2) due to their great-great-grandmother is shown in <a href="#fig-third-cousin-IBD" class="quarto-xref">Figure&nbsp;<span>2.15</span></a>.</p>
+<div id="fig-third-cousin-IBD" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A simulation of sharing between third cousins, the details are the same as in @fig-first-cousin-IBD.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-third-cousin-IBD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/sharing_relatives/Third_cousin_overlap_1.png" class="img-fluid figure-img" style="width:100.0%" alt="A simulation of sharing between third cousins, the details are the same as in @fig-first-cousin-IBD.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-third-cousin-IBD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.15: A simulation of sharing between third cousins, the details are the same as in <a href="#fig-first-cousin-IBD" class="quarto-xref">Figure&nbsp;<span>2.14</span></a>.
+</figcaption>
+</figure>
+</div>
+<p>Note how if you compare <a href="#fig-third-cousin-IBD" class="quarto-xref">Figure&nbsp;<span>2.15</span></a> and <a href="#fig-first-cousin-IBD" class="quarto-xref">Figure&nbsp;<span>2.14</span></a>, individuals inherit less IBD from a shared great-great-grandmother than from a shared grandmother, as they inherit from more total ancestors further back. Also notice how the sharing occurs in shorter genomic blocks, as it has passed through more generations of recombination during meiosis. These blocks are still detectable, and so third cousins can be detected using high-density genotyping chips, allowing more distant relatives to be identified than single marker methods alone. <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> More distant relations than third cousins, e.g.&nbsp;fourth cousins, start to have a significant probability of sharing none of their genome IBD. But you have many fourth cousins, so you will share some of your genome IBD with some of them; however, it gets increasingly hard to identify the degree of relatedness from genetic data the deeper in the family tree this sharing goes.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Indeed the suspect in case of the Golden State Killer was identified through identifying third cousins that genetically matched a DNA sample from an old crime scene (see <a href="https://gcbias.org/2018/05/07/how-lucky-was-the-genetic-investigation-in-the-golden-state-killer-case/">here</a> for more details).</p></div></div><section id="inbreeding" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="inbreeding">Inbreeding</h3>
+<p>We can define an inbred individual as an individual whose parents are more closely related to each other than two random individuals drawn from some reference population.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-IBD-cousins-cartoon" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Alleles being transmitted through an inbred pedigree.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-IBD-cousins-cartoon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/Child_first_cousins_Homozy_BD.png" class="img-fluid figure-img" style="width:100.0%" alt="Alleles being transmitted through an inbred pedigree.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-IBD-cousins-cartoon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.16: Alleles being transmitted through an inbred pedigree. The two sisters (mum and aunt) share two alleles identical by descent (IBD). The cousins share one pink allele IBD. The offspring of first cousins is homozygous by descent at this locus for the pink allele. You can simulate more examples for yourself <a href="https://cooplab.shinyapps.io/Shiny_pedigree_sims/">here</a>.
+</figcaption>
+</figure>
+</div></div><p>When two related individuals produce an offspring, that individual can receive two alleles that are identical by descent, i.e.&nbsp;they can be homozygous by descent (sometimes termed autozygous), due to the fact that they have two copies of an allele through different paths through the pedigree. This increased likelihood of being homozygous relative to an outbred individual is the most obvious effect of inbreeding. It is also the one that will be of most interest to us, as it underlies a lot of our ideas about inbreeding depression and population structure. For example, in <a href="#fig-IBD-cousins-cartoon" class="quarto-xref">Figure&nbsp;<span>2.16</span></a> our offspring of first cousins is homozygous by descent having received the same IBD allele via two different routes around an inbreeding loop.</p>
+<p>As the offspring receives a random allele from each parent (<span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>), the probability that those two alleles are identical by descent is equal to the kinship coefficient <span class="math inline">\(F_{ij}\)</span> of the two parents (<a href="#eq-coeffkinship" class="quarto-xref">Equation&nbsp;<span>2.4</span></a>). This follows from the fact that the genotype of the offspring is made by sampling an allele at random from each of our parents.</p>
+<div id="tbl-GeneralizedHWE" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-GeneralizedHWE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.5: <strong>Generalized Hardy–Weinberg</strong>. Dropped the indices <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> for simplicity.
+</figcaption>
+<div aria-describedby="tbl-GeneralizedHWE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(f_{11}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f_{12}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(f_{22}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\((1-F) p^2 + F p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1-F) 2pq\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1-F) q^2 + F q\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The only way the offspring can be heterozygous (<span class="math inline">\(A_1 A_2\)</span>) is if their two alleles at a locus are not IBD (otherwise they would necessarily be homozygous). Therefore, the probability that they are heterozygous is</p>
+<p><span id="eq-hetGenHW"><span class="math display">\[\mathbb{P}(A_1 A_2) = \mathbb{P}(A_1 A_2 |\textrm{I \&amp; J not IBD} ) \mathbb{P} (\textrm{I \&amp; J not IBD} ) = 2p q (1-F_{ij}) , \tag{2.7}\]</span></span></p>
+<p>The offspring can be homozygous for the <span class="math inline">\(A_1\)</span> allele in two different ways. They can have two non-IBD alleles that are not IBD but happen to be of the allelic type <span class="math inline">\(A_1\)</span>, or their two alleles can be IBD, such that they inherited allele <span class="math inline">\(A_1\)</span> by two different routes from the same ancestor. Thus, the probability that an offspring is homozygous for <span class="math inline">\(A_1\)</span> is</p>
+<p><span class="math display">\[\begin{aligned}
+\mathbb{P}(A_1 A_1) &amp; = \mathbb{P}(A_1 A_1 |\textrm{I \&amp; J not IBD} ) \mathbb{P} (\textrm{I\&amp;J
+  not IBD} ) + \mathbb{P}(A_1 A_1 |\textrm{I\&amp;J IBD} ) \mathbb{P} (\textrm{I\&amp;J IBD}) \\
+             &amp;= p^2(1-F_{ij})  + pF_{ij}.
+\end{aligned}\]</span></p>
+<p>using the Law of Total Probability (see Appendix <a href="math-background.html#eq-law-tot-prob" class="quarto-xref">Equation&nbsp;<span>A.11</span></a>). Therefore, the frequencies of the three possible genotypes can be written as given in <a href="#tbl-GeneralizedHWE" class="quarto-xref">Table&nbsp;<span>2.5</span></a>, which provides a generalization of the Hardy–Weinberg proportions.</p>
+<div id="exr-allele-and-genotype-frequencies-9" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.9</strong></span> The frequency of the <span class="math inline">\(A_1\)</span> allele is <span class="math inline">\(p\)</span> at a biallelic locus. Assume that our population is randomly mating and that the genotype frequencies in the population follow from HW. We select two individuals at random to mate from this population. We then mate the children from this cross. What is the probability that the child from this full sib-mating is homozygous?</p>
+</div>
+<p><strong>Multiple inbreeding loops in a pedigree.</strong> Up to this point we have assumed that there is at most one inbreeding loop in the recent family history of our individuals, i.e.&nbsp;the parents of our inbred individual have at most one recent genealogical connection. However, an individual who has multiple inbreeding loops in their pedigree can be homozygous by descent thanks to receiving IBD alleles via multiple different different loops. To calculate inbreeding in pedigrees of arbitrary complexity, we can extend beyond our original relatedness coefficients <span class="math inline">\(r_0\)</span>, <span class="math inline">\(r_1\)</span>, and <span class="math inline">\(r_2\)</span> to account for higher order sharing of alleles IBD among relatives. For example, we can ask, what is the probability that <em>both</em> of the alleles in the first individual are shared IBD with one allele in the second individual? There are nine possible relatedness coefficients in total to completely describe kinship between two diploid individuals, and we won’t go in to them here as it’s a lot to keep track of. However, we will show how we can calculate the inbreeding coefficient of an individual with multiple inbreeding loops more directly.</p>
+<p>Let’s say the parents of our inbred individual (B and C) have <span class="math inline">\(K\)</span> shared ancestors, i.e.&nbsp;individuals who appear in both B and C’s recent family trees. We denote these shared ancestors by <span class="math inline">\(A_1, \dots,A_K\)</span>, and we denote by <span class="math inline">\(n\)</span> the total number of individuals in the chain from B to C via ancestor <span class="math inline">\(A_i\)</span>, including B, C, and <span class="math inline">\(A_i\)</span>. For example, if B is C’s aunt, then B and C share two ancestors, which are B’s parents and, equivalently, C’s grandparents. In this case, there are n=4 individuals from B to C through each of these two shared ancestor. In the general case, the kinship coefficient of B and C, i.e.&nbsp;the inbreeding coefficient of their child, is</p>
+<p><span id="eq-inbreeding-over-ancs"><span class="math display">\[F = \sum_{i=1}^K \frac{1}{2^{n_i}} \big( 1+ f_{A_i} \big) \tag{2.8}\]</span></span></p>
+<p>where <span class="math inline">\(f_{A_i}\)</span> is the inbreeding coefficient of the ancestor <span class="math inline">\(A_i\)</span>. What’s happening here is that we sum over all the mutually-exclusive paths in the pedigree through which B and C can share an allele IBD. With probability <span class="math inline">\({}^{1}\!/\!{}_{2^{n_i}}\)</span>, a pair of alleles picked at random from B and C is descended from the same ancestral allele in individual <span class="math inline">\(A_i\)</span>, in which case the alleles are IBD. <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> However, even if B inherits the maternal allele and C inherits the paternal allele of shared ancestor <span class="math inline">\(A_i\)</span>, if <span class="math inline">\(A_i\)</span> was themselves inbred, with probability <span class="math inline">\(f_{A_i}\)</span> those two alleles are themselves IBD. Thus a shared <em>inbred</em> ancestor further increases the kinship of B and C.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;For example, in the case of our aunt-nephew case, assuming that the aunt’s two parents are their only recent shared ancestors, then <span class="math inline">\(F = {}^{1}\!/\!{}_{2^4}+{}^{1}\!/\!{}_{2^4} = {}^{1}\!/\!{}_{8}\)</span>, in agreement with the answer we would obtain from <a href="#eq-coeffkinship" class="quarto-xref">Equation&nbsp;<span>2.4</span></a>.</p></div></div><div id="fig-Carlos-second-pedigree" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The pedigree of King Charles II of Spain.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Carlos-second-pedigree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/alleles_genotypes/Charles_second_pedigree/Carlos_second_pedigree_2_trimmed.png" class="img-fluid figure-img" style="width:100.0%" alt="The pedigree of King Charles II of Spain.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Carlos-second-pedigree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.17: The pedigree of King Charles II of Spain. Pedigree from <a href="https://commons.wikimedia.org/wiki/File:Carlos_segundo80.png">wikimedia</a> drawn by <a href="https://en.wikipedia.org/wiki/User:Lec_CRP1">Lec CRP1</a>, public domain.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Carlos-second" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Charles II of Spain (by Juan Carreño de Miranda, 1685).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Carlos-second-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/alleles_genotypes/Carlos_second/378px-Juan_de_Miranda_Carreno_002.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Charles II of Spain (by Juan Carreño de Miranda, 1685).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Carlos-second-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.18: Charles II of Spain (by Juan Carreño de Miranda, 1685). <a href="https://it.wikipedia.org/wiki/Carlo_II_di_Spagna#/media/File:Juan_de_Miranda_Carreno_002.jpg">Public Domain</a>.
+</figcaption>
+</figure>
+</div></div><p>Multiple inbreeding loops increase the probability that a child is homozygous by descent at a locus, which can be calculated simply by plugging in <span class="math inline">\(F\)</span>, the child’s inbreeding coefficient, into our generalized HW equation.</p>
+<p>As one extreme example of the impact of multiple inbreeding loops in an individual’s pedigree, let’s consider king Charles II of Spain, the last of the Spanish Habsburgs. Charles was the son of Philip IV of Spain and Mariana of Austria, who were uncle and niece. If this were the only inbreeding loop, then Charles would have had an inbreeding coefficient of <span class="math inline">\({}^{1}\!/\!{}_{8}\)</span>. Unfortunately for Charles, the Spanish Habsburgs had long kept wealth and power within their family by arranging marriages between close kin. The pedigree of Charles II is shown in <a href="#fig-Carlos-second-pedigree" class="quarto-xref">Figure&nbsp;<span>2.17</span></a>, and multiple inbreeding loops are apparent. For example, Phillip III, Charles II’s grandfather and great-grandfather, was himself a child of an uncle-niece marriage.</p>
+<p><span class="citation" data-cites="alvarez:09">Alvarez et al. (<a href="references.html#ref-alvarez:09" role="doc-biblioref">2009</a>)</span> calculated that Charles II had an inbreeding coefficient of <span class="math inline">\(0.254\)</span>, equivalent to a full-sib mating, thanks to all of the inbreeding loops in his pedigree. Therefore, he is expected to have been homozygous by descent for a full quarter of his genome. As we’ll talk about later in these notes, this means that Charles may have been homozygous for a number of recessive disease alleles, and indeed he was a very sickly man who left no descendants due to his infertility. <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Thus plausibly the end of one of the great European dynasties came about through inbreeding.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Pedro Gargantilla, who performed Charles’s autopsy, stated that his body “did not contain a single drop of blood; his heart was the size of a peppercorn; his lungs corroded; his intestines rotten and gangrenous; he had a single testicle, black as coal, and his head was full of water.” While some of this description may refer to actual medical conditions, some of these details seem a little unlikely. See <a href="https://www.thevintagenews.com/2017/03/23/when-charles-ii-of-spain-died-the-autopsy-stated-that-his-body-did-not-contain-a-single-drop-of-blood-and-his-head-was-full-of-water/">here</a>.</p></div></div></section>
+<section id="calculating-inbreeding-coefficients-from-genetic-data" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="calculating-inbreeding-coefficients-from-genetic-data">Calculating inbreeding coefficients from genetic data</h3>
+<p>If the observed heterozygosity in a population is <span class="math inline">\(H_O\)</span>, and we assume that the generalized Hardy–Weinberg proportions hold, we can set <span class="math inline">\(H_O\)</span> equal to <span class="math inline">\(f_{12}\)</span>, and solve <a href="#eq-hetGenHW" class="quarto-xref">Equation&nbsp;<span>2.7</span></a> for <span class="math inline">\(F\)</span> to obtain an estimate of the inbreeding coefficient as</p>
+<p><span id="eq-Fhat"><span class="math display">\[\hat{F} = 1-\frac{f_{12}}{2pq} = \frac{2pq - f_{12}}{2pq}. \tag{2.9}\]</span></span></p>
+<div class="page-columns page-full"><p> As before, <span class="math inline">\(p\)</span> is the frequency of allele <span class="math inline">\(A_{1}\)</span> in the population. This can be rewritten in terms of the observed heterozygosity (<span class="math inline">\(H_O\)</span>) and the heterozygosity expected in the absence of inbreeding, <span class="math inline">\(H_E=2pq\)</span>, as</p><div class="no-row-height column-margin column-container"><span class="margin-aside">The hat on the F here denotes that this is an estimate from a sample.</span></div></div>
+<p><span id="eq-FhatHO"><span class="math display">\[\hat{F} = \frac{H_E-H_O}{H_E} = 1 - \frac{H_O}{H_E}. \tag{2.10}\]</span></span></p>
+<p>Hence, <span class="math inline">\(\hat{F}\)</span> quantifies the deviation due to inbreeding of the observed heterozygosity from the one expected under random mating, relative to the latter.</p>
+<div id="exr-allele-and-genotype-frequencies-10" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.10</strong></span> Suppose the following genotype frequencies were observed for an esterase locus in a population of <em>Drosophila</em> (A denotes the “fast” allele and B denotes the “slow” allele):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">AA</th>
+<th style="text-align: center;">AB</th>
+<th style="text-align: center;">BB</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.6</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">0.2</td>
+</tr>
+</tbody>
+</table>
+<p>What is the estimate of the inbreeding coefficient at the esterase locus?</p>
+</div>
+<p>If we have multiple loci, we can replace <span class="math inline">\(H_O\)</span> and <span class="math inline">\(H_E\)</span> by their means over loci, <span class="math inline">\(\bar{H}_O\)</span> and <span class="math inline">\(\bar{H}_E\)</span>, respectively. Note that, in principle, we could also calculate <span class="math inline">\(F\)</span> for each individual locus first, and then take the average across loci. However, this procedure is more prone to introducing a bias if sample sizes vary across loci, which is not unlikely when we are dealing with real data.</p>
+<p>Genetic markers are commonly used to estimate inbreeding for wild and/or captive populations of conservation concern. As an example of this, consider the case of the Mexican wolf (<em>Canis lupus baileyi</em>), a sub-species of gray wolf.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Grey-wolf" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Grey wolf (Canis lupus).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Grey-wolf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/alleles_genotypes/grey_wolf/5988399184_0c36a8e51c_z.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Grey wolf (Canis lupus).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Grey-wolf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.19: Grey wolf (<em>Canis lupus</em>). <span class="attribution">Dogs, jackals, wolves, and foxes: a monograph of the Canidae. 1890. y J.G. Keulemans Image from the <a href="https://www.biodiversitylibrary.org/page/17002968#page/58/mode/1up">Biodiversity Heritage Library</a>. Contributed by University of Toronto - Gerstein Science Information Centre. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p>They were extirpated in the wild during the mid-1900s due to hunting, and the remaining five Mexican wolves in the wild were captured to start a breeding program. <span class="citation" data-cites="vonHoldt:11">vonHoldt et al. (<a href="references.html#ref-vonHoldt:11" role="doc-biblioref">2011</a>)</span> estimated the current-day, average expected heterozygosity to be <span class="math inline">\(0.18\)</span>, based on allele frequencies at over forty thousand SNPs. However, the average Mexican wolf individual was only observed to be heterozygous at <span class="math inline">\(12\%\)</span> of these SNPs. Therefore, the average inbreeding coefficient for the Mexican wolf is <span class="math inline">\(\hat{F} = 1 -{}^{0.12}\!/\!{}_{0.18}\)</span>, i.e.&nbsp;<span class="math inline">\(\sim 33 \%\)</span> of a lobo’s genome is homozygous due to recent inbreeding in their pedigree.</p>
+<p><strong>Genomic blocks of homozygosity due to inbreeding.</strong></p>
+<p>As we saw above, close relatives are expected to share alleles IBD in large genomic blocks. Thus, when related individuals mate and transmit alleles to an inbred offspring, they transmit these alleles in big blocks through meiosis. As an example, let’s return to the case of our hypothetical first cousins from <a href="#fig-IBD-cousins-chr-cartoon" class="quarto-xref">Figure&nbsp;<span>2.10</span></a>. If this pair of individuals had a child, one possible pattern of genetic transmission is shown in <a href="#fig-kid-first-cousins" class="quarto-xref">Figure&nbsp;<span>2.20</span></a>. The child has inherited the red stretch of chromosome via two different routes through their predigree from the grandparents. This is an example of an autozygous segment, where the child is homozygous by descent at all of the loci in this red region.</p>
+<div id="fig-kid-first-cousins" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A pedigree showing the offspring of first cousins.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-kid-first-cousins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/sharing_relatives/first_cousin_offspring.png" class="img-fluid figure-img" style="width:75.0%" alt="A pedigree showing the offspring of first cousins.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kid-first-cousins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.20: A pedigree showing the offspring of first cousins. The chromosomes of their great-grandparents are coloured different colours so their transmission can be tracked. The child is homozygous by descent (HBD) for a section of the red chromosome.
+</figcaption>
+</figure>
+</div>
+<p>The inbreeding coefficient of the child sets the proportion of their genome that will be in these autozygous segments. For example, a child of first full cousins is expected to have <span class="math inline">\(1/16\)</span> of their genome in these segments. The more distant the loop in the pedigree, the more meioses that chromosomes have been through and the shorter individual blocks will be. A child of first cousins will have longer blocks than a child of second cousins, for example.</p>
+<p>Individuals with multiple inbreeding loops in their family tree can have a high inbreeding coefficient due to the combined effect of many small blocks of autozygosity. For example, Charles II had an inbreeding coefficient that is equivalent to that of the child of full-sibs, with a quarter of his genome expected to homozygous by descent, but this would be made up of many shorter blocks.</p>
+<p>We can hope to detect these blocks by looking for unusually long genomic runs of homozygosity (ROH) sites in an individual’s genome. One way to estimate an individual’s inbreeding coefficient is then to total up the proportion of an individual’s genome that falls in such ROH regions. This estimate is called <span class="math inline">\(F_{ROH}\)</span>.</p>
+<p>An example of using <span class="math inline">\(F_{ROH}\)</span> to study inbreeding comes from the work of <span class="citation" data-cites="sams2018fine">Sams and Boyko (<a href="references.html#ref-sams2018fine" role="doc-biblioref">2018b</a>)</span>, who identified runs of homozygosity in 2,500 dogs, ranging from 500kb up to many megabases.</p>
+<div id="fig-dog-FOH" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The distribution of F_ROH of individuals from various dog breeds from , licensed under CC BY 4.0.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dog-FOH-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/sharing_relatives/dogs_FROH.png" class="img-fluid figure-img" style="width:100.0%" alt="The distribution of F_ROH of individuals from various dog breeds from , licensed under CC BY 4.0.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dog-FOH-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.21: The distribution of <span class="math inline">\(F_{ROH}\)</span> of individuals from various dog breeds from <span class="citation" data-cites="Sams:18">Sams and Boyko (<a href="references.html#ref-Sams:18" role="doc-biblioref">2018a</a>)</span>, licensed under CC BY 4.0.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-dog-FOH" class="quarto-xref">Figure&nbsp;<span>2.21</span></a> shows the distribution of <span class="math inline">\(F_{ROH}\)</span> of individuals in each dog breed for the X and autosome. In <a href="#fig-dog-FOH-dist" class="quarto-xref">Figure&nbsp;<span>2.23</span></a> this is broken down by the length of ROH segments.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-bulldog" class="quarto-float quarto-figure quarto-figure-center anchored" alt="English bulldog.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bulldog-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/alleles_genotypes/english_bulldog/14752595581_4330377c97_z.jpg" class="img-fluid figure-img" style="width:100.0%" alt="English bulldog.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bulldog-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.22: English bulldog. The dogs of Boytown. 1918. Dyer, W. A.
+</figcaption>
+</figure>
+</div></div><div id="fig-dog-FOH-dist" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cumulative density of ROH length, measured in megabases (Mb) from for various dog breeds (licensed under CC BY 4.0).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dog-FOH-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/sharing_relatives/dog_FROH_dist.png" class="img-fluid figure-img" style="width:100.0%" alt="Cumulative density of ROH length, measured in megabases (Mb) from for various dog breeds (licensed under CC BY 4.0).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dog-FOH-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.23: Cumulative density of ROH length, measured in megabases (Mb) from <span class="citation" data-cites="Sams:18">Sams and Boyko (<a href="references.html#ref-Sams:18" role="doc-biblioref">2018a</a>)</span> for various dog breeds (licensed under CC BY 4.0). Note that longer lengths of ROH are on the left of the plot.
+</figcaption>
+</figure>
+</div>
+<p>Dog breeds have been subject to intense breeding that has resulted in high levels of inbreeding. Of the population samples examined, Doberman Pinschers have the highest levels of their genome in runs of homozygosity (<span class="math inline">\(F_{ROH}\)</span>), somewhat higher than English bulldogs. In <a href="#fig-dog-FOH-dist" class="quarto-xref"><span>2.23</span></a> we can see that English bulldogs have more short ROH than Doberman Pinschers, but that Doberman Pinschers have more of their genome in very large ROH (<span class="math inline">\(&gt;16 Mb\)</span>). This suggests that English bulldogs have had long history of inbreeding as they have many small blocks, but that Doberman Pinschers have a lot of recent inbreeding as their autozygosity is contained in long blocks relatively unbroken by recombination.</p>
+<div class="chapter-summary">
+<p><strong>Chapter summary.</strong></p>
+<ul>
+<li><p>This chapter developed the relationship between allele frequencies and genotype frequencies within a generation and among relatives.</p></li>
+<li><p>Under random mating, we derived expectations of the genotype frequencies (Hardy-Weinberg), and we can identify deviations away from these expectations.</p></li>
+<li><p>Identity by descent (IBD) refers to the sharing of alleles due to a recent shared biological relationship.</p></li>
+<li><p>We can predict the probability and expected level of sharing of alleles IBD among pairs of relatives using mendelian transmission probabilities (as contained in coefficients <span class="math inline">\(r_0\)</span>, <span class="math inline">\(r_1\)</span>, and <span class="math inline">\(r_2\)</span>). One useful summary of relatedness for a pair of individuals is the kinship coefficient <span class="math inline">\(F_{i,j}\)</span>.</p></li>
+<li><p>We can also learn about genetic relationships from the sharing of genomic segments among relatives, with many long shared segments revealing a closer relationship.</p></li>
+<li><p>An inbred individual has parents who are more closely related than random draws from some reference population.</p></li>
+<li><p>Inbreeding results in decreased heterozygosity and a complementary increase in homozygosity. We can use the kinship coefficient of the parents to estimate the distortion away from Hardy-Weinberg and the expected level of heterozygosity.</p></li>
+<li><p>Inbreeding coefficients can be calculated from genetic data, either for multiple individuals at a single locus or for multiple loci for a single individual.</p></li>
+</ul>
+</div>
+<div id="exr-allele-and-genotype-frequencies-11" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.11</strong></span> Calculate <span class="math inline">\(r_{0}\)</span>, <span class="math inline">\(r_{1}\)</span>, <span class="math inline">\(r_{2}\)</span> and the coefficient of kinship <span class="math inline">\(F\)</span> between:<br>
+<strong>A)</strong> A grandparent and their grandchild<br>
+<strong>B)</strong> A great grandparent and their great grandchild<br>
+<strong>C)</strong> Full siblings<br>
+<strong>D)</strong> A great aunt and her grand nephew (your great aunt = your parent’s aunt)</p>
+</div>
+<div id="exr-allele-and-genotype-frequencies-12" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.12</strong></span> You are studying a codominant flower colour polymorphism. Skipping through a meadow of flowers you and compile the following data:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">red</th>
+<th style="text-align: center;">pink</th>
+<th style="text-align: center;">white</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">200</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">200</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A)</strong> What frequencies would you expect at this locus under Hardy-Weinberg equilibrium?<br>
+<strong>B)</strong> Calculate the inbreeding coefficient at this locus.<br>
+<strong>C)</strong> Name two distinct processes that could lead to the deviation you see, and describe how they would result in a deficit of heterozygotes.</p>
+</div>
+<div id="exr-allele-and-genotype-frequencies-13" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.13</strong></span> What are the relatedness coefficients of the X chromosome between:<br>
+<strong>A)</strong> Two male full siblings?<br>
+<strong>B)</strong> Two female full siblings?<br>
+<strong>C)</strong> What is the probability that a female offspring of a full sib mating is homozygous by descent at a locus on her X chromosome?</p>
+</div>
+<div id="exr-allele-and-genotype-frequencies-14" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.14</strong></span> You are studying the wing spot polymorphism in a butterfly species. From crosses in the lab you find that the presence of wing spots is determined by a dominant allele.<br>
+You collect 100 butterflies, 84 of them have the wing spots. What is the frequency of the wing-spot allele? What assumption did you have to make to come to your answer?</p>
+</div>
+<div id="exr-allele-and-genotype-frequencies-15" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.15</strong></span> An allele has frequency of <span class="math inline">\(0.001\)</span> in the population. What is the probability that both you and your first (full) cousin are heterozygote for the allele?</p>
+</div>
+<div id="exr-allele-and-genotype-frequencies-16" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.16</strong></span> The kinship coefficient of the parents is the inbreeding coefficient of the offspring. Explain, with reference to the weighting of relatedness coefficients in the inbreeding coefficient, why the inbreeding coefficient is the probability that a locus is homozygous by descent.</p>
+</div>
+<div id="exr-allele-and-genotype-frequencies-17" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 2.17</strong></span> In terms of identity by descent, explain why multiple inbreeding loops in an individual’s pedigree lead to higher levels of inbreeding.</p>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Aguillon:17" class="csl-entry" role="listitem">
+Aguillon, J. W. A. B., Stepfanie M. AND Fitzpatrick. 2017. <a href="https://doi.org/10.1371/journal.pgen.1006911">Deconstructing isolation-by-distance: The genomic consequences of limited dispersal</a>. PLOS Genetics 13:1–27. Public Library of Science.
+</div>
+<div id="ref-algee:16" class="csl-entry" role="listitem">
+Algee-Hewitt, B. F., M. D. Edge, J. Kim, J. Z. Li, and N. A. Rosenberg. 2016. Individual identifiability predicts population identifiability in forensic microsatellite markers. Current Biology 26:935–942. Elsevier.
+</div>
+<div id="ref-alvarez:09" class="csl-entry" role="listitem">
+Alvarez, G., F. C. Ceballos, and C. Quinteiro. 2009. The role of inbreeding in the extinction of a european royal dynasty. PLoS One 4:e5174. Public Library of Science.
+</div>
+<div id="ref-chen:16" class="csl-entry" role="listitem">
+Chen, N., E. J. Cosgrove, R. Bowman, J. W. Fitzpatrick, and A. G. Clark. 2016. <a href="https://doi.org/10.1016/j.cub.2016.08.062">Genomic consequences of population decline in the endangered florida scrub-jay</a>. Current Biology 26:2974–2979.
+</div>
+<div id="ref-cotterman:40" class="csl-entry" role="listitem">
+Cotterman, C. W. 1940. A calculus for statistico-genetics. The Ohio State University.
+</div>
+<div id="ref-hardy1908mendelian" class="csl-entry" role="listitem">
+Hardy, G. H., and others. 1908. Mendelian proportions in a mixed population. Science 28:49–50.
+</div>
+<div id="ref-james2015mushrooms" class="csl-entry" role="listitem">
+James, T. Y. 2015. Why mushrooms have evolved to be so promiscuous: Insights from evolutionary and ecological patterns. Fungal biology reviews 29:167–178. Elsevier.
+</div>
+<div id="ref-klinka2009adaptive" class="csl-entry" role="listitem">
+Klinka, D. R., and T. E. Reimchen. 2009. Adaptive coat colour polymorphism in the kermode bear of coastal british columbia. Biological Journal of the Linnean Society 98:479–488. Oxford University Press.
+</div>
+<div id="ref-leffler:12" class="csl-entry" role="listitem">
+Leffler, E. M., K. Bullaughey, D. R. Matute, W. K. Meyer, L. Segurel, A. Venkat, P. Andolfatto, and M. Przeworski. 2012. Revisiting an old riddle: What determines genetic diversity levels within species? PLoS biology 10:e1001388. Public Library of Science.
+</div>
+<div id="ref-lewontin:94" class="csl-entry" role="listitem">
+Lewontin, R. C. 1994. <a href="https://doi.org/10.1214/ss/1177010492">[DNA fingerprinting: A review of the controversy]: Comment: The use of DNA profiles in forensic contexts</a>. Statist. Sci. 9:259–262. The Institute of Mathematical Statistics.
+</div>
+<div id="ref-lowther1961polymorphism" class="csl-entry" role="listitem">
+Lowther, J. K. 1961. Polymorphism in the white-throated sparrow, zonotrichia albicollis (gmelin). Canadian Journal of Zoology 39:281–292. NRC Research Press.
+</div>
+<div id="ref-malecot:48" class="csl-entry" role="listitem">
+Malécot, G. 1948. Les math<span>é</span>matiques de l’h<span>é</span>r<span>é</span>dit<span>é</span>. Masson, Paris.
+</div>
+<div id="ref-martin1978decay" class="csl-entry" role="listitem">
+Martin, K., and R. Gilbertson. 1978. Decay of douglas-fir by sparassis radicata in arizona. Phytopathology 68:149–154.
+</div>
+<div id="ref-mcdonald:91" class="csl-entry" role="listitem">
+McDonald, J. H., and M. Kreitman. 1991. Adaptive protein evolution at the adh locus in drosophila. Nature 351:652. Nature Publishing Group.
+</div>
+<div id="ref-merrill2019genetic" class="csl-entry" role="listitem">
+Merrill, R. M., P. Rastas, S. H. Martin, M. C. Melo, S. Barker, J. Davey, W. O. McMillan, and C. D. Jiggins. 2019. Genetic dissection of assortative mating behavior. PLoS biology 17. Public Library of Science.
+</div>
+<div id="ref-RITLAND:01" class="csl-entry" role="listitem">
+Ritland, K., C. Newton, and H. D. Marshall. 2001. <a href="https://doi.org/10.1016/S0960-9822(01)00448-1">Inheritance and population structure of the white-phased <span>“kermode”</span> black bear</a>. Current Biology 11:1468–1472.
+</div>
+<div id="ref-Sams:18" class="csl-entry" role="listitem">
+Sams, A. J., and A. R. Boyko. 2018a. Fine-scale resolution and analysis of runs of homozygosity in domestic dogs. bioRxiv, doi: <a href="https://doi.org/10.1101/315770">10.1101/315770</a>. Cold Spring Harbor Laboratory.
+</div>
+<div id="ref-sams2018fine" class="csl-entry" role="listitem">
+Sams, A. J., and A. R. Boyko. 2018b. Fine-scale resolution of runs of homozygosity reveal patterns of inbreeding and substantial overlap with recessive disease genotypes in domestic dogs. G3: Genes, Genomes, Genetics g3–200836. G3: Genes, Genomes, Genetics.
+</div>
+<div id="ref-tuttle2016divergence" class="csl-entry" role="listitem">
+Tuttle, E. M., A. O. Bergland, M. L. Korody, M. S. Brewer, D. J. Newhouse, P. Minx, M. Stager, A. Betuel, Z. A. Cheviron, W. C. Warren, and others. 2016. Divergence and functional degradation of a sex chromosome-like supergene. Current Biology 26:344–350. Elsevier.
+</div>
+<div id="ref-vonHoldt:11" class="csl-entry" role="listitem">
+vonHoldt, B. M., J. P. Pollinger, D. A. Earl, J. C. Knowles, A. R. Boyko, H. Parker, E. Geffen, M. Pilot, W. Jedrzejewski, B. Jedrzejewska, V. Sidorovich, C. Greco, E. Randi, M. Musiani, R. Kays, C. D. Bustamante, E. A. Ostrander, J. Novembre, and R. K. Wayne. 2011. A genome-wide perspective on the evolutionary history of enigmatic wolf-like canids. Genome Research, doi: <a href="https://doi.org/10.1101/gr.116301.110">10.1101/gr.116301.110</a>.
+</div>
+<div id="ref-weinberg1908ber" class="csl-entry" role="listitem">
+Weinberg, W. 1908. Über den nachweis der vererbung beim menschen. Jahres. Wiertt. Ver. Vaterl. Natkd. 64:369–382.
+</div>
+</div>
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./introduction.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./population-structure.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Population Structure and Correlations Among Loci</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script id="popgen-scroll-focus">
+(function(){function f(){document.querySelectorAll('figure.quarto-float-tbl > div, .column-page-right > div').forEach(function(d){
+ var s=d.scrollWidth>d.clientWidth+1; if(s){d.setAttribute('tabindex','0');d.setAttribute('role','region');d.setAttribute('aria-label','Scrollable table');}
+ else{d.removeAttribute('tabindex');}});}
+ window.addEventListener('load',f);window.addEventListener('resize',f);})();
+</script><script id="popgen-no-overlap">
+(function(){
+ var SEL='.column-margin.column-container > *, .margin-caption, .aside';
+ function R(e){var r=e.getBoundingClientRect();return {t:r.top+scrollY,b:r.bottom+scrollY,l:r.left,r:r.right};}
+ function run(){
+  var root=document.getElementById('quarto-document-content'); if(!root) return;
+  var items=[].filter.call(root.querySelectorAll(SEL),function(e){return e.offsetParent!==null && !e.parentElement.closest(SEL);});
+  items.forEach(function(e){e.style.marginTop='';});
+  var blk=[].filter.call(root.querySelectorAll('figure, table, pre, .column-page-right, .column-page, .column-screen, mjx-container[display="true"], .callout, .chapter-summary, blockquote'),
+    function(e){return e.offsetParent!==null && !e.closest(SEL) && !(e.parentElement.closest('figure,.column-page-right,.column-page,.callout') && e.tagName!=='FIGURE' && false);});
+  var last=0;
+  for(var pass=0;pass<3;pass++){
+   last=0; var moved=false;
+   items.forEach(function(it){
+    var r=R(it), top=r.t, h=r.b-r.t, need=Math.max(top,last), gap=8, again=true, n=0;
+    while(again && n++<40){
+     again=false;
+     blk.forEach(function(b){
+      if(it.contains(b)||b.contains(it)) return;
+      var q=R(b); if(q.r<=r.l+1||q.l>=r.r-1) return;
+      if(need<q.b+gap && need+h>q.t-1 && q.b>q.t){ if(need<q.b+gap){need=q.b+gap;again=true;} }
+     });
+    }
+    if(need>top+1){var cur=parseFloat(getComputedStyle(it).marginTop)||0; it.style.marginTop=(cur+need-top)+'px'; moved=true;}
+    var r2=R(it); last=r2.b+ (parseFloat(getComputedStyle(it).marginBottom)||0);
+   });
+   if(!moved) break;
+  }
+ }
+ var tm; function later(){clearTimeout(tm);tm=setTimeout(run,120);}
+ window.addEventListener('load',function(){later();
+   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(later);
+   if(window.MathJax&&MathJax.startup&&MathJax.startup.promise) MathJax.startup.promise.then(later);
+   [].forEach.call(document.images,function(i){if(!i.complete) i.addEventListener('load',later);});
+   setTimeout(later,1500);});
+ window.addEventListener('resize',later);
+ if(window.ResizeObserver) new ResizeObserver(later).observe(document.body);
+})();
+</script></body></html>

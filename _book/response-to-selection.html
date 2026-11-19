@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; The Response to Phenotypic Selection – Population and Quantitative Genetics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./correlated-traits.html" rel="next">
+<link href="./phenotypic-variation.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-468b43a5444adb4913bafb0b3b0c703b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./response-to-selection.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Population and Quantitative Genetics</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/cooplab/popgen-notes" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equation-sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equation Sheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allele-and-genotype-frequencies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Allele and Genotype Frequencies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./population-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Population Structure and Correlations Among Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./genetic-drift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Genetic Drift and Neutral Diversity</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./molecular-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Population Genetics of Divergence and Molecular Substitution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./neutral-diversity-and-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Neutral Diversity and Population Structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phenotypic-variation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-selection.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./correlated-traits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlated Traits and the Response of Multiple Traits to Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./one-locus-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">One-Locus Models of Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./selection-mutation-migration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Interaction of Selection, Mutation, and Migration</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drift-and-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Impact of Genetic Drift on Selected Alleles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linked-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The Effects of Linked Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multiple-selected-loci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Interaction of Multiple Selected Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#the-long-term-response-to-selection" id="toc-the-long-term-response-to-selection" class="nav-link active" data-scroll-target="#the-long-term-response-to-selection"><span class="header-section-number">8.1</span> The Long-Term Response to Selection</a></li>
+  <li><a href="#fitness-and-the-breeders-equation." id="toc-fitness-and-the-breeders-equation." class="nav-link" data-scroll-target="#fitness-and-the-breeders-equation."><span class="header-section-number">8.2</span> Fitness and the Breeder’s Equation.</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="page-columns page-full"><p> Evolution by natural selection requires:</p><div class="no-row-height column-margin column-container"><span class="margin-aside">See <span class="citation" data-cites="lewontin1970units">Lewontin (<a href="references.html#ref-lewontin1970units" role="doc-biblioref">1970</a>)</span>. Note that these requirements are not specific to DNA, i.e.&nbsp;the concept of evolution by natural selection is substrate independent.</span></div></div>
+<ol type="1">
+<li><p>Variation in a phenotype</p></li>
+<li><p>That survival and reproduction is non-random with respect to this phenotypic variation.</p></li>
+<li><p>That this variation is heritable.</p></li>
+</ol>
+<p>Points 1 and 2 encapsulate our idea of Natural Selection, but evolution by natural selection will only occur if the 3rd condition is also met.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> It is the heritable nature of variation that couples change within a generation due to natural selection to change across generations (evolutionary change).</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Some people consider natural selection to only operate on heritable phenotype varation and so require all three conditions to say that natural selection occurs. This is mostly a semantic point, however, the defintion here is useful as we can distinguish the action of selection from a possible response.</p></div></div><p>Let’s start by thinking about the change within a generation due to directional selection, where selection acts to change the mean phenotype within a generation. For example, a decrease in mean height within a generation, due to taller organisms having a lower chance of surviving to reproduction than shorter organisms. Specifically, we’ll denote our mean phenotype at reproduction by <span class="math inline">\(\mu_S\)</span>, i.e.&nbsp;after selection has acted, and our mean phenotype before selection acts by <span class="math inline">\(\mu_{BS}\)</span>. This second quantity may be hard to measure, as obviously selection acts throughout the life-cycle, so it might be easier to think of this as the mean phenotype if selection hadn’t acted. So the change in mean phenotype within a generation is <span class="math inline">\(\mu_{S} - \mu_{BS}= S\)</span>, we’ll call <span class="math inline">\(S\)</span> the selection differential.</p>
+
+<div class="no-row-height column-margin column-container"><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/figures/Response_to_sel/QT3.png" class="img-fluid figure-img" style="width:100.0%" alt="Top."></p>
+<figcaption><strong>Top.</strong> Distribution of a phenotype in the parental population prior to selection, <span class="math inline">\(V_A=V_E=1\)</span>. <strong>Middle.</strong> Only individuals in the top <span class="math inline">\(10\%\)</span> of the phenotypic distribution are selected to reproduce; the resulting shift in the phenotypic mean is <span class="math inline">\(S\)</span>. <strong>Bottom.</strong> Phenotypic distribution of children of the selected parents; the shift in the mean phenotype is <span class="math inline">\(R\)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/QT3.R">here</a>.</figcaption>
+</figure>
+</div></div><p>We are interested in predicting the distribution of phenotypes in the next generation. In particular, we are interested in the mean phenotype in the next generation to understand how directional selection has contributed to evolutionary change. We’ll denote the mean phenotype in offspring, i.e.&nbsp;the mean phenotype in the next generation before selection acts, as <span class="math inline">\(\mu_{NG}\)</span>. The change across generations we’ll call the response to selection <span class="math inline">\(R\)</span> and put this equal to <span class="math inline">\(\mu_{NG}- \mu_{BS}\)</span>.</p>
+<p>The mean phenotype in the next generation is</p>
+<p><span id="eq-response-to-selection-1"><span class="math display">\[\mu_{NG} = \mathbb{E} \left( \mathbb{E}(X_{kid} | X_{mum},X_{dad}) \right) \tag{8.1}\]</span></span></p>
+<p>where the inner expectation is giving us the expected phenotype of the child given the parents, and the outer expectation is over possible pairings of parents formed by randomly mating individuals who survive to reproduce. We can use <a href="phenotypic-variation.html#eq-predict-kid" class="quarto-xref">Equation&nbsp;<span>7.15</span></a> to obtain an expression for this expectation:</p>
+<p><span id="eq-response-to-selection-2"><span class="math display">\[\mu_{NG} = \mu_{BS} +
+\beta_{mid,kid} ( \mathbb{E}(X_{mid}) - \mu_{BS}) \tag{8.2}\]</span></span></p>
+
+<div class="no-row-height column-margin column-container"><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/figures/Response_to_sel/Breeders_eqn.png" class="img-fluid figure-img" style="width:100.0%" alt="A visual representation of the Breeder’s equation."></p>
+<figcaption>A visual representation of the Breeder’s equation. Regression of child’s phenotype on parental mid-point phenotype (<span class="math inline">\(V_A=V_E=1\)</span>). The parents and children of all families are shown as grey or red points, However, under truncation selection, only individuals with phenotypes <span class="math inline">\(&gt;1\)</span> (red) are bred. The use of the red families only results in a phenotypic shift <span class="math inline">\(S\)</span> in the parental generation, which drives a shift <span class="math inline">\(R\)</span> in the offspring generation. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/QT2.R">here</a>.</figcaption>
+</figure>
+</div></div><p>So to obtain <span class="math inline">\(\mu_{NG}\)</span> we need to compute <span class="math inline">\(\mathbb{E}(X_{mid})\)</span>, the expected mid-point phenotype of pairs of individuals who survive to reproduce. This is just the expected phenotype in the individuals who survived to reproduce (<span class="math inline">\(\mu_{S}\)</span>), so</p>
+<p><span id="eq-response-to-selection-3"><span class="math display">\[\mu_{NG} = \mu_{BS} +
+h^2 (\mu_S - \mu_{BS}) \tag{8.3}\]</span></span></p>
+<p>So we can write our response to selection as</p>
+<p><span id="eq-breeders-eqn"><span class="math display">\[R = \mu_{NG} -\mu_{BS}  =
+h^2 (\mu_S - \mu_{BS}) = h^2 S \tag{8.4}\]</span></span></p>
+<div class="page-columns page-full"><p>So our response to selection is proportional to our selection differential, and the constant of proportionality is the narrow sense heritability. This equation is sometimes termed the Breeder’s equation. It is a statement that the evolutionary change across generations (<span class="math inline">\(R\)</span>) is proportional to the change caused by directional selection within a generation (<span class="math inline">\(S\)</span>), and that the strength of this relationship is determined by the narrow sense heritability (<span class="math inline">\(h^2\)</span>).</p><div class="no-row-height column-margin column-container"><span class="margin-aside">The earliest formulation of the Breeder’s equation appears as a footnote in <span class="citation" data-cites="lush1943animal">Lush (<a href="references.html#ref-lush1943animal" role="doc-biblioref">1943</a>)</span>.</span></div></div>
+<div id="fig-Galen-corolla" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The relationship between maternal and offspring corolla flare (flower width) in P.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Galen-corolla-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Galen_flower_herit/Galen_corolla_flare.png" class="img-fluid figure-img" style="width:60.0%" alt="The relationship between maternal and offspring corolla flare (flower width) in P.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Galen-corolla-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.1: The relationship between maternal and offspring corolla flare (flower width) in <em>P. viscosum</em>. From <span class="citation" data-cites="galen:96">Galen (<a href="references.html#ref-galen:96" role="doc-biblioref">1996</a>)</span>’s data the covariance of mother and child is 1.3, while the variance of the mother is 2.8. Data from <span class="citation" data-cites="galen:96">Galen (<a href="references.html#ref-galen:96" role="doc-biblioref">1996</a>)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Galen_flower_herit/Gallen_analysis.R">here</a>.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/illustration_images/Quant_gen/Polemonium_viscosum_Galen/Polemonium_viscosum.jpg" class="img-fluid figure-img" style="width:75.0%" alt="Sticky jacob’s ladder (Polemonium viscosum)."></p>
+<figcaption>Sticky jacob’s ladder (<em>Polemonium viscosum</em>). <span class="attribution">Flowers of Mountain and Plain (1920). Clements, E. Image from the <a href="https://www.biodiversitylibrary.org/page/40791993#page/49/mode/1up">Biodiversity Heritage Library</a>. Contributed by New York Botanical Garden, Mertz Library. Not in copyright.</span> Cropped from original.</figcaption>
+</figure>
+</div></div><div id="exr-response-to-selection-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 8.1</strong></span> <span class="citation" data-cites="galen:96">Galen (<a href="references.html#ref-galen:96" role="doc-biblioref">1996</a>)</span> explored selection on flower shape in <em>Polemonium viscosum</em>. She found that plants with larger corolla flare had more bumblebee visits, which resulted in higher seed set and a <span class="math inline">\(17\%\)</span> increase in corolla flare in the plants contributing to the next generation. Based on the data in the caption of <a href="#fig-Galen-corolla" class="quarto-xref">Figure&nbsp;<span>8.1</span></a> what is the expected response in the next generation?</p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Illinois-LTS-breeders-eq" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Illinois-LTS-breeders-eq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Illinois_long_term_selection_corn/Illinois_LTS_breeders_eq.png" class="img-fluid figure-img" style="width:100.0%" alt="Top.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Illinois-LTS-breeders-eq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.2: <strong>Top.</strong> Phenotypic distribution of oil in corn in 1897, and the individuals who were selected to breed for the next generation are marked in blue. <strong>Bottom.</strong> The distribution in the next generation. Data from the Illinois selection experiment available <a href="https://www.ideals.illinois.edu/handle/2142/3525">here</a>, Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Illinois_long_term_selection_corn/corn_LTS.R">here</a>.
+</figcaption>
+</figure>
+</div></div><p>If we know <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> we can estimate <span class="math inline">\(h^2\)</span>. Heritabilities estimated like this are called ‘realized heritability’. Estimates of the ‘realized heritability’ can readily be produced in artificial selection experiments:</p>
+<div id="exr-response-to-selection-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 8.2</strong></span> From the experiment shown in <a href="#fig-Illinois-LTS-breeders-eq" class="quarto-xref">Figure&nbsp;<span>8.2</span></a>, the mean corn oil content in 1897 was <span class="math inline">\(4.78\)</span>, among the <span class="math inline">\(24\)</span> individuals chosen to breed to for the next generation the mean was <span class="math inline">\(5.2\)</span>. The offspring of these individuals had a mean kernel oil content of <span class="math inline">\(5.1\)</span>. What is the narrow sense realized heritability?</p>
+</div>
+<p>To understand the genetic basis of the response to selection take a look at <a href="#fig-Response-num-alleles" class="quarto-xref">Figure&nbsp;<span>8.3</span></a>. The setup is the same as in our previous simulation figures.</p>
+<div id="fig-Response-num-alleles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Response-num-alleles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/QT3_w_genosums.png" class="img-fluid figure-img" style="width:100.0%" alt="Top.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Response-num-alleles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.3: <strong>Top.</strong> Distribution of the number of up alleles in the parental population prior to selection (red), for the selected individuals in the top <span class="math inline">\(10\%\)</span> phenotypic tail of the population (blue) <strong>Bottom.</strong> The same distribution for the offspring of the selected parents in the next generation (green). Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/QT3.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>The individuals who are selected to form our next generation carry more alleles that increase the phenotype in the current range of environments currently experienced by the population. The average individual before selection carried 100 of these ‘up’ alleles, while the average individual surviving selection carries 108 ‘up’ alleles.</p>
+<p>As individuals faithfully transmit their alleles to the next generation the average child of the selected parents carries <span class="math inline">\(108\)</span> up alleles. Note that the variance has changed little, the children have plenty of variation in their genotype, such that selection can readily drive evolution in future generations. The average frequency of an ‘up’ allele has changed from <span class="math inline">\(50\%\)</span> to <span class="math inline">\(54\%\)</span>. Gains due to selection will be stably inherited to future generations and can be compounded on generation after generation if selection pressures were to remain constant.</p>
+<section id="the-long-term-response-to-selection" class="level2 page-columns page-full" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="the-long-term-response-to-selection"><span class="header-section-number">8.1</span> The Long-Term Response to Selection</h2>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Illinois-LTS-means" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The mean oil content of corn in the Illinois long term selection experiment.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Illinois-LTS-means-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Illinois_long_term_selection_corn/Illinois_LTS_means.png" class="img-fluid figure-img" style="width:100.0%" alt="The mean oil content of corn in the Illinois long term selection experiment.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Illinois-LTS-means-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.4: The mean oil content of corn in the Illinois long term selection experiment. Two populations were established in 1896 from the same inital population. Two secondary populations were established in 1948 where the direction of selection was reversed. Linear fit to the up experiment shown as a red line. Data available <a href="https://www.ideals.illinois.edu/handle/2142/3525">here</a>, Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Illinois_long_term_selection_corn/corn_LTS.R">here</a>.
+</figcaption>
+</figure>
+</div></div><p>If our selection pressure is sustained over many generations, we can use our breeder’s equation to predict the response. If we are willing to assume that our heritability does not change and we maintain a constant selection differential (<span class="math inline">\(S\)</span>), then after <span class="math inline">\(n\)</span> generations our phenotype mean will have shifted</p>
+<p><span id="eq-response-to-selection-4"><span class="math display">\[n h^2 S \tag{8.5}\]</span></span></p>
+<p>i.e.&nbsp;our population will keep up a linear response to selection.</p>
+<div id="fig-Illinois-LTS-dists" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Density plots showing the phenotypic distributions of the up- and down-selection populations of the Illinois long term selection experiment over time.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Illinois-LTS-dists-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Illinois_long_term_selection_corn/Illinois_LTS_ggridges_distribution.png" class="img-fluid figure-img" style="width:100.0%" alt="Density plots showing the phenotypic distributions of the up- and down-selection populations of the Illinois long term selection experiment over time.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Illinois-LTS-dists-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.5: Density plots showing the phenotypic distributions of the up- and down-selection populations of the Illinois long term selection experiment over time. Data available <a href="https://www.ideals.illinois.edu/handle/2142/3525">here</a>, Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Illinois_long_term_selection_corn/corn_LTS.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>Therefore, long-term, consistent selection can drive impressive evolutionary change. One example of this comes from a field experiment in Illinois, where plant breeders have systematically selected for higher and lower oil content in corn (see our previous <a href="#fig-Illinois-LTS-breeders-eq" class="quarto-xref">Figure&nbsp;<span>8.2</span></a> for one generation of up selection). For over a century, they have taking seeds from the plants in the extremes of the distribution and using them to form the next generation. They have achieved impressive long-term responses, pushing the population distributions well beyond their initial range (<a href="#fig-Illinois-LTS-dists" class="quarto-xref">Figure&nbsp;<span>8.5</span></a>. For example, the oil up-selection line went from a mean oil content of <span class="math inline">\(4.7\%\)</span> in 1896 to <span class="math inline">\(22.1\%\)</span> in 2004. They’ve established two secondary populations where the selection differential was reversed. In the up-selection population they have maintained an impressively linear increase in oil content, shown by red line in <a href="#fig-Illinois-LTS-means" class="quarto-xref">Figure&nbsp;<span>8.4</span></a>, but while the response is linear at first in the down line but they quickly reach very low oil content (limited by the physical boundary at 0% oil content).</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-maize" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Maize (Zea mays.)">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-maize-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Genetic_drift/maize/7845339168_66aa3d8ccc_z.jpg" class="img-fluid figure-img" style="width:70.0%" alt="Maize (Zea mays.)">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-maize-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.6: Maize (<em>Zea mays</em>.) <span class="attribution">Prof.&nbsp;Dr.&nbsp;Thomé’s Flora von Deutschland. 1886. Thomé, O. W. Image from the <a href="https://www.biodiversitylibrary.org/page/12306602#page/669/mode/1up">Biodiversity Heritage Library</a>. Contributed by New York Botanical Garden. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><div id="exr-reddeer" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 8.3</strong></span> A population of red deer were trapped on Jersey (an island off of England) during the last inter-glacial period. From the fossil record we can see that the population rapidly adapted to their new conditions, perhaps due to selection for shorter reproductive times in the absence of predation <span class="citation" data-cites="lister:89">(<a href="references.html#ref-lister:89" role="doc-biblioref">Lister 1989</a>)</span>. Within 6,000 years they evolved from an estimated mean weight of the population of 200kg to an estimated mean weight of 36kg (a 6 fold reduction)! You estimate that the generation time of red deer is 5 years and, from a current day population, that the narrow sense heritability of the phenotype is 0.5.</p>
+<p><strong>A)</strong> Estimate the mean change per generation in the mean body weight.</p>
+<p><strong>B)</strong> Estimate the change in mean body weight caused by selection within a generation. State your assumptions.</p>
+<p><strong>C)</strong> Assuming we only have fossils from the founding population and the population after 6000 years, should we assume that the calculations accurately reflect what actually occurred within our population?</p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Pygmy-mammoth" class="quarto-float quarto-figure quarto-figure-center anchored" alt="It’s not just deer that evolve to be small on islands, pygmy mammoths and elephants have evolved from large mainland species on numerous islands.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Pygmy-mammoth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Quant_gen/dwarf_elephant/M_exilis_skeletal.png" class="img-fluid figure-img" style="width:100.0%" alt="It’s not just deer that evolve to be small on islands, pygmy mammoths and elephants have evolved from large mainland species on numerous islands.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Pygmy-mammoth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.7: It’s not just deer that evolve to be small on islands, pygmy mammoths and elephants have evolved from large mainland species on numerous islands. For example, the California Channel Islands were home to a dwarf mammoth until about 13,000 years ago. Santa Rosa <em>Mammuthus exilis</em>. <a href="https://en.wikipedia.org/wiki/Pygmy_mammoth#/media/File:M._exilis_skeletal.png">wikimedia</a>, CC BY 3.0.
+</figcaption>
+</figure>
+</div></div><div id="fig-Darwins-Finches-unpred" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top) Mean body size of the medium ground-finch population measured each year.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Darwins-Finches-unpred-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Darwins_Finches_unpred/Darwins_Finches_unpred.png" class="img-fluid figure-img" style="width:70.0%" alt="Top) Mean body size of the medium ground-finch population measured each year.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Darwins-Finches-unpred-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.8: <strong>Top)</strong> Mean body size of the medium ground-finch population measured each year. The 1973 <span class="math inline">\(95\%\)</span> confidence intervals are shown as horizontal bars. <strong>Bottom)</strong> Standardized selection differentials on body size. The statistical significance of the selection differentials is shown, black points are <span class="math inline">\(p&lt;0.001\)</span> and grey <span class="math inline">\(p&lt;0.05\)</span>. Data from <span class="citation" data-cites="grant2002unpredictable">Grant and Grant (<a href="references.html#ref-grant2002unpredictable" role="doc-biblioref">2002</a>)</span> Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Darwins_Finches_unpred/Darwins_Finches_unpred.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>In wild populations, selection pressures are likely rarely sustained for large numbers of generations. For example, the Grants’ have measured phenotypic selection in Darwin’s Finches over multiple decades on the island of Daphne Major. They have seen that selection pressures in the Medium ground-finch (<em>Geospiza fortis</em>) have reversed a number of times over the years (<a href="#fig-Darwins-Finches-unpred" class="quarto-xref">Figure&nbsp;<span>8.8</span></a>).</p>
+<p><strong>Patterns of long-term phenotypic change in the wild.</strong> Looking across the diversity of plants and animals we see huge changes in size and form, can the strengths of selection we can observe over short time periods possibly explain these changes?</p>
+<p>To compare phenotypic changes over various time periods we need some measure of the rate of phenotypic change. <span class="citation" data-cites="haldane1949suggestions">Haldane (<a href="references.html#ref-haldane1949suggestions" role="doc-biblioref">1949</a>)</span> proposed the rate of change from <span class="math inline">\(X_1\)</span> to <span class="math inline">\(X_2\)</span> in time interval <span class="math inline">\(\Delta t\)</span>, measured in millions of years, be quantified as</p>
+<p><span id="eq-response-to-selection-5"><span class="math display">\[\frac{\log \left({}^{X_2}\!/\!{}_{X_1} \right) }{\Delta t}  = \frac{\log
+  \left(X_2 \right) -\log \left(X_1 \right)  }{\Delta t} \tag{8.6}\]</span></span></p>
+<p>by expressing this the log of the ratio,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> we are looking at the proportional fold change, which makes sense as a evolutionary change of 1cm in length is more impressive if you’re a mouse than an elephant. By putting this on a <span class="math inline">\(\log\)</span>-scale we are looking at the fold relative change. <span class="citation" data-cites="haldane1949suggestions">Haldane (<a href="references.html#ref-haldane1949suggestions" role="doc-biblioref">1949</a>)</span> called the units of this measure <em>`</em>the Darwin’, with a one Darwin change corresponding to a <span class="math inline">\(e\approx 2.71\)</span> fold change in a million years, a two Darwin change corresponding to a <span class="math inline">\(e^2\approx  7.34\)</span> fold change in a million years and so on.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Note that here, as elsewhere, <span class="math inline">\(\log\)</span> refers the natural logarithm, i.e.&nbsp;<span class="math inline">\(\log\)</span> base <span class="math inline">\(e\)</span>. We’ll make it clear if we using <span class="math inline">\(\log\)</span> in a different base, e.g.&nbsp;we’ll use <span class="math inline">\(\log_{10}\)</span> for <span class="math inline">\(\log\)</span> in base 10.</p></div><div id="fig-dg-whelks" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Variation in Atlantic dog whelks (Nucella lapillus, synonym Purrpura lapukkus) along the coast of Great Britain.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dg-whelks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Quant_gen/dog_whelks/dog_whelks.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Variation in Atlantic dog whelks (Nucella lapillus, synonym Purrpura lapukkus) along the coast of Great Britain.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dg-whelks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.9: Variation in Atlantic dog whelks (<em>Nucella lapillus</em>, synonym <em>Purrpura lapukkus</em>) along the coast of Great Britain. <span class="attribution">The Cambridge natural history, Molluscs and Brachiopods (1895). Cooke AH, Shipley AE, Reed FRC. Image from the <a href="https://archive.org/stream/cambridgenatural03har/cambridgenatural03har#page/89/mode/1up">Biodiversity Heritage Library</a>. Contributed by University of Toronto - Earth Sciences Library. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div>
+<div id="exr-response-to-selection-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 8.4</strong></span> Calculate the rate of change in body size in the Jersey red deer from <a href="#exr-reddeer" class="quarto-xref">Question&nbsp;<span>8.3</span></a> in Darwins. Do the same for the total change in corn oil content in the up lines in <a href="#fig-Illinois-LTS-means" class="quarto-xref">Figure&nbsp;<span>8.4</span></a>.</p>
+</div>
+<p><span class="citation" data-cites="gingerich1983rates">Gingerich (<a href="references.html#ref-gingerich1983rates" role="doc-biblioref">1983</a>)</span> examined the absolute rate of phenotypic change in field study data and the fossil record, a dataset considerably expanded by <span class="citation" data-cites="uyeda2011million">Uyeda et al. (<a href="references.html#ref-uyeda2011million" role="doc-biblioref">2011</a>)</span>. In <a href="#fig-uyeda-gingerich" class="quarto-xref">Figure&nbsp;<span>8.10</span></a> each point is an observation of phenotype evolution. The <em>x</em>-axis shows the time period in years over which the evolutionary change was observed, the <em>x</em>-axis is plotted on a <span class="math inline">\(\log_{10}\)</span> scale. The <em>y</em>-axis shows absolute rate of phenotypic change, measured in Darwins, again on a <span class="math inline">\(\log_{10}\)</span> scale.</p>
+<p>Over short timescales we see incredibly rapid evolution, note the high rates on the left of <a href="#fig-uyeda-gingerich" class="quarto-xref">Figure&nbsp;<span>8.10</span></a>. For example, the first black dot from the left is a case of evolution over decades in dog whelks. The invasion the green crab (<em>Carcinus maenas</em>) drove the evolution of more robust shells in Atlantic dog whelk (<em>Nucella lapillus</em>) in response to predation along the North American coast <span class="citation" data-cites="vermeij1982phenotypic">(<a href="references.html#ref-vermeij1982phenotypic" role="doc-biblioref">Vermeij 1982</a>)</span>. The shell lip thickness of dog whelks in the St.&nbsp;Andrews, New Brunswick population had changed from 0.94mm to 1.44mm in just 25 years. That’s a 50% increase, and a rate of 17060 Darwins.</p>
+<div id="fig-uyeda-gingerich" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The absolute rate of phenotypic evolution, measured in Darwins, plotted against the time interval over which the evolution was observed.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-uyeda-gingerich-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Uyeda_evol_rates/Uyeda_evol_rates.png" class="img-fluid figure-img" style="width:100.0%" alt="The absolute rate of phenotypic evolution, measured in Darwins, plotted against the time interval over which the evolution was observed.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-uyeda-gingerich-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.10: The absolute rate of phenotypic evolution, measured in Darwins, plotted against the time interval over which the evolution was observed. The green points show direct observations of phenotypic change in historical and contemporary populations. The orange dots give changes observed in the fossil record. The three black dots left to right give examples from dog whelks, our red deer example, and <em>Triceratops</em>. Based on an original plot by <span class="citation" data-cites="gingerich1983rates">Gingerich (<a href="references.html#ref-gingerich1983rates" role="doc-biblioref">1983</a>)</span> using an expanded dataset from <span class="citation" data-cites="uyeda2011million">Uyeda et al. (<a href="references.html#ref-uyeda2011million" role="doc-biblioref">2011</a>)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Uyeda_evol_rates/Uyeda_evol_rates.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>However, when we observe phenotypic evolution over longer time periods it is usually much slower. For example, the rightmost black dot in <a href="#fig-uyeda-gingerich" class="quarto-xref">Figure&nbsp;<span>8.10</span></a> shows the phenotypic evolution along the lineage leading to <em>Triceratops</em>. <em>Triceratops</em> measured in an impressive 25.9–29.5 ft in length. They evolved from a close relative of <em>Protoceratops</em>, which was a bit bigger than a sheep at <span class="math inline">\(\sim\)</span><!-- -->5.9 ft in about 7.5 million years <span class="citation" data-cites="colbert1948evolution">(<a href="references.html#ref-colbert1948evolution" role="doc-biblioref">Colbert 1948</a>)</span>. However, that’s only a phenotypic change of <span class="math inline">\(0.143\)</span> Darwins, its only a roughly four fold change in millions of years. These rates of change in dinosaurs have nothing on our dog whelks, or many other examples of evolution on short time scales. Thus evolutionary changes we can observe over short timescales readily explain long term changes in quantitative phenotypes.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Triceratops-phyl" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The evolution of Triceratops from Protoceratops; see here for a fun updated view of the Coronosauria phylogeny.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Triceratops-phyl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Quant_gen/Triceratops/Triceratops_phylo.png" class="img-fluid figure-img" style="width:100.0%" alt="The evolution of Triceratops from Protoceratops; see here for a fun updated view of the Coronosauria phylogeny.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Triceratops-phyl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.11: The evolution of <em>Triceratops</em> from <em>Protoceratops</em>; see <a href="https://www.geol.umd.edu/~tholtz/G104/lectures/104margino.html">here</a> for a fun updated view of the <em>Coronosauria</em> phylogeny. See these <a href="https://www.geol.umd.edu/~tholtz/G104/lectures/104margino.html">figures</a> from Holtz for an updated &amp; fuller phylogeny. <span class="attribution">The dinosaur book : the ruling reptiles and their relatives. (1951) Colbert, E.H. Image from the <a href="https://www.biodiversitylibrary.org/ia/bookruli00colb#page/86/mode/1up">Internet Archive</a>. Contributed by American Museum of Natural History Library. No known copyright restrictions.</span>
+</figcaption>
+</figure>
+</div></div></section>
+<section id="fitness-and-the-breeders-equation." class="level2 page-columns page-full" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="fitness-and-the-breeders-equation."><span class="header-section-number">8.2</span> Fitness and the Breeder’s Equation.</h2>
+<p>So directional evolution occurs as selection drives a change in the mean phenotype within a generation. But precisely how does this relate to the natural-selection requirement that organisms vary in their fitness? Some different ways of formulating the Breeder’s equation give us insight into the conditions for directional selection and the relationship to fitness landscapes.</p>
+<section id="directional-selection-as-the-covariance-between-fitness-and-phenotype." class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="directional-selection-as-the-covariance-between-fitness-and-phenotype.">Directional selection as the covariance between fitness and phenotype.</h3>
+<p>To think more carefully about this change within a generation, let’s think about a simple fitness model where our phenotype affects the viability of our organisms (i.e.&nbsp;the probability they survive to reproduce). The probability that an individual has a phenotype <span class="math inline">\(X\)</span> before selection is <span class="math inline">\(p(X=x)\)</span>, so that the mean phenotype before selection is</p>
+<p><span id="eq-response-to-selection-6"><span class="math display">\[\mu_{BS} = \mathbb{E}[X] =  \int_{-\infty}^{\infty} x p(x) dx \tag{8.7}\]</span></span></p>
+<p>The probability that an organism with a phenotype <span class="math inline">\(X\)</span> survives to reproduce is <span class="math inline">\(w(X)\)</span>, and we’ll think about this as the fitness of our organism. The probability distribution of phenotypes in those who do survive to reproduce is</p>
+<p><span id="eq-response-to-selection-7"><span class="math display">\[\mathbb{P}(X | \textrm{survive}) =  \frac{p(x) w(x)}{
+\int_{-\infty}^{\infty} p(x) w(x) dx}. \tag{8.8}\]</span></span></p>
+<p>where the denominator is a normalization constant which ensures that our phenotypic distribution integrates to one. The denominator also has the interpretation of being the mean fitness of the population, which we’ll call <span class="math inline">\(\overline{w}\)</span>, i.e.</p>
+<p><span id="eq-pheno-mean-fitness"><span class="math display">\[\overline{w} =  \int_{-\infty}^{\infty} p(x) w(x) dx. \tag{8.9}\]</span></span></p>
+<p>Therefore, we can write the mean phenotype in those who survive to reproduce as</p>
+<p><span id="eq-response-to-selection-8"><span class="math display">\[\mu_S = \frac{1}{\overline{w}}\int_{-\infty}^{\infty} x p(x) w(x) dx \tag{8.10}\]</span></span></p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-red-deer" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Red deer (Cervus elaphus).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-red-deer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Quant_gen/red_deer/Red_deer.png" class="img-fluid figure-img" style="width:100.0%" alt="Red deer (Cervus elaphus).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-red-deer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.12: Red deer (<em>Cervus elaphus</em>). <span class="attribution">British mammals. Thorburn, A. (1920) Image from the <a href="https://www.flickr.com/photos/biodivlibrary/21269550204">Biodiversity Heritage Library</a>. Contributed by Field Museum of Natural History Library. Licensed under CC BY-2.0.</span>
+</figcaption>
+</figure>
+</div></div><p>If we mean center the distribution of phenotypes in our population, i.e.&nbsp;set the phenotype before selection to zero, then</p>
+<p><span id="eq-response-to-selection-9"><span class="math display">\[S=\mu_S= \frac{1}{\overline{w}}\int_{-\infty}^{\infty} x p(x) w(x) dx = \frac{1}{\overline{w}}\mathbb{E} \left (X
+  w(X) \right) \tag{8.11}\]</span></span></p>
+<p>where the final part follows from the fact that the integral is taking the mean of <span class="math inline">\(X w(X)\)</span> over the population.</p>
+<p>As our phenotype is mean centered (<span class="math inline">\(\mathbb{E}(X)=0\)</span>), we can see that <span class="math inline">\(S\)</span> has the form of a covariance<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> between our phenotype <span class="math inline">\(X\)</span> and our relative fitness <span class="math inline">\({}^{w(X)}\!/\!{}_{\overline{w}}\)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;See our math appendix <a href="math-background.html#eq-def-covar" class="quarto-xref">Equation&nbsp;<span>A.39</span></a> for the definition of covariance.</p></div></div><p><span id="eq-S-covar"><span class="math display">\[S =  \mathbb{E} \left (X
+  {}^{w(X)}\!/\!{}_{\overline{w}} \right) =Cov \left(X, {}^{w(X)}\!/\!{}_{\overline{w}} \right) \tag{8.12}\]</span></span></p>
+<p>Thus our change in mean phenotype is directly a measure of the covariance of our phenotype and our fitness. Rewriting our breeder’s equation using this observation we see</p>
+<p><span id="eq-response-to-selection-10"><span class="math display">\[R = \frac{V_A}{V_P}  Cov \left(X, {}^{w(X)}\!/\!{}_{\overline{w}} \right) \tag{8.13}\]</span></span></p>
+<p>we see that the response to selection is due to the fact that our fitness (viability) of our organisms/parents covaries with our phenotype, and that our child’s phenotype covaries with our parent’s phenotype.</p>
+<p><strong>Fitness Gradients and linear regressions.</strong></p>
+<p>To understand this in more detail let imagine that we calculate the linear regression of an individual <span class="math inline">\(i\)</span>’s mean-centered phenotype (<span class="math inline">\(X_i\)</span>) on fitness (<span class="math inline">\(W_i\)</span>), i.e.</p>
+<p><span id="eq-fitness-regression"><span class="math display">\[W_i \sim \beta X_i + \overline{w} \tag{8.14}\]</span></span></p>
+<p>the best fitting slope of this regression (<span class="math inline">\(\beta\)</span>), we’ll call it the ‘fitness gradient’, is given by</p>
+<p><span id="eq-beta-covar"><span class="math display">\[\beta = Cov(X, {}^{w(X)}\!/\!{}_{\overline{w}} )/ V_P \tag{8.15}\]</span></span></p>
+<p>i.e.&nbsp;the fitness gradient is the phenotype-fitness covariance divided by the phenotypic variance. <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Using this result we can rewrite the breeder’s equation as</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;see math appendix around <a href="math-background.html#eq-def-linear-regression" class="quarto-xref">Equation&nbsp;<span>A.43</span></a> for more on linear regression</p></div></div><p><span id="eq-R-beta"><span class="math display">\[R= V_A \beta \tag{8.16}\]</span></span></p>
+<p>i.e.&nbsp;we’ll see a directional response to selection if there is a linear relationship of phenotype on fitness, and if there is additive genetic variance for the phenotype. As one example of a fitness gradient, in <a href="#fig-red-deer-fitness-grad" class="quarto-xref">Figure&nbsp;<span>8.13</span></a> the lifetime reproductive success (LRS) of male Red Deer is plotted against the weight of their antlers. The red line gives the linear regression of fitness (LRS) on antler mass and the slope of this line is the fitness gradient (<span class="math inline">\(\beta\)</span>).</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-red-deer-fitness-grad" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Lifetime reproductive success (LRS) of male Red Deer as a function of their antler mass.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-red-deer-fitness-grad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/red_deer_selection_gradient/selection_grad_deer.png" class="img-fluid figure-img" style="width:100.0%" alt="Lifetime reproductive success (LRS) of male Red Deer as a function of their antler mass.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-red-deer-fitness-grad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.13: Lifetime reproductive success (LRS) of male Red Deer as a function of their antler mass. Data from <span class="citation" data-cites="kruuk2002antler">Kruuk et al. (<a href="references.html#ref-kruuk2002antler" role="doc-biblioref">2002</a>)</span>; see the paper for discussion of the complexities of equating this selection gradient with the evolutionary response. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/red_deer_selection_gradient/selection_grad_deer.R">here</a>..
+</figcaption>
+</figure>
+</div></div><p><strong>Fisher’s fundamental theorem of natural selection.</strong> Finally how does the mean fitness of our population evolve? If we choose relative fitness to be our phenotype (<span class="math inline">\(X={}^{w(X)}\!/\!{}_{\overline{w}}\)</span>), then the response in fitness is</p>
+<p><span class="math display">\[\begin{aligned}
+  R &amp;= \frac{V_A}{V_P}  Cov \left({}^{w(X)}\!/\!{}_{\overline{w}} ,
+  {}^{w(X)}\!/\!{}_{\overline{w}} \right) = \frac{V_A}{V_P} V_P \\
+  &amp;=V_A
+\end{aligned}\]</span></p>
+<p>i.e.&nbsp;the response to selection is equal to the additive genetic variance for relative fitness. Or as Fisher put it</p>
+<blockquote class="blockquote">
+<p>“The rate of increase in fitness of any organism at any time is equal to its genetic variance in fitness at that time.” <span class="citation" data-cites="fisher1930">(<a href="references.html#ref-fisher1930" role="doc-biblioref">1930</a>)</span> (pg 37)</p>
+</blockquote>
+<p>Fisher called this ‘the fundamental theorem of natural selection’. Our proof here is just a sketch, and more formal approaches are needed to show it in generality. There has been much gnashing of teeth over exactly how broadly this result holds, and exactly what Fisher meant <span class="citation" data-cites="ewens2010gene">(see <a href="references.html#ref-ewens2010gene" role="doc-biblioref">Ewens 2010</a> for a recent overview)</span>.</p>
+</section>
+<section id="sec-pheno-fitness-landscapes" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-pheno-fitness-landscapes">Directional Selection on Fitness Landscapes.</h3>
+<div id="fig-fitness-landscape-1D" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" alt="An example of a fitness landscape, showing the mean fitness of the population (w) as a function of the mean phenotype of the population (x.">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-fitness-landscape-1D-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="images/figures/Response_to_sel/fitness_landscape_1D.png" class="img-fluid figure-img column-page-right" style="width:80.0%" alt="An example of a fitness landscape, showing the mean fitness of the population (w) as a function of the mean phenotype of the population (x.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fitness-landscape-1D-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.14: An example of a fitness landscape, showing the mean fitness of the population (<span class="math inline">\(\overline{w}\)</span>) as a function of the mean phenotype of the population (<span class="math inline">\(\bar{x}\)</span>. The arrows show the expected direction of movement of our population on the fitness landscape, with natural selection moving our population toward local fitness optima. The coloured bar shows the derivative (slope) of the mean fitness with respect to mean phenotype (<a href="#eq-pheno-fitness-landscape" class="quarto-xref">Equation&nbsp;<span>8.18</span></a>). Red values are positive slopes corresponding to the population evolving towards the right of the page, blue is a negative slope with the population moving to the left.
+</figcaption>
+</figure>
+</div>
+<p>One common metaphor when we talk about evolution is that of a population exploring an adaptive landscape with natural selection pushing a population towards higher fitness states corresponding to peaks in this landscape (see e.g. <a href="#fig-fitness-landscape-1D" class="quarto-xref">Figure&nbsp;<span>8.14</span></a>). <span class="citation" data-cites="lande1976natural">Lande (<a href="references.html#ref-lande1976natural" role="doc-biblioref">1976</a>)</span> found an evocative formulation of the Breeder’s equation which aids our intuition of phenotypic fitness landscapes. <span class="citation" data-cites="lande1976natural">Lande (<a href="references.html#ref-lande1976natural" role="doc-biblioref">1976</a>)</span> showed that, if the phenotype is normally distributed, the response to selection (<span class="math inline">\(R\)</span>) could be written in terms of the gradient (derivative) of the mean fitness (<span class="math inline">\(\overline{w}\)</span>) of the population</p>
+<p>This follows from the fact that we can move the derivative inside the integral of <span class="math inline">\(\overline{w}\)</span>, <a href="#eq-pheno-mean-fitness" class="quarto-xref">Equation&nbsp;<span>8.9</span></a>, to write the new term in <a href="#eq-pheno-fitness-landscape" class="quarto-xref">Equation&nbsp;<span>8.18</span></a> as</p>
+<p><span id="eq-proof-landscape"><span class="math display">\[\begin{aligned}
+\frac{1}{\overline{w}}  \frac{\partial \overline{w}}{\partial \bar{x}} &amp;=
+                                                                   \frac{1}{\overline{w}}
+                                                                   \int_{-\infty}^{\infty}w(x)
+                               \frac{\partial p(x)}{\partial \bar{x}}  dx \\
+&amp; =\int_{-\infty}^{\infty} \frac{w(x)}{\overline{w}}  \frac{(x-\bar{x})}{V_P}  dx  \\
+                             &amp; = \frac{cov(w(x),x) }{var(x)}
+\end{aligned} \tag{8.17}\]</span></span></p>
+<p>which is <span class="math inline">\(\beta\)</span>, so that eqns (<a href="#eq-R-beta" class="quarto-xref"><span>8.16</span></a>) and (<a href="#eq-pheno-fitness-landscape" class="quarto-xref"><span>8.18</span></a>) are equivalent. For this equivalence to hold, in the first line we assume that <span class="math inline">\(w(x)\)</span> is not a function of <span class="math inline">\(\bar{x}\)</span>, while the middle line is true when <span class="math inline">\(p(x)\)</span> is the normal distribution.</p>
+<p>as a function of the mean phenotype:</p>
+<p><span id="eq-pheno-fitness-landscape"><span class="math display">\[R = \frac{V_A}{\overline{w}} \frac{\partial \overline{w}}{\partial \bar{x}} \tag{8.18}\]</span></span></p>
+<p>What does this mean? Well <span class="math inline">\({}^{V_A}\!/\!{}_{\overline{w}}\)</span> is always positive, so the direction our population responds to selection is predicted by the sign of the derivative (see Appendix <a href="math-background.html#sec-calculus" class="quarto-xref"><span>Section A.1</span></a> for more on derivatives). If increasing the mean phenotype of the population slightly would increase mean fitness (<span class="math inline">\({}^{\partial \overline{w}}\!/\!{}_{\partial \bar{x}}
+&gt;0\)</span>) our population will respond that generation by evolving toward higher values of the trait (<span class="math inline">\(R&gt;0\)</span>), left panel of <a href="#fig-fitness-landscape-1D-w-wbar" class="quarto-xref">Figure&nbsp;<span>8.15</span></a>. Conversely, if decreasing the population mean phenotype slightly would increase the mean fitness (<span class="math inline">\({}^{\partial \overline{w}}\!/\!{}_{\partial \bar{x}}
+&lt;0\)</span>) the population will that generation evolve towards lower values of the phenotype (middle panel of <a href="#fig-fitness-landscape-1D-w-wbar" class="quarto-xref">Figure&nbsp;<span>8.15</span></a>). Thus, if selection pressures remain constant, we can think of the population as evolving on an adaptive landscape where the elevation is given by the population mean fitness. Natural selection operates on the basis of individual-level fitness, but as a result of this our population is increasing in its average fitness, i.e.&nbsp;our population is becoming better adapted. We’ll discuss the caveats of this hill-climbing interpretation below.</p>
+<div id="fig-fitness-landscape-1D-w-wbar" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" alt="A population evolving on a (guassian) fitness surface.">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-fitness-landscape-1D-w-wbar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="images/figures/Response_to_sel/fitness_landscape_1D_w_wbar.png" class="img-fluid figure-img column-page-right" style="width:80.0%" alt="A population evolving on a (guassian) fitness surface.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fitness-landscape-1D-w-wbar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.15: A population evolving on a (guassian) fitness surface. The bottom panel shows the expected individual fitness (<span class="math inline">\(w()\)</span>) and mean fitess as a function of phenotype. The red line shows the best fitting linear approximation to the relationship between phenotype and individual fitness, <a href="#eq-fitness-regression" class="quarto-xref">Equation&nbsp;<span>8.14</span></a>, whose slope is <span class="math inline">\(\beta\)</span>. The top panel shows the distribution of the phenotype before and after selection. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/fitness_landscape_1D_animated.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>What happens when it reaches the top of a peak? Well at the top of a peak <span class="math inline">\({}^{\partial
+  \overline{w}}\!/\!{}_{\partial \bar{x}}=0\)</span>, as it is a local maximum, and so <span class="math inline">\(R=0\)</span>. Assuming that the relationship between fitness and phenotype stays constant, our population will stay at the top of the fitness peak. This view of natural selection does not imply that the population is evolving to the best possible state. Our population is just marching up the hill of mean fitness (end panel <a href="#fig-fitness-landscape-1D-w-wbar" class="quarto-xref">Figure&nbsp;<span>8.15</span></a>). However, this peak isn’t necessarily the highest fitness peak but simply whichever peak was closest. So our population can become trapped on a local, but not global peak of fitness (see, for example <a href="#fig-fitness-landscape-1D" class="quarto-xref">Figure&nbsp;<span>8.14</span></a>).</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Stickleback-fossil-traj" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top) A time series of stickleback phenotypic evolution from the fossil record.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Stickleback-fossil-traj-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Stickleback_fossil_traj/Stickleback_fossil_traj.png" class="img-fluid figure-img" style="width:100.0%" alt="Top) A time series of stickleback phenotypic evolution from the fossil record.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Stickleback-fossil-traj-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.16: <strong>Top)</strong> A time series of stickleback phenotypic evolution from the fossil record. After a heavily armoured stickleback invades the lake it quickly evolves towards fewer touching pterygiophores (the bones supporting the dorsal spines). Fossil measurements means are calculated in 250 year bins. <strong>Bottom)</strong> How our population moves on the Inferred fitness landscape. The arrows show each move made by the population in the 250 intervals. Data from <span class="citation" data-cites="bell2006inferring">Bell et al. (<a href="references.html#ref-bell2006inferring" role="doc-biblioref">2006</a>)</span> and <span class="citation" data-cites="hunt2008evolution">Hunt et al. (<a href="references.html#ref-hunt2008evolution" role="doc-biblioref">2008</a>)</span> Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Stickleback_fossil_traj/Stickleback_traj.R">here</a>.
+</figcaption>
+</figure>
+</div></div><p>One dramatic example documenting adaptive evolution to a new fitness optimum is offered by a remarkable time-series of stickleback evolution from a fossil lake-bed in Nevada <span class="citation" data-cites="bell2006inferring">(<a href="references.html#ref-bell2006inferring" role="doc-biblioref">Bell et al. 2006</a>)</span>. In this lake the layers of sediment are laid down each year allowing a very detailed time series with over five thousand fossils measured. The time-series documents the evolution towards a new set of optimum phenotypes in the fifteen thousand years after the initial invasion of the lake by a heavily armoured stickleback species. In <a href="#fig-Stickleback-fossil-traj" class="quarto-xref">Figure&nbsp;<span>8.16</span></a> the population mean number of touching pterygiophores, the bones supporting the dorsal spines, through the fossil record (<a href="#fig-Stickleback-fossil" class="quarto-xref">Figure&nbsp;<span>8.17</span></a>). Note how quickly the species evolves toward its new value, presumably a fitness optimum in their new environment, and the long subsequent time interval over which the population mean phenotype fluctuates about its new value.</p>
+<p><span class="citation" data-cites="hunt2008evolution">Hunt et al. (<a href="references.html#ref-hunt2008evolution" role="doc-biblioref">2008</a>)</span> fitted a model of a population adapting to a fitness landscape, with a single peak, to these time-series data. Their fitted fitness surface is shown in the lower panel of <a href="#fig-Stickleback-fossil-traj" class="quarto-xref">Figure&nbsp;<span>8.16</span></a> . The arrows show the moves that the population mean phenotype is making on this inferred fitness surface. The population initially takes large steps up toward the peak of this surface and subsequently fluctuates around the peak. Under the interpretation that there is a single stationary peak these fluctuations represent genetic drift randomly knocking the population off its optimum, with selection acting to restore the population towards this local optimum.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Stickleback-fossil" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Fossil stickleback.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Stickleback-fossil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Quant_gen/Fossil_stickleback/journal.pbio.1001466.g003.png" class="img-fluid figure-img" style="width:100.0%" alt="Fossil stickleback.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Stickleback-fossil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.17: Fossil stickleback. Photo by Peter J. Park from <span class="citation" data-cites="losos2013evolutionary">Losos et al. (<a href="references.html#ref-losos2013evolutionary" role="doc-biblioref">2013</a>)</span>, licensed under CC BY 4.0.
+</figcaption>
+</figure>
+</div></div><p><strong>Issues with the interpretation of fitness landscapes.</strong> In practice, fitness landscapes may not be constant. The environment may be constantly changing so our population is constantly forced to change to keep up with the fitness peak. Indeed our environment may change so quickly that our population cannot keep up with the peak. Our population is still trying to increase its mean fitness, to ‘adapt’, but the landscape itself is evolving. In the case of very rapid environmental change our population may slide further and further away the peak, and as a consequence its mean fitness decreases which may drive the population to extinction if our population drops below <span class="math inline">\(\overline{w}&lt;1\)</span> for long enough. The conditions for extinction are an active area of research in the field of ‘Evolutionary rescue’. More generally, for our fitness landscape result (<a href="#eq-pheno-fitness-landscape" class="quarto-xref">Equation&nbsp;<span>8.18</span></a>) to hold, and for us to be able to talk of our population attempting to evolve to higher mean fitness states, we need the fitness of our phenotypes to be independent of the frequency of other phenotypes in the population. (This independence allows us to assume that the fitness of individuals is not a function of the mean phenotype, as needed in <a href="#eq-proof-landscape" class="quarto-xref">Equation&nbsp;<span>8.17</span></a>). The assumption of frequency independence may not hold when there is competition between individuals, e.g.&nbsp;for resources or mates, as then the fitness of an individual depends on the strategies pursued by other individuals in the populations.</p>
+</section>
+<section id="stabilizing-and-disruptive-selection" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="stabilizing-and-disruptive-selection">Stabilizing and Disruptive selection</h3>
+<p>Up to now we have just looked at directional selection, where selection acts to change the mean phenotype. However, we can also use quantitative genetic models to describe other modes of selection, extending from effects on the population mean the next natural step is to think about selection which acts on the population variance. Selection might act more strongly against individuals in the tails of the distribution, with those closer to the mean phenotype having higher fitness, which lowers the variance. Selection could also disfavour individuals close to the population mean, with individuals with extreme phenotypes having higher fitness, which acts to increase the variance of the population.</p>
+<p>Directional selection occurs because of the covariance between our phenotype and fitness, <a href="#eq-S-covar" class="quarto-xref">Equation&nbsp;<span>8.12</span></a>. Just as expressing directional selection as a covariance allowed us to characterize directional selection as the linear relationship between fitness and phenotype, <span class="math inline">\(\beta\)</span>, we can summarize the variance reducing selection by including a quadratic term in the regression of fitness on phenotype</p>
+<p><span id="eq-fitness-regression-stab"><span class="math display">\[w_i \sim \beta x_i + {}^{1}\!/\!{}_{2}  \gamma x_i^2  + \overline{w} \tag{8.19}\]</span></span></p>
+<p>This <span class="math inline">\(\gamma\)</span>, the coefficient of the quadratic term in our model, is the quadratic selection gradient: the covariance of fitness and the squared deviation from the phenotypic mean (<span class="math inline">\(\mu_{BS}\)</span>), i.e.</p>
+<p><span id="eq-response-to-selection-11"><span class="math display">\[\gamma = \frac{Cov\left(w(X), (X-\mu_{BS})^2 \right)}{V^2} \tag{8.20}\]</span></span></p>
+<div class="page-columns page-full"><p>Our <span class="math inline">\(\gamma\)</span> describes the curvature of the fitness surface around the mean.  Values of <span class="math inline">\(\gamma&lt;0\)</span> are consistent with stabilizing selection, reducing the variance. While values of <span class="math inline">\(\gamma&gt;0\)</span> are consistent with disruptive selection, increasing the variance.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">Just like how <span class="math inline">\(\beta\)</span> could be interpreted as the mean gradient of the fitness surface, our <span class="math inline">\(\gamma\)</span> is the mean curvature of the fitness surface <span class="math display">\[\gamma = \mathbb{E} \left[{}^{\partial^2 w(x)}\!/\!{}_{\partial x^2}  \right] =
+\int {}^{\partial^2 w(x)}\!/\!{}_{\partial x^2} p(x) dx\]</span> see Appendix <a href="math-background.html#sec-calculus" class="quarto-xref"><span>Section A.1</span></a> for more on 2nd derivatives.</span></div></div>
+<div id="fig-Birth-weight" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Bars show the total number of births with different birth weights (left axis) Dots show the mortality probability for different birth-weight bins (right axis), the red line shows a fitted quadratic model to mortality.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Birth-weight-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/birth_weight/Karn_Penrose_birth_weight.png" class="img-fluid figure-img" style="width:60.0%" alt="Bars show the total number of births with different birth weights (left axis) Dots show the mortality probability for different birth-weight bins (right axis), the red line shows a fitted quadratic model to mortality.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Birth-weight-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.18: Bars show the total number of births with different birth weights (left axis) Dots show the mortality probability for different birth-weight bins (right axis), the red line shows a fitted quadratic model to mortality. Data from <span class="citation" data-cites="karn1951birth">Karn and Penrose (<a href="references.html#ref-karn1951birth" role="doc-biblioref">1951</a>)</span> Table 2, collapsing male and female births, Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/birth_weight/birth_weight_selection.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>Under stabilizing selection the individuals with extreme phenotypes in either tail have lower fitness, the result of which is to reduce the phenotypic variance within a generation. A classic case of stabilizing selection is birth weight in humans <span class="citation" data-cites="karn1951birth">(<a href="references.html#ref-karn1951birth" role="doc-biblioref">Karn and Penrose 1951</a>)</span>. Mary Karn collected data for nearly fourteen thousand pregnancies from 1935-46 for birth weight and mortality. These data are replotted in <a href="#fig-Birth-weight" class="quarto-xref">Figure&nbsp;<span>8.18</span></a>. The variance of all births is <span class="math inline">\(1.575\)</span>lb<span class="math inline">\(^2\)</span>, while in live births this was reduced to <span class="math inline">\(1.26\)</span>lb<span class="math inline">\(^2\)</span>, a 20% reduction in variance due to stabilizing selection. It is worth noting that this selection pressure has been greatly reduced over the decades in societies with access to good prenatal care <span class="citation" data-cites="ulizzi1992natural">(<a href="references.html#ref-ulizzi1992natural" role="doc-biblioref">Ulizzi and Terrenato 1992</a>)</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/illustration_images/Quant_gen/Pyrenestes_seedcracker/Pyrenestes_minor.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Lesser seedcracker Pyrenestes minor a close relative of the black-bellied seedcracker, whose beak is about the same size as the smallest black-bellied individuals."></p>
+<figcaption>Lesser seedcracker <em>Pyrenestes minor</em> a close relative of the black-bellied seedcracker, whose beak is about the same size as the smallest black-bellied individuals. <span class="attribution">The birds of Africa, comprising all the species which occur in the Ethiopian region. (1986) Sclater, W. L Plate by H. Grönvold Image from the <a href="https://archive.org/stream/birdsofafricacom41shel/birdsofafricacom41shel#page/n306/mode/1up">Biodiversity Heritage Library</a>. Contributed by Smithsonian Libraries. Not in copyright.</span></figcaption>
+</figure>
+</div></div><p>In Central Africa, Black-bellied seedcrackers ( <em>Pyrenestes ostrinus</em>) show disruptive selection on a remarkable beak-size polymorphism (<a href="#fig-Black-bellied-seedcrackers-beaks" class="quarto-xref">Figure&nbsp;<span>8.19</span></a>). The small-beaked individuals feed on soft seeds from one species of marsh sedge while the big-beaked individuals feed on hard seeds from another sedge, which requires ten times the force to crack. <span class="citation" data-cites="smith1993disruptive">Smith (<a href="references.html#ref-smith1993disruptive" role="doc-biblioref">1993</a>)</span> recorded the fates of hundreds of juveniles, and found that individuals with intermediate beak sizes survived at much lower rates (<a href="#fig-Black-bellied-seedcrackers-beaks" class="quarto-xref">Figure&nbsp;<span>8.19</span></a>) because they were not well adapted to either seed resource. Break length is subject to disruptive selection, as can also be seen by the significant positive quadratic term in the regression of survival probability on break length. The variance of mandible length in the total sample of individuals was <span class="math inline">\(0.5\)</span>mm<span class="math inline">\(^2\)</span> in the survivors this variance increased by a factor of <span class="math inline">\(2.5\)</span> to <span class="math inline">\(1.3\)</span>mm<span class="math inline">\(^2\)</span>.</p>
+<div id="fig-Black-bellied-seedcrackers-beaks" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Left An illustration of the the remarkable variation in beak size within Black-bellied seedcrackers (P.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Black-bellied-seedcrackers-beaks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Smith_black_bellied_seed_cracker/Smith_black_bellied.png" class="img-fluid figure-img" style="width:100.0%" alt="Left An illustration of the the remarkable variation in beak size within Black-bellied seedcrackers (P.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Black-bellied-seedcrackers-beaks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.19: <strong>Left</strong> An illustration of the the remarkable variation in beak size within Black-bellied seedcrackers (<em>P. ostrinus</em>). <strong>Right</strong> A histogram of a beak size measurement in Black-bellied seedcrackers. All juveniles are shown in grey, while the black bars show the survivors. The red curve shows the best fitting linear and quadratic model to the probability of survival, fitted using a binomial generalized linear model with a logit link function. <span class="attribution">Left illustration from: Size variation in <em>Pyrenestes</em> by Chapin J.P. in the Bulletin of the American Museum of Natural History (Vol. XLIX 1923) Image from the <a href="https://archive.org/stream/bulletinofameric49alleuoft/#page/417/mode/1up">Biodiversity Heritage Library</a>. Contributed by Toronto Library. Not in copyright.</span>
+</figcaption>
+</figure>
+</div>
+<p>To illustrate how directional selection and quadratic terms play off during adaptation, let’s consider the goldenrod gall fly (<em>Eurosta solidaginis</em>), aka the goldenrod ball gallmaker. See <a href="#fig-gall-size-stab" class="quarto-xref">Figure&nbsp;<span>8.20</span></a>. As it’s wonderful name implies this insect lays its eggs in goldenrod plants, and the larvae release chemicals forcing the plant to form a gall that forms a home for the larvae as they develop. While this seems like a pretty sweet deal for the larvae, it is not without its perils.</p>
+
+<div class="no-row-height column-margin column-container"><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/illustration_images/Quant_gen/goldenrod_ball_gall_maker/goldenrod_ball_gall_maker.png" class="img-fluid figure-img" style="width:70.0%" alt="The gall formed by the goldenrod ball gallmaker (Eurosta solidaginis) in a goldenrod plant."></p>
+<figcaption>The gall formed by the goldenrod ball gallmaker (<em>Eurosta solidaginis</em>) in a goldenrod plant. The one on the right is cut to show a partial cross-section. <span class="attribution">Annual report of the New York State Museum (1917) Image from the <a href="https://archive.org/stream/annualreport71newy/#page/196/mode/1upp">Biodiversity Heritage Library</a>. Contributed by The LuEsther T Mertz Library, the New York Botanical Garden. Not in copyright.</span></figcaption>
+</figure>
+</div></div><p>When the small, ball galls fall prey to parasitism from parasitoid wasps. When all the ball galls are small in the population selection drives strong positive directional selection on gall size, with little stabilizing selection. Notice in the left panel of <a href="#fig-gall-size-stab" class="quarto-xref">Figure&nbsp;<span>8.20</span></a> the good agreement between the linear selection gradient and the fit including a linear and quadratic term. However, bigger galls fall under the pall of predation from downy woodpeckers and black-capped chickadees, who seek out the tasty larvae. Thus intermediate size galls are favoured, a fitness peak that the population quickly reaches. Once on this peak, as shown in the right panel of <a href="#fig-gall-size-stab" class="quarto-xref">Figure&nbsp;<span>8.20</span></a> there is no directional selection, i.e.&nbsp;no linear slope, but there is strong stabilizing selection, i.e.&nbsp;a quadratic term. Thus the population will be maintained at this fitness peak indefinitely if the environment remains unchanged.</p>
+<div id="fig-gall-size-stab" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Fitness surface for gall diameter in goldenrod ball gallmakers.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gall-size-stab-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Weis_Gorman_gall_size_stablizing_sel/gall_size.png" class="img-fluid figure-img" style="width:100.0%" alt="Fitness surface for gall diameter in goldenrod ball gallmakers.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gall-size-stab-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.20: Fitness surface for gall diameter in goldenrod ball gallmakers. The dots are the measured survival probabilities of bins of different sized galls.The solid line is a fitted individual fitness surface (<span class="math inline">\(w(~)\)</span>). Dotted line is <span class="math inline">\(\overline{w}\)</span> plotted as a function of the population mean assuming a normal distribution with a standard deviation of <span class="math inline">\(2\)</span>mm. Data from <span class="citation" data-cites="weis1990measuring">Weis and Gorman (<a href="references.html#ref-weis1990measuring" role="doc-biblioref">1990</a>)</span>, Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Weis_Gorman_gall_size_stablizing_sel/gall_size_fitness_landscape.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<div class="chapter-summary">
+<p><strong>Chapter summary.</strong></p>
+<ul>
+<li><p>Phenotypic natural selection requires variation in phenotypes impacts fitness in a non-random way. For evolution by natural selection to occur we need this phenotypic variation to be heritable.</p></li>
+<li><p>A simple model for the response to directional selection on a phenotype is given by the breeder’s equation. The expected response to selection between adjacent generations (<span class="math inline">\(R\)</span>) is proportional to the response to selection within a generation, the selection differential (<span class="math inline">\(S\)</span>), where the constant of proportionality is the narrow-sense heritability (<span class="math inline">\(h^2\)</span>) of the trait. Thus we expect to see, and indeed do see, strong responses to selection when selection causes large changes within a generation in heritable phenotypes.</p></li>
+<li><p>If selection pressures and heritability remain constant we expect a linear response to selection across many generations. We can often see this in selection experiments, but in the wild selection pressures often fluctuate from generation to generation. The large changes in phenotype we see in the fossil record are easily explained by the strengths of selection we see acting over short time-scales.</p></li>
+<li><p>There are two other common ways to write the breeder’s equation. The first uses the selection gradient (<span class="math inline">\(\beta\)</span>), the regression of fitness on phenotype. The second, the fitness landscape interpretation relies on writing this selection gradient as the derivative of mean fitness by phenotype. The fitness landscape form to the breeder’s equation helps us to understand how and when we can expect selection to act to increase the mean fitness of the population.</p></li>
+<li><p>We can understand other forms of selection on our phenotype that are expected to act on the phenotypic variance rather than the mean, such as disruptive and stabilizing selection, by extensions of the breeder’s equation to include terms for quadratic selection gradients.</p></li>
+</ul>
+</div>
+<div id="exr-response-to-selection-5" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 8.5</strong></span> You are studying the rapid evolution of light organ size in fireflies (<em>Photinus pyralis</em>) in response to light pollution on a prairie in Ohio. In January of 1985, a highway was constructed through the prairie with bright streetlights. Since fireflies use light signals to locate mates, individuals with smaller, and thus less visible, light organs were less successful at mating in these new light conditions. You know the light organ was, on average, 4mm long prior to the construction of the highway. In 2005, the average light organ size in this population before mating was 6mm. If this firefly has 1 generation per year and the narrow sense heritability is 0.1, what was the mean light organ length of successfully reproducing individuals in 1985 (the first year of selection)?</p>
+</div>
+<div id="exr-response-to-selection-6" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 8.6</strong></span> You are a rabbit breeder, and you decide that you want rabbits with long fur. The phenotypic variance is <span class="math inline">\(4\textrm{cm}^2\)</span>. The covariance of fur length between between full sibs is <span class="math inline">\(1\textrm{cm}^2\)</span>. The mean fur length in the initial population is <span class="math inline">\(3\textrm{cm}\)</span>. You choose to breed the top <span class="math inline">\({}^{1}\!/\!{}_{3}\)</span> of the population with the longest fur, and their mean fur length is <span class="math inline">\(5\)</span>cm.<br>
+Assuming that the covariance between sibs is due to only additive genetic variance, how many generations of this selection regime will it take for the fur length to be <span class="math inline">\(10cm\)</span> in the population?</p>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-bell2006inferring" class="csl-entry" role="listitem">
+Bell, M. A., M. P. Travis, and D. M. Blouw. 2006. Inferring natural selection in a fossil threespine stickleback. Paleobiology 32:562–577. Cambridge University Press.
+</div>
+<div id="ref-colbert1948evolution" class="csl-entry" role="listitem">
+Colbert, E. H. 1948. Evolution of the horned dinosaurs. Evolution 2:145–163. Wiley Online Library.
+</div>
+<div id="ref-ewens2010gene" class="csl-entry" role="listitem">
+Ewens, W. J. 2010. What is the gene trying to do? British Journal for the Philosophy of Science 62:155–176. Oxford University Press.
+</div>
+<div id="ref-fisher1930" class="csl-entry" role="listitem">
+Fisher, R. A. 1930. The genetical theory of natural selection: A complete variorum edition. Oxford University Press.
+</div>
+<div id="ref-galen:96" class="csl-entry" role="listitem">
+Galen, C. 1996. Rates of floral evolution: Adaptation to bumblebee pollination in an alpine wildflower, polemonium viscosum. Evolution 50:120–125. Wiley Online Library.
+</div>
+<div id="ref-gingerich1983rates" class="csl-entry" role="listitem">
+Gingerich, P. 1983. Rates of evolution: Effects of time and temporal scaling. Science 222:159–162. American Association for the Advancement of Science.
+</div>
+<div id="ref-grant2002unpredictable" class="csl-entry" role="listitem">
+Grant, P. R., and B. R. Grant. 2002. Unpredictable evolution in a 30-year study of darwin’s finches. science 296:707–711. American Association for the Advancement of Science.
+</div>
+<div id="ref-haldane1949suggestions" class="csl-entry" role="listitem">
+Haldane, J. B. S. 1949. Suggestions as to quantitative measurement of rates of evolution. Evolution 3:51–56. Wiley Online Library.
+</div>
+<div id="ref-hunt2008evolution" class="csl-entry" role="listitem">
+Hunt, G., M. A. Bell, and M. P. Travis. 2008. Evolution toward a new adaptive optimum: Phenotypic evolution in a fossil stickleback lineage. Evolution 62:700–710. Wiley Online Library.
+</div>
+<div id="ref-karn1951birth" class="csl-entry" role="listitem">
+Karn, M. N., and L. Penrose. 1951. Birth weight and gestation time in relation to maternal age, parity and infant survival. Annals of eugenics 16:147–164. Wiley Online Library.
+</div>
+<div id="ref-kruuk2002antler" class="csl-entry" role="listitem">
+Kruuk, L. E., J. Slate, J. M. Pemberton, S. Brotherstone, F. Guinness, and T. Clutton-Brock. 2002. Antler size in red deer: Heritability and selection but no evolution. Evolution 56:1683–1695. Wiley Online Library.
+</div>
+<div id="ref-lande1976natural" class="csl-entry" role="listitem">
+Lande, R. 1976. Natural selection and random genetic drift in phenotypic evolution. Evolution 30:314–334. Wiley Online Library.
+</div>
+<div id="ref-lewontin1970units" class="csl-entry" role="listitem">
+Lewontin, R. C. 1970. The units of selection. Annual review of ecology and systematics 1:1–18. Annual Reviews 4139 El Camino Way, PO Box 10139, Palo Alto, CA 94303-0139, USA.
+</div>
+<div id="ref-lister:89" class="csl-entry" role="listitem">
+Lister, A. 1989. Rapid dwarfing of red deer on jersey in the last interglacial. Nature 342:539. Nature Publishing Group.
+</div>
+<div id="ref-losos2013evolutionary" class="csl-entry" role="listitem">
+Losos, J. B., S. J. Arnold, G. Bejerano, E. Brodie III, D. Hibbett, H. E. Hoekstra, D. P. Mindell, A. Monteiro, C. Moritz, H. A. Orr, and others. 2013. Evolutionary biology for the 21st century. PLoS Biology 11:e1001466. Public Library of Science.
+</div>
+<div id="ref-lush1943animal" class="csl-entry" role="listitem">
+Lush, J. L. 1943. Animal breeding plans. Animal breeding plans. Iowa State College Press.
+</div>
+<div id="ref-smith1993disruptive" class="csl-entry" role="listitem">
+Smith, T. B. 1993. Disruptive selection and the genetic basis of bill size polymorphism in the african finch pyrenestes. Nature 363:618. Nature Publishing Group.
+</div>
+<div id="ref-ulizzi1992natural" class="csl-entry" role="listitem">
+Ulizzi, L., and L. Terrenato. 1992. Natural selection associated with birth weight. VI. Towards the end of the stabilizing component. Annals of human genetics 56:113–118. Wiley Online Library.
+</div>
+<div id="ref-uyeda2011million" class="csl-entry" role="listitem">
+Uyeda, J. C., T. F. Hansen, S. J. Arnold, and J. Pienaar. 2011. The million-year wait for macroevolutionary bursts. Proceedings of the National Academy of Sciences 108:15908–15913. National Acad Sciences.
+</div>
+<div id="ref-vermeij1982phenotypic" class="csl-entry" role="listitem">
+Vermeij, G. J. 1982. Phenotypic evolution in a poorly dispersing snail after arrival of a predator. Nature 299:349. Nature Publishing Group.
+</div>
+<div id="ref-weis1990measuring" class="csl-entry" role="listitem">
+Weis, A. E., and W. L. Gorman. 1990. Measuring selection on reaction norms: An exploration of the eurosta-solidago system. Evolution 44:820–831. Wiley Online Library.
+</div>
+</div>
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./phenotypic-variation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./correlated-traits.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlated Traits and the Response of Multiple Traits to Selection</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script id="popgen-scroll-focus">
+(function(){function f(){document.querySelectorAll('figure.quarto-float-tbl > div, .column-page-right > div').forEach(function(d){
+ var s=d.scrollWidth>d.clientWidth+1; if(s){d.setAttribute('tabindex','0');d.setAttribute('role','region');d.setAttribute('aria-label','Scrollable table');}
+ else{d.removeAttribute('tabindex');}});}
+ window.addEventListener('load',f);window.addEventListener('resize',f);})();
+</script><script id="popgen-no-overlap">
+(function(){
+ var SEL='.column-margin.column-container > *, .margin-caption, .aside';
+ function R(e){var r=e.getBoundingClientRect();return {t:r.top+scrollY,b:r.bottom+scrollY,l:r.left,r:r.right};}
+ function run(){
+  var root=document.getElementById('quarto-document-content'); if(!root) return;
+  var items=[].filter.call(root.querySelectorAll(SEL),function(e){return e.offsetParent!==null && !e.parentElement.closest(SEL);});
+  items.forEach(function(e){e.style.marginTop='';});
+  var blk=[].filter.call(root.querySelectorAll('figure, table, pre, .column-page-right, .column-page, .column-screen, mjx-container[display="true"], .callout, .chapter-summary, blockquote'),
+    function(e){return e.offsetParent!==null && !e.closest(SEL) && !(e.parentElement.closest('figure,.column-page-right,.column-page,.callout') && e.tagName!=='FIGURE' && false);});
+  var last=0;
+  for(var pass=0;pass<3;pass++){
+   last=0; var moved=false;
+   items.forEach(function(it){
+    var r=R(it), top=r.t, h=r.b-r.t, need=Math.max(top,last), gap=8, again=true, n=0;
+    while(again && n++<40){
+     again=false;
+     blk.forEach(function(b){
+      if(it.contains(b)||b.contains(it)) return;
+      var q=R(b); if(q.r<=r.l+1||q.l>=r.r-1) return;
+      if(need<q.b+gap && need+h>q.t-1 && q.b>q.t){ if(need<q.b+gap){need=q.b+gap;again=true;} }
+     });
+    }
+    if(need>top+1){var cur=parseFloat(getComputedStyle(it).marginTop)||0; it.style.marginTop=(cur+need-top)+'px'; moved=true;}
+    var r2=R(it); last=r2.b+ (parseFloat(getComputedStyle(it).marginBottom)||0);
+   });
+   if(!moved) break;
+  }
+ }
+ var tm; function later(){clearTimeout(tm);tm=setTimeout(run,120);}
+ window.addEventListener('load',function(){later();
+   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(later);
+   if(window.MathJax&&MathJax.startup&&MathJax.startup.promise) MathJax.startup.promise.then(later);
+   [].forEach.call(document.images,function(i){if(!i.complete) i.addEventListener('load',later);});
+   setTimeout(later,1500);});
+ window.addEventListener('resize',later);
+ if(window.ResizeObserver) new ResizeObserver(later).observe(document.body);
+})();
+</script></body></html>

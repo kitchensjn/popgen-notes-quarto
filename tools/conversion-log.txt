@@ -1,0 +1,9 @@
+image 'figures/Child_first_cousins_Homozy_BD_new' not found, using figures/Child_first_cousins_Homozy_BD.pdf
+[response-to-selection] sidenote containing a labelled equation was moved into the main text
+[linked-selection] empty \citep{} in the source (missing citation) was removed
+[math-background] sidenote containing a labelled equation was moved into the main text
+[population-structure] 1 heading(s) promoted to avoid skipped levels
+[phenotypic-variation] 1 heading(s) promoted to avoid skipped levels
+[response-to-selection] 1 heading(s) promoted to avoid skipped levels
+[one-locus-selection] 1 heading(s) promoted to avoid skipped levels
+[selection-mutation-migration] 1 heading(s) promoted to avoid skipped levels

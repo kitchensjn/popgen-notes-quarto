@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; The Population Genetics of Divergence and Molecular Substitution – Population and Quantitative Genetics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./neutral-diversity-and-structure.html" rel="next">
+<link href="./genetic-drift.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-468b43a5444adb4913bafb0b3b0c703b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./molecular-evolution.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Population Genetics of Divergence and Molecular Substitution</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Population and Quantitative Genetics</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/cooplab/popgen-notes" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equation-sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equation Sheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allele-and-genotype-frequencies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Allele and Genotype Frequencies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./population-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Population Structure and Correlations Among Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./genetic-drift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Genetic Drift and Neutral Diversity</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./molecular-evolution.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Population Genetics of Divergence and Molecular Substitution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./neutral-diversity-and-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Neutral Diversity and Population Structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phenotypic-variation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./correlated-traits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlated Traits and the Response of Multiple Traits to Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./one-locus-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">One-Locus Models of Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./selection-mutation-migration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Interaction of Selection, Mutation, and Migration</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drift-and-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Impact of Genetic Drift on Selected Alleles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linked-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The Effects of Linked Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multiple-selected-loci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Interaction of Multiple Selected Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#the-neutral-substitution-process." id="toc-the-neutral-substitution-process." class="nav-link active" data-scroll-target="#the-neutral-substitution-process."><span class="header-section-number">5.1</span> The Neutral Substitution process.</a></li>
+  <li><a href="#tests-of-molecular-evolution." id="toc-tests-of-molecular-evolution." class="nav-link" data-scroll-target="#tests-of-molecular-evolution."><span class="header-section-number">5.2</span> Tests of molecular evolution.</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Population Genetics of Divergence and Molecular Substitution</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>“History is just one damn thing after another.” -sometimes attributed to Arnold Toynbee</p>
+</blockquote>
+<p>There are over <span class="math inline">\(30\)</span> million base pair substitutions between human and chimpanzees, sites where humans carry one allele and chimps another at orthologous locations. These changes have occurred in the seven million years or so since human and chimp last shared a common ancestor. Other subsitutions are shared between the sister species human and chimp to the exclusion of gorilla, yet others are shared between human, chimps and Gorilla but not Orangs. Long-term evolution, from the molecular perspective, is just one damn substitution after another. These substitutions represent changes at just a small percentage of sites genome-wide as we share the majority of our genome, our evolutionary history, and our biology with the other great apes. Each of the substitutions must have arisen as a mutation in the population, spread through the population as a polymorphism before eventually reaching fixation. What forces drove the spread of these alleles through the population to become substitutions?</p>
+<div class="column-page-right">
+<table class="caption-top table">
+<caption>Variable positions in a primate alignment of orthologous sequences of a 136bp region. This region starts at position 5242147 of chromosome 11, chosen pretty much at random from the <a href="https://genome.ucsc.edu/cgi-bin/hgc?hgsid=751620175_qgtFpsA9hP8yVBVZ1ezZl3Iy3N1L&amp;c=chr17&amp;l=43084819&amp;r=43084957&amp;o=43084819&amp;t=43084957&amp;g=multiz30way&amp;i=multiz30way">UCSC browser</a>. Dots indicate positions where the other sequences carry the same base as the human reference sequence.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Human</th>
+<th style="text-align: left;"><code>accacagcatttgttagttactgccaagaagcctgtatctgtagggtaaaatcctcgctgaagtgggttg</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Chimp</td>
+<td style="text-align: left;"><code>......................................g...........c...................</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Gorilla</td>
+<td style="text-align: left;"><code>..................................................cc..................</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Orangutan</td>
+<td style="text-align: left;"><code>.........c.........c..............................c...................</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Gibbon</td>
+<td style="text-align: left;"><code>...................c..............................—.................</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Crab-eating macaque</td>
+<td style="text-align: left;"><code>g.............gg...c..............................c..t.t..............</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="page-columns page-full"><p>Many substitutions were driven by selection, as there has undoubtedly been plenty of adaptive phenotypic adaptive evolution in great apes. However, these adaptive changes may be a small minority of all the subsitutions, for a start many of these substitutions have occurred in non-coding DNA with no known functional effect. Thus it is reasonable initial position that the majority of substitutions genome-wide may well be neutral.  How can we hope to identify regions undergoing adaptive divergence? How could we hope to address the claim that many amino-acid changing substitutions are also neutral, as posited by the Neutral theory of molecular evolution. One way forward is to understand what neutral theory predicts for the rate of molecular substition, and then develop ways to test these ideas.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">Many of the topics covered in this chapter also fall within the field of ‘molecular evolution’, which shares many of its questions and tools with population genetics but often focuses on longer time-scales of evolution using phylogenetic approaches.</span></div></div>
+<div id="fig-Huxley-man" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Illustration by Benjamin Waterhouse Hawkins from Huxley’s “Evidence as to Man’s Place in Nature” (1863).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Huxley-man-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Genetic_drift/Huxley_mans_place/Huxley_Mans_Place_in_Nature.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Illustration by Benjamin Waterhouse Hawkins from Huxley’s “Evidence as to Man’s Place in Nature” (1863).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Huxley-man-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: Illustration by Benjamin Waterhouse Hawkins from Huxley’s “Evidence as to Man’s Place in Nature” (1863). Image from the <a href="https://en.wikipedia.org/wiki/Pithecometra_principle#/media/File:Huxley_-_Mans_Place_in_Nature.jpg">wikimedia</a>, public domain.
+</figcaption>
+</figure>
+</div>
+<section id="the-neutral-substitution-process." class="level2 page-columns page-full" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="the-neutral-substitution-process."><span class="header-section-number">5.1</span> The Neutral Substitution process.</h2>
+<p>So how then do neutral substitutions occur? It is very unlikely that a rare neutral allele accidentally drifts up to fixation; more likely, such an allele will be eventually lost from the population. However, populations experience a large and constant influx of rare alleles due to mutation, so even if it is very unlikely that an individual allele fixes within the population, some neutral alleles will fix by chance. So we’ll need to understand the probability that a neutral mutation fixes, and then how we can think about the rate of substitutions accumulate over time.</p>
+<section id="probability-of-the-eventual-fixation-of-a-neutral-allele" class="level3">
+<h3 class="anchored" data-anchor-id="probability-of-the-eventual-fixation-of-a-neutral-allele">probability of the eventual fixation of a neutral allele</h3>
+<div id="fig-subs-simulation" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Each allele initially present in a small diploid population is given a different colour so we can track their descendants over time.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-subs-simulation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/Substitution_sim.png" class="img-fluid figure-img" style="width:100.0%" alt="Each allele initially present in a small diploid population is given a different colour so we can track their descendants over time.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-subs-simulation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.2: Each allele initially present in a small diploid population is given a different colour so we can track their descendants over time. By the 9th generation, all of the alleles present in the population can trace their ancestry back to the orange allele. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/Loss_of_heterozyg_varying_pop.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>An allele which reaches fixation within a population is an ancestor to the entire population. In a particular generation there can only be a single allele that all other alleles at the locus in a later generation can claim as an ancestor (See <a href="#fig-subs-simulation" class="quarto-xref">Figure&nbsp;<span>5.2</span></a>). At a neutral locus, the actual allele does not affect the number of descendants that the allele has (this follows from the definition of neutrality: neutral alleles don’t leave more or less descendants on average than other neutral alleles). An equivalent way to state this is that the allele labels don’t affect anything; thus the alleles are <em>exchangeable</em>. As a consequence of being exchangeable, any allele is equally likely to be the ancestor of the entire population. In a diploid population of size <span class="math inline">\(N\)</span>, there are <span class="math inline">\(2N\)</span> alleles, all of which are equally likely to be the ancestor of the entire population at some later time point. So if our allele is present in a single copy, the chance that it is the ancestor to the entire population in some future generation is <span class="math inline">\({}^{1}\!/\!{}_{(2N)}\)</span>, i.e.&nbsp;the chance our neutral allele is eventually fixed is <span class="math inline">\({}^{1}\!/\!{}_{(2N)}\)</span>. In <a href="#fig-subs-simulation" class="quarto-xref">Figure&nbsp;<span>5.2</span></a>, our orange allele in the first generation is one of 10 differently coloured alleles, and so has a <span class="math inline">\(1/10\)</span> chance of being the ancestor of the entire population at some later time point (and in this simulation it does become the common ancestor, by the 9th generation).</p>
+<p>More generally, if our neutral allele is present in <span class="math inline">\(i\)</span> copies in the population, of <span class="math inline">\(2N\)</span> alleles, the probability that this allele becomes fixed is <span class="math inline">\({}^{i}\!/\!{}_{(2N)}\)</span>, i.e.&nbsp;the probability that a neutral allele is eventually fixed is simply given by its frequency (<span class="math inline">\(p\)</span>) in the population. (We can also derive this result by letting <span class="math inline">\(Ns \rightarrow 0\)</span> in <a href="drift-and-selection.html#eq-prob-fixed" class="quarto-xref">Equation&nbsp;<span>12.10</span></a>, a result we’ll encounter later.)</p>
+<p>How long does it take on average for such an allele to fix within our population? In developing <a href="genetic-drift.html#eq-TMRCA-neutral" class="quarto-xref">Equation&nbsp;<span>4.30</span></a> we’ve seen that it takes on average <span class="math inline">\(4N\)</span> generations for a large sample of alleles to all trace their ancestry back to a single most recent common ancestral allele. Any single-base pair change which arose as a single mutation at a locus, and fixed in the population, must have been present in the sequence transmitted by the most recent common ancestor of the population at that locus. Thus it must take roughly <span class="math inline">\(4N\)</span> generations for a neutral allele present in a single copy within the population to fix. This argument can be made more precise, but in general we would still find that it takes <span class="math inline">\(\approx 4N\)</span> generations for a neutral allele to go from its introduction to fixation with the population.</p>
+</section>
+<section id="rate-of-substitution-of-neutral-alleles" class="level3">
+<h3 class="anchored" data-anchor-id="rate-of-substitution-of-neutral-alleles">Rate of substitution of neutral alleles</h3>
+<p>A substitution between populations that do not exchange gene flow is simply a fixation event within one population. The rate of substitution is therefore the rate at which new alleles fix in the population, so that the long-term substitution rate is the rate at which mutations arise that will eventually become fixed within our population.</p>
+<p>Let’s assume, based on our discussion of the neutral theory of molecular evolution, that there are only two classes of mutational changes that can occur with a region, highly deleterious mutations and neutral mutations. A fraction <span class="math inline">\(C\)</span> of all mutational changes are highly deleterious, and cannot possibly contribute to substitution nor polymorphism. The other <span class="math inline">\(1-C\)</span> fraction of mutations are neutral. If our total mutation rate is <span class="math inline">\(\mu\)</span> per transmitted allele per generation, then a total of <span class="math inline">\(2N \mu (1-C)\)</span> neutral mutations enter our population each generation.</p>
+<p>Each of these neutral mutations has a <span class="math inline">\({}^{1}\!/\!{}_{(2N)}\)</span> probability chance of eventually becoming fixed in the population. Therefore, the rate at which neutral mutations arise that eventually become fixed within our population is</p>
+<p><span id="eq-molecular-evolution-1"><span class="math display">\[2N\mu(1-C)\frac{1}{2N} = \mu(1-C) \tag{5.1}\]</span></span></p>
+<p>Thus the rate of substitution, under a model where newly arising alleles are either highly deleterious or neutral, is simply given by the mutation rate of neutral alleles, i.e.&nbsp;<span class="math inline">\(\mu(1-C)\)</span>.</p>
+<p>Consider a pair of species that have diverged for <span class="math inline">\(T\)</span> generations, i.e.&nbsp;orthologous sequences shared between the species last shared a common ancestor <span class="math inline">\(T\)</span> generations ago. If these species have maintained a constant <span class="math inline">\(\mu\)</span> over that time, they will have accumulated an average of</p>
+<p><span id="eq-moleclock"><span class="math display">\[2\mu(1-C)T \tag{5.2}\]</span></span></p>
+<p>neutral substitutions. This assumes that <span class="math inline">\(T\)</span> is a lot longer than the time it takes to fix a neutral allele, such that the total number of alleles introduced into the population that will eventually fix is the total number of substitutions.</p>
+<p>This is a really pretty result as the population size has completely canceled out of the neutral substitution rate. However, there is another way to see this in a more straight forward way. If I look at a sequence in me compared to, say, a particular chimp, I’m looking at the mutations that have occurred in both of our germlines since they parted ways <span class="math inline">\(T\)</span> generations ago. Since neutral alleles do not alter the probability of their transmission to the next generation, we are simply looking at the mutations that have occurred in <span class="math inline">\(2T\)</span> generations worth of transmissions. Thus the average number of neutral mutational differences separating our pair of species is simply <span class="math inline">\(2\mu (1-C) T\)</span>.</p>
+</section>
+<section id="implications-for-the-molecular-clock." class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="implications-for-the-molecular-clock.">Implications for the Molecular Clock.</h3>
+<div class="page-columns page-full"><p> A number of observations follow under this model, from <a href="#eq-moleclock" class="quarto-xref">Equation&nbsp;<span>5.2</span></a>. The first is that a primary determinant of patterns of molecular evolution in a genomic region is the level of constraint (<span class="math inline">\(C\)</span>). This pattern generally seems to hold empirically: non-coding regions often evolve more rapidly than coding regions, synonymous substitutions accumulate faster than nonsynonymous, and nonsynonymous substitutions accumulate faster in less vital proteins than ones that are absolutely necessary for early development. For example, fibrinopeptides evolve in a less constrained manner than the cytochrome c gene, see <a href="#fig-Dickerson-mole-clock" class="quarto-xref">Figure&nbsp;<span>5.3</span></a>. Note that this constraint prediction is not a unique prediction of the neutral model, e.g.&nbsp;less constrained regions may also be better able to evolve adaptively. However, it is a fantastically useful general insight, e.g.&nbsp;it allows us to spot putatively functional non-coding regions by looking for genomic regions that have very low levels of divergence among distantly related species.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">“Functionally less important molecules or parts of a molecule evolve faster than more important ones.” – <span class="citation" data-cites="kimura1974some">Kimura and Ohta (<a href="references.html#ref-kimura1974some" role="doc-biblioref">1974</a>)</span></span></div></div>
+<div id="fig-Dickerson-mole-clock" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The numbers of substitutions in three proteins, corrected for multiple hits, between various pairs of groups plotted against the time these groups shared a common ancestor in the fossil record.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Dickerson-mole-clock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/genetic_drift/Molecular_clock_Dickerson/Dickerson_1979_mole_clock_fig.png" class="img-fluid figure-img" style="width:80.0%" alt="The numbers of substitutions in three proteins, corrected for multiple hits, between various pairs of groups plotted against the time these groups shared a common ancestor in the fossil record.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Dickerson-mole-clock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.3: The numbers of substitutions in three proteins, corrected for multiple hits, between various pairs of groups plotted against the time these groups shared a common ancestor in the fossil record. Data from <span class="citation" data-cites="dickerson1971structure">Dickerson (<a href="references.html#ref-dickerson1971structure" role="doc-biblioref">1971</a>)</span>. The lines give the linear regression through the origin for each protein. The slope of the regression is given next to the protein name. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/genetic_drift/Molecular_clock_Dickerson/Dickerson_1979_mole_clock_data.R">here</a>. See <span class="citation" data-cites="robinson2016revisiting">(<a href="references.html#ref-robinson2016revisiting" role="doc-biblioref">Robinson et al. 2016</a>)</span> who revisited this classic study and confirmed the conclusions.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-rattlesnake" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Eastern diamondback rattlesnake (Crotalus adamanteus).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rattlesnake-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Genetic_drift/rattlesnake/rattlesnake.jpg" class="img-fluid figure-img" style="width:70.0%" alt="Eastern diamondback rattlesnake (Crotalus adamanteus).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rattlesnake-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.4: Eastern diamondback rattlesnake (<em>Crotalus adamanteus</em>). <span class="attribution">North American herpetology. Holbrook, J. E. Image from the <a href="https://www.biodiversitylibrary.org/page/35765722#page/120/mode/1up">Biodiversity Heritage Library</a>. Contributed by Smithsonian Libraries. Licensed under CC BY-2.0.</span>
+</figcaption>
+</figure>
+</div></div><p>The second important insight, and critical for the development of the neutral theory, is that <a href="#eq-moleclock" class="quarto-xref">Equation&nbsp;<span>5.2</span></a> is seemingly consistent with <span class="citation" data-cites="zuckerkandl1965evolutionary">Zuckerkandl and Pauling (<a href="references.html#ref-zuckerkandl1965evolutionary" role="doc-biblioref">1965</a>)</span>’s hypothesis of a surprisingly constant, protein molecular clock. The protein molecular clock is the observation that for some proteins there’s a linear relationship between the number of non-synonymous (NS) substitutions and the time species last shared a common ancestor in the fossil record. <span class="citation" data-cites="dickerson1971structure">Dickerson (<a href="references.html#ref-dickerson1971structure" role="doc-biblioref">1971</a>)</span> provided an for early example of this observation (<a href="#fig-Dickerson-mole-clock" class="quarto-xref">Figure&nbsp;<span>5.3</span></a>), by comparing various organisms whose molecular sequences were available to him. For example, he found that humans and rattlesnakes, who last share a common ancestor in the fossil record around 300 million years, are separated by roughly <span class="math inline">\(15\)</span> NS substitutions per <span class="math inline">\(100\)</span> sites in the cytochrome c protein. While, humans and dogfish, which diverged around 400 million years, are separated by <span class="math inline">\(19\)</span> NS substitutions per <span class="math inline">\(100\)</span> sites in this gene.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-dogfish" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Spiny dogfish (Squalus acanthias).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dogfish-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Genetic_drift/dogfish/dogfish.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Spiny dogfish (Squalus acanthias).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dogfish-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.5: Spiny dogfish (<em>Squalus acanthias</em>). <a href="http://digitalcollections.nypl.org/items/510d47da-6930-a3d9-e040-e00a18064a99">Rare Book Division, The New York Public Library. “Squalus Acanthias, The Picked- Dog” The New York Public Library Digital Collections. 1785. Public domain.</a>
+</figcaption>
+</figure>
+</div></div><p>In <a href="#eq-moleclock" class="quarto-xref">Equation&nbsp;<span>5.2</span></a>, if we double the amount of time separating a pair of species <span class="math inline">\(T\)</span>, we double the number of substitutions predicted. Note that for this to be true <span class="math inline">\(T\)</span> must be measured in generations. To explain a protein molecular clock between species that clearly differed dramatically in generation time it was hypothesized that the mutation rate actually scaled with generation time, i.e.&nbsp;short-lived organisms introduced fewer mutations per generation, e.g.&nbsp;as they had fewer rounds of mitosis. This generation-time assumption meant that the mutation rate per year could be constant, such that <span class="math inline">\(\mu T\)</span> would be a constant for pairs of species that had diverged for similar geological times, which are measured in years, even if the organisms differed in generation time. This assumption would allow neutral theory to be consistent with a protein molecular clock measured in years. We now know that this critical generation time assumption is false: organisms with shorter generation times have somewhat higher mutation rates per year so a strict neutral model is inconsistent with the protein molecular clock. We’ll return to these ideas when we discuss the fate of very weakly selected mutations in <a href="drift-and-selection.html" class="quarto-xref"><span>Chapter 12</span></a> and <span class="citation" data-cites="ohta1973slightly">Ohta (<a href="references.html#ref-ohta1973slightly" role="doc-biblioref">1973</a>)</span>’s Nearly Neutral theory. If you are still reading this send Graham a picture of Tomoko Ohta receiving the Crafoord Prize, an analog of the Nobel prize for biology, for her contributions to molecular evolution.</p>
+<p><strong>The contribution of ancestral polymorphism to divergence.</strong> If we are considering <span class="math inline">\(T\)</span> to represent the divergence between long-separated species, then we can think of <span class="math inline">\(T\)</span> as the time that the species split. However, for more recently diverged populations and species, we need to include the fact that the sorting of ancestral polymorphism contributes to divergence among species. In <a href="#fig-split-anc-pop" class="quarto-xref">Figure&nbsp;<span>5.6</span></a>, we see our two populations split <span class="math inline">\(T_s\)</span> generations ago. However, the coalescence of our A and B lineage is necessarily deeper in time than <span class="math inline">\(T_s\)</span>. The top mutation was polymorphic in the ancestral population but now contributes to the divergence between A and B. Assuming that our ancestral population had effective size <span class="math inline">\(N_A\)</span> individuals, and that our populations split cleanly with no subsequent gene flow, then</p>
+<p><span id="eq-molecular-evolution-2"><span class="math display">\[T = T_s + 2N_A. \tag{5.3}\]</span></span></p>
+<p>If our species split time is very large compared to <span class="math inline">\(2N\)</span> then we can think of <span class="math inline">\(T\)</span> as the split time.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-split-anc-pop" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The genealogy of two alleles one sampled from population A and B.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-split-anc-pop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/Genetic_drift/ILS/split_anc_pop.png" class="img-fluid figure-img" style="width:80.0%" alt="The genealogy of two alleles one sampled from population A and B.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-split-anc-pop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.6: The genealogy of two alleles one sampled from population A and B. Mutations on the lineages are shown as dashes. The pair of alleles coalesce in the ancestral population of A and B. The two populations split <span class="math inline">\(T_S\)</span> generations ago, with no subsequent gene flow, but the two lineages must coalesce deeper in time.
+</figcaption>
+</figure>
+</div></div><div id="exr-molecular-evolution-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 5.1</strong></span> For this, and the next question, assume that humans and chimps split around 5.5<span class="math inline">\(\times 10^6\)</span> years ago, have a generation time &nbsp;20 years, that the speciation occurred instantaneously in allopatry with no subsequent gene flow, and the ancestral effective population size of the human and chimp common ancestor population was 10,000 individuals.<br>
+Nachman and Crowell sequenced 12 pseudogenes in humans and chimps and found substitutions at 1.3% of sites.<br>
+<strong>A)</strong> What is the mutation rate per site per generation at these genes?<br>
+<strong>B)</strong> All of the pseudogenes they sequenced are on the autosomes. What would your prediction be for pseudogenes on the X and Y chromosomes, given that few mutations occur in the female germline than in the male germline per generation.</p>
+</div>
+</section>
+</section>
+<section id="tests-of-molecular-evolution." class="level2 page-columns page-full" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="tests-of-molecular-evolution."><span class="header-section-number">5.2</span> Tests of molecular evolution.</h2>
+<p>One of the great appeals of neutral models is they offer a simple null for us to test real data against.</p>
+<section id="comparing-the-rates-of-non-synonymous-to-synonymous-substitutions-d_n_d_s" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="comparing-the-rates-of-non-synonymous-to-synonymous-substitutions-d_n_d_s">Comparing the rates of non-synonymous to synonymous substitutions <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span></h3>
+<p>One common tool in molecular evolution is to compare the estimated number (or rates) of substitutions in different classes of genomic sites, for example the ratio of the rates of non-synonymous (<span class="math inline">\(d_N\)</span>) to synonymous substitutions (<span class="math inline">\(d_S\)</span>) in a given gene. The simplest way to think about calculating <span class="math inline">\(d_N\)</span> is to count up the non-synonymous changes and divide by the total number of positions in the gene where a non-synonymous point mutation could occur and then divide by time. We can do likewise for synonymous changes <span class="math inline">\(d_S\)</span>, and then take the ratio <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;This ignores the fact that some changes are more likely to occur by mutation than others and also does not account for multiple hits (multiple mutations at the same bp position). Therefore, in practice the ratio <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span> is more typically calculated by model-based likelihood and bayesian methods that can account for these features.</p></div></div><p>For the vast majority of protein-coding genes in the genome we see that <span class="math inline">\({}^{d_N}\!/\!{}_{d_S} &lt; 1\)</span>. This observation is consistent with the view that non-synonymous sites are much more constrained than synonymous sites, i.e.&nbsp;that most non-synonymous mutations are deleterious and quickly removed from the population. If we are willing to make the assumption that all synonymous changes are neutral, <span class="math inline">\(d_S= \mu\)</span>, then we can estimate the degree of constraint on non-synonymous sites. (Note that synonymous changes can sometimes be subject to both positive and negative selection, but this neutral assumption is a useful starting place.)</p>
+<p>Assume that a fraction <span class="math inline">\(C\)</span> of non-synonymous changes are too deleterious to contribute to divergence, and that there are no beneficial mutations. Then, we expected rate of neutral non-synonymous substitutions is</p>
+<p><span id="eq-molecular-evolution-3"><span class="math display">\[d_N = (1-C) \mu \tag{5.4}\]</span></span></p>
+<p>Dividing by <span class="math inline">\(d_S\)</span>, we find</p>
+<p><span id="eq-molecular-evolution-4"><span class="math display">\[{}^{d_N}\!/\!{}_{d_S} = (1-C) \tag{5.5}\]</span></span></p>
+<p>Therefore, if we assume that non-synonymous mutations can only be strongly deleterious or neutral, we estimate the fraction of mutational changes that are constrained by negative selection as <span class="math inline">\(C= 1- {}^{d_N}\!/\!{}_{d_S}\)</span>. C has the interpretations of being the fraction of non-synonymous mutations that are quickly weeded out of the population by selection, and so do not contribute to divergence among species.</p>
+<p>We can test whether our gene is evolving in a constrained way at the protein level by estimating <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span> and testing whether this is significantly less that <span class="math inline">\(1\)</span>. A <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span> test can provide evolutionary evidence that a stretch of DNA proposed to be protein-coding is subject to selective constraint, and so likely does encode for a functional protein. We can also perform a <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span> test on specific branches of a phylogeny for a gene, to test on which branches the gene is subject to constraint, or to test for changes in the level of constraint across the phylogeny.</p>
+<p><strong>Loss of constraint at pseudogenes.</strong></p>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">“Rudimentary organs may be compared with the letters in a word, still retained in the spelling, but become useless in the pronunciation, but which serve as a clue .. for its derivation.” – <span class="citation" data-cites="darwin1859">Darwin (<a href="references.html#ref-darwin1859" role="doc-biblioref">1859</a>)</span> pg. 455</span></div></div>
+<p>While most protein genes evolve under constraint, we can find examples of genes that are evolving in a much less constrained manner. The simplest example of this is where the gene has lost function. Genes can lose function because of inactivating mutations that stop them being transcribed or translated into functional proteins. Such genes are called ‘pseudogenes’. When a gene completely loses function there is no longer selection against non-synonynous changes and so such mutations are just as free to accumulate as synonymous changes, and so <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}=1\)</span>. Pseudogenes are a wonderful example of the extension of Darwin’s ideas about vestigial traits (‘Rudimentary organs’) to the DNA level; we can still recognize a once useful word (gene) whose spelling is slowly degrading. Our genomes are filled with old pseudogenes whose original meanings (functional protein coding sequences) are slowly being eroded through the accumulation of neutral substitutions. One nice example of a gene that has repeatedly lost function, i.e.&nbsp;become repeatedly psuedogenized, is the <em>enamlin</em> gene from the study of <span class="citation" data-cites="Meredith:09">Meredith (<a href="references.html#ref-Meredith:09" role="doc-biblioref">2009</a>)</span>.</p>
+<div id="fig-Enamlin-coding" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Examples of frameshift mutations (insertions blue, deletions red) and premature stop codons in enamlin in Cetacea and Xenarthra.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Enamlin-coding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/genetic_drift/Enamelin/Enamlin.png" class="img-fluid figure-img" style="width:100.0%" alt="Examples of frameshift mutations (insertions blue, deletions red) and premature stop codons in enamlin in Cetacea and Xenarthra.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Enamlin-coding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.7: Examples of frameshift mutations (insertions blue, deletions red) and premature stop codons in <em>enamlin</em> in Cetacea and Xenarthra. Figure from <span class="citation" data-cites="Meredith:09">Meredith (<a href="references.html#ref-Meredith:09" role="doc-biblioref">2009</a>)</span>, licensed under CC BY 4.0.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-sloth" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two-toed sloth (Choloepus hoffmanni).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sloth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Genetic_drift/sloth/20423856040_6e4360df9c_z.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Two-toed sloth (Choloepus hoffmanni).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sloth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.8: Two-toed sloth (<em>Choloepus hoffmanni</em>). <span class="attribution">An introduction to the study of mammals, living and extinct. 1891. Flower W. H. and Lydekker R. Image from the <a href="https://archive.org/stream/chordates00rand/#page/744/mode/1up">Biodiversity Heritage Library</a>. Contributed by University of Toronto. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p>The protein <em>enamlin</em> is a key structural protein involved in the outer cap of enamel on teeth. Various mammals have secondarily evolved diets that do not require hard teeth, and so greatly reduced the selection pressure for hard enamel, or even teeth at all. For example, two-toed sloths (<em>Choloepus</em>), pygmy sperm whales (<em>Kogia</em>), and aardvark (<em>Orycteropus</em>) all lack enamel on teeth. Other mammals have lost their teeth entirely, e.g.&nbsp;giant anteaters (<em>Myrmecophaga</em>) and baleen whales. Due to this relaxation of constraint on the phenotype, the <em>enamlin</em> gene has accumulated pseudogenizing substitutions such as premature stop codons and frameshift mutations (see <a href="#fig-Enamlin-coding" class="quarto-xref">Figure&nbsp;<span>5.7</span></a> for examples). <span class="citation" data-cites="Meredith:09">Meredith (<a href="references.html#ref-Meredith:09" role="doc-biblioref">2009</a>)</span> sequenced <em>enamlin</em> across a range of species and found that none of the species with enamel have frameshift mutations in <em>enamlin</em>, while 17/20 of species that lack enamel or teeth have frameshifts in <em>enamlin</em>, and all of them carry premature stop codons.</p>
+<p><span class="citation" data-cites="Meredith:09">Meredith (<a href="references.html#ref-Meredith:09" role="doc-biblioref">2009</a>)</span> found that the branches of the <em>enamlin</em> phylogeny with a functional <em>enamlin</em> gene had an estimated <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}= 0.51\)</span>, consistent with the protein evolving in a constrained manner. In contrast, the branches with a pseudogenized Enamlin had <span class="math inline">\({}^{d_N}\!/\!{}_{d_S} = 1.02\)</span>, consistent with the gene evolving a completely unconstrained way. The branches where the gene was likely transitioning from a functional to non-function state, i.e.&nbsp;pre-mutation and mixed, had intermediate values of <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}=0.83-0.98\)</span>, consistent with a transition from a constrained to unconstrained mode of protein evolution somewhere along these branches of the phylogeny.</p>
+<div id="fig-Aardvark-pseudogene" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A synthetic interpretation of the history of enamel degeneration in Tubulidentata (the order of aardvarks) based on fossils, phylogenetics, molecular clocks, frameshift mutations, and ^d_N!/!_d_S ratios.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Aardvark-pseudogene-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/genetic_drift/Enamelin/Aardvark_pseudogene.png" class="img-fluid figure-img" style="width:100.0%" alt="A synthetic interpretation of the history of enamel degeneration in Tubulidentata (the order of aardvarks) based on fossils, phylogenetics, molecular clocks, frameshift mutations, and ^d_N!/!_d_S ratios.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Aardvark-pseudogene-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.9: A synthetic interpretation of the history of enamel degeneration in <em>Tubulidentata</em> (the order of aardvarks) based on fossils, phylogenetics, molecular clocks, frameshift mutations, and <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span> ratios. The oldest fossil aardvarks are <em>O. minutus</em> (19 mya) from the early Miocene of Kenya and also lack enamel. Figure &amp; caption modified from <span class="citation" data-cites="Meredith:09">Meredith (<a href="references.html#ref-Meredith:09" role="doc-biblioref">2009</a>)</span>, licensed under CC BY 4.0.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Aardvark" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Aardvarks (Cape ant-eater, Orycteropus afer)">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Aardvark-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Genetic_drift/aardvark/20514695666_5a22b53b8c_h.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Aardvarks (Cape ant-eater, Orycteropus afer)">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Aardvark-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.10: Aardvarks (Cape ant-eater, <em>Orycteropus afer</em>) <span class="attribution">Cassell’s natural history ( 1896 ). Duncan, P. M. Image from the <a href="https://www.flickr.com/photos/internetarchivebookimages/20514695666/in/photolist-xfPbiq-xUcng7-xCyGQA-xdRRQ3-wPMGZr-tFgYfN-wPMPkT-tDahHQ-xuc4KM-xKR4u3-xUkupQ-w88zeU-xMia2r-sp4Aq5-x1wNyZ-xMi46D-tDaCr7-sJE2X4-tFB8Lc-wHWiNj-tp8AUk-tFvh4R-xu3M7w-toUVwN-wYWgVi-w34vHn-x9xAfL-wWhnso-ovvmHE-tG5AgB-xdUzWD-y82dEG-xCA7kx-xV5xWg-wYc33H-wYbFdX-wYbBMP-xUcjpL-xKQjHw-xJmBQU-xKPwEQ-xLEzv4-xu3wHJ-xLEg9V-xnA6Lr-x684wQ-wZNgpq-wYcVbh-wZtb3F-wYbJLh">Biodiversity Heritage Library</a>. Contributed by NCSU Libraries. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><div id="exr-molecular-evolution-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 5.2</strong></span> The <em>enamlin</em> gene was pseudogenized somewhere along the branch leading to Aardvarks (<em>Orycteropus afer</em>), see <a href="#fig-Aardvark-pseudogene" class="quarto-xref">Figure&nbsp;<span>5.9</span></a>. <span class="citation" data-cites="Meredith:09">Meredith (<a href="references.html#ref-Meredith:09" role="doc-biblioref">2009</a>)</span> estimated that this branch has a <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}=0.75\)</span><br>
+<strong>A)</strong> Calculate the average constraint against amino-acid changes on this branch.</p>
+<p><strong>B)</strong> Aardvarks last shared a common ancestor with <em>Afrosoricida</em> (golden moles, tenrecs) and <em>Macroscelidea</em> (elephant shrews) around <span class="math inline">\(\sim 75.1\)</span> million years ago in the Cretaceous. Assume that for the portion of the branch while <em>enamlin</em> was functional <span class="math inline">\({}^{d_N}\!/\!{}_{d_S} = 0.51\)</span> and after it was pseudogenized there was no constaint (i.e.&nbsp;<span class="math inline">\({}^{d_N}\!/\!{}_{d_S} = 1\)</span>). Based on the branch’s average <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}=0.75\)</span>, can you estimate the time at which <em>enamlin</em> was pseudogenized? (I.e. when is the star in <a href="#fig-Aardvark-pseudogene" class="quarto-xref">Figure&nbsp;<span>5.9</span></a>?)</p>
+</div>
+<p><strong>Adaptive evolution and <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span>.</strong> Clearly genes are not only subject to neutral and deleterious mutations; beneficial mutations must also arise and fix from from time to time. Let’s assume that a fraction <span class="math inline">\(B\)</span> of non-synonymous mutations that arise are beneficial such that <span class="math inline">\(2 N \mu B\)</span> beneficial mutations arise per generation. Newly arisen beneficial alleles are not destined to fix in the population, as they may be lost to genetic drift when they are rare in the population (we’ll discuss how to calculate the fixation probability for beneficial alleles in <a href="drift-and-selection.html" class="quarto-xref"><span>Chapter 12</span></a>). A newly arisen beneficial allele reaches fixation in the population with probability <span class="math inline">\(f_B\)</span> from its initial frequency of <span class="math inline">\({}^{1}\!/\!{}_{2N}\)</span>. This fixation probability may be much higher than that of neutral mutations, but still much less than <span class="math inline">\(1\)</span>. The expected total rate of non-synonymous substitutions is</p>
+<p><span id="eq-molecular-evolution-5"><span class="math display">\[dN= (1-C - B) \mu  +   (2 N \mu B) \times  f_B. \tag{5.6}\]</span></span></p>
+<p>Then</p>
+<p><span id="eq-dNDS-C-B"><span class="math display">\[{}^{d_N}\!/\!{}_{d_S} = (1-C-B) +  2 N B f_B \tag{5.7}\]</span></span></p>
+<p>assuming again that all synonymous mutations are neutral. Note that this means that our estimates of <span class="math inline">\(C\)</span> using <span class="math inline">\(1-{}^{d_N}\!/\!{}_{d_S}\)</span> will be a lower bound on the true constraint if even a small fraction of mutations are beneficial. Those cases where the gene is evolving more rapidly at the protein level than at synonymous sites, i.e.&nbsp;<span class="math inline">\(d_N/d_S &gt; 1\)</span>, are potentially strong candidates for positive selection rapidly driving change at the protein level. We can identify genes that have <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span> significantly greater than one, either on the complete gene phylogeny, or on particular branches. Note that is a very conservative test that few genes in the genome meet, as many genes that are fixing adaptive non-synonymous substitutions will have <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}&lt;1\)</span>; even if adaptive mutations are common, genes may still evolve in a constrained way (i.e.&nbsp;<span class="math inline">\({}^{d_N}\!/\!{}_{d_S}&lt;1\)</span>) if the rapid fixation of beneficial mutations due to positive selection is outweighed by the loss of non-synonymous mutations to negative selection.</p>
+<div id="fig-lysozyme" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A phylogram for the primate lysozyme gene, data from .">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lysozyme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/genetic_drift/Yang_lysozyme/Yang_lysozyme.png" class="img-fluid figure-img" style="width:80.0%" alt="A phylogram for the primate lysozyme gene, data from .">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lysozyme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.11: A phylogram for the primate <em>lysozyme</em> gene, data from <span class="citation" data-cites="Yang:98">Yang (<a href="references.html#ref-Yang:98" role="doc-biblioref">1998</a>)</span>. For each branch, the numbers give the estimated average number of non-synonymous to synonymous changes in the lysozyme protein.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Colobus" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Abyssinian black-and-white colobus (Colobus guereza).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Colobus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Genetic_drift/Colobus/19792029373_fcce706e67_k.jpg" class="img-fluid figure-img" style="width:80.0%" alt="Abyssinian black-and-white colobus (Colobus guereza).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Colobus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.12: Abyssinian black-and-white colobus (<em>Colobus guereza</em>). A member of the leaf-eating Colobines. <span class="attribution">Brehm’s Tierleben, Brehm, A.E. 1893. Image from the <a href="https://archive.org/stream/brehmstierlebena001breh/#page/125/mode/1up">Biodiversity Heritage Library</a>. Contributed by University of Illinois Urbana-Champaign. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p>A classic example for looking at adaptive evolution using <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span> is the evolution of the <em>lysozyme</em> gene in primates <span class="citation" data-cites="Messier:97 Yang:98">(<a href="references.html#ref-Messier:97" role="doc-biblioref">Messier and Stewart 1997</a>; <a href="references.html#ref-Yang:98" role="doc-biblioref">Yang 1998</a>)</span>. The lysozyme protein is a key component for the breakdown of bacterial walls. The <em>lysozyme</em> gene shows very fast protein evolution (see the phylogeny in <a href="#fig-lysozyme" class="quarto-xref">Figure&nbsp;<span>5.11</span></a>), notably on the lineages leading to apes (e.g.&nbsp;gibbons and humans) and Colobines (e.g.&nbsp;colobus and langur monkeys). Colobines have leaf-based diets. They digest these leaves by bacterial fermentation in their foregut, and then use lysozymes to break down the bacteria to extract energy from the leaves. In Colobines, the lysozyme protein has evolved to work well in the high-PH environment of the stomach. Remarkably, the Colobine lysozyme protein has convergently evolved this activity via very similar amino-acid changes at 5 key residuals in cows and Hoatzins <span class="citation" data-cites="kornegay1994molecular">(a leaf eating bird, <a href="references.html#ref-kornegay1994molecular" role="doc-biblioref">Kornegay et al. 1994</a>)</span></p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-hoatzin" class="quarto-float quarto-figure quarto-figure-center anchored" alt="(Hoatzin (Opisthocomus hoazin).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hoatzin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Genetic_drift/Hoatzin/14747388314_85798ba97e_z.jpg" class="img-fluid figure-img" style="width:80.0%" alt="(Hoatzin (Opisthocomus hoazin).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hoatzin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.13: (Hoatzin (<em>Opisthocomus hoazin</em>). A leaf-eating bird. <span class="attribution">A history of birds (1910) Pycraft, W.P. Image from the <a href="https://archive.org/stream/historyofbirds00pycr/historyofbirds00pycr#page/238/mode/1up">Biodiversity Heritage Library</a>. Contributed by American Museum of Natural History Library. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p><strong>The McDonald-Kreitman test.</strong></p>
+<p>As noted above, a big issue with using <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span> to detect adaptation is that it is very conservative. For a more powerful test of rapid divergence, what we need to do is adjust for the level of constraint a gene experiences at non-synonymous sites. One way to do this is to use polymorphism data as an internal control. If we see little non-synonymous polymorphism at a gene, but a lot of synonymous polymorphism, we now know that there is likely strong constraint on the gene (i.e.&nbsp;high <span class="math inline">\(C\)</span>), thus we expect <span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span> to be low. <span class="citation" data-cites="mcdonald:91">McDonald and Kreitman (<a href="references.html#ref-mcdonald:91" role="doc-biblioref">1991</a>)</span> devised a simple test of the neutral theory of molecular evolution at a gene based on this intuition <span class="citation" data-cites="hudson1987test">(building on the conceptually similar HKA test <a href="references.html#ref-hudson1987test" role="doc-biblioref">Hudson et al. 1987</a>)</span>. <span class="citation" data-cites="mcdonald:91">McDonald and Kreitman (<a href="references.html#ref-mcdonald:91" role="doc-biblioref">1991</a>)</span> took the case where we have polymorphism data at a gene for one species and divergence to a closely related species. They partitioned polymorphism and fixed differences in their sample into the number of non-synonymous and synonymous changes:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Poly.</th>
+<th style="text-align: center;">Fixed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Non-Syn.</td>
+<td style="text-align: center;"><span class="math inline">\(P_N\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(D_N\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Syn.</td>
+<td style="text-align: center;"><span class="math inline">\(P_S\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(D_S\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: center;"><span class="math inline">\(P_N/P_S\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(D_N/D_S\)</span></td>
+</tr>
+</tbody>
+</table>
+
+<div class="no-row-height column-margin column-container"><div id="fig-MK-tree" class="quarto-float quarto-figure quarto-figure-center anchored" alt="An example gene genealogy for a set of alleles sampled within a population and a single allele sampled from a distantly-related species.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-MK-tree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/Coalescent/MK_tree.png" class="img-fluid figure-img" style="width:100.0%" alt="An example gene genealogy for a set of alleles sampled within a population and a single allele sampled from a distantly-related species.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-MK-tree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.14: An example gene genealogy for a set of alleles sampled within a population and a single allele sampled from a distantly-related species. Here <span class="math inline">\(T_{div}'\)</span> is the total length of the dotted branch, we use a <span class="math inline">\('\)</span> on the T to indicate that this is not simply double the divergence time for the gene as the <span class="math inline">\(T_{MRCA}\)</span> for the sample has been subtracted off.
+</figcaption>
+</figure>
+</div></div><p>Under neutral theory, we expect a smaller number of non-synonymous to synonymous fixed differences (<span class="math inline">\(D_N/D_S &lt; 1\)</span>) and exactly the same expectation holds for polymorphism (<span class="math inline">\(P_N/P_S\)</span>). Let’s consider a gene with <span class="math inline">\(L_S\)</span> and <span class="math inline">\(L_N\)</span> sites where synonymous and non-synonymous mutations could arise respectively. We can think of the underlying gene genealogy at our gene, see <a href="#fig-MK-tree" class="quarto-xref">Figure&nbsp;<span>5.14</span></a>, with the total time on the coalescent genealogy within the species as <span class="math inline">\(T_{tot}\)</span> and the total time for fixed differences between our species as <span class="math inline">\(T_{div}'\)</span>, note that <span class="math inline">\(T_{div}'\)</span> is the total time where a an allele that would appear as a subsitution could arise. Then under neutrality we expect <span class="math inline">\(\mu L_N (1-C) T_{tot}\)</span> non-synonymous polymorphisms (i.e.&nbsp;our number of segregating sites), and <span class="math inline">\(\mu L_N (1-C) T_{div}'\)</span> non-synonymous fixed differences. We can then fill out the rest of our table as follows:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Poly.</th>
+<th style="text-align: center;">Fixed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Non-Syn.</td>
+<td style="text-align: center;"><span class="math inline">\(\mu L_N (1-C) T_{tot}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\mu L_N (1-C)  T_{div}'\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Syn.</td>
+<td style="text-align: center;"><span class="math inline">\(\mu L_S T_{tot}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\mu L_S T_{div}'\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: center;"><span class="math inline">\(L_N(1-C)/( L_S)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(L_N (1-C) / ( L_S)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, we expect the ratio of non-synonymous to synonymous changes to be the same for polymorphism and divergence under a strict neutral model. We can test this expectation of equal ratios via the standard tests of a <span class="math inline">\(2
+\times 2\)</span> table. If the ratio of <span class="math inline">\(N/S\)</span> is significantly higher for divergence than polymorphism we have evidence that non-synonymous substitutions are accumulating more rapidly than we would predict given levels of constraint alone.</p>
+<p>As example of a Mcdonald-Kreitman (MK) table consider the work of <span class="citation" data-cites="frentiu2007adaptive">Frentiu et al. (<a href="references.html#ref-frentiu2007adaptive" role="doc-biblioref">2007</a>)</span> on the molecular evolution of L photopigment opsin in admiral (<em>Limenitis</em>) butterflies, responsible for colour vision in the long-wavelength part of the visual spectrum. <span class="citation" data-cites="frentiu2007adaptive">Frentiu et al. (<a href="references.html#ref-frentiu2007adaptive" role="doc-biblioref">2007</a>)</span> found that the sensitivity of this opsin had shifted towards blue in its sensitivity in <em>L. archippus archippus</em> (viceroy) compared to <em>L. arthemis astyanax</em>. To test whether this molecular evolution reflected positive selection they sequenced 24 <em>L. arthemis astyanax</em> individuals and one <em>L. archippus archippus</em> sequence. They identified 11 polymorphic sites in <em>L. arthemis astyanax</em> and 16 fixed differences, which break down as follows:</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Limenitis" class="quarto-float quarto-figure quarto-figure-center anchored" alt="White admiral (Limenitis arthemis) and viceroy ( Limenitis archippus) butterflies.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Limenitis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Genetic_drift/Basilarchia_arthemis_archippus/Basilarchia_arthemis_archippus.png" class="img-fluid figure-img" style="width:100.0%" alt="White admiral (Limenitis arthemis) and viceroy ( Limenitis archippus) butterflies.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Limenitis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.15: White admiral (<em>Limenitis arthemis</em>) and viceroy ( <em>Limenitis archippus</em>) butterflies. <em>Basilarchia</em> is the old genus that these two species were originally placed in. Viceroy and monarch butterflies are Müllerian mimics. <span class="attribution">Field book of insects (1918). Lutz, F.E. . illustrations by Edna L. Beutenmüller. Image from the <a href="https://www.flickr.com/photos/biodivlibrary/6244367298/in/photolist-avN2o3-avN1Eo-avN2gy-avN39b-avN1R9-avN2Hf-avN2CJ-avN2Um-avN1VS-avN3hU-avN2us-avN21m">Biodiversity Heritage Library</a>. Contributed by MBLWHOI Library. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Poly.</th>
+<th style="text-align: center;">Fixed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Non-Syn.</td>
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(12\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Syn.</td>
+<td style="text-align: center;"><span class="math inline">\(9\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(4\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: center;"><span class="math inline">\({}^{2}\!/\!{}_{9}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({}^{3}\!/\!{}_{1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Note the strong excess of non-synonymous to synonymous divergence compared to polymorphism (p-value of <span class="math inline">\(0.006\)</span>, Fisher’s exact test), which is consistent with the gene evolving in an adaptive manner among the two species. We would expect roughly only <span class="math inline">\(3\)</span> non-synonymous substitutions out of 16 substitutions if the gene was evolving neutrally (<span class="math inline">\(16 \times {}^{2}\!/\!{}_{11}\)</span>).</p>
+<div class="chapter-summary">
+<p><strong>Chapter summary.</strong></p>
+<ul>
+<li><p>In a diploid population of size <span class="math inline">\(N\)</span>, any of a set of <span class="math inline">\(2N\)</span> selectively equivalent (ie neutral) alleles are equally likely to be the ancestor of the entire population at some future distant time point. Therefore, the probability that a new mutation eventually fixes in the population is <span class="math inline">\({}^{1}\!/\!{}_{2N}\)</span>.</p></li>
+<li><p>Under a model where a fraction <span class="math inline">\(C\)</span> of new mutations are neutral and <span class="math inline">\(1-C\)</span> mutations are strongly deleterious, <span class="math inline">\(2NC\mu\)</span> mutations arise every generation that can possibly become substitutions. Therefore, the per-generation rate of neutral substitution is <span class="math inline">\(2N(1-C)\mu
+    \times {}^{1}\!/\!{}_{2N} = (1-C)\mu\)</span>. This is independent of the population size and just depends on levels of constraint and mutation rates.</p></li>
+<li><p>The constant rate of neutral substitution gives rise to a per-generation molecular clock, which can potentially be used to estimate constraint (<span class="math inline">\(C\)</span>) and mutation rates.</p></li>
+<li><p>Many summaries and tests of molecular evolution, e.g.&nbsp;<span class="math inline">\({}^{d_N}\!/\!{}_{d_S}\)</span>, are based on comparing rates of substitution between functional classes of sites. These allow differing levels of constraint to be identified and signals of adaptive substitution to be detected.</p></li>
+<li><p>Tests of molecular evolution for adaptation that also incorporate both divergence and polymorphism, e.g.&nbsp;the Mcdonald-Kreitman test, are potentially powerful tools as polymorphism levels allow a somewhat independent measure of levels of constraint.</p></li>
+</ul>
+</div>
+<div id="exr-molecular-evolution-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 5.3</strong></span> Assuming that the mutation rate is <span class="math inline">\(\mu\)</span>/gamete/generation and the population size is N diploid individuals, what is the number of new mutations introduced into the population each generation?</p>
+</div>
+<div id="exr-molecular-evolution-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 5.4</strong></span> What is the probability of fixation of a unique new, neutral mutation in a population of N haploid individuals?</p>
+</div>
+<div id="exr-molecular-evolution-5" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 5.5</strong></span> Why is dN/dS much less than one for the majority of genes in our genome?</p>
+</div>
+<div id="exr-molecular-evolution-6" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 5.6</strong></span> You sequence a gene in <em>Drosophila melanogaster</em> and <em>D. simulans</em>. You observe 5 non-synonymous substitutions out of 500 bases where non-synonymous substitutions could occur, and 15 synonymous substitutions out of 500 bases where synonymous substitutions could occur. What is the level of constraint at nonsynonymous sites?</p>
+</div>
+<div id="exr-molecular-evolution-7" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 5.7</strong></span> Analyzing polymorphism and divergence data for a gene, you calculate the following McDonald-Kreitman table.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Polymorp.</th>
+<th style="text-align: left;">Fixed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Synonymous</td>
+<td style="text-align: left;">40</td>
+<td style="text-align: left;">80</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Non-synonymous</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">80</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<strong>A)</strong> Based on the ratio of non-synonymous to synonymous polymorphisms, and given the 80 synonymous substitutions, how many nonsynymous substitutions would you expect if this gene were evolving neutrally?<br>
+<strong>B)</strong> Is this table consistent with the gene evolving neutrally? If not what could explain the results?</p>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-darwin1859" class="csl-entry" role="listitem">
+Darwin, C. 1859. On the origin of species by means of natural selection. Murray, London.
+</div>
+<div id="ref-dickerson1971structure" class="csl-entry" role="listitem">
+Dickerson, R. E. 1971. The structure of cytochromec and the rates of molecular evolution. Journal of Molecular Evolution 1:26–45. Springer.
+</div>
+<div id="ref-frentiu2007adaptive" class="csl-entry" role="listitem">
+Frentiu, F. D., G. D. Bernard, C. I. Cuevas, M. P. Sison-Mangus, K. L. Prudic, and A. D. Briscoe. 2007. Adaptive evolution of color vision as seen through the eyes of butterflies. Proceedings of the National Academy of Sciences 104:8634–8640. National Acad Sciences.
+</div>
+<div id="ref-hudson1987test" class="csl-entry" role="listitem">
+Hudson, R. R., M. Kreitman, and M. Aguadé. 1987. A test of neutral molecular evolution based on nucleotide data. Genetics 116:153–159. Genetics Soc America.
+</div>
+<div id="ref-kimura1974some" class="csl-entry" role="listitem">
+Kimura, M., and T. Ohta. 1974. On some principles governing molecular evolution. Proceedings of the National Academy of Sciences 71:2848–2852. National Acad Sciences.
+</div>
+<div id="ref-kornegay1994molecular" class="csl-entry" role="listitem">
+Kornegay, J. R., J. W. Schilling, and A. C. Wilson. 1994. Molecular adaptation of a leaf-eating bird: Stomach lysozyme of the hoatzin. Molecular Biology and Evolution 11:921–928.
+</div>
+<div id="ref-mcdonald:91" class="csl-entry" role="listitem">
+McDonald, J. H., and M. Kreitman. 1991. Adaptive protein evolution at the adh locus in drosophila. Nature 351:652. Nature Publishing Group.
+</div>
+<div id="ref-Meredith:09" class="csl-entry" role="listitem">
+Meredith, J. A. M., Robert W. AND Gatesy. 2009. <a href="https://doi.org/10.1371/journal.pgen.1000634">Molecular decay of the tooth gene enamelin (ENAM) mirrors the loss of enamel in the fossil record of placental mammals</a>. PLOS Genetics 5:1–12. Public Library of Science.
+</div>
+<div id="ref-Messier:97" class="csl-entry" role="listitem">
+Messier, W., and C.-B. Stewart. 1997. Episodic adaptive evolution of primate lysozymes. Nature 385:151. Nature Publishing Group.
+</div>
+<div id="ref-ohta1973slightly" class="csl-entry" role="listitem">
+Ohta, T. 1973. Slightly deleterious mutant substitutions in evolution. Nature 246:96. Nature Publishing Group.
+</div>
+<div id="ref-robinson2016revisiting" class="csl-entry" role="listitem">
+Robinson, L. M., J. R. Boland, and J. M. Braverman. 2016. Revisiting a classic study of the molecular clock. Journal of molecular evolution 82:110–116. Springer.
+</div>
+<div id="ref-Yang:98" class="csl-entry" role="listitem">
+Yang, Z. 1998. <a href="https://doi.org/10.1093/oxfordjournals.molbev.a025957">Likelihood ratio tests for detecting positive selection and application to primate lysozyme evolution.</a> Molecular Biology and Evolution 15:568–573.
+</div>
+<div id="ref-zuckerkandl1965evolutionary" class="csl-entry" role="listitem">
+Zuckerkandl, E., and L. Pauling. 1965. Evolutionary divergence and convergence in proteins. Pp. 97–166 <em>in</em> Evolving genes and proteins. Elsevier.
+</div>
+</div>
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./genetic-drift.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Genetic Drift and Neutral Diversity</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./neutral-diversity-and-structure.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Neutral Diversity and Population Structure</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script id="popgen-scroll-focus">
+(function(){function f(){document.querySelectorAll('figure.quarto-float-tbl > div, .column-page-right > div').forEach(function(d){
+ var s=d.scrollWidth>d.clientWidth+1; if(s){d.setAttribute('tabindex','0');d.setAttribute('role','region');d.setAttribute('aria-label','Scrollable table');}
+ else{d.removeAttribute('tabindex');}});}
+ window.addEventListener('load',f);window.addEventListener('resize',f);})();
+</script><script id="popgen-no-overlap">
+(function(){
+ var SEL='.column-margin.column-container > *, .margin-caption, .aside';
+ function R(e){var r=e.getBoundingClientRect();return {t:r.top+scrollY,b:r.bottom+scrollY,l:r.left,r:r.right};}
+ function run(){
+  var root=document.getElementById('quarto-document-content'); if(!root) return;
+  var items=[].filter.call(root.querySelectorAll(SEL),function(e){return e.offsetParent!==null && !e.parentElement.closest(SEL);});
+  items.forEach(function(e){e.style.marginTop='';});
+  var blk=[].filter.call(root.querySelectorAll('figure, table, pre, .column-page-right, .column-page, .column-screen, mjx-container[display="true"], .callout, .chapter-summary, blockquote'),
+    function(e){return e.offsetParent!==null && !e.closest(SEL) && !(e.parentElement.closest('figure,.column-page-right,.column-page,.callout') && e.tagName!=='FIGURE' && false);});
+  var last=0;
+  for(var pass=0;pass<3;pass++){
+   last=0; var moved=false;
+   items.forEach(function(it){
+    var r=R(it), top=r.t, h=r.b-r.t, need=Math.max(top,last), gap=8, again=true, n=0;
+    while(again && n++<40){
+     again=false;
+     blk.forEach(function(b){
+      if(it.contains(b)||b.contains(it)) return;
+      var q=R(b); if(q.r<=r.l+1||q.l>=r.r-1) return;
+      if(need<q.b+gap && need+h>q.t-1 && q.b>q.t){ if(need<q.b+gap){need=q.b+gap;again=true;} }
+     });
+    }
+    if(need>top+1){var cur=parseFloat(getComputedStyle(it).marginTop)||0; it.style.marginTop=(cur+need-top)+'px'; moved=true;}
+    var r2=R(it); last=r2.b+ (parseFloat(getComputedStyle(it).marginBottom)||0);
+   });
+   if(!moved) break;
+  }
+ }
+ var tm; function later(){clearTimeout(tm);tm=setTimeout(run,120);}
+ window.addEventListener('load',function(){later();
+   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(later);
+   if(window.MathJax&&MathJax.startup&&MathJax.startup.promise) MathJax.startup.promise.then(later);
+   [].forEach.call(document.images,function(i){if(!i.complete) i.addEventListener('load',later);});
+   setTimeout(later,1500);});
+ window.addEventListener('resize',later);
+ if(window.ResizeObserver) new ResizeObserver(later).observe(document.body);
+})();
+</script></body></html>

@@ -1,0 +1,45 @@
+/*-- scss:defaults --*/
+// muted text (captions, margin notes, section numbers) must reach 4.5:1 on white
+$text-muted: #4a5560;
+
+/*-- scss:rules --*/
+// links inside running text must not rely on colour alone (WCAG 1.4.1)
+#quarto-content a:not(.nav-link):not(.pagination-link):not(.sidebar-link):not(.toc-link):not(.btn) {
+  text-decoration: underline;
+}
+a { overflow-wrap: anywhere; }
+// Bootstrap derives "muted" text with an opacity (4.4:1 on white); use a solid colour that passes 4.5:1
+:root, [data-bs-theme] { --bs-secondary-color: #4a5560; }
+html body .header-section-number, html body figcaption, html body .figure-caption,
+html body .quarto-float-caption, html body .table-caption, html body caption,
+html body .column-margin, html body .margin-caption, html body .margin-aside,
+html body .toc-title, html body .sidebar-title, html body .text-muted { color: #4a5560; }
+// wide data tables scroll inside their own box instead of the whole page (WCAG 1.4.10)
+.quarto-float-tbl > div, .column-page-right > div { overflow-x: auto; max-width: 100%; }
+.attribution { color: #4a5560; }
+div[id^="exr-"] { border: 1px solid #8a1c1c; background: #fbeeee; padding: .6em 1em; margin: 1.2em 0; border-radius: 4px; }
+.smallcaps { font-variant: small-caps; }
+html body blockquote, html body blockquote :not(a), html body figcaption, html body figcaption :not(a) { color: #4a5560 !important; }
+.chapter-summary { border: 1px solid #1d4f91; background: #eef3fa; padding: .6em 1em; margin: 1.5em 0; border-radius: 4px; }
+
+// Keep the navigation sidebar the same width on every page at a given window size.
+// Quarto's floating layout sizes the sidebar tracks with minmax(), so the width otherwise
+// depends on each page's content (e.g. the Preface vs. a chapter). Here the sidebar and the
+// right margin are sized from the window width only; the sidebar still grows and shrinks
+// with the window (176px at 992px wide, 250px from about 1190px up).
+@media (min-width: 992px) {
+  html body.floating .page-columns,
+  html body.floating.slimcontent .page-columns {
+    --pg-sidebar: clamp(176px, 21vw, 250px);
+    --pg-margin: clamp(100px, 17.5vw, 250px);
+    grid-template-columns:
+      [screen-start] 1.5em [screen-start-inset] 5fr
+      [page-start] calc(var(--pg-sidebar) * 0.2) [page-start-inset] calc(var(--pg-sidebar) * 0.6) [body-start-outset] calc(var(--pg-sidebar) * 0.2)
+      [body-start] 1.5em [body-content-start] minmax(500px, calc(-3em + 800px)) [body-content-end] 1.5em
+      [body-end] calc(var(--pg-margin) * 0.2) [body-end-outset] calc(var(--pg-margin) * 0.6) [page-end-inset] calc(var(--pg-margin) * 0.2)
+      [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+  }
+}
+
+// Long display equations scroll inside the text column rather than running into the margin.
+#quarto-document-content mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; }

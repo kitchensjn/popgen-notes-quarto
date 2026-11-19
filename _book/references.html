@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>References – Population and Quantitative Genetics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./math-background.html" rel="next">
+<link href="./multiple-selected-loci.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-468b43a5444adb4913bafb0b3b0c703b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Population and Quantitative Genetics</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/cooplab/popgen-notes" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equation-sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equation Sheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allele-and-genotype-frequencies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Allele and Genotype Frequencies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./population-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Population Structure and Correlations Among Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./genetic-drift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Genetic Drift and Neutral Diversity</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./molecular-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Population Genetics of Divergence and Molecular Substitution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./neutral-diversity-and-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Neutral Diversity and Population Structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phenotypic-variation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./correlated-traits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlated Traits and the Response of Multiple Traits to Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./one-locus-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">One-Locus Models of Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./selection-mutation-migration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Interaction of Selection, Mutation, and Migration</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drift-and-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Impact of Genetic Drift on Selected Alleles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linked-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The Effects of Linked Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multiple-selected-loci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Interaction of Multiple Selected Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">References</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Aguade:89" class="csl-entry" role="listitem">
+Aguadé, M., N. Miyashita, and C. H. Langley. 1989. <span class="nocase"><span>R</span>educed variation in the
+yellow-achaete-scute region in natural populations of
+<span><em><span>D</span>rosophila melanogaster</em></span></span>.
+Genetics 122:607–615.
+</div>
+<div id="ref-Aguillon:17" class="csl-entry" role="listitem">
+Aguillon, J. W. A. B., Stepfanie M. AND Fitzpatrick. 2017. <a href="https://doi.org/10.1371/journal.pgen.1006911">Deconstructing
+isolation-by-distance: The genomic consequences of limited
+dispersal</a>. PLOS Genetics 13:1–27. Public Library of Science.
+</div>
+<div id="ref-akccay2016" class="csl-entry" role="listitem">
+Akçay, E., and J. Van Cleve. 2016. There is no fitness but fitness, and
+the lineage is its bearer. Phil. Trans. R. Soc. B 371:20150085. The
+Royal Society.
+</div>
+<div id="ref-alcaide:14" class="csl-entry" role="listitem">
+Alcaide, M., E. S. Scordato, T. D. Price, and D. E. Irwin. 2014. Genomic
+divergence in a ring species complex. Nature 511:83. Nature Publishing
+Group.
+</div>
+<div id="ref-alexander:09" class="csl-entry" role="listitem">
+Alexander, D. H., J. Novembre, and K. Lange. 2009. Fast model-based
+estimation of ancestry in unrelated individuals. Genome research
+19:1655–1664. Cold Spring Harbor Lab.
+</div>
+<div id="ref-algee:16" class="csl-entry" role="listitem">
+Algee-Hewitt, B. F., M. D. Edge, J. Kim, J. Z. Li, and N. A. Rosenberg.
+2016. Individual identifiability predicts population identifiability in
+forensic microsatellite markers. Current Biology 26:935–942. Elsevier.
+</div>
+<div id="ref-allen2011eugenics" class="csl-entry" role="listitem">
+Allen, G. E. 2011. Eugenics and modern biology: Critiques of eugenics,
+1910–1945. Annals of human genetics 75:314–325. Wiley Online Library.
+</div>
+<div id="ref-Allendorf:09" class="csl-entry" role="listitem">
+Allendorf, F. W., and J. J. Hard. 2009. <a href="https://doi.org/10.1073/pnas.0901069106">Human-induced evolution
+caused by unnatural selection through harvest of wild animals</a>.
+Proceedings of the National Academy of Sciences 106:9987–9994. National
+Academy of Sciences.
+</div>
+<div id="ref-alvarez:09" class="csl-entry" role="listitem">
+Alvarez, G., F. C. Ceballos, and C. Quinteiro. 2009. The role of
+inbreeding in the extinction of a european royal dynasty. PLoS One
+4:e5174. Public Library of Science.
+</div>
+<div id="ref-Andolfatto:07" class="csl-entry" role="listitem">
+Andolfatto, P. 2007. <span class="nocase"><span>H</span>itchhiking
+effects of recurrent beneficial amino acid substitutions in the
+<span><em><span>D</span>rosophila melanogaster</em></span>
+genome</span>. Genome Res. 17:1755–1762.
+</div>
+<div id="ref-Andolfatto:01" class="csl-entry" role="listitem">
+Andolfatto, P., and M. Przeworski. 2001. <span class="nocase"><span>R</span>egions of lower crossing over harbor more
+rare variants in <span>A</span>frican populations of
+<span><em><span>D</span>rosophila melanogaster</em></span></span>.
+Genetics 158:657–665.
+</div>
+<div id="ref-axelrod1981evolution" class="csl-entry" role="listitem">
+Axelrod, R., and W. D. Hamilton. 1981. The evolution of cooperation.
+science 211:1390–1396. American Association for the Advancement of
+Science.
+</div>
+<div id="ref-ayllon2015vgll3" class="csl-entry" role="listitem">
+Ayllon, F., E. Kjærner-Semb, T. Furmanek, V. Wennevik, M. F. Solberg, G.
+Dahle, G. L. Taranger, K. A. Glover, M. S. Almén, C. J. Rubin, and
+others. 2015. The vgll3 locus controls age at maturity in wild and
+domesticated atlantic salmon (salmo salar l.) males. PLoS genetics
+11:e1005628. Public Library of Science.
+</div>
+<div id="ref-bachtrog2014sex" class="csl-entry" role="listitem">
+Bachtrog, D., J. E. Mank, C. L. Peichel, M. Kirkpatrick, S. P. Otto,
+T.-L. Ashman, M. W. Hahn, J. Kitano, I. Mayrose, R. Ming, and others.
+2014. Sex determination: Why so many ways of doing it? PLoS biology
+12:e1001899. Public Library of Science.
+</div>
+<div id="ref-baranova2015extraordinary" class="csl-entry" role="listitem">
+Baranova, M. A., M. D. Logacheva, A. A. Penin, V. B. Seplyarskiy, Y. Y.
+Safonova, S. A. Naumenko, A. V. Klepikova, E. S. Gerasimov, G. A.
+Bazykin, T. Y. James, and others. 2015. Extraordinary genetic diversity
+in a wood decay mushroom. Molecular biology and evolution 32:2775–2783.
+Oxford University Press.
+</div>
+<div id="ref-Barrett:08" class="csl-entry" role="listitem">
+Barrett, R. D. H., S. M. Rogers, and D. Schluter. 2008. <a href="https://doi.org/10.1126/science.1159978">Natural selection on a
+major armor gene in threespine stickleback</a>. Science 322:255–257.
+American Association for the Advancement of Science.
+</div>
+<div id="ref-barson2015sex" class="csl-entry" role="listitem">
+Barson, N. J., T. Aykanat, K. Hindar, M. Baranski, G. H. Bolstad, P.
+Fiske, C. Jacq, A. J. Jensen, S. E. Johnston, S. Karlsson, and others.
+2015. Sex-dependent dominance at a single locus maintains variation in
+age at maturity in salmon. Nature 528:405. Nature Publishing Group.
+</div>
+<div id="ref-Barton:00" class="csl-entry" role="listitem">
+Barton, N. H. 2000. <span class="nocase"><span>G</span>enetic
+hitchhiking</span>. Philos. Trans. R. Soc. Lond., B, Biol. Sci.
+355:1553–1562.
+</div>
+<div id="ref-barton1981chromosomal" class="csl-entry" role="listitem">
+Barton, N., and G. Hewitt. 1981. A chromosomal cline in the grasshopper
+podisma pedestris. Evolution 1008–1018. JSTOR.
+</div>
+<div id="ref-basolo1994dynamics" class="csl-entry" role="listitem">
+Basolo, A. L. 1994. The dynamics of fisherian sex-ratio evolution:
+Theoretical and experimental investigations. The American Naturalist
+144:473–490. University of Chicago Press.
+</div>
+<div id="ref-bazykin1969hypothetical" class="csl-entry" role="listitem">
+Bazykin, A. 1969. Hypothetical mechanism of speciation. Evolution
+23:685–687. Wiley Online Library.
+</div>
+<div id="ref-becquet:07" class="csl-entry" role="listitem">
+Becquet, C., N. Patterson, A. C. Stone, M. Przeworski, and D. Reich.
+2007. Genetic structure of chimpanzee populations. PLoS genetics 3:e66.
+Public Library of Science.
+</div>
+<div id="ref-Begun:92" class="csl-entry" role="listitem">
+Begun, D. J., and C. F. Aquadro. 1992. <span class="nocase"><span>L</span>evels of naturally occurring
+<span>D</span><span>N</span><span>A</span> polymorphism correlate with
+recombination rates in <span><em><span>D</span>.
+melanogaster</em></span></span>. Nature 356:519–520.
+</div>
+<div id="ref-beissinger2016recent" class="csl-entry" role="listitem">
+Beissinger, T. M., L. Wang, K. Crosby, A. Durvasula, M. B. Hufford, and
+J. Ross-Ibarra. 2016. Recent demography drives changes in linked
+selection across the maize genome. Nature plants 2:16084. Nature
+Publishing Group.
+</div>
+<div id="ref-bell2006inferring" class="csl-entry" role="listitem">
+Bell, M. A., M. P. Travis, and D. M. Blouw. 2006. Inferring natural
+selection in a fossil threespine stickleback. Paleobiology 32:562–577.
+Cambridge University Press.
+</div>
+<div id="ref-boag1983heritability" class="csl-entry" role="listitem">
+Boag, P. T. 1983. The heritability of external morphology in darwin’s
+ground finches (geospiza) on isla daphne major, galapagos. Evolution
+877–894. JSTOR.
+</div>
+<div id="ref-box:79" class="csl-entry" role="listitem">
+Box, G. E. 1979. Robustness in the strategy of scientific model
+building. Pp. 201–236 <em>in</em> Robustness in statistics. Elsevier.
+</div>
+<div id="ref-bradburd:16" class="csl-entry" role="listitem">
+Bradburd, G. S., P. L. Ralph, and G. M. Coop. 2016. A spatial framework
+for understanding population structure and admixture. PLoS genetics
+12:e1005703. Public Library of Science.
+</div>
+<div id="ref-brandvain:14" class="csl-entry" role="listitem">
+Brandvain, Y., A. M. Kenney, L. Flagel, G. Coop, and A. L. Sweigart.
+2014. Speciation and introgression between mimulus nasutus and mimulus
+guttatus. PLoS Genetics 10:e1004410. Public Library of Science.
+</div>
+<div id="ref-Braverman:95" class="csl-entry" role="listitem">
+Braverman, J. M., R. R. Hudson, N. L. Kaplan, C. H. Langley, and W.
+Stephan. 1995. <span class="nocase"><span>T</span>he hitchhiking effect
+on the site frequency spectrum of
+<span>D</span><span>N</span><span>A</span> polymorphisms</span>.
+Genetics 140:783–796.
+</div>
+<div id="ref-brodie1992correlational" class="csl-entry" role="listitem">
+Brodie, E. D. 1992. Correlational selection for color pattern and
+antipredator behavior in the garter snake thamnophis ordinoides.
+Evolution 46:1284–1298. Wiley Online Library.
+</div>
+<div id="ref-Cai:09" class="csl-entry" role="listitem">
+Cai, J. J., J. M. Macpherson, G. Sella, and D. A. Petrov. 2009. <span class="nocase"><span>P</span>ervasive hitchhiking at coding and
+regulatory sites in humans</span>. PLoS Genet. 5:e1000336.
+</div>
+<div id="ref-carter2013food" class="csl-entry" role="listitem">
+Carter, G. G., and G. S. Wilkinson. 2013. Food sharing in vampire bats:
+Reciprocal help predicts donations more than relatedness or harassment.
+Proceedings of the Royal Society B: Biological Sciences 280:20122573.
+The Royal Society.
+</div>
+<div id="ref-charlesworth:09" class="csl-entry" role="listitem">
+Charlesworth, B. 2009. Effective population size and patterns of
+molecular evolution and variation. Nature Reviews Genetics 10:195.
+Nature Publishing Group.
+</div>
+<div id="ref-Charlesworth:95" class="csl-entry" role="listitem">
+Charlesworth, D., B. Charlesworth, and M. T. Morgan. 1995. <span class="nocase"><span>T</span>he pattern of neutral molecular variation
+under the background selection model</span>. Genetics 141:1619–1632.
+</div>
+<div id="ref-charlesworth1998male" class="csl-entry" role="listitem">
+Charlesworth, D., and V. Laporte. 1998. The male-sterility polymorphism
+of silene vulgaris: Analysis of genetic data from two populations and
+comparison with thymus vulgaris. Genetics 150:1267–1282. Genetics Soc
+America.
+</div>
+<div id="ref-chen:16" class="csl-entry" role="listitem">
+Chen, N., E. J. Cosgrove, R. Bowman, J. W. Fitzpatrick, and A. G. Clark.
+2016. <a href="https://doi.org/10.1016/j.cub.2016.08.062">Genomic
+consequences of population decline in the endangered florida
+scrub-jay</a>. Current Biology 26:2974–2979.
+</div>
+<div id="ref-cohen1966optimizing" class="csl-entry" role="listitem">
+Cohen, D. 1966. Optimizing reproduction in a randomly varying
+environment. Journal of theoretical biology 12:119–129. Elsevier.
+</div>
+<div id="ref-colbert1948evolution" class="csl-entry" role="listitem">
+Colbert, E. H. 1948. Evolution of the horned dinosaurs. Evolution
+2:145–163. Wiley Online Library.
+</div>
+<div id="ref-cook2012selective" class="csl-entry" role="listitem">
+Cook, L. M., B. S. Grant, I. J. Saccheri, and J. Mallet. 2012. Selective
+bird predation on the peppered moth: The last experiment of michael
+majerus. Biology Letters 8:609–612. The Royal Society.
+</div>
+<div id="ref-cosmides1981cytoplasmic" class="csl-entry" role="listitem">
+Cosmides, L. M., and J. Tooby. 1981. Cytoplasmic inheritance and
+intragenomic conflict. Journal of theoretical biology 89:83–129.
+Elsevier.
+</div>
+<div id="ref-cotterman:40" class="csl-entry" role="listitem">
+Cotterman, C. W. 1940. A calculus for statistico-genetics. The Ohio
+State University.
+</div>
+<div id="ref-cousminer2013genome" class="csl-entry" role="listitem">
+Cousminer, D. L., D. J. Berry, N. J. Timpson, W. Ang, E. Thiering, E. M.
+Byrne, H. R. Taal, V. Huikari, J. P. Bradfield, M. Kerkhof, and others.
+2013. Genome-wide association and longitudinal analyses reveal genetic
+loci linking pubertal height growth, pubertal timing and childhood
+adiposity. Human molecular genetics 22:2735–2747. Oxford University
+Press.
+</div>
+<div id="ref-Cutter:10" class="csl-entry" role="listitem">
+Cutter, A. D., and J. Y. Choi. 2010. <span class="nocase"><span>N</span>atural selection shapes nucleotide
+polymorphism across the genome of the nematode
+<span><em><span>C</span>aenorhabditis briggsae</em></span></span>.
+Genome Res. 20:1103–1111.
+</div>
+<div id="ref-darwin1859" class="csl-entry" role="listitem">
+Darwin, C. 1859. On the origin of species by means of natural selection.
+Murray, London.
+</div>
+<div id="ref-darwin1888descent" class="csl-entry" role="listitem">
+Darwin, C. 1888. The descent of man and selection in relation to sex.
+Murray.
+</div>
+<div id="ref-darwin:1876" class="csl-entry" role="listitem">
+Darwin, C. 1876. The effect of cross and self fertilization in the
+vegetable kingdom: murray. London, UK.
+</div>
+<div id="ref-Dempster:55" class="csl-entry" role="listitem">
+Dempster, E. 1955. Maintenance of genetic heterogeneity. Cold Spring
+Harb Symp Quant Biol 20:25–32.
+</div>
+<div id="ref-dickerson1971structure" class="csl-entry" role="listitem">
+Dickerson, R. E. 1971. The structure of cytochromec and the rates of
+molecular evolution. Journal of Molecular Evolution 1:26–45. Springer.
+</div>
+<div id="ref-dobzhansky1961bogus" class="csl-entry" role="listitem">
+Dobzhansky, T. 1961. A bogus <span>“science”</span> of race prejudice.
+Journal of Heredity 52:189–190. Oxford University Press.
+</div>
+<div id="ref-DobzhanskyBook" class="csl-entry" role="listitem">
+Dobzhansky, T. 1951. Genetics and the origin of species. P. 16
+<em>in</em>.
+</div>
+<div id="ref-dobzhansky1943" class="csl-entry" role="listitem">
+Dobzhansky, T. 1943. Genetics of natural populations IX. Temporal
+changes in the composition of populations of drosophila pseudoobscura.
+Genetics 28:162. Genetics Society of America.
+</div>
+<div id="ref-dobzhansky1970genetics" class="csl-entry" role="listitem">
+Dobzhansky, T. 1970. Genetics of the evolutionary process. Columbia
+University Press.
+</div>
+<div id="ref-east2009maternal" class="csl-entry" role="listitem">
+East, M. L., O. P. Höner, B. Wachter, K. Wilhelm, T. Burke, and H.
+Hofer. 2009. Maternal effects on offspring social status in spotted
+hyenas. Behavioral Ecology 20:478–483. Oxford University Press.
+</div>
+<div id="ref-edwards1961population" class="csl-entry" role="listitem">
+Edwards, A. 1961. The population genetics of <span>“sex-ratio”</span> in
+drosophila pseudoobscura. Heredity 16:291. Nature Publishing Group.
+</div>
+<div id="ref-edwards1998natural" class="csl-entry" role="listitem">
+Edwards, A. W. 1998. Natural selection and the sex ratio: Fisher’s
+sources. The American Naturalist 151:564–569. The University of Chicago
+Press.
+</div>
+<div id="ref-elton:42" class="csl-entry" role="listitem">
+Elton, C. 1942. Voles, mice and lemmings. Problems in population
+dynamics. Oxford: Clarendon Press.
+</div>
+<div id="ref-elyashiv2016genomic" class="csl-entry" role="listitem">
+Elyashiv, E., S. Sattath, T. T. Hu, A. Strutsovsky, G. McVicker, P.
+Andolfatto, G. Coop, and G. Sella. 2016. A genomic map of the effects of
+linked selection in drosophila. PLoS genetics 12:e1006130. Public
+Library of Science.
+</div>
+<div id="ref-ewens2016motoo" class="csl-entry" role="listitem">
+Ewens, W. J. 2016. Motoo kimura and james crow on the infinitely many
+alleles model. Genetics 202:1243–1245. Genetics Soc America.
+</div>
+<div id="ref-ewens2010gene" class="csl-entry" role="listitem">
+Ewens, W. J. 2010. What is the gene trying to do? British Journal for
+the Philosophy of Science 62:155–176. Oxford University Press.
+</div>
+<div id="ref-faith1999evidence" class="csl-entry" role="listitem">
+Faith, M. S., A. Pietrobelli, C. Nunez, M. Heo, S. B. Heymsfield, and D.
+B. Allison. 1999. Evidence for independent genetic influences on fat
+mass and body mass index in a pediatric twin sample. Pediatrics
+104:61–67. Am Acad Pediatrics.
+</div>
+<div id="ref-Fay:00" class="csl-entry" role="listitem">
+Fay, J. C., and C. I. Wu. 2000. <span class="nocase"><span>H</span>itchhiking under positive
+<span>D</span>arwinian selection</span>. Genetics 155:1405–1413.
+</div>
+<div id="ref-feder2017" class="csl-entry" role="listitem">
+Feder, A. F., C. Kline, P. Polacino, M. Cottrell, A. D. Kashuba, B. F.
+Keele, S.-L. Hu, D. A. Petrov, P. S. Pennings, and Z. Ambrose. 2017. A
+spatio-temporal assessment of simian/human immunodeficiency virus (SHIV)
+evolution reveals a highly dynamic process within the host. PLoS
+pathogens 13:e1006358. Public Library of Science.
+</div>
+<div id="ref-ferree2007distorted" class="csl-entry" role="listitem">
+Ferree, P. M., and D. A. Barbash. 2007. Distorted sex ratios: A window
+into RNAi-mediated silencing. PLoS biology 5:e303. Public Library of
+Science.
+</div>
+<div id="ref-figueiro2017genome" class="csl-entry" role="listitem">
+Figueiró, H. V., G. Li, F. J. Trindade, J. Assis, F. Pais, G. Fernandes,
+S. H. Santos, G. M. Hughes, A. Komissarov, A. Antunes, and others. 2017.
+Genome-wide signatures of complex introgression and adaptive evolution
+in the big cats. Science advances 3:e1700299. American Association for
+the Advancement of Science.
+</div>
+<div id="ref-fisher1923xxi" class="csl-entry" role="listitem">
+Fisher, R. A. 1923. On the dominance ratio. Proceedings of the royal
+society of Edinburgh 42:321–341. Royal Society of Edinburgh Scotland
+Foundation.
+</div>
+<div id="ref-Fisher:1918" class="csl-entry" role="listitem">
+Fisher, R. A. 1918. The correlation between relatives on the supposition
+of mendelian inheritance. Trans. R. Soc. 52:399–433.
+</div>
+<div id="ref-fisher1915evolution" class="csl-entry" role="listitem">
+Fisher, R. A. 1915. The evolution of sexual preference. The Eugenics
+Review 7:184. Oliver; Boyd.
+</div>
+<div id="ref-fisher1930" class="csl-entry" role="listitem">
+Fisher, R. A. 1930. The genetical theory of natural selection: A
+complete variorum edition. Oxford University Press.
+</div>
+<div id="ref-francioli:14" class="csl-entry" role="listitem">
+Francioli, L. C., A. Menelaou, S. L. Pulit, F. Van Dijk, P. F. Palamara,
+C. C. Elbers, P. B. Neerincx, K. Ye, V. Guryev, W. P. Kloosterman, and
+others. 2014. Whole-genome sequence variation, population structure and
+demographic history of the dutch population. Nature genetics 46:818.
+Nature Publishing Group.
+</div>
+<div id="ref-frank1996mitochondria" class="csl-entry" role="listitem">
+Frank, S., and L. Hurst. 1996. Mitochondria and male disease. Nature
+383:224–224. Nature Publishing Group.
+</div>
+<div id="ref-frankham1996relationship" class="csl-entry" role="listitem">
+Frankham, R. 1996. Relationship of genetic variation to population size
+in wildlife. Conservation biology 10:1500–1508. Wiley Online Library.
+</div>
+<div id="ref-frentiu2007adaptive" class="csl-entry" role="listitem">
+Frentiu, F. D., G. D. Bernard, C. I. Cuevas, M. P. Sison-Mangus, K. L.
+Prudic, and A. D. Briscoe. 2007. Adaptive evolution of color vision as
+seen through the eyes of butterflies. Proceedings of the National
+Academy of Sciences 104:8634–8640. National Acad Sciences.
+</div>
+<div id="ref-galen:96" class="csl-entry" role="listitem">
+Galen, C. 1996. Rates of floral evolution: Adaptation to bumblebee
+pollination in an alpine wildflower, polemonium viscosum. Evolution
+50:120–125. Wiley Online Library.
+</div>
+<div id="ref-galtier2016adaptive" class="csl-entry" role="listitem">
+Galtier, N. 2016. Adaptive protein evolution in animals and the
+effective population size hypothesis. PLoS genetics 12:e1005774. Public
+Library of Science.
+</div>
+<div id="ref-galton1883inquiries" class="csl-entry" role="listitem">
+Galton, F. 1883. Inquiries into human faculty and its development.
+Macmillan.
+</div>
+<div id="ref-gannett2013theodosius" class="csl-entry" role="listitem">
+Gannett, L. 2013. Theodosius dobzhansky and the genetic race concept.
+Studies in History and Philosophy of Biological and Biomedical Sciences
+44:250–261. Elsevier.
+</div>
+<div id="ref-gigord2001negative" class="csl-entry" role="listitem">
+Gigord, L. D., M. R. Macnair, and A. Smithson. 2001. Negative
+frequency-dependent selection maintains a dramatic flower color
+polymorphism in the rewardless orchid dactylorhiza sambucina (l.) soo.
+Proceedings of the National Academy of Sciences 98:6253–6255. National
+Acad Sciences.
+</div>
+<div id="ref-Gillespie:00" class="csl-entry" role="listitem">
+Gillespie, J. H. 2000. <span class="nocase"><span>G</span>enetic drift
+in an infinite population. <span>T</span>he pseudohitchhiking
+model</span>. Genetics 155:909–919.
+</div>
+<div id="ref-gillespie1977natural" class="csl-entry" role="listitem">
+Gillespie, J. H. 1977. Natural selection for variances in offspring
+numbers: A new evolutionary principle. The American Naturalist
+111:1010–1014. University of Chicago Press.
+</div>
+<div id="ref-gillespie1973natural" class="csl-entry" role="listitem">
+Gillespie, J. H. 1973. Natural selection with varying selection
+coefficients–a haploid model. Genetics Research 21:115–120. Cambridge
+University Press.
+</div>
+<div id="ref-gingerich1983rates" class="csl-entry" role="listitem">
+Gingerich, P. 1983. Rates of evolution: Effects of time and temporal
+scaling. Science 222:159–162. American Association for the Advancement
+of Science.
+</div>
+<div id="ref-grant1995predicting" class="csl-entry" role="listitem">
+Grant, P. R., and B. R. Grant. 1995. Predicting microevolutionary
+responses to directional selection on heritable variation. Evolution
+49:241–251. Wiley Online Library.
+</div>
+<div id="ref-grant2002unpredictable" class="csl-entry" role="listitem">
+Grant, P. R., and B. R. Grant. 2002. Unpredictable evolution in a
+30-year study of darwin’s finches. science 296:707–711. American
+Association for the Advancement of Science.
+</div>
+<div id="ref-green2010draft" class="csl-entry" role="listitem">
+Green, R. E., J. Krause, A. W. Briggs, T. Maricic, U. Stenzel, M.
+Kircher, N. Patterson, H. Li, W. Zhai, M. H.-Y. Fritz, and others. 2010.
+A draft sequence of the neandertal genome. science 328:710–722. American
+Association for the Advancement of Science.
+</div>
+<div id="ref-gremer2014bet" class="csl-entry" role="listitem">
+Gremer, J. R., and D. L. Venable. 2014. Bet hedging in desert winter
+annual plants: Optimal germination strategies in a variable environment.
+Ecology Letters 17:380–387. Wiley Online Library.
+</div>
+<div id="ref-grognet2014genes" class="csl-entry" role="listitem">
+Grognet, P., H. Lalucque, F. Malagnac, and P. Silar. 2014. Genes that
+bias mendelian segregation. PLoS genetics 10:e1004387. Public Library of
+Science.
+</div>
+<div id="ref-gulick1873diversity" class="csl-entry" role="listitem">
+Gulick, J. T. 1873. On diversity of evolution under one set of external
+conditions. Journal of the Linnean Society of London, Zoology
+11:496–505. Oxford University Press.
+</div>
+<div id="ref-Hagedoorn" class="csl-entry" role="listitem">
+Hagedoorn, A. L., and A. C. Hagedoorn. 1921. The relative value of the
+processes causing evolution. The Hague,M. Nijhoff.
+</div>
+<div id="ref-haldane:42" class="csl-entry" role="listitem">
+Haldane, J. 1942. The selective elimination of silver foxes in eastern
+canada. Journal of Genetics 44:296–304. Springer.
+</div>
+<div id="ref-haldane1964defense" class="csl-entry" role="listitem">
+Haldane, J. B. S. 1964. A defense of beanbag genetics. Perspectives in
+Biology and Medicine 7:343–360. Johns Hopkins University Press.
+</div>
+<div id="ref-haldane1927mathematical" class="csl-entry" role="listitem">
+Haldane, J. B. S. 1927. A mathematical theory of natural and artificial
+selection, part v: Selection and mutation. Pp. 838–844 <em>in</em>
+Mathematical proceedings of the cambridge philosophical society.
+Cambridge University Press.
+</div>
+<div id="ref-haldane1924" class="csl-entry" role="listitem">
+Haldane, J. B. S. 1924. A mathematical theory of natural and artificial
+selection. Part i. Transactions of the Camrbidge Philosophical Society
+23:19–41.
+</div>
+<div id="ref-haldane1949suggestions" class="csl-entry" role="listitem">
+Haldane, J. B. S. 1949. Suggestions as to quantitative measurement of
+rates of evolution. Evolution 3:51–56. Wiley Online Library.
+</div>
+<div id="ref-Haldane:37" class="csl-entry" role="listitem">
+Haldane, J. B. S. 1937. <a href="https://doi.org/10.1086/280722">The
+effect of variation of fitness</a>. The American Naturalist 71:337–349.
+</div>
+<div id="ref-haldane1963" class="csl-entry" role="listitem">
+Haldane, J., and S. Jayakar. 1963. Polymorphism due to selection of
+varying direction. Journal of Genetics 58:237–242. Springer.
+</div>
+<div id="ref-hamilton1967extraordinary" class="csl-entry" role="listitem">
+Hamilton, W. D. 1967. Extraordinary sex ratios. Science 156:477–488.
+Citeseer.
+</div>
+<div id="ref-hamilton1964genetical2" class="csl-entry" role="listitem">
+Hamilton, W. D. 1964b. The genetical evolution of social behaviour. II.
+Journal of theoretical biology 7:17–52. Elsevier.
+</div>
+<div id="ref-hamilton1964genetical" class="csl-entry" role="listitem">
+Hamilton, W. D. 1964a. The genetical evolution of social behaviour. II.
+Journal of theoretical biology 7:17–52. Elsevier.
+</div>
+<div id="ref-hansen2013sterilized" class="csl-entry" role="listitem">
+Hansen, R., and D. King. 2013. Sterilized by the state: Eugenics, race,
+and the population scare in twentieth-century north america. Cambridge
+University Press.
+</div>
+<div id="ref-hardy1908mendelian" class="csl-entry" role="listitem">
+Hardy, G. H., and others. 1908. Mendelian proportions in a mixed
+population. Science 28:49–50.
+</div>
+<div id="ref-helgason2008association" class="csl-entry" role="listitem">
+Helgason, A., S. Pálsson, D. F. Gubjartsson, K. Stefánsson, and others.
+2008. An association between the kinship and fertility of human couples.
+Science 319:813–816. American Association for the Advancement of
+Science.
+</div>
+<div id="ref-hermisson2017soft" class="csl-entry" role="listitem">
+Hermisson, J., and P. S. Pennings. 2017. Soft sweeps and beyond:
+Understanding the patterns and probabilities of selection footprints
+under rapid adaptation. Methods in Ecology and Evolution 8:700–716.
+Wiley Online Library.
+</div>
+<div id="ref-hey2002interactions" class="csl-entry" role="listitem">
+Hey, J., and R. M. Kliman. 2002. Interactions between natural selection,
+recombination and gene density in the genes of drosophila. Genetics
+160:595–608. Genetics Soc America.
+</div>
+<div id="ref-hoekstra2004ecological" class="csl-entry" role="listitem">
+Hoekstra, H. E., K. E. Drumm, and M. W. Nachman. 2004. Ecological
+genetics of adaptive color polymorphism in pocket mice: Geographic
+variation in selected and neutral genes. Evolution 58:1329–1341. Wiley
+Online Library.
+</div>
+<div id="ref-van2011industrial" class="csl-entry" role="listitem">
+Hof, A. E. van’t, N. Edmonds, M. Dalíková, F. Marec, and I. J. Saccheri.
+2011. Industrial melanism in british peppered moths has a singular and
+recent mutational origin. Science 332:958–960. American Association for
+the Advancement of Science.
+</div>
+<div id="ref-hogben1933nature" class="csl-entry" role="listitem">
+Hogben, L. 1933. Nature and nurture (being the william withering
+memorial lectures). George Allen; Unwin Limited, London.
+</div>
+<div id="ref-hohenlohe2010population" class="csl-entry" role="listitem">
+Hohenlohe, P. A., S. Bassham, P. D. Etter, N. Stiffler, E. A. Johnson,
+and W. A. Cresko. 2010. Population genomics of parallel adaptation in
+threespine stickleback using sequenced RAD tags. PLoS genetics
+6:e1000862. Public Library of Science.
+</div>
+<div id="ref-hollister2014recurrent" class="csl-entry" role="listitem">
+Hollister, J. D., S. Greiner, W. Wang, J. Wang, Y. Zhang, G. K.-S. Wong,
+S. I. Wright, and M. T. Johnson. 2014. Recurrent loss of sex is
+associated with accumulation of deleterious mutations in oenothera.
+Molecular biology and evolution 32:896–905. Oxford University Press.
+</div>
+<div id="ref-hopkins2015m" class="csl-entry" role="listitem">
+Hopkins, J., G. Baudry, U. Candolin, and A. Kaitala. 2015. I’m sexy and
+i glow it: Female ornamentation in a nocturnal capital breeder. Biology
+letters 11:20150599. The Royal Society.
+</div>
+<div id="ref-houde:94" class="csl-entry" role="listitem">
+Houde, A. E. 1994. Effect of artificial selection on male colour
+patterns on mating preference of female guppies. Proc. R. Soc. Lond. B
+256:125–130. The Royal Society.
+</div>
+<div id="ref-Howes-g6pd-variants" class="csl-entry" role="listitem">
+Howes, R. E., M. Dewi, F. B. Piel, W. M. Monteiro, K. E. Battle, J. P.
+Messina, A. Sakuntabhai, A. W. Satyagraha, T. N. Williams, J. K. Baird,
+and S. I. Hay. 2013. <span class="nocase">Spatial distribution of
+<span>G6PD</span> deficiency variants across malaria-endemic
+regions</span>. Malar. J. 12:418.
+</div>
+<div id="ref-Howes-g6pd-preval" class="csl-entry" role="listitem">
+Howes, R. E., F. B. Piel, A. P. Patil, O. A. Nyangiri, P. W. Gething, M.
+Dewi, M. M. Hogg, K. E. Battle, C. D. Padilla, J. K. Baird, and S. I.
+Hay. 2012. <span class="nocase"><span>G</span>6<span>P</span><span>D</span> deficiency
+prevalence and estimates of affected populations in malaria endemic
+countries: a geostatistical model-based map</span>. PLoS Medicine
+9:e1001339.
+</div>
+<div id="ref-Hudson:15" class="csl-entry" role="listitem">
+Hudson, R. R. 2015. <a href="https://doi.org/10.1371/journal.pone.0118087">A new proof of the
+expected frequency spectrum under the standard neutral model</a>. PLOS
+ONE 10:1–5. Public Library of Science.
+</div>
+<div id="ref-Hudson:95b" class="csl-entry" role="listitem">
+Hudson, R. R., and N. L. Kaplan. 1995a. <span class="nocase"><span>D</span>eleterious background selection with
+recombination</span>. Genetics 141:1605–1617.
+</div>
+<div id="ref-Hudson:95" class="csl-entry" role="listitem">
+Hudson, R. R., and N. L. Kaplan. 1995b. <span class="nocase"><span>T</span>he coalescent process and background
+selection</span>. Philos. Trans. R. Soc. Lond., B, Biol. Sci. 349:19–23.
+</div>
+<div id="ref-hudson1987test" class="csl-entry" role="listitem">
+Hudson, R. R., M. Kreitman, and M. Aguadé. 1987. A test of neutral
+molecular evolution based on nucleotide data. Genetics 116:153–159.
+Genetics Soc America.
+</div>
+<div id="ref-hughes2008ancestral" class="csl-entry" role="listitem">
+Hughes, W. O., B. P. Oldroyd, M. Beekman, and F. L. Ratnieks. 2008.
+Ancestral monogamy shows kin selection is key to the evolution of
+eusociality. Science 320:1213–1216. American Association for the
+Advancement of Science.
+</div>
+<div id="ref-hunt2008evolution" class="csl-entry" role="listitem">
+Hunt, G., M. A. Bell, and M. P. Travis. 2008. Evolution toward a new
+adaptive optimum: Phenotypic evolution in a fossil stickleback lineage.
+Evolution 62:700–710. Wiley Online Library.
+</div>
+<div id="ref-ilany2021rank" class="csl-entry" role="listitem">
+Ilany, A., K. E. Holekamp, and E. Akçay. 2021. Rank-dependent social
+inheritance determines social network structure in spotted hyenas.
+Science 373:348–352. American Association for the Advancement of
+Science.
+</div>
+<div id="ref-jain1966evolutionary" class="csl-entry" role="listitem">
+Jain, S., and A. D. Bradshaw. 1966. Evolutionary divergence among
+adjacent plant populations i. The evidence and its theoretical analysis.
+Heredity 21:407. Nature Publishing Group.
+</div>
+<div id="ref-james2015mushrooms" class="csl-entry" role="listitem">
+James, T. Y. 2015. Why mushrooms have evolved to be so promiscuous:
+Insights from evolutionary and ecological patterns. Fungal biology
+reviews 29:167–178. Elsevier.
+</div>
+<div id="ref-janicke:16" class="csl-entry" role="listitem">
+Janicke, T., I. K. Häderer, M. J. Lajeunesse, and N. Anthes. 2016.
+Darwinian sex roles confirmed across the animal kingdom. Science
+advances 2:e1500983. American Association for the Advancement of
+Science.
+</div>
+<div id="ref-jennings1917numerical" class="csl-entry" role="listitem">
+Jennings, H. S. 1917. The numerical results of diverse systems of
+breeding, with respect to two pairs of characters, linked or
+independent, with special relation to the effects of linkage. Genetics
+2:97. Genetics Society of America.
+</div>
+<div id="ref-jennings:05" class="csl-entry" role="listitem">
+Jennings, W. B., and S. V. Edwards. 2005. Speciational history of
+australian grass finches (poephila) inferred from thirty gene trees.
+Evolution 59:2033–2047. Wiley Online Library.
+</div>
+<div id="ref-Johannsen:1911" class="csl-entry" role="listitem">
+Johannsen, W. 1911. <a href="https://doi.org/10.1086/279202">The
+genotype conception of heredity</a>. The American Naturalist 45:129–159.
+</div>
+<div id="ref-johnston2013life" class="csl-entry" role="listitem">
+Johnston, S. E., J. Gratten, C. Berenos, J. G. Pilkington, T. H.
+Clutton-Brock, J. M. Pemberton, and J. Slate. 2013. Life history
+trade-offs at a single locus maintain sexually selected genetic
+variation. Nature 502:93. Nature Publishing Group.
+</div>
+<div id="ref-joron2011chromosomal" class="csl-entry" role="listitem">
+Joron, M., L. Frezal, R. T. Jones, N. L. Chamberlain, S. F. Lee, C. R.
+Haag, A. Whibley, M. Becuwe, S. W. Baxter, L. Ferguson, and others.
+2011. Chromosomal rearrangements maintain a polymorphic supergene
+controlling butterfly mimicry. Nature 477:203. Nature Publishing Group.
+</div>
+<div id="ref-joron2006conserved" class="csl-entry" role="listitem">
+Joron, M., R. Papa, M. Beltrán, N. Chamberlain, J. Mavárez, S. Baxter,
+M. Abanto, E. Bermingham, S. J. Humphray, J. Rogers, and others. 2006. A
+conserved supergene locus controls colour pattern diversity in
+heliconius butterflies. PLoS biology 4:e303. Public Library of Science.
+</div>
+<div id="ref-jukema2006permanent" class="csl-entry" role="listitem">
+Jukema, J., and T. Piersma. 2006. Permanent female mimics in a lekking
+shorebird. Biology letters 2:161–164. The Royal Society.
+</div>
+<div id="ref-Kaplan:89" class="csl-entry" role="listitem">
+Kaplan, N. L., R. R. Hudson, and C. H. Langley. 1989. The hitchhiking
+effect revisited. Genetics 123:887–899.
+</div>
+<div id="ref-karn1951birth" class="csl-entry" role="listitem">
+Karn, M. N., and L. Penrose. 1951. Birth weight and gestation time in
+relation to maternal age, parity and infant survival. Annals of eugenics
+16:147–164. Wiley Online Library.
+</div>
+<div id="ref-kettlewell1955selection" class="csl-entry" role="listitem">
+Kettlewell, H. B. D. 1955. Selection experiments on industrial melanism
+in the lepidoptera. Heredity 9:323. Nature Publishing Group.
+</div>
+<div id="ref-kevles1995name" class="csl-entry" role="listitem">
+Kevles, D. J. 1995. In the name of eugenics: Genetics and the uses of
+human heredity. 2nd ed. Harvard University Press.
+</div>
+<div id="ref-Kim:06" class="csl-entry" role="listitem">
+Kim, Y. 2006. <span class="nocase"><span>A</span>llele frequency
+distribution under recurrent selective sweeps</span>. Genetics
+172:1967–1978.
+</div>
+<div id="ref-kimura:68" class="csl-entry" role="listitem">
+Kimura, M. 1968. Evolutionary rate at the molecular level. Nature
+217:624–626.
+</div>
+<div id="ref-kimura1962probability" class="csl-entry" role="listitem">
+Kimura, M. 1962. On the probability of fixation of mutant genes in a
+population. Genetics 47:713. Genetics Society of America.
+</div>
+<div id="ref-kimura:83" class="csl-entry" role="listitem">
+Kimura, M. 1983. The neutral theory of molecular evolution. Cambridge
+University Press.
+</div>
+<div id="ref-kimura1964number" class="csl-entry" role="listitem">
+Kimura, M., and J. F. Crow. 1964. The number of alleles that can be
+maintained in a finite population. Genetics 49:725. Genetics Society of
+America.
+</div>
+<div id="ref-kimura1974some" class="csl-entry" role="listitem">
+Kimura, M., and T. Ohta. 1974. On some principles governing molecular
+evolution. Proceedings of the National Academy of Sciences 71:2848–2852.
+National Acad Sciences.
+</div>
+<div id="ref-king:69" class="csl-entry" role="listitem">
+King, J. L., and T. H. Jukes. 1969. Non-darwinian evolution. Science
+164:788–798.
+</div>
+<div id="ref-klinka2009adaptive" class="csl-entry" role="listitem">
+Klinka, D. R., and T. E. Reimchen. 2009. Adaptive coat colour
+polymorphism in the kermode bear of coastal british columbia. Biological
+Journal of the Linnean Society 98:479–488. Oxford University Press.
+</div>
+<div id="ref-kornegay1994molecular" class="csl-entry" role="listitem">
+Kornegay, J. R., J. W. Schilling, and A. C. Wilson. 1994. Molecular
+adaptation of a leaf-eating bird: Stomach lysozyme of the hoatzin.
+Molecular Biology and Evolution 11:921–928.
+</div>
+<div id="ref-krakauer2005kin" class="csl-entry" role="listitem">
+Krakauer, A. H. 2005. Kin selection and cooperative courtship in wild
+turkeys. Nature 434:69. Nature Publishing Group.
+</div>
+<div id="ref-kruuk2002antler" class="csl-entry" role="listitem">
+Kruuk, L. E., J. Slate, J. M. Pemberton, S. Brotherstone, F. Guinness,
+and T. Clutton-Brock. 2002. Antler size in red deer: Heritability and
+selection but no evolution. Evolution 56:1683–1695. Wiley Online
+Library.
+</div>
+<div id="ref-kupper2016supergene" class="csl-entry" role="listitem">
+Küpper, C., M. Stocks, J. E. Risse, N. dos Remedios, L. L. Farrell, S.
+B. McRae, T. C. Morgan, N. Karlionova, P. Pinchuk, Y. I. Verkuil, and
+others. 2016. A supergene determines highly divergent male reproductive
+morphs in the ruff. Nature Genetics 48:79. Nature Publishing Group.
+</div>
+<div id="ref-Kwiatkowski:05" class="csl-entry" role="listitem">
+Kwiatkowski, D. P. 2005. <span class="nocase"><span>H</span>ow malaria
+has affected the human genome and what human genetics can teach us about
+malaria</span>. Am. J. Hum. Genet. 77:171–192.
+</div>
+<div id="ref-laberge2005fille" class="csl-entry" role="listitem">
+Laberge, A.-M., M. Jomphe, L. Houde, H. Vézina, M. Tremblay, B.
+Desjardins, D. Labuda, M. St-Hilaire, C. Macmillan, E. A. Shoubridge,
+and others. 2005. A <span>“fille du roy”</span> introduced the T14484C
+leber hereditary optic neuropathy mutation in french canadians. The
+American Journal of Human Genetics 77:313–317. Elsevier.
+</div>
+<div id="ref-lamichhaney2016structural" class="csl-entry" role="listitem">
+Lamichhaney, S., G. Fan, F. Widemo, U. Gunnarsson, D. S. Thalmann, M. P.
+Hoeppner, S. Kerje, U. Gustafson, C. Shi, H. Zhang, and others. 2016.
+Structural genomic changes underlie alternative reproductive strategies
+in the ruff (philomachus pugnax). Nature Genetics 48:84. Nature
+Publishing Group.
+</div>
+<div id="ref-lande1976natural" class="csl-entry" role="listitem">
+Lande, R. 1976. Natural selection and random genetic drift in phenotypic
+evolution. Evolution 30:314–334. Wiley Online Library.
+</div>
+<div id="ref-lande:79" class="csl-entry" role="listitem">
+Lande, R. 1979. Quantitative genetic analysis of multivariate evolution,
+applied to brain: Body size allometry. Evolution 33:402–416. Wiley
+Online Library.
+</div>
+<div id="ref-lande1983measurement" class="csl-entry" role="listitem">
+Lande, R., and S. J. Arnold. 1983. The measurement of selection on
+correlated characters. Evolution 37:1210–1226. Wiley Online Library.
+</div>
+<div id="ref-Laurie:07" class="csl-entry" role="listitem">
+Laurie, D. A. A. A., Cathy C AND Nickerson. 2007. <a href="https://doi.org/10.1371/journal.pgen.0030144">Linkage
+disequilibrium in wild mice</a>. PLOS Genetics 3:1–9. Public Library of
+Science.
+</div>
+<div id="ref-lawson:18" class="csl-entry" role="listitem">
+Lawson, D. J., L. Van Dorp, and D. Falush. 2018. A tutorial on how not
+to over-interpret STRUCTURE and ADMIXTURE bar plots. Nature
+communications 9:3258. Nature Publishing Group.
+</div>
+<div id="ref-lefebure2017less" class="csl-entry" role="listitem">
+Lefébure, T., C. Morvan, F. Malard, C. François, L. Konecny-Dupré, L.
+Guéguen, M. Weiss-Gayet, A. Seguin-Orlando, L. Ermini, C. Der
+Sarkissian, and others. 2017. Less effective selection leads to larger
+genomes. Genome research gr–212589. Cold Spring Harbor Lab.
+</div>
+<div id="ref-leffler:12" class="csl-entry" role="listitem">
+Leffler, E. M., K. Bullaughey, D. R. Matute, W. K. Meyer, L. Segurel, A.
+Venkat, P. Andolfatto, and M. Przeworski. 2012. Revisiting an old
+riddle: What determines genetic diversity levels within species? PLoS
+biology 10:e1001388. Public Library of Science.
+</div>
+<div id="ref-lek:16" class="csl-entry" role="listitem">
+Lek, M., K. J. Karczewski, E. V. Minikel, K. E. Samocha, E. Banks, T.
+Fennell, A. H. O’Donnell-Luria, J. S. Ware, A. J. Hill, B. B. Cummings,
+and others. 2016. Analysis of protein-coding genetic variation in 60,706
+humans. Nature 536:285. Nature Publishing Group.
+</div>
+<div id="ref-lenormand1999tracking" class="csl-entry" role="listitem">
+Lenormand, T., D. Bourguet, T. Guillemaud, and M. Raymond. 1999.
+Tracking the evolution of insecticide resistance in the mosquito culex
+pipiens. Nature 400:861. Nature Publishing Group.
+</div>
+<div id="ref-leroy2020endemic" class="csl-entry" role="listitem">
+Leroy, T., M. Rousselle, M.-K. Tilak, A. Caizergues, C. Scornavacca, M.
+R. Carrasco, J. Fuchs, J. C. Illera, D. H. De Swardt, C. Thebaud, and
+others. 2020. Endemic island songbirds as windows into evolution in
+small effective population sizes. bioRxiv. Cold Spring Harbor
+Laboratory.
+</div>
+<div id="ref-lewontin:94" class="csl-entry" role="listitem">
+Lewontin, R. C. 1994. <a href="https://doi.org/10.1214/ss/1177010492">[DNA fingerprinting: A
+review of the controversy]: Comment: The use of DNA profiles in forensic
+contexts</a>. Statist. Sci. 9:259–262. The Institute of Mathematical
+Statistics.
+</div>
+<div id="ref-lewontin1970race" class="csl-entry" role="listitem">
+Lewontin, R. C. 1970a. Race and intelligence. Bulletin of the Atomic
+Scientists 26:2–8. Taylor &amp; Francis.
+</div>
+<div id="ref-lewontin1972apportionment" class="csl-entry" role="listitem">
+Lewontin, R. C. 1972. The apportionment of human diversity. Pp. 381–398
+<em>in</em> Evolutionary biology. Springer.
+</div>
+<div id="ref-Lewontin:74" class="csl-entry" role="listitem">
+Lewontin, R. C. 1974. The genetic basis of evolutionary change. Columbia
+University Press, New York.
+</div>
+<div id="ref-lewontin1970units" class="csl-entry" role="listitem">
+Lewontin, R. C. 1970b. The units of selection. Annual review of ecology
+and systematics 1:1–18. Annual Reviews 4139 El Camino Way, PO Box 10139,
+Palo Alto, CA 94303-0139, USA.
+</div>
+<div id="ref-lewontin01" class="csl-entry" role="listitem">
+Lewontin, R. C. 2001. Thinking about evolution: Historical,
+philosophical, and political perspectives. Pp. 7–20 <em>in</em> S. et
+al, ed. Cambridge University Press.
+</div>
+<div id="ref-lewontin1960evolutionary" class="csl-entry" role="listitem">
+Lewontin, R., and K. Kojima. 1960. The evolutionary dynamics of complex
+polymorphisms. Evolution 458–472. JSTOR.
+</div>
+<div id="ref-li:08" class="csl-entry" role="listitem">
+Li, J. Z., D. M. Absher, H. Tang, A. M. Southwick, A. M. Casto, S.
+Ramachandran, H. M. Cann, G. S. Barsh, M. Feldman, L. L. Cavalli-Sforza,
+and others. 2008. Worldwide human relationships inferred from
+genome-wide patterns of variation. science 319:1100–1104. American
+Association for the Advancement of Science.
+</div>
+<div id="ref-librado2017ancient" class="csl-entry" role="listitem">
+Librado, P., C. Gamba, C. Gaunitz, C. Der Sarkissian, M. Pruvost, A.
+Albrechtsen, A. Fages, N. Khan, M. Schubert, V. Jagannathan, and others.
+2017. Ancient genomic changes associated with domestication of the
+horse. Science 356:442–445. American Association for the Advancement of
+Science.
+</div>
+<div id="ref-lin2018hprna" class="csl-entry" role="listitem">
+Lin, C.-J., F. Hu, R. Dubruille, J. Vedanayagam, J. Wen, P. Smibert, B.
+Loppin, and E. C. Lai. 2018. The hpRNA/RNAi pathway is essential to
+resolve intragenomic conflict in the drosophila male germline.
+Developmental cell 46:316–326. Elsevier.
+</div>
+<div id="ref-lister:89" class="csl-entry" role="listitem">
+Lister, A. 1989. Rapid dwarfing of red deer on jersey in the last
+interglacial. Nature 342:539. Nature Publishing Group.
+</div>
+<div id="ref-locke2011" class="csl-entry" role="listitem">
+Locke, D. P., L. W. Hillier, W. C. Warren, K. C. Worley, L. V. Nazareth,
+D. M. Muzny, S.-P. Yang, Z. Wang, A. T. Chinwalla, P. Minx, and others.
+2011. Comparative and demographic analysis of orang-utan genomes. Nature
+469:529. Nature Publishing Group.
+</div>
+<div id="ref-losos2013evolutionary" class="csl-entry" role="listitem">
+Losos, J. B., S. J. Arnold, G. Bejerano, E. Brodie III, D. Hibbett, H.
+E. Hoekstra, D. P. Mindell, A. Monteiro, C. Moritz, H. A. Orr, and
+others. 2013. Evolutionary biology for the 21st century. PLoS Biology
+11:e1001466. Public Library of Science.
+</div>
+<div id="ref-Louicharoen-g6pd" class="csl-entry" role="listitem">
+Louicharoen, C., E. Patin, R. Paul, I. Nuchprayoon, B. Witoonpanich, C.
+Peerapittayamongkol, I. Casademont, T. Sura, N. M. Laird, P.
+Singhasivanon, L. Quintana-Murci, and A. Sakuntabhai. 2009. <span class="nocase">Positively selected
+<span>G6PD</span>-<span>Mahidol</span> mutation reduces
+<em><span>Plasmodium</span> vivax</em> density in Southeast
+<span>Asians</span></span>. Science 326:1546–1549.
+</div>
+<div id="ref-lowry2010widespread" class="csl-entry" role="listitem">
+Lowry, D. B., and J. H. Willis. 2010. A widespread chromosomal inversion
+polymorphism contributes to a major life-history transition, local
+adaptation, and reproductive isolation. PLoS biology 8:e1000500. Public
+Library of Science.
+</div>
+<div id="ref-lowther1961polymorphism" class="csl-entry" role="listitem">
+Lowther, J. K. 1961. Polymorphism in the white-throated sparrow,
+zonotrichia albicollis (gmelin). Canadian Journal of Zoology 39:281–292.
+NRC Research Press.
+</div>
+<div id="ref-lush1943animal" class="csl-entry" role="listitem">
+Lush, J. L. 1943. Animal breeding plans. Animal breeding plans. Iowa
+State College Press.
+</div>
+<div id="ref-macarthur:12" class="csl-entry" role="listitem">
+MacArthur, D. G., S. Balasubramanian, A. Frankish, N. Huang, J. Morris,
+K. Walter, L. Jostins, L. Habegger, J. K. Pickrell, S. B. Montgomery,
+and others. 2012. A systematic survey of loss-of-function variants in
+human protein-coding genes. Science 335:823–828. American Association
+for the Advancement of Science.
+</div>
+<div id="ref-Macpherson:07" class="csl-entry" role="listitem">
+Macpherson, J. M., G. Sella, J. C. Davis, and D. A. Petrov. 2007. <span class="nocase"><span>G</span>enomewide spatial correspondence between
+nonsynonymous divergence and neutral polymorphism reveals extensive
+adaptation in <span><em><span>D</span>rosophila</em></span></span>.
+Genetics 177:2083–2099.
+</div>
+<div id="ref-majerus2009industrial" class="csl-entry" role="listitem">
+Majerus, M. E. 2009. Industrial melanism in the peppered moth, biston
+betularia: An excellent teaching example of darwinian evolution in
+action. Evolution: Education and Outreach 2:63.
+</div>
+<div id="ref-malecot:48" class="csl-entry" role="listitem">
+Malécot, G. 1948. Les math<span>é</span>matiques de
+l’h<span>é</span>r<span>é</span>dit<span>é</span>. Masson, Paris.
+</div>
+<div id="ref-malecot:69" class="csl-entry" role="listitem">
+Malécot, G. 1969. The mathematics of heredity (revised, edited and
+translated by yermanos, DM). Freeman, San Francisco.
+</div>
+<div id="ref-marciniak2017" class="csl-entry" role="listitem">
+Marciniak, S., and G. H. Perry. 2017. Harnessing ancient genomes to
+study the history of human adaptation. Nature Reviews Genetics 18:659.
+Nature Publishing Group.
+</div>
+<div id="ref-martin1978decay" class="csl-entry" role="listitem">
+Martin, K., and R. Gilbertson. 1978. Decay of douglas-fir by sparassis
+radicata in arizona. Phytopathology 68:149–154.
+</div>
+<div id="ref-smith1982evolution" class="csl-entry" role="listitem">
+Maynard Smith, J. 1982. Evolution and the theory of games. Cambridge
+university press.
+</div>
+<div id="ref-smith1964kin" class="csl-entry" role="listitem">
+Maynard Smith, J. 1964. Group selection and kin selection. Nature
+201:1145. Nature Publishing Group.
+</div>
+<div id="ref-smith1971origin" class="csl-entry" role="listitem">
+Maynard Smith, J. 1971. The origin and maintenance of sex. Pp. 163–175
+<em>in</em> Group selection. Routledge.
+</div>
+<div id="ref-MaynardSmithHaigh74" class="csl-entry" role="listitem">
+Maynard Smith, J., and J. Haigh. 1974. The hitch-hiking effect of a
+favourable gene. Genet. Res. 23:23–35.
+</div>
+<div id="ref-mazumdar2005eugenics_fisher" class="csl-entry" role="listitem">
+Mazumdar, P. 2005. Eugenics, human genetics and human failings: The
+eugenics society, its sources and its critics in britain. Routledge.
+</div>
+<div id="ref-mcdonald:91" class="csl-entry" role="listitem">
+McDonald, J. H., and M. Kreitman. 1991. Adaptive protein evolution at
+the adh locus in drosophila. Nature 351:652. Nature Publishing Group.
+</div>
+<div id="ref-Mcvicker:09" class="csl-entry" role="listitem">
+McVicker, G., D. Gordon, C. Davis, and P. Green. 2009. <span class="nocase"><span>W</span>idespread genomic signatures of natural
+selection in hominid evolution</span>. PLoS Genet. 5:e1000471.
+</div>
+<div id="ref-menozzi:78" class="csl-entry" role="listitem">
+Menozzi, P., A. Piazza, and L. Cavalli-Sforza. 1978. Synthetic maps of
+human gene frequencies in europeans. Science 201:786–792. American
+Association for the Advancement of Science.
+</div>
+<div id="ref-Meredith:09" class="csl-entry" role="listitem">
+Meredith, J. A. M., Robert W. AND Gatesy. 2009. <a href="https://doi.org/10.1371/journal.pgen.1000634">Molecular decay of
+the tooth gene enamelin (ENAM) mirrors the loss of enamel in the fossil
+record of placental mammals</a>. PLOS Genetics 5:1–12. Public Library of
+Science.
+</div>
+<div id="ref-merrill2019genetic" class="csl-entry" role="listitem">
+Merrill, R. M., P. Rastas, S. H. Martin, M. C. Melo, S. Barker, J.
+Davey, W. O. McMillan, and C. D. Jiggins. 2019. Genetic dissection of
+assortative mating behavior. PLoS biology 17. Public Library of Science.
+</div>
+<div id="ref-Messier:97" class="csl-entry" role="listitem">
+Messier, W., and C.-B. Stewart. 1997. Episodic adaptive evolution of
+primate lysozymes. Nature 385:151. Nature Publishing Group.
+</div>
+<div id="ref-milne" class="csl-entry" role="listitem">
+Milne, A. A., and E. H. Shepard. 1926. Winnie-the-pooh.
+</div>
+<div id="ref-milot2017mother" class="csl-entry" role="listitem">
+Milot, E., C. Moreau, A. Gagnon, A. A. Cohen, B. Brais, and D. Labuda.
+2017. Mother’s curse neutralizes natural selection against a human
+genetic disease over three centuries. Nature ecology &amp; evolution
+1:1400. Nature Publishing Group.
+</div>
+<div id="ref-muller1932some" class="csl-entry" role="listitem">
+Muller, H. J. 1932. Some genetic aspects of sex. The American Naturalist
+66:118–138. Science Press.
+</div>
+<div id="ref-muller1964relation" class="csl-entry" role="listitem">
+Muller, H. J. 1964. The relation of recombination to mutational advance.
+Mutation Research/Fundamental and Molecular Mechanisms of Mutagenesis
+1:2–9. Elsevier.
+</div>
+<div id="ref-nachman2003genetic" class="csl-entry" role="listitem">
+Nachman, M. W., H. E. Hoekstra, and S. L. D’Agostino. 2003. The genetic
+basis of adaptive melanism in pocket mice. Proceedings of the National
+Academy of Sciences 100:5268–5273. National Acad Sciences.
+</div>
+<div id="ref-nash2005selection" class="csl-entry" role="listitem">
+Nash, D., S. Nair, M. Mayxay, P. N. Newton, J.-P. Guthmann, F. Nosten,
+and T. J. Anderson. 2005. Selection strength and hitchhiking around two
+anti-malarial resistance genes. Proceedings of the Royal Society of
+London B: Biological Sciences 272:1153–1161. The Royal Society.
+</div>
+<div id="ref-nei1973linkage" class="csl-entry" role="listitem">
+Nei, M., and W.-H. Li. 1973. Linkage disequilibrium in subdivided
+populations. Genetics 75:213–219. Genetics Soc America.
+</div>
+<div id="ref-nelson:12" class="csl-entry" role="listitem">
+Nelson, M. R., D. Wegmann, M. G. Ehm, D. Kessner, P. S. Jean, C.
+Verzilli, J. Shen, Z. Tang, S.-A. Bacanu, D. Fraser, and others. 2012.
+An abundance of rare functional variants in 202 drug target genes
+sequenced in 14,002 people. Science 1217876. American Association for
+the Advancement of Science.
+</div>
+<div id="ref-Nordborg:96" class="csl-entry" role="listitem">
+Nordborg, M., B. Charlesworth, and D. Charlesworth. 1996. <span class="nocase"><span>T</span>he effect of recombination on background
+selection</span>. Genet. Res. 67:159–174.
+</div>
+<div id="ref-norton1983fisher" class="csl-entry" role="listitem">
+Norton, B. 1983. Fisher’s entrance into evolutionary science: The role
+of eugenics. Dimensions of Darwinism: Themes and counterthemes in
+twentieth-century evolutionary theory 9–29. Cambridge University Press;
+Editions de la Maison des Sciences de l’Homme&nbsp;….
+</div>
+<div id="ref-novak2018disproportionate" class="csl-entry" role="listitem">
+Novak, N. L., N. Lira, K. E. O’Connor, S. D. Harlow, S. L. Kardia, and
+A. M. Stern. 2018. Disproportionate sterilization of latinos under
+california’s eugenic sterilization program, 1920–1945. American journal
+of public health 108:611–613. American Public Health Association.
+</div>
+<div id="ref-novembre:08" class="csl-entry" role="listitem">
+Novembre, J., and M. Stephens. 2008. Interpreting principal component
+analyses of spatial population genetic variation. Nature genetics
+40:646. Nature Publishing Group.
+</div>
+<div id="ref-ohta1973slightly" class="csl-entry" role="listitem">
+Ohta, T. 1973. Slightly deleterious mutant substitutions in evolution.
+Nature 246:96. Nature Publishing Group.
+</div>
+<div id="ref-ohta1987very" class="csl-entry" role="listitem">
+Ohta, T. 1987. Very slightly deleterious mutations and the molecular
+clock. Journal of Molecular Evolution 26:1–6. Springer.
+</div>
+<div id="ref-ohta1996development" class="csl-entry" role="listitem">
+Ohta, T., and J. H. Gillespie. 1996. Development of neutral and nearly
+neutral theories. Theoretical population biology 49:128–142. Elsevier.
+</div>
+<div id="ref-okrent2020guarded" class="csl-entry" role="listitem">
+Okrent, D. 2020. The guarded gate: Bigotry, eugenics, and the law that
+kept two generations of jews, italians, and other european immigrants
+out of america. Scribner.
+</div>
+<div id="ref-owen1972polymorphic" class="csl-entry" role="listitem">
+Owen, D., and D. Chanter. 1972. Polymorphic mimicry in a population of
+the african butterfly, pseudacraea eurytus (l.)(lep. nymphalidae).
+Insect Systematics &amp; Evolution 3:258–266. Brill.
+</div>
+<div id="ref-oziolor2019adaptive" class="csl-entry" role="listitem">
+Oziolor, E. M., N. M. Reid, S. Yair, K. M. Lee, S. G. VerPloeg, P. C.
+Bruns, J. R. Shaw, A. Whitehead, and C. W. Matson. 2019. Adaptive
+introgression enables evolutionary rescue from extreme environmental
+pollution. Science 364:455–457. American Association for the Advancement
+of Science.
+</div>
+<div id="ref-paaby:14" class="csl-entry" role="listitem">
+Paaby, A. B., A. O. Bergland, E. L. Behrman, and P. S. Schmidt. 2014. A
+highly pleiotropic amino acid polymorphism in the drosophila insulin
+receptor contributes to life-history adaptation. Evolution 68:3395–3409.
+Wiley Online Library.
+</div>
+<div id="ref-patterson:06" class="csl-entry" role="listitem">
+Patterson, N., A. L. Price, and D. Reich. 2006. Population structure and
+eigenanalysis. PLoS genetics 2:e190. Public Library of Science.
+</div>
+<div id="ref-paul1984eugenics" class="csl-entry" role="listitem">
+Paul, D. 1984. Eugenics and the left. Journal of the History of Ideas
+567–590. JSTOR.
+</div>
+<div id="ref-paul1994dobzhansky" class="csl-entry" role="listitem">
+Paul, D. B. 1994. Dobzhansky in the <span>“nature-nurture”</span>
+debate. The evolution of Theodosius Dobzhansky: essays on his life and
+thought in Russia and America 219–232. Princeton University Press
+Princeton.
+</div>
+<div id="ref-paul2014wrong" class="csl-entry" role="listitem">
+Paul, D. B. 2014. What was wrong with eugenics? Conflicting narratives
+and disputed interpretations. Science &amp; Education 23:259–271.
+Springer.
+</div>
+<div id="ref-paul2008s" class="csl-entry" role="listitem">
+Paul, D. B., and H. G. Spencer. 2008. <span>“It’s ok, we’re not cousins
+by blood”</span>: The cousin marriage controversy in historical
+perspective. PLoS Biol 6:e320. Public Library of Science.
+</div>
+<div id="ref-pickrell2016detection" class="csl-entry" role="listitem">
+Pickrell, J. K., T. Berisa, J. Z. Liu, L. Ségurel, J. Y. Tung, and D. A.
+Hinds. 2016. Detection and interpretation of shared genetic influences
+on 42 human traits. Nature genetics 48:709. Nature Publishing Group.
+</div>
+<div id="ref-potti:11" class="csl-entry" role="listitem">
+Potti, J., and D. Canal. 2011. Heritability and genetic correlation
+between the sexes in a songbird sexual ornament. Heredity 106:945.
+Nature Publishing Group.
+</div>
+<div id="ref-pritchard:00" class="csl-entry" role="listitem">
+Pritchard, J. K., M. Stephens, and P. Donnelly. 2000. Inference of
+population structure using multilocus genotype data. Genetics
+155:945–959. Genetics Soc America.
+</div>
+<div id="ref-provine1986geneticists" class="csl-entry" role="listitem">
+Provine, W. B. 1986. Geneticists and race. American Zoologist
+26:857–888. Oxford University Press UK.
+</div>
+<div id="ref-provine:01" class="csl-entry" role="listitem">
+Provine, W. B. 2001. The origins of theoretical population genetics:
+With a new afterword. University of Chicago Press.
+</div>
+<div id="ref-Przeworski:02" class="csl-entry" role="listitem">
+Przeworski, M. 2002. <span class="nocase"><span>T</span>he signature of
+positive selection at randomly chosen loci</span>. Genetics
+160:1179–1189.
+</div>
+<div id="ref-ptak2004absence" class="csl-entry" role="listitem">
+Ptak, S. E., A. D. Roeder, M. Stephens, Y. Gilad, S. Pääbo, and M.
+Przeworski. 2004. Absence of the TAP2 human recombination hotspot in
+chimpanzees. PLoS biology 2:e155. Public Library of Science.
+</div>
+<div id="ref-queller2011expanded" class="csl-entry" role="listitem">
+Queller, D. C. 2011. Expanded social fitness and hamilton’s rule for
+kin, kith, and kind. Proceedings of the National Academy of Sciences
+108:10792–10799. National Acad Sciences.
+</div>
+<div id="ref-queller1992quantitative" class="csl-entry" role="listitem">
+Queller, D. C. 1992. Quantitative genetics, inclusive fitness, and group
+selection. The American Naturalist 139:540–558. University of Chicago
+Press.
+</div>
+<div id="ref-Rstats" class="csl-entry" role="listitem">
+R. 2018. R: A language and environment for statistical computing. R
+Foundation for Statistical Computing, Vienna, Austria.
+</div>
+<div id="ref-ralph2015role" class="csl-entry" role="listitem">
+Ralph, P. L., and G. Coop. 2015. The role of standing variation in
+geographic convergent adaptation. The American Naturalist 186:S5–S23.
+University of Chicago Press Chicago, IL.
+</div>
+<div id="ref-rands:14" class="csl-entry" role="listitem">
+Rands, C. M., S. Meader, C. P. Ponting, and G. Lunter. 2014. 8.2% of the
+human genome is constrained: Variation in rates of turnover across
+functional element classes in the human lineage. PLoS genetics
+10:e1004525. Public Library of Science.
+</div>
+<div id="ref-reilly2015eugenics" class="csl-entry" role="listitem">
+Reilly, P. R. 2015. Eugenics and involuntary sterilization: 1907–2015.
+Annual review of genomics and human genetics 16:351–368. Annual Reviews.
+</div>
+<div id="ref-richards:00" class="csl-entry" role="listitem">
+Richards, C. M. 2000. Inbreeding depression and genetic rescue in a
+plant metapopulation. The American Naturalist 155:383–394. The
+University of Chicago Press.
+</div>
+<div id="ref-RITLAND:01" class="csl-entry" role="listitem">
+Ritland, K., C. Newton, and H. D. Marshall. 2001. <a href="https://doi.org/10.1016/S0960-9822(01)00448-1">Inheritance and
+population structure of the white-phased <span>“kermode”</span> black
+bear</a>. Current Biology 11:1468–1472.
+</div>
+<div id="ref-roberts2009sexual" class="csl-entry" role="listitem">
+Roberts, R. B., J. R. Ser, and T. D. Kocher. 2009. Sexual conflict
+resolved by invasion of a novel sex determiner in lake malawi cichlid
+fishes. Science 326:998–1001. American Association for the Advancement
+of Science.
+</div>
+<div id="ref-Robertson:61" class="csl-entry" role="listitem">
+Robertson, A. 1961. Inbreeding in artificial selection programmes.
+Genet. Res. 2:189--194.
+</div>
+<div id="ref-robinson:16" class="csl-entry" role="listitem">
+Robinson, J. A., D. Ortega-Del Vecchyo, Z. Fan, B. Y. Kim, C. D.
+Marsden, K. E. Lohmueller, R. K. Wayne, and others. 2016a. Genomic
+flatlining in the endangered island fox. Current Biology 26:1183–1189.
+Elsevier.
+</div>
+<div id="ref-robinson2016revisiting" class="csl-entry" role="listitem">
+Robinson, L. M., J. R. Boland, and J. M. Braverman. 2016b. Revisiting a
+classic study of the molecular clock. Journal of molecular evolution
+82:110–116. Springer.
+</div>
+<div id="ref-rosenberg:02" class="csl-entry" role="listitem">
+Rosenberg, N. A., J. K. Pritchard, J. L. Weber, H. M. Cann, K. K. Kidd,
+L. A. Zhivotovsky, and M. W. Feldman. 2002. Genetic structure of human
+populations. science 298:2381–2385. American Association for the
+Advancement of Science.
+</div>
+<div id="ref-Ruwende-g6pd" class="csl-entry" role="listitem">
+Ruwende, C., S. C. Khoo, R. W. Snow, S. N. Yates, D. Kwiatkowski, S.
+Gupta, P. Warn, C. E. Allsopp, S. C. Gilbert, and N. Peschu. 1995. <span class="nocase">Natural selection of hemi- and heterozygotes for
+<span>G6PD</span> deficiency in <span>Africa</span> by resistance to
+severe malaria</span>. Nature 376:246–249.
+</div>
+<div id="ref-Sams:18" class="csl-entry" role="listitem">
+Sams, A. J., and A. R. Boyko. 2018a. Fine-scale resolution and analysis
+of runs of homozygosity in domestic dogs. bioRxiv, doi: <a href="https://doi.org/10.1101/315770">10.1101/315770</a>. Cold Spring
+Harbor Laboratory.
+</div>
+<div id="ref-sams2018fine" class="csl-entry" role="listitem">
+Sams, A. J., and A. R. Boyko. 2018b. Fine-scale resolution of runs of
+homozygosity reveal patterns of inbreeding and substantial overlap with
+recessive disease genotypes in domestic dogs. G3: Genes, Genomes,
+Genetics g3–200836. G3: Genes, Genomes, Genetics.
+</div>
+<div id="ref-Sankararaman:12" class="csl-entry" role="listitem">
+Sankararaman, N. A. L., Sriram AND Patterson. 2012. <a href="https://doi.org/10.1371/journal.pgen.1002947">The date of
+interbreeding between neandertals and modern humans</a>. PLOS Genetics
+8:1–9. Public Library of Science.
+</div>
+<div id="ref-Santiago:98" class="csl-entry" role="listitem">
+Santiago, E., and A. Caballero. 1998. <span class="nocase"><span>E</span>ffective size and polymorphism of linked
+neutral loci in populations under directional selection</span>. Genetics
+149:2105–2117.
+</div>
+<div id="ref-Santiago:95" class="csl-entry" role="listitem">
+Santiago, E., and A. Caballero. 1995. <span class="nocase"><span>E</span>ffective size of populations under
+selection</span>. Genetics 139:1013–1030.
+</div>
+<div id="ref-Sattath:11" class="csl-entry" role="listitem">
+Sattath, S., E. Elyashiv, O. Kolodny, Y. Rinott, and G. Sella. 2011a.
+<span class="nocase"><span>P</span>ervasive adaptive protein evolution
+apparent in diversity patterns around amino acid substitutions in
+<span><em><span>D</span>rosophila simulans</em></span></span>. PLoS
+Genet. 7:e1001302.
+</div>
+<div id="ref-sattath2011pervasive" class="csl-entry" role="listitem">
+Sattath, S., E. Elyashiv, O. Kolodny, Y. Rinott, and G. Sella. 2011b.
+Pervasive adaptive protein evolution apparent in diversity patterns
+around amino acid substitutions in drosophila simulans. PLoS genetics
+7:e1001302. Public Library of Science.
+</div>
+<div id="ref-schemske2001perspective" class="csl-entry" role="listitem">
+Schemske, D. W., and P. Bierzychudek. 2001. Perspective: Evolution of
+flower color in the desert annual linanthus parryae: Wright revisited.
+Evolution 55:1269–1282. Wiley Online Library.
+</div>
+<div id="ref-seger1987oxford" class="csl-entry" role="listitem">
+Seger, J., and H. Brockmann. 1987. Oxford surveys in evolutionary
+biology. Pp. 182–211 <em>in</em> P. Harvey and L. Partridge, eds. Oxford
+University Press.
+</div>
+<div id="ref-sella2009pervasive" class="csl-entry" role="listitem">
+Sella, G., D. A. Petrov, M. Przeworski, and P. Andolfatto. 2009.
+Pervasive natural selection in the drosophila genome? PLoS genetics
+5:e1000495. Public Library of Science.
+</div>
+<div id="ref-dr._seuss_cat_1957" class="csl-entry" role="listitem">
+Seuss, Dr. 1957. The cat in the hat. Houghton Mifflin, Boston.
+</div>
+<div id="ref-Shapiro:07" class="csl-entry" role="listitem">
+Shapiro, J. A., W. Huang, C. Zhang, M. J. Hubisz, J. Lu, D. A.
+Turissini, S. Fang, H. Y. Wang, R. R. Hudson, R. Nielsen, Z. Chen, and
+C. I. Wu. 2007. <span class="nocase"><span>A</span>daptive genic
+evolution in the <span><em><span>D</span>rosophila</em></span>
+genomes</span>. Proc. Natl. Acad. Sci. U.S.A. 104:2271–2276.
+</div>
+<div id="ref-slatkin2008linkage" class="csl-entry" role="listitem">
+Slatkin, M. 2008. Linkage disequilibrium—understanding the evolutionary
+past and mapping the medical future. Nature Reviews Genetics 9:477–485.
+Nature Publishing Group.
+</div>
+<div id="ref-smith1980experimental" class="csl-entry" role="listitem">
+Smith, J. N., and A. A. Dhondt. 1980. Experimental confirmation of
+heritable morphological variation in a natural population of song
+sparrows. Evolution 1155–1158. JSTOR.
+</div>
+<div id="ref-smith1979heritability" class="csl-entry" role="listitem">
+Smith, J. N., and R. Zach. 1979. Heritability of some morphological
+characters in a song sparrow population. Evolution 33:460–467. Wiley
+Online Library.
+</div>
+<div id="ref-smith1993disruptive" class="csl-entry" role="listitem">
+Smith, T. B. 1993. Disruptive selection and the genetic basis of bill
+size polymorphism in the african finch pyrenestes. Nature 363:618.
+Nature Publishing Group.
+</div>
+<div id="ref-smithson1997negative" class="csl-entry" role="listitem">
+Smithson, A., and M. R. Macnair. 1997. Negative frequency-dependent
+selection by pollinators on artificial flowers without rewards.
+Evolution 51:715–723. Wiley Online Library.
+</div>
+<div id="ref-soule1976allozyme" class="csl-entry" role="listitem">
+Soulé, M. E. 1976. Molecular evolution. Pp. 60–77 <em>in</em>. Sinauer
+associates.
+</div>
+<div id="ref-stern2017california" class="csl-entry" role="listitem">
+Stern, A. M., N. L. Novak, N. Lira, K. O’Connor, S. Harlow, and S.
+Kardia. 2017. California’s sterilization survivors: An estimate and call
+for redress. American journal of public health 107:50–54. American
+Public Health Association.
+</div>
+<div id="ref-stevens1905studies" class="csl-entry" role="listitem">
+Stevens, N. M. 1905. Studies in spermatogenesis: With especial reference
+to the" accessory chromosome". Carnegie Institution of Washington.
+</div>
+<div id="ref-stitzer2018maize" class="csl-entry" role="listitem">
+Stitzer, M. C., and J. Ross-Ibarra. 2018. Maize domestication and gene
+interaction. PeerJ Preprints.
+</div>
+<div id="ref-stumpf2002herpes" class="csl-entry" role="listitem">
+Stumpf, M. P., Z. Laidlaw, and V. A. Jansen. 2002. Herpes viruses hedge
+their bets. Proceedings of the National Academy of Sciences
+99:15234–15237. National Acad Sciences.
+</div>
+<div id="ref-sturtevant:15" class="csl-entry" role="listitem">
+Sturtevant, A. H. 1915. The behavior of the chromosomes as studied
+through linkage. Zeitschrift f<span>ü</span>r induktive Abstammungs-und
+Vererbungslehre 13:234–287. Springer.
+</div>
+<div id="ref-sweigart2019making" class="csl-entry" role="listitem">
+Sweigart, A. L., Y. Brandvain, and L. Fishman. 2019. Making a murderer:
+The evolutionary framing of hybrid gamete-killers. Trends in Genetics.
+Elsevier.
+</div>
+<div id="ref-tabery2008ra" class="csl-entry" role="listitem">
+Tabery, J. 2008. RA fisher, lancelot hogben, and the origin (s) of
+genotype–environment interaction. Journal of the History of Biology
+41:717–761. Springer.
+</div>
+<div id="ref-tajima:89" class="csl-entry" role="listitem">
+Tajima, F. 1989. Statistical method for testing the neutral mutation
+hypothesis by DNA polymorphism. Genetics 123:585–595. Genetics Soc
+America.
+</div>
+<div id="ref-tao2007sexII" class="csl-entry" role="listitem">
+Tao, Y., L. Araripe, S. B. Kingan, Y. Ke, H. Xiao, and D. L. Hartl.
+2007a. A sex-ratio meiotic drive system in drosophila simulans. II: An
+x-linked distorter. PLoS biology 5:e293. Public Library of Science.
+</div>
+<div id="ref-tao2007sex" class="csl-entry" role="listitem">
+Tao, Y., J. P. Masly, L. Araripe, Y. Ke, and D. L. Hartl. 2007b. A
+sex-ratio meiotic drive system in drosophila simulans. I: An autosomal
+suppressor. PLoS biology 5:e292. Public Library of Science.
+</div>
+<div id="ref-tishkoff-g6pd" class="csl-entry" role="listitem">
+Tishkoff, S. A., R. Varkonyi, N. Cahinhinan, S. Abbes, G. Argyropoulos,
+G. Destro-Bisol, A. Drousiotou, B. Dangerfield, G. Lefranc, J. Loiselet,
+A. Piro, M. Stoneking, A. Tagarelli, G. Tagarelli, E. H. Touma, S. M.
+Williams, and A. G. Clark. 2001. <a href="https://doi.org/10.1126/science.1061573">Haplotype diversity and
+linkage disequilibrium at human <span>G6PD</span>: Recent origin of
+alleles that confer malarial resistance</a>. Science 293:455–462.
+</div>
+<div id="ref-Toews:16" class="csl-entry" role="listitem">
+Toews, D. P. L., S. A. Taylor, R. Vallender, A. Brelsford, B. G.
+Butcher, P. W. Messer, and I. J. Lovette. 2016. <a href="https://doi.org/10.1016/j.cub.2016.06.034">Plumage genes and
+little else distinguish the genomes of hybridizing warblers</a>. Current
+Biology 26:2313–2318.
+</div>
+<div id="ref-trivers1971evolution" class="csl-entry" role="listitem">
+Trivers, R. L. 1971. The evolution of reciprocal altruism. The Quarterly
+review of biology 46:35–57. Stony Brook Foundation, Inc.
+</div>
+<div id="ref-turelli2001stable" class="csl-entry" role="listitem">
+Turelli, M., D. W. Schemske, and P. Bierzychudek. 2001. Stable
+two-allele polymorphisms maintained by fluctuating fitnesses and seed
+banks: Protecting the blues in linanthus parryae. Evolution
+55:1283–1298. Wiley Online Library.
+</div>
+<div id="ref-tuttle2016divergence" class="csl-entry" role="listitem">
+Tuttle, E. M., A. O. Bergland, M. L. Korody, M. S. Brewer, D. J.
+Newhouse, P. Minx, M. Stager, A. Betuel, Z. A. Cheviron, W. C. Warren,
+and others. 2016. Divergence and functional degradation of a sex
+chromosome-like supergene. Current Biology 26:344–350. Elsevier.
+</div>
+<div id="ref-ulizzi1992natural" class="csl-entry" role="listitem">
+Ulizzi, L., and L. Terrenato. 1992. Natural selection associated with
+birth weight. VI. Towards the end of the stabilizing component. Annals
+of human genetics 56:113–118. Wiley Online Library.
+</div>
+<div id="ref-united1952race" class="csl-entry" role="listitem">
+UNESCO. 1952. The race concept: Results of an inquiry. Greenwood Press.
+</div>
+<div id="ref-uyeda2011million" class="csl-entry" role="listitem">
+Uyeda, J. C., T. F. Hansen, S. J. Arnold, and J. Pienaar. 2011. The
+million-year wait for macroevolutionary bursts. Proceedings of the
+National Academy of Sciences 108:15908–15913. National Acad Sciences.
+</div>
+<div id="ref-vermeij1982phenotypic" class="csl-entry" role="listitem">
+Vermeij, G. J. 1982. Phenotypic evolution in a poorly dispersing snail
+after arrival of a predator. Nature 299:349. Nature Publishing Group.
+</div>
+<div id="ref-voight2005interrogating" class="csl-entry" role="listitem">
+Voight, B. F., A. M. Adams, L. A. Frisse, Y. Qian, R. R. Hudson, and A.
+Di Rienzo. 2005. Interrogating multiple aspects of variation in a full
+resequencing data set to infer human population size changes.
+Proceedings of the National Academy of Sciences 102:18508–18513.
+National Acad Sciences.
+</div>
+<div id="ref-vonHoldt:11" class="csl-entry" role="listitem">
+vonHoldt, B. M., J. P. Pollinger, D. A. Earl, J. C. Knowles, A. R.
+Boyko, H. Parker, E. Geffen, M. Pilot, W. Jedrzejewski, B. Jedrzejewska,
+V. Sidorovich, C. Greco, E. Randi, M. Musiani, R. Kays, C. D.
+Bustamante, E. A. Ostrander, J. Novembre, and R. K. Wayne. 2011. A
+genome-wide perspective on the evolutionary history of enigmatic
+wolf-like canids. Genome Research, doi: <a href="https://doi.org/10.1101/gr.116301.110">10.1101/gr.116301.110</a>.
+</div>
+<div id="ref-wahlund1928zusammensetzung" class="csl-entry" role="listitem">
+Wahlund, S. 1928. Zusammensetzung von populationen und
+korrelationserscheinungen vom standpunkt der vererbungslehre aus
+betrachtet. Hereditas 11:65–106. Wiley Online Library.
+</div>
+<div id="ref-wang:18" class="csl-entry" role="listitem">
+Wang, J., J. Ding, B. Tan, K. M. Robinson, I. H. Michelson, A.
+Johansson, B. Nystedt, D. G. Scofield, O. Nilsson, S. Jansson, and
+others. 2018. A major locus controls local adaptation and adaptive life
+history variation in a perennial plant. Genome biology 19:72. BioMed
+Central.
+</div>
+<div id="ref-wang1999limits" class="csl-entry" role="listitem">
+Wang, R.-L., A. Stec, J. Hey, L. Lukens, and J. Doebley. 1999. The
+limits of selection during maize domestication. Nature 398:236–239.
+Nature Publishing Group.
+</div>
+<div id="ref-watterson:75" class="csl-entry" role="listitem">
+Watterson, G. 1975. On the number of segregating sites in genetical
+models without recombination. Theoretical population biology 7:256–276.
+Elsevier.
+</div>
+<div id="ref-weinberg1908ber" class="csl-entry" role="listitem">
+Weinberg, W. 1908. Über den nachweis der vererbung beim menschen.
+Jahres. Wiertt. Ver. Vaterl. Natkd. 64:369–382.
+</div>
+<div id="ref-weinberg1909vererbungsgesetze" class="csl-entry" role="listitem">
+Weinberg, W. 1909. <span>Ü</span>ber vererbungsgesetze beim menschen.
+Zeitschrift f<span>ü</span>r induktive Abstammungs-und Vererbungslehre
+2:276–330. Springer.
+</div>
+<div id="ref-weis1990measuring" class="csl-entry" role="listitem">
+Weis, A. E., and W. L. Gorman. 1990. Measuring selection on reaction
+norms: An exploration of the eurosta-solidago system. Evolution
+44:820–831. Wiley Online Library.
+</div>
+<div id="ref-welch2014multivariate" class="csl-entry" role="listitem">
+Welch, A. M., M. J. Smith, and H. C. Gerhardt. 2014. A multivariate
+analysis of genetic variation in the advertisement call of the gray
+treefrog, hyla versicolor. Evolution 68:1629–1639. Wiley Online Library.
+</div>
+<div id="ref-Wheeler:07" class="csl-entry" role="listitem">
+Wheeler, W. M. 1907. <a href="http://www.jstor.org/stable/2454781">Pink
+insect mutants</a>. The American Naturalist 41:773–780. [University of
+Chicago Press, American Society of Naturalists].
+</div>
+<div id="ref-widemo1998alternative" class="csl-entry" role="listitem">
+Widemo, F. 1998. Alternative reproductive strategies in the ruff,
+philomachus pugnax: A mixed ESS? Animal Behaviour 56:329–336. Academic
+Press.
+</div>
+<div id="ref-Wiehe:93" class="csl-entry" role="listitem">
+Wiehe, T. H., and W. Stephan. 1993a. <span class="nocase"><span>A</span>nalysis of a genetic hitchhiking model, and
+its application to <span>D</span><span>N</span><span>A</span>
+polymorphism data from <span><em><span>D</span>rosophila
+melanogaster</em></span></span>. Mol. Biol. Evol. 10:842–854.
+</div>
+<div id="ref-wiehe1993analysis" class="csl-entry" role="listitem">
+Wiehe, T., and W. Stephan. 1993b. Analysis of a genetic hitchhiking
+model, and its application to DNA polymorphism data from drosophila
+melanogaster. Molecular Biology and Evolution 10:842–854.
+</div>
+<div id="ref-wilkinson:93" class="csl-entry" role="listitem">
+Wilkinson, G. S. 1993. Artificial sexual selection alters allometry in
+the stalk-eyed fly cyrtodiopsis dalmanni (diptera: diopsidae). Genetics
+Research 62:213–222. Cambridge University Press.
+</div>
+<div id="ref-wilkinson1984reciprocal" class="csl-entry" role="listitem">
+Wilkinson, G. S. 1984. Reciprocal food sharing in the vampire bat.
+Nature 308:181–184. Springer.
+</div>
+<div id="ref-Williams:66" class="csl-entry" role="listitem">
+Williams, G. C. 1966. Adaptation and natural selection. Princeton.
+</div>
+<div id="ref-Williams548198" class="csl-entry" role="listitem">
+Williams, K.-A., and P. S. Pennings. 2019. Drug resistance evolution in
+HIV in the late 1990s: Hard sweeps, soft sweeps, clonal interference and
+the accumulation of drug resistance mutations. bioRxiv, doi: <a href="https://doi.org/10.1101/548198">10.1101/548198</a>. Cold Spring
+Harbor Laboratory.
+</div>
+<div id="ref-Wisely:02" class="csl-entry" role="listitem">
+Wisely, S. M., S. W. Buskirk, M. A. Fleming, D. B. McDonald, and E. A.
+Ostrander. 2002. <a href="https://doi.org/10.1093/jhered/93.4.231">Genetic diversity and
+fitness in black-footed ferrets before and during a bottleneck</a>.
+Journal of Heredity 93:231–237.
+</div>
+<div id="ref-wright2015adaptation" class="csl-entry" role="listitem">
+Wright, K. M., U. Hellsten, C. Xu, A. L. Jeong, A. Sreedasyam, J. A.
+Chapman, J. Schmutz, G. Coop, D. S. Rokhsar, and J. H. Willis. 2015.
+Adaptation to heavy-metal contaminated environments proceeds via
+selection on pre-existing genetic variation. bioRxiv 029900. Cold Spring
+Harbor Laboratory.
+</div>
+<div id="ref-wright1931evolution" class="csl-entry" role="listitem">
+Wright, S. 1931. Evolution in mendelian populations. Genetics 16:97.
+Genetics Society of America.
+</div>
+<div id="ref-Wright:43" class="csl-entry" role="listitem">
+Wright, S. 1943. <a href="http://www.genetics.org/content/28/2/114">Isolation by
+distance</a>. Genetics 28:114–138. Genetics.
+</div>
+<div id="ref-Wright:49" class="csl-entry" role="listitem">
+Wright, S. 1949. <a href="https://doi.org/10.1111/j.1469-1809.1949.tb02451.x">The genetical
+structure of populations</a>. Annals of Eugenics 15:323–354.
+</div>
+<div id="ref-wright1932" class="csl-entry" role="listitem">
+Wright, S. 1932. The roles of mutation, inbreeding, crossbreeding, and
+selection in evolution. na.
+</div>
+<div id="ref-Wright:05" class="csl-entry" role="listitem">
+Wright, S. I., I. V. Bi, S. G. Schroeder, M. Yamasaki, J. F. Doebley, M.
+D. McMullen, and B. S. Gaut. 2005. <a href="https://doi.org/10.1126/science.1107891">The effects of artificial
+selection on the maize genome</a>. Science 308:1310–1314. American
+Association for the Advancement of Science.
+</div>
+<div id="ref-wright:46" class="csl-entry" role="listitem">
+Wright, S., and T. Dobzhansky. 1946. Genetics of natural populations.
+XII. Experimental reproduction of some of the changes caused by natural
+selection in certain populations of drosophila pseudoobscura. Genetics
+31:125. Genetics Society of America.
+</div>
+<div id="ref-Yang:98" class="csl-entry" role="listitem">
+Yang, Z. 1998. <a href="https://doi.org/10.1093/oxfordjournals.molbev.a025957">Likelihood
+ratio tests for detecting positive selection and application to primate
+lysozyme evolution.</a> Molecular Biology and Evolution 15:568–573.
+</div>
+<div id="ref-zuckerkandl1965evolutionary" class="csl-entry" role="listitem">
+Zuckerkandl, E., and L. Pauling. 1965. Evolutionary divergence and
+convergence in proteins. Pp. 97–166 <em>in</em> Evolving genes and
+proteins. Elsevier.
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./multiple-selected-loci.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Interaction of Multiple Selected Loci</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./math-background.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script id="popgen-scroll-focus">
+(function(){function f(){document.querySelectorAll('figure.quarto-float-tbl > div, .column-page-right > div').forEach(function(d){
+ var s=d.scrollWidth>d.clientWidth+1; if(s){d.setAttribute('tabindex','0');d.setAttribute('role','region');d.setAttribute('aria-label','Scrollable table');}
+ else{d.removeAttribute('tabindex');}});}
+ window.addEventListener('load',f);window.addEventListener('resize',f);})();
+</script><script id="popgen-no-overlap">
+(function(){
+ var SEL='.column-margin.column-container > *, .margin-caption, .aside';
+ function R(e){var r=e.getBoundingClientRect();return {t:r.top+scrollY,b:r.bottom+scrollY,l:r.left,r:r.right};}
+ function run(){
+  var root=document.getElementById('quarto-document-content'); if(!root) return;
+  var items=[].filter.call(root.querySelectorAll(SEL),function(e){return e.offsetParent!==null && !e.parentElement.closest(SEL);});
+  items.forEach(function(e){e.style.marginTop='';});
+  var blk=[].filter.call(root.querySelectorAll('figure, table, pre, .column-page-right, .column-page, .column-screen, mjx-container[display="true"], .callout, .chapter-summary, blockquote'),
+    function(e){return e.offsetParent!==null && !e.closest(SEL) && !(e.parentElement.closest('figure,.column-page-right,.column-page,.callout') && e.tagName!=='FIGURE' && false);});
+  var last=0;
+  for(var pass=0;pass<3;pass++){
+   last=0; var moved=false;
+   items.forEach(function(it){
+    var r=R(it), top=r.t, h=r.b-r.t, need=Math.max(top,last), gap=8, again=true, n=0;
+    while(again && n++<40){
+     again=false;
+     blk.forEach(function(b){
+      if(it.contains(b)||b.contains(it)) return;
+      var q=R(b); if(q.r<=r.l+1||q.l>=r.r-1) return;
+      if(need<q.b+gap && need+h>q.t-1 && q.b>q.t){ if(need<q.b+gap){need=q.b+gap;again=true;} }
+     });
+    }
+    if(need>top+1){var cur=parseFloat(getComputedStyle(it).marginTop)||0; it.style.marginTop=(cur+need-top)+'px'; moved=true;}
+    var r2=R(it); last=r2.b+ (parseFloat(getComputedStyle(it).marginBottom)||0);
+   });
+   if(!moved) break;
+  }
+ }
+ var tm; function later(){clearTimeout(tm);tm=setTimeout(run,120);}
+ window.addEventListener('load',function(){later();
+   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(later);
+   if(window.MathJax&&MathJax.startup&&MathJax.startup.promise) MathJax.startup.promise.then(later);
+   [].forEach.call(document.images,function(i){if(!i.complete) i.addEventListener('load',later);});
+   setTimeout(later,1500);});
+ window.addEventListener('resize',later);
+ if(window.ResizeObserver) new ResizeObserver(later).observe(document.body);
+})();
+</script></body></html>

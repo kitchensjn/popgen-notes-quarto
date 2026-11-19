@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; Phenotypic Variation and the Resemblance Between Relatives – Population and Quantitative Genetics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./response-to-selection.html" rel="next">
+<link href="./neutral-diversity-and-structure.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-468b43a5444adb4913bafb0b3b0c703b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./phenotypic-variation.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Population and Quantitative Genetics</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/cooplab/popgen-notes" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equation-sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equation Sheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allele-and-genotype-frequencies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Allele and Genotype Frequencies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./population-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Population Structure and Correlations Among Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./genetic-drift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Genetic Drift and Neutral Diversity</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./molecular-evolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Population Genetics of Divergence and Molecular Substitution</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./neutral-diversity-and-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Neutral Diversity and Population Structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./phenotypic-variation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./correlated-traits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Correlated Traits and the Response of Multiple Traits to Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./one-locus-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">One-Locus Models of Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./selection-mutation-migration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Interaction of Selection, Mutation, and Migration</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drift-and-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Impact of Genetic Drift on Selected Alleles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linked-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The Effects of Linked Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./multiple-selected-loci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Interaction of Multiple Selected Loci</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./math-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">An Introduction to Mathematical Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#a-simple-additive-model-of-a-trait" id="toc-a-simple-additive-model-of-a-trait" class="nav-link active" data-scroll-target="#a-simple-additive-model-of-a-trait"><span class="header-section-number">7.1</span> A simple additive model of a trait</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Phenotypic Variation and the Resemblance Between Relatives</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="smallcaps">The distinction between genotype and phenotype</span> is one of the most useful ideas in biology.<span class="citation" data-cites="Johannsen:1911">(<a href="references.html#ref-Johannsen:1911" role="doc-biblioref">Johannsen 1911</a>)</span> The genotype of an individual (the genome), for most purposes, is decided when the gametes fuse to form a zygote (individual). The phenotype of an individual represents any measurable aspect of an organism.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Apsen" class="quarto-float quarto-figure quarto-figure-center anchored" alt="European aspen P.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Apsen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Quant_gen/Aspen_budset/Aspen_leaves.png" class="img-fluid figure-img" style="width:80.0%" alt="European aspen P.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Apsen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.1: European aspen <em>P. tremula</em>. <span class="attribution">Der baum. H. Schacht. 1860. BHL Image from the <a href="https://archive.org/stream/derbaum00scha/#page/n284/mode/1up">Biodiversity Heritage Library</a>. Contributed by The Library of Congress. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p>Your height, the amount of RNA transcribed from a given gene, what you ate last Tuesday: all of these are phenotypes. Nearly any phenotype we can choose to measure about an organism represents the outcome of the information encoded by their genome played out through an incredibly complicated developmental, physiological and/or behavioural processes that in turn interact with a myriad of environmental and stochastic factors. Honestly it boggles the mind how organisms work as well as they do, let alone that I managed to eat lunch last Tuesday.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Apsen-geno-pheno" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The effect of a flowering time gene (PtFT2) SNP on budset time in European aspen.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Apsen-geno-pheno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Wang_GWAS_poplar/Poplar_Aspen_budset_geno_pheno.png" class="img-fluid figure-img" style="width:100.0%" alt="The effect of a flowering time gene (PtFT2) SNP on budset time in European aspen.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Apsen-geno-pheno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.2: The effect of a flowering time gene (<em>PtFT2</em>) SNP on budset time in European aspen. Each dot gives the genotype-phenotype combination for an individual. The horizontal lines give the budset mean for each genotype and the vertical lines show the inter-quartile range. The dotted line gives the linear regression of phenotype on genotype. Thanks to Pär Ingvarsson for sharing these data from <span class="citation" data-cites="wang:18">Wang et al. (<a href="references.html#ref-wang:18" role="doc-biblioref">2018</a>)</span>.
+</figcaption>
+</figure>
+</div></div><p>There are many different ways to think about studying the path from genotype through to phenotype. The one we will take here is to think about how phenotypic variation among individuals in a population arises as a result of genetic variation in the population. One simple way to measure this genotype-phenotype relationship is to calculate the phenotypic mean for each genotype at a locus. For example, <span class="citation" data-cites="wang:18">Wang et al. (<a href="references.html#ref-wang:18" role="doc-biblioref">2018</a>)</span> explored the genetic basis of budset time in European aspen (<em>Populus tremula</em>); the effect of one specific SNP on that phenotype is shown in in <a href="#fig-Apsen-geno-pheno" class="quarto-xref">Figure&nbsp;<span>7.2</span></a>. Budset timing is a key trait underlying local adaptation to varying growing season length. The associated SNP falls in a gene (<em>PtFT2</em>) that is known to play a strong role in flowering time regulation in other plants.</p>
+<p>One way for us to assess the relationship between genotype and phenotype is to find the best fitting linear line through the data, i.e.&nbsp;fit a linear regression of phenotypes for our individuals on their genotypes at a particular SNP (<span class="math inline">\(l\)</span>):</p>
+<p><span id="eq-phenotypic-variation-1"><span class="math display">\[X \sim \mu + a_l G_{l} \tag{7.1}\]</span></span></p>
+<div class="page-columns page-full"><p>In the equation above, <span class="math inline">\(X\)</span> is a vector of the phenotypes of a set of individuals and <span class="math inline">\(G_{l}\)</span> is our vector of genotypes at locus <span class="math inline">\(l\)</span>, with <span class="math inline">\(G_{i,l}\)</span> taking the value 0, 1, or 2 depending on whether our individual <span class="math inline">\(i\)</span> is homozygote, heterozygote, or the alternate homozygote at our locus of interest. Here <span class="math inline">\(\mu\)</span> is our phenotypic mean. The slope of this regression line (<span class="math inline">\(a_l\)</span>)  has the interpretation of being the average effect of substituting a copy of allele <span class="math inline">\(2\)</span> for a copy of allele <span class="math inline">\(1\)</span>. In our aspen example the slope is <span class="math inline">\(-13.6\)</span>, i.e.&nbsp;swapping a single <span class="math inline">\(T\)</span> for a <span class="math inline">\(G\)</span> allele moves the budset forward by <span class="math inline">\(13.6\)</span> days, such that the <span class="math inline">\(GG\)</span> homozygote is predicted to set buds <span class="math inline">\(27.2\)</span> days earlier than the <span class="math inline">\(TT\)</span> homozygote.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">We’ll encounter linear regressions at various points during the next few chapters, see the math appendix around <a href="math-background.html#eq-def-linear-regression" class="quarto-xref">Equation&nbsp;<span>A.43</span></a> for more background details.</span></div></div>
+<p>As a measure of the significance of this genotype-phenotype relationship, we can calculate the p-value of our regression. To try to identify loci that are associated with our trait genome-wide, we can conduct this regression at each SNP we genotype in the genome. One common way to display the results of such an analysis (called a genome-wide association study or GWAS for short) is to plot the minus logarithm of the p-value for each SNP along genome (a so-called Manhattan plot). Here’s one from <span class="citation" data-cites="wang:18">Wang et al. (<a href="references.html#ref-wang:18" role="doc-biblioref">2018</a>)</span> for their aspen budset phenotype</p>
+<div id="fig-Apsen-Manhattan" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Manhattan plot of the p-value of the linear association between genotype and budset in aspen.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Apsen-Manhattan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Wang_GWAS_poplar/Wang_Fig_just_Manhattan.png" class="img-fluid figure-img" style="width:100.0%" alt="Manhattan plot of the p-value of the linear association between genotype and budset in aspen.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Apsen-Manhattan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.3: Manhattan plot of the p-value of the linear association between genotype and budset in aspen. Each dot represents the test at a single SNP, plotted at its physical coordinate in the genome. Different chromosomes are plotted in alternating colours. The SNPs surrounding the PtFT2 gene are shown in red. From <span class="citation" data-cites="wang:18">Wang et al. (<a href="references.html#ref-wang:18" role="doc-biblioref">2018</a>)</span>, licensed under CC BY 4.0.
+</figcaption>
+</figure>
+</div>
+<p>The SNP with the most significant p-value is SNP in <em>PtFT2</em>. Note that other SNPs in the surrounding region also light up as showing a significant association with budset timing. This is because loci that are in linkage disequilibrium with a functional locus may in turn show an association, not because they directly affect the phenotype, but simply because the genotypes at the two loci are themselves non-randomly associated. Below is a zoomed in version (Figure 2 in <span class="citation" data-cites="wang:18">Wang et al. (<a href="references.html#ref-wang:18" role="doc-biblioref">2018</a>)</span>) with SNPs coloured by the strength of their LD with the putatively functional SNP.</p>
+<div id="fig-Apsen-zoom-Manhattan" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The Manhattan plot zoomed in on the top-hit (red SNPs from @fig-Apsen-Manhattan).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Apsen-zoom-Manhattan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/Wang_GWAS_poplar/Wang_Fig_zoomed_Manhattan.png" class="img-fluid figure-img" style="width:100.0%" alt="The Manhattan plot zoomed in on the top-hit (red SNPs from @fig-Apsen-Manhattan).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Apsen-zoom-Manhattan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.4: The Manhattan plot zoomed in on the top-hit (red SNPs from <a href="#fig-Apsen-Manhattan" class="quarto-xref">Figure&nbsp;<span>7.3</span></a>). SNPs are now coloured by their <span class="math inline">\(D^{\prime}\)</span> value with the most significant SNP. <span class="math inline">\(D^{\prime}\)</span> is the LD covariance between a pair of loci (<span class="math inline">\(D\)</span>, <a href="population-structure.html#eq-LD-def" class="quarto-xref">Equation&nbsp;<span>3.15</span></a>) normalized by the largest value <span class="math inline">\(D\)</span> can take given the allele frequencies. Figure from <span class="citation" data-cites="wang:18">Wang et al. (<a href="references.html#ref-wang:18" role="doc-biblioref">2018</a>)</span>, licensed under CC BY 4.0.
+</figcaption>
+</figure>
+</div>
+<p>Note how SNPs in strong LD with the functional allele (redder points) have more significant p-values.</p>
+<div class="page-columns page-full"><p>Variation in some traits seems to have a relatively simple genetic basis. In our aspen example there is one clear large-effect locus, which explains 62% of the variation in budset. Note that even in this case, where we have an allele with a very strong effect on a phenotype, this is not an allele <em>for</em> budset, nor is <em>PtFT2</em> a gene <em>for</em> budset.  It is an allele that is associated with budset in the sampled environments and populations. In a different set of environments, this allele’s effects may be far smaller, and a different set of alleles may contribute to phenotype variation. <em>PtFT2</em>, the gene our focal SNP falls close to, is just one of many genes and molecular pathways involved in budset. A mutant screen for budset may uncover many genes with larger effects; this gene is just a locus that happens to be polymorphic in this particular set of genotyped individuals.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">“All that we mean when we speak of a gene [allele] for pink eyes is, a gene which differentiates a pink eyed fly from a normal one not a gene [allele] which produces pink eyes per se, for the character pink eyes is dependent on the action of many other genes.” - <span class="citation" data-cites="sturtevant:15">Sturtevant (<a href="references.html#ref-sturtevant:15" role="doc-biblioref">1915</a>)</span></span></div></div>
+<p>While phenotypic variation for some phenotypes has a relatively simple genetic basis, many phenotypes are likely much more genetically complex, involving the functional effect of many alleles at hundreds or thousands of polymorphic loci. For example hundreds of small effect loci affecting human height have been mapped in European populations to date. Such genetically complex traits are called polygenic traits.</p>
+<p>In this chapter, we will use our understanding of the sharing of alleles between relatives to understand the phenotypic resemblance between relatives in quantitative phenotypes. This will allow us to understand the contribution of genetic variation to phenotypic variation. In the next chapter, we will then use these results to understand the evolutionary change in quantitative phenotypes in response to selection.</p>
+<section id="a-simple-additive-model-of-a-trait" class="level2 page-columns page-full" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="a-simple-additive-model-of-a-trait"><span class="header-section-number">7.1</span> A simple additive model of a trait</h2>
+<div class="page-columns page-full"><p>Let’s imagine that the genetic component of the variation in our trait is controlled by <span class="math inline">\(L\)</span> autosomal loci that act in an additive manner.  The frequency of allele <span class="math inline">\(1\)</span> at locus <span class="math inline">\(l\)</span> is <span class="math inline">\(p_l\)</span>, with each copy of allele <span class="math inline">\(1\)</span> at this locus increasing your trait value by <span class="math inline">\(a_l\)</span> above the population mean. The phenotype of an individual, let’s call her <span class="math inline">\(i\)</span>, is <span class="math inline">\(X_i\)</span>. Her genotype at SNP <span class="math inline">\(l\)</span> is <span class="math inline">\(G_{i,l}\)</span>. Here <span class="math inline">\(G_{i,l}=0,~1,\)</span> or <span class="math inline">\(2\)</span>, representing the number of copies of allele <span class="math inline">\(1\)</span> she has at this SNP. Her expected phenotype, given her genotype at all <span class="math inline">\(L\)</span> SNPs, is then</p><div class="no-row-height column-margin column-container"><span class="margin-aside">Throughout this chapter we are following ideas that were developed by <span class="citation" data-cites="Fisher:1918">Fisher (<a href="references.html#ref-Fisher:1918" role="doc-biblioref">1918</a>)</span> and numerous other researchers. See <span class="citation" data-cites="provine:01">Provine (<a href="references.html#ref-provine:01" role="doc-biblioref">2001</a>)</span> for a history.</span></div></div>
+<p><span id="eq-pheno-geno"><span class="math display">\[\mathbb{E} (X_i | G_{i,1},\cdots,G_{i,L}) =\mu + X_{A,i} = \mu+\sum_{l=1}^L G_{i,l} a_{l} \tag{7.2}\]</span></span></p>
+<p>where <span class="math inline">\(\mu\)</span> is the mean phenotype in our population, and <span class="math inline">\(X_{A,i}\)</span> is the deviation away from the mean phenotype due to her genotype. Now in reality the phenotype is a function of the expression of those alleles in a particular environment. Therefore, we can think of this expected phenotype as being an average across a set of environments that occur in the population.</p>
+<p>When we measure our individual’s observed phenotype we see</p>
+<p><span id="eq-pheno-geno-environ"><span class="math display">\[X_i =   \mu+X_{A,i} + X_{E,i} \tag{7.3}\]</span></span></p>
+<p>where <span class="math inline">\(X_E\)</span> is the deviation from the mean phenotype due to the environment. This <span class="math inline">\(X_E\)</span> includes the systematic effects of the environment our individual finds herself in and all of the noise during development, growth, and the various random insults that life throws at our individual. If a reasonable number of loci contribute to variation in our trait then we can approximate the distribution of <span class="math inline">\(X_{A,i}\)</span> by a normal distribution due to the central limit theorem (see <a href="#fig-QT1" class="quarto-xref">Figure&nbsp;<span>7.5</span></a>). <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Thus if we can approximate the distribution of the effect of environmental variation on our trait (<span class="math inline">\(X_{E,i}\)</span>) also by a normal distribution, which is reasonable as there are many small environmental effects, then the distribution of phenotypes within the population (<span class="math inline">\(X_i\)</span>) will be normally distributed (see <a href="#fig-QT1" class="quarto-xref">Figure&nbsp;<span>7.5</span></a>).</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The central limit theory is discussed briefly in the math appendix section <a href="math-background.html#sec-useful-limits" class="quarto-xref"><span>A.2.7</span></a>.</p></div></div><div id="fig-QT1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The convergence of the phenotypic distribution to a normal distribution.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-QT1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/QT1.png" class="img-fluid figure-img" style="width:100.0%" alt="The convergence of the phenotypic distribution to a normal distribution.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-QT1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.5: The convergence of the phenotypic distribution to a normal distribution. Each of the three histograms shows the distribution of the phenotype in a large sample, for increasingly large numbers of loci (<span class="math inline">\(L=1,~4,\)</span> and <span class="math inline">\(10\)</span>, with the proportion of variance explained held at <span class="math inline">\(V_A=1\)</span>). I have simulated each individual’s phenotype following equations (<a href="#eq-pheno-geno" class="quarto-xref"><span>7.2</span></a>) and (<a href="#eq-pheno-geno-environ" class="quarto-xref"><span>7.3</span></a>). Specifically, we’ve simulated each individual’s biallelic genotype at <span class="math inline">\(L\)</span> loci, assuming Hardy-Weinberg proportions and that the allele is at 50% frequency. We assume that all of the alleles have equal effects and combine them additively together. We then add an environmental contribution, which is normally distributed with mean zero and variance <span class="math inline">\(0.05\)</span>. Note that in the left two pictures you can see peaks corresponding to different genotypes due to our low environmental noise (in practice we can rarely see such peaks for real quantitative phenotypes). Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/QT1.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>Note that as this is an additive model; we can decompose <a href="#eq-pheno-geno-environ" class="quarto-xref">Equation&nbsp;<span>7.3</span></a> into the effects of the two alleles at each locus and rewrite it as</p>
+<p><span id="eq-mum-and-pop-var"><span class="math display">\[X_i = \mu + X_{iM}+X_{iP} +X_{iE} \tag{7.4}\]</span></span></p>
+<p>where <span class="math inline">\(X_{iM}\)</span> and <span class="math inline">\(X_{iP}\)</span> are the contribution to the phenotype of the alleles that our individual received from her mother (maternal alleles) and father (paternal alleles) respectively. This will come in handy in just a moment when we start thinking about the phenotypic covariance of relatives.</p>
+<p>Now obviously this model seems silly at first sight as alleles don’t only act in an additive manner, as they interact with alleles at the same loci (dominance) and at different loci (epistasis). Later we’ll relax this assumption, however, we’ll find that if we are interested in evolutionary change over short time-scales it is actually only the “additive component” of genetic variation that will (usually) concern us. We will define this more formally later on, but for the moment we can offer the intuition that parents only get to pass on a single allele at each locus on to the next generation. As such, it is the effect of these transmitted alleles, averaged over possible matings, that is an individual’s average contribution to the next generation (i.e.&nbsp;the additive effect of the alleles that their genotype consists of).</p>
+<section id="additive-genetic-variance-and-heritability" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="additive-genetic-variance-and-heritability">Additive genetic variance and heritability</h3>
+<p>As we are talking about an additive genetic model, we’ll talk about the additive genetic variance (<span class="math inline">\(V_A\)</span>), the phenotypic variance due to the additive effects of segregating genetic variation. This is a subset of the total genetic variance if we allow for non-additive effects.</p>
+<p>The variance of our phenotype across individuals (<span class="math inline">\(V_P\)</span>) we can write as</p>
+<p><span id="eq-phenotypic-variation-2"><span class="math display">\[V_P = Var(X)= Var(X_A) + Var(X_E) = V_A+V_E \tag{7.5}\]</span></span></p>
+<p>In writing the phenotypic variance as a sum of the additive and environmental contributions, we are assuming that there is no covariance between <span class="math inline">\(X_{G,i}\)</span> and <span class="math inline">\(X_{E,i}\)</span> i.e.&nbsp;there is no covariance between genotype and environment. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;In this section we’re making use of the properties of the variance of a random variable, see math appendix <a href="math-background.html#eq-general-var-decomp" class="quarto-xref">Equation&nbsp;<span>A.24</span></a></p></div></div><p>Our additive genetic variance can be written as</p>
+<p><span id="eq-phenotypic-variation-3"><span class="math display">\[V_A =Var(X_A)  =\sum_{l=1}^L Var(G_{i,l} a_{l}) \tag{7.6}\]</span></span></p>
+<p>where <span class="math inline">\(Var(G_{i,l} a_{l})\)</span> is the contribution of locus <span class="math inline">\(l\)</span> to the additive variance among individuals. Assuming random mating, and that our loci are in linkage equilibrium, we can write our additive genetic variance as</p>
+<p><span id="eq-VA"><span class="math display">\[V_A = \sum_{l=1}^L a_{l}^2 2 p_l(1-p_l) \tag{7.7}\]</span></span></p>
+<p>where the <span class="math inline">\(2 p_l(1-p_l)\)</span> term follows from the binomial sampling of two alleles per individual at each locus. <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;These results follow from the properties of variance in math appendix <a href="math-background.html#eq-general-var-decomp" class="quarto-xref">Equation&nbsp;<span>A.24</span></a>.</p></div></div><div id="exr-phenotypic-variation-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 7.1</strong></span> You have two biallelic SNPs contributing to variance in human height. At the first SNP you have an allele with an additive effect of <span class="math inline">\(5\)</span>cm which is found at a frequency of <span class="math inline">\({}^{1}\!/\!{}_{10,000}\)</span>. At the second SNP you have an allele with an additive effect of <span class="math inline">\(-0.5\)</span>cm segregating at 50% frequency. Which SNP contributes more to the additive genetic variance? Explain the intuition of your answer.</p>
+</div>
+<p>Above in <a href="#eq-mum-and-pop-var" class="quarto-xref">Equation&nbsp;<span>7.4</span></a> we decomposed the additive genetic component of <span class="math inline">\(X_{A,i}\)</span> as <span class="math inline">\(X_{M,i} + X_{P,i}\)</span> the additive contributions of the maternal and paternal derived alleles in the <span class="math inline">\(i^{th}\)</span> individual. Similarly we can decompose the additive genetic variance <span class="math inline">\(V_A\)</span> as</p>
+<p><span id="eq-mat-pat-var"><span class="math display">\[\begin{aligned}
+  V_A&amp;= Var(X_A) = Var(X_{M,i} ) + Var(X_{P,i} ) \\
+       Var(X_{M,i} ) &amp; =Var(X_{P,i} ) = {}^{V_{A}}\!/\!{}_{2}  
+\end{aligned} \tag{7.8}\]</span></span></p>
+<p>assuming that our individuals are mating at random and that maternal and paternal alleles are equal in their effect in offspring. <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Genetic imprinting violates this assumption, but is relatively rare.</p></div><div id="fn5"><p><sup>5</sup>&nbsp;Each of these was chosen as the SNP with the strongest signal of association with height in 1700 roughly independent bins spaced across the genome.</p></div></div><p><strong>An example of the additive basis of variation using polygenic scores.</strong> Now we don’t usually get to see the individual loci contributing to highly polygenic traits. Instead, we only get to see the distribution of the trait in the population. However, with the advent of GWAS in human genetics we can see some of the underlying genetics using the many trait-associated loci identified to date. Using the estimated effect sizes at each locus, each one of which is tiny, we can calculate the weighted sum over an individual’s genotype as in <a href="#eq-pheno-geno" class="quarto-xref">Equation&nbsp;<span>7.2</span></a>. This weighted sum is called the individual’s polygenic score. To illustrate how polygenic scores work, we can take a set of 1700 SNPs<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. The effects of these SNPs are tiny; the median, absolute additive effect size is <span class="math inline">\(0.07\)</span>cm. <a href="#fig-Biobank-height-PGS" class="quarto-xref">Figure&nbsp;<span>7.6</span></a> shows the distribution of a thousand individuals’ polygenic scores calculated using these 1700 SNPs (simulated genotypes using the UKBB frequencies). The standard deviation of these polygenic scores <span class="math inline">\(\sim 2\)</span>cm. The individuals with higher polygenic scores for height are predicted to be taller than the individuals with lower polygenic scores.</p>
+<div id="fig-Biobank-height-PGS" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Left) The distribution of the number of height-increasing alleles that individuals carry at 1700 SNPs associated with height in the UK Biobank, for a sample of 1000 individuals.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Biobank-height-PGS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/Biobank_height_dist.png" class="img-fluid figure-img" style="width:100.0%" alt="Left) The distribution of the number of height-increasing alleles that individuals carry at 1700 SNPs associated with height in the UK Biobank, for a sample of 1000 individuals.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Biobank-height-PGS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.6: <strong>Left)</strong> The distribution of the number of height-increasing alleles that individuals carry at 1700 SNPs associated with height in the UK Biobank, for a sample of 1000 individuals. <strong>right)</strong> The distribution of the polygenic scores for these 1000 individuals. Plotted on top is a normal distribution with the same mean and variance. The empirical variance of these polygenic scores is <span class="math inline">\(0.13\)</span>, the additive genetic variance calculated by <a href="#eq-VA" class="quarto-xref">Equation&nbsp;<span>7.7</span></a> is <span class="math inline">\(0.135\)</span>, so the two are in good agreement. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/Height/Biobank_height.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p><strong>The narrow sense heritability.</strong> We would like a way to think about what proportion of the variation in our phenotype across individuals is due to genetic differences as opposed to environmental differences. Such a quantity will be key in helping us think about the evolution of phenotypes. For example, if variation in our phenotype had no genetic basis, then no matter how much selection changes the mean phenotype within a generation the trait will not change over generations.</p>
+<p>We’ll call the proportion of the variance that is genetic the <em>heritability</em>, and denote it by <span class="math inline">\(h^2\)</span>. We can then write heritability as</p>
+<p><span id="eq-phenotypic-variation-4"><span class="math display">\[h^2 = \frac{Var(X_A)}{V_P} = \frac{V_A}{V_P} \tag{7.9}\]</span></span></p>
+<p>Remember that we are thinking about a trait where all of the alleles act in a perfectly additive manner. In this case our heritability <span class="math inline">\(h^2\)</span> is referred to as the <em>narrow sense heritability</em>, the proportion of the variance explained by the additive effect of our loci. When we allow dominance and epistasis into our model, we’ll also have to define the <em>broad sense heritability</em> (the total proportion of the phenotypic variance attributable to genetic variation).</p>
+<p>The narrow sense heritability of a trait is a useful quantity; indeed we’ll see shortly that it is exactly what we need to understand the evolutionary response to selection on a quantitative phenotype. We can calculate the narrow sense heritability by using the resemblance between relatives. For example, if the phenotypic differences between individuals in our population were solely determined by environmental differences experienced by these different individuals, we should not expect relatives to resemble each other any more than random individuals drawn from the population. Now the obvious caveat here is that relatives also share an environment, so they may resemble each other due to shared environmental effects.</p>
+<p>Note that the heritability is a property of a sample from the population in a particular set of environments at a particular time. Changes in the environment may change the phenotypic variance. Changes in the environment may also change how our genetic alleles are expressed through development and so change <span class="math inline">\(V_A\)</span>. Thus estimates of heritability are not transferable across environments or populations.</p>
+</section>
+<section id="the-covariance-between-relatives" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="the-covariance-between-relatives">The covariance between relatives</h3>
+<p>People have long been fascinated by the resemblance between relatives, particularly twins (see <a href="#fig-The-Cholmondeley-Ladies" class="quarto-xref">Figure&nbsp;<span>7.7</span></a>). Families hold a special place in quantitative genetics, as remarkably we can use the resemblance between relatives to directly estimate the heritability and covariance of traits. To see this we can calculate the covariance in phenotype between pairs of individuals (<span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>) who have phenotypes <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> respectively.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> To think about imagine plotting the phenotypes of, say, sisters against each other. The x and y coordinates of each point will be the, say, heights of the pair of siblings. Do tall women tend to have tall sisters, do short women tend to have short sisters? How much do their phenotypes covary? If some of the variation in our phenotype is genetic we expect identical twins to resemble each other more than full siblings, who in turn will resemble each other more than half-sibs and so on out (see <a href="#fig-Varying-rellys-phenos" class="quarto-xref">Figure&nbsp;<span>7.8</span></a>). Under our simple additive model of phenotypes we can write the covariance as</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;We’ll be dealing with covariance a lot this chapter, see math appendix section <a href="math-background.html#sec-multi-RV" class="quarto-xref"><span>A.2.6</span></a> for more background.</p></div></div><p><span id="eq-phenotypic-variation-5"><span class="math display">\[Cov(X_1,X_2) =
+Cov\left( X_{1M}+X_{1P}+X_{1E},~ X_{2M}+X_{2P}+X_{2E} \right) \tag{7.10}\]</span></span></p>
+<p>We can expand this out in terms of the covariance between the various components in these sums.</p>
+<div id="fig-The-Cholmondeley-Ladies" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" alt="The Cholmondeley Ladies.">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-The-Cholmondeley-Ladies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="images/illustration_images/Quant_gen/Cholmondeley_Ladies/1024px-British_School_17th_century_-_The_Cholmondeley_Ladies_-_Google_Art_Project.jpg" class="img-fluid figure-img column-page-right" style="width:85.0%" alt="The Cholmondeley Ladies.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-The-Cholmondeley-Ladies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.7: The Cholmondeley Ladies. Unknown British Painter, circa 1600. Inscription on bottom left of the painting “Two Ladies of the Cholmondeley Family, Who were born the same day, Married the same day, And brought to Bed the same day.” The ladies are thought to be twin sisters, but there’s a clue that they’re not identical twins. Can you spot it? Image from <a href="https://commons.wikimedia.org/wiki/File:British_School_17th_century_-_The_Cholmondeley_Ladies_-_Google_Art_Project.jpg">Wikimedia</a>, considered public domain in the United States, UK <a href="https://www.tate.org.uk/art/artworks/unknown-artist-britain-the-cholmondeley-ladies-t00069">Tate</a> Creative Commons CC-BY-NC-ND (3.0 Unported)
+</figcaption>
+</figure>
+</div>
+<p>To make our task easier, we will make two commonly made assumptions:</p>
+<ol type="1">
+<li><p>We can ignore the covariance of the environments between individuals (i.e.&nbsp;<span class="math inline">\(Cov(X_{1E},X_{2E})=0\)</span>)</p></li>
+<li><p>We can ignore the covariance between the environment of one individual and the genetic variation in another individual (i.e.&nbsp;<span class="math inline">\(Cov(X_{1E},(X_{2M}+X_{2P}))=0\)</span>). <a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p></li>
+</ol>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;We can actually incorporate these effects into the definition of additive genetic variance, but here we’ll choose not to for simplicity.</p></div></div><p>The failure of these assumptions to hold can undermine our estimates of heritability, but we’ll return to that later. Moving forward with these assumptions, we can simplify our original expression above and write our phenotypic covariance between our pair of individuals as</p>
+<p><span id="eq-cov-rels-1"><span class="math display">\[Cov(X_1,X_2) =
+Cov(X_{1M},X_{2M})+Cov(X_{1M},X_{2P})+Cov(X_{1P},X_{2M})
++Cov(X_{1P},X_{2P}) \tag{7.11}\]</span></span></p>
+<p>This equation is saying that, under our simple additive model, we can see the covariance in phenotypes between individuals as the covariance between the maternal and paternal allelic effects in our individuals. We can use our results about the sharing of alleles between relatives to obtain these covariance terms. But before we write down the general case, let’s quickly work through some examples.</p>
+<div id="fig-Varying-rellys-phenos" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" alt="Covariance of phenotypes between pairs of individuals of a given relatedness.">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-Varying-rellys-phenos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="images/figures/Varying_rellys_phenos.png" class="img-fluid figure-img column-page-right" style="width:100.0%" alt="Covariance of phenotypes between pairs of individuals of a given relatedness.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Varying-rellys-phenos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.8: Covariance of phenotypes between pairs of individuals of a given relatedness. Each point gives the phenotypes of a different pair of individuals. The additive genetic variance is held constant at <span class="math inline">\(V_A=1\)</span>, such that the expected covariances (<span class="math inline">\(2F_{1,2}V_A\)</span>) should be <span class="math inline">\(1\)</span>, <span class="math inline">\(0.5\)</span>, <span class="math inline">\(0.25\)</span>, and <span class="math inline">\(0.125\)</span> respectively in good agreement with the empirical covariances reported in the title of each graph. The data were simulated as described in the caption of <a href="#fig-QT1" class="quarto-xref">Figure&nbsp;<span>7.5</span></a>. The dashed red line shows <span class="math inline">\(x=y\)</span> and the solid blue line shows the best fitting linear regression line. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/QT4.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p><strong>The covariance between identical twins.</strong> Let’s first consider the case of a pair of identical twins, monzygotic (MZ) twins, from two unrelated parents. Our pair of twins share their maternal and paternal allele identical by descent (<span class="math inline">\(X_{1M}=X_{2M}\)</span> and <span class="math inline">\(X_{1P}=X_{2P}\)</span>). As their maternal and paternal alleles are not correlated draws from the population, i.e.&nbsp;have no probability of being <span class="math inline">\(IBD\)</span> as we’ve said the parents are unrelated, the covariance between their effects on the phenotype is zero (i.e.&nbsp;<span class="math inline">\(Cov(X_{1P},X_{2M})=Cov(X_{1M},X_{2P})=0\)</span>). In that case, <a href="#eq-cov-rels-1" class="quarto-xref">Equation&nbsp;<span>7.11</span></a> is</p>
+<p><span id="eq-phenotypic-variation-6"><span class="math display">\[Cov(X_1,X_2) = Cov(X_{1M},X_{2M})+Cov(X_{1P},X_{2P}) = Var(X_{1M}) +Var(X_{1P})
+= V_A \tag{7.12}\]</span></span></p>
+<p>where the middle step follows from the fact the maternal (or similarly the paternal) allele in a pair of twins is the same allele so <span class="math inline">\(Cov(X_{1M},X_{2M})=Cov(X_{1M},X_{1M})=Var(X_{1M})\)</span>, as the covariance of random variable with itself is just its variance, and then the additive variance of the maternal allele contribution is <span class="math inline">\(Var(X_{1M})={}^{V_A}\!/\!{}_{2}\)</span> following from <a href="#eq-mat-pat-var" class="quarto-xref">Equation&nbsp;<span>7.8</span></a>.</p>
+<p>To calculate the narrow sense heritability we could then in principal divide the covariance of our pairs of MZ twins (MZ<span class="math inline">\(_1\)</span> and MZ<span class="math inline">\(_2\)</span>) by the trait variance to give</p>
+<p><span id="eq-phenotypic-variation-7"><span class="math display">\[h^2 = \frac{Cov(\text{MZ}_1, \text{MZ}_2) }{V_P} =
+\rho_{\text{MZ}} \tag{7.13}\]</span></span></p>
+<p>where <span class="math inline">\(\rho_{\text{MZ}}\)</span> is the correlation of pairs of MZ twins (see Appendix <a href="math-background.html#eq-def-corr" class="quarto-xref">Equation&nbsp;<span>A.42</span></a> for more on correlations). For example, we could estimate the heritability of a measure of body from the MZ correlation in <a href="#fig-twins-body-fat" class="quarto-xref">Figure&nbsp;<span>7.9</span></a>. In general, this simple estimator isn’t great as the correlation of identical twins includes the effects of the shared family environment of the twins (i.e.&nbsp;<span class="math inline">\(Cov(X_{1E},X_{2E})\)</span>).</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-twins-body-fat" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A measure of body fat in pairs of monozygotic (MZ) and dizygotic (DZ) twins.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-twins-body-fat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/twins_body_fat/twins_body_fat.png" class="img-fluid figure-img" style="width:100.0%" alt="A measure of body fat in pairs of monozygotic (MZ) and dizygotic (DZ) twins.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-twins-body-fat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.9: A measure of body fat in pairs of monozygotic (MZ) and dizygotic (DZ) twins. Our sample correlations are <span class="math inline">\(\hat{\rho}_{\text{MZ}}=0.72\)</span> and <span class="math inline">\(\hat{\rho}_{\text{DZ}}=0.10\)</span>. Data from <span class="citation" data-cites="faith1999evidence">Faith et al. (<a href="references.html#ref-faith1999evidence" role="doc-biblioref">1999</a>)</span>, Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/twins_body_fat/twins_body_fat.R">here</a>.
+</figcaption>
+</figure>
+</div></div><p>Moreover, it can be inflated by non-additive effects as identical twins don’t just share alleles, they share their entire genotypes, and thus resemble each other in phenotype also because of shared dominance effects (we’ll discuss non-additive effects in <a href="#sec-nonAddVar" class="quarto-xref"><span>Section 7.1.3</span></a>). Better twin-based estimates of heritability are commonly used based on the comparison of MZ vs twins that bypass some of these issues.</p>
+<p><strong>The covariance in phenotype between parent and child.</strong></p>
+<p>Children resemble their biological parents because children inherit their genome from their parents (putting aside shared environments for the moment). If a mother and father are unrelated individuals, i.e.&nbsp;they are two random draws from the population, then this mother and her child share one allele IBD at each locus (i.e.&nbsp;<span class="math inline">\(r_1=1\)</span> and <span class="math inline">\(r_0=r_2=0\)</span>). Let’s assume that our mother (ind 1) transmits her paternal allele to the child (ind 2), in which case <span class="math inline">\(X_{P1}=X_{M2}\)</span>, and so <span class="math inline">\(Cov(X_{P1},X_{M2})=Var(X_{P1})=\tfrac{1}{2}
+V_A\)</span>, and all the other covariances in <a href="#eq-cov-rels-1" class="quarto-xref">Equation&nbsp;<span>7.11</span></a> are zero. We’d also arrive at this result if instead we had thought of the mother transmitting her own maternal allele. Thus <span class="math inline">\(Cov(X_1,X_2) = \tfrac{1}{2}
+V_A\)</span>, we can leverage this form of the covariance to directly estimate <span class="math inline">\(h^2\)</span> by regression.</p>
+<p>We can estimate the narrow sense heritability through the regression of child’s phenotype on the parental mid-point phenotype. The parental mid-point phenotype is simply the average of the mum and dad’s phenotype. See <a href="#fig-song-sparrow-herit" class="quarto-xref">Figure&nbsp;<span>7.10</span></a> for an example from song sparrows.</p>
+<div id="fig-song-sparrow-herit" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Parent-midpoint offspring regression for beak depth and tarsus length in song sparrows.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-song-sparrow-herit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/song_sparrow_herit/song_sparrow_herit.png" class="img-fluid figure-img" style="width:100.0%" alt="Parent-midpoint offspring regression for beak depth and tarsus length in song sparrows.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-song-sparrow-herit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.10: Parent-midpoint offspring regression for beak depth and tarsus length in song sparrows. The phenotypes have been standardized to have mean <span class="math inline">\(0\)</span> and variance <span class="math inline">\(1\)</span>. The red line shows the best fitting slope, whose slope is reported on the graph. Note that <span class="citation" data-cites="smith1979heritability">Smith and Zach (<a href="references.html#ref-smith1979heritability" role="doc-biblioref">1979</a>)</span> regressed the average offspring phenotype for each family on parental mid-point (<span class="math inline">\(X_{\textrm{avg.kid}}\sim X_{\textrm{mid}}\)</span>), as they had multiple offspring per family. However, this doesn’t change the slope of the regression from the form given by <a href="#eq-par-off-herit" class="quarto-xref">Equation&nbsp;<span>7.14</span></a>. The grey line is the <span class="math inline">\(x=y\)</span> line. Data from <span class="citation" data-cites="smith1979heritability">Smith and Zach (<a href="references.html#ref-smith1979heritability" role="doc-biblioref">1979</a>)</span>, Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/song_sparrow_herit/song_sparrow_herit.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>We denote the child’s phenotype by <span class="math inline">\(X_{kid}\)</span> and mid-point phenotype by <span class="math inline">\(X_{\textrm{mid}}\)</span>, so that if we take the regression <span class="math inline">\(X_{\textrm{kid}} \sim X_{\textrm{mid}}\)</span> this regression has slope <span class="math inline">\(\beta = Cov(X_{\textrm{kid}},X_{\textrm{mid}})/Var(X_{\textrm{mid}})\)</span>. The covariance of <span class="math inline">\(Cov(X_{\textrm{kid}},X_{\textrm{mid}})=\tfrac{1}{2}
+V_A\)</span>, and <span class="math inline">\(Var(X_{\textrm{mid}}) = \tfrac{1}{2} V_P\)</span>, as by taking the average of the parents we have halved the variance, such that the slope of the regression is</p>
+<p><span id="eq-par-off-herit"><span class="math display">\[\beta_{\textrm{mid}, \textrm{kid}}=
+\frac{Cov(X_{\textrm{kid}},X_{\textrm{mid}})}{Var(X_{\textrm{mid}})}=
+\frac{V_A}{V_P} = h^2 \tag{7.14}\]</span></span></p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-song-sparrow" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Song sparrow (Melospiza melodia).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-song-sparrow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Quant_gen/song_sparrow/birdbiographies00ball_0165.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Song sparrow (Melospiza melodia).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-song-sparrow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.11: Song sparrow (<em>Melospiza melodia</em>). “He is the most incurable optimist of my acquaintance”. <span class="attribution">Bird biographies (1923). Ball, A.E. illustrations by Horsfall R.B. Image from the <a href="https://www.biodiversitylibrary.org/page/7282967#page/163/mode/1up">Biodiversity Heritage Library</a>. Contributed by American Museum of Natural History Library. Not in copyright.</span>
+</figcaption>
+</figure>
+</div><div id="fn8"><p><sup>8</sup>&nbsp;See math appendix <a href="math-background.html#eq-slope-linear-reg" class="quarto-xref">Equation&nbsp;<span>A.45</span></a> for more on regression slopes.</p></div></div><p>i.e.&nbsp;the regression of the child’s phenotype on the parental midpoint phenotype is an estimate of the narrow sense heritability.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> If much of the phenotypic variation is due to the (additive) differences in genotypes among individuals (<span class="math inline">\(h^2 \approx 1\)</span>), then children will closely resemble their parents. Conversely if much of the variation is environmental (<span class="math inline">\(h^2 \approx 0\)</span>), and there is no shared environment between parent and child, children will not resemble their parents.</p>
+<div id="fig-midpar" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Regression of child’s phenotype of the parental mid-point phenotype.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-midpar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/QT2.png" class="img-fluid figure-img" style="width:100.0%" alt="Regression of child’s phenotype of the parental mid-point phenotype.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-midpar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.12: Regression of child’s phenotype of the parental mid-point phenotype. The three panels show decreasing levels of environmental variance (<span class="math inline">\(V_E\)</span>) holding the additive genetic variance constant (<span class="math inline">\(V_A=1\)</span>). In these figures, we simulate <span class="math inline">\(100\)</span> loci, as described in the caption of <a href="#fig-QT1" class="quarto-xref">Figure&nbsp;<span>7.5</span></a>.We simulate the genotypes and phenotypes of the two parents, and then simulate the child’s genotype following mendelian transmission. The red line shows <span class="math inline">\(x=y\)</span> and the blue line shows the best fitting linear regression line. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/QT2.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>Applying this heritability estimate to the Song sparrow sample we find <span class="math inline">\(h^2=0.43\)</span> and <span class="math inline">\(h^2=0.3\)</span> for beak depth and tarsus length respectively from <a href="#fig-song-sparrow-herit" class="quarto-xref">Figure&nbsp;<span>7.10</span></a>. So in <span class="citation" data-cites="smith1979heritability">Smith and Zach (<a href="references.html#ref-smith1979heritability" role="doc-biblioref">1979</a>)</span> analysis, for example, <span class="math inline">\(30\%\)</span> of the variance in tarsus length is atttributal to the additive effect of genetic differences among individuals. <span class="citation" data-cites="smith1979heritability">Smith and Zach (<a href="references.html#ref-smith1979heritability" role="doc-biblioref">1979</a>)</span> also regressed the average offspring phenotype against their fathers <em>o</em>r mothers, giving a slope of <span class="math inline">\(\beta_{\textrm{dad}, \textrm{avg.kid}}\)</span> and <span class="math inline">\(\beta_{\textrm{mum}, \textrm{avg.kid}}\)</span>. For tarsus length, for example, they found <span class="math inline">\(\beta_{\textrm{dad},
+  \textrm{avg.kid}}= 0.19\)</span> and <span class="math inline">\(\beta_{\textrm{mum},
+  \textrm{avg.kid}}= 0.17\)</span>. Following a similar argument to that in <a href="#eq-par-off-herit" class="quarto-xref">Equation&nbsp;<span>7.14</span></a> we find that these slopes are <span class="math inline">\(\beta_{\textrm{dad}, \textrm{avg.kid}}=
+{}^{{}^{V_{A}}\!/\!{}_{2}}\!/\!{}_{V_P} = {}^{h^2}\!/\!{}_{2}\)</span>, and the same for mums. Thus the regression of offspring’s phenotype on a particular parent is an estimate of half the narrow-sense heritability, in line with the reduced slopes found by <span class="citation" data-cites="smith1979heritability">Smith and Zach (<a href="references.html#ref-smith1979heritability" role="doc-biblioref">1979</a>)</span>, this halfing of the slope is due to the fact that a single parent’s phenotype is a noisier estimate of the parental mid-point and so less informative about the child s phenotype. These parent specific estimates of heritability are particularly useful as they allow us to investigate sex-specific inheritance and sexual dimorphism (we’ll explore this in a later section).</p>
+<p>Estimating heritability by these various parent-offspring regression have the issue of not controlling for environmental correlations between parent and offspring, which can inflate our estimates of heritability (as we will mistake environmentally mediated resemblance for genetics). Despite its issues, this measure of heritability provides useful intuition and is directly relevant to our discussion of the response to selection in the next chapter. That’s because our regression allows us to attempt to predict the phenotype of the child given the phenotypes of the parents; how well we can do this depends on the slope. See <a href="#fig-midpar" class="quarto-xref">Figure&nbsp;<span>7.12</span></a> for examples. If the slope is close to zero then the parental phenotypes hold little information about the phenotype of the child, while if the slope is close to one then the parental mid-point is a good predictor of the child’s phenotype. As we will see, natural selection will only efficiently drive evolution if children resemble their parents.</p>
+<p>Thinking about our prediction of child’s phenotpye more formally, the expected phenotype of the child given the parental phenotypes is</p>
+<p><span id="eq-predict-kid"><span class="math display">\[\mathbb{E}(X_{kid} | X_{mum},X_{dad}) = \mu +
+\beta_{mid,kid}(X_{mid} - \mu) =\mu + h^2(X_{mid} - \mu) \tag{7.15}\]</span></span></p>
+<p>which follows from the definition of linear regression. So to find the child’s predicted phenotype, we simply take the mean phenotype and add on the difference between our parental mid-point and the population mean, multiplied by our narrow sense heritability.</p>
+<p><strong>The confounding effect of the shared environment.</strong> Children resemble their biological parents both because they share alleles but also because they can share environments. For example, mother birds who are lucky enough to live in a territory with good nutrition available can in turn provide their offspring better nutrition, while mothers born in poor territories will be able to provide less nutrition to their offspring. This covariance in environment will increase the covariance in traits among relatives, e.g.&nbsp;weight between mother bird and child, and falsely bias our estimates of heritability upward if we fail to account for the shared environment. (Technically what is happening here is that the shared environment causes <span class="math inline">\(Cov(X_{1E},X_{2E})&gt;0\)</span> violating the assumption we made in deriving <a href="#eq-cov-rels-1" class="quarto-xref">Equation&nbsp;<span>7.11</span></a>.)</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-song-sparrow-herit-foster" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Foster Parent-midpoint offspring regression for beak depth and tarsus length in song sparrows.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-song-sparrow-herit-foster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/song_sparrow_herit/song_sparrow_herit_foster.png" class="img-fluid figure-img" style="width:100.0%" alt="Foster Parent-midpoint offspring regression for beak depth and tarsus length in song sparrows.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-song-sparrow-herit-foster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.13: Foster Parent-midpoint offspring regression for beak depth and tarsus length in song sparrows. The red line shows the best fitting slope, whose slope is reported on the graph. The slope is not significant. The grey line is the <span class="math inline">\(x=y\)</span> line. Data from <span class="citation" data-cites="smith1980experimental">Smith and Dhondt (<a href="references.html#ref-smith1980experimental" role="doc-biblioref">1980</a>)</span>, Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/song_sparrow_herit/song_sparrow_herit.R">here</a>.
+</figcaption>
+</figure>
+</div></div><p>Raising the organisms in the lab could remove much of the potential for shared environment between parent and offspring, but it also removes much of the environmental variation and we (as evolutionary geneticists) are usually not primarily interested in knowing the heritability in the lab bur rather in the field. In some organisms, notably plants, we can begin to sidestep these issues by raising offspring in a common set of randomized field conditions (a so called “common garden”). Another option is cross-foster animals, for example <span class="citation" data-cites="smith1980experimental">Smith and Dhondt (<a href="references.html#ref-smith1980experimental" role="doc-biblioref">1980</a>)</span> returned to the song sparrow population and swapped eggs between parents nests. They found that the covariance between biological parents and children was still high despite these children being raised in a different nest, but that there was no significant covariance between foster parents and their non-biological children (see <a href="#fig-song-sparrow-herit-foster" class="quarto-xref">Figure&nbsp;<span>7.13</span></a> for beak depth). This suggests that family environment is not confounding the estimate of heritability in this song sparrow sample.</p>
+<div id="fig-hyena-mat-effects" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" alt="Mother-daughter regression for standardized social rank in spotted hyenas.">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-hyena-mat-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="images/Journal_figs/Quant_gen/hyena_mat_effects/hyena_mat_effects.png" class="img-fluid figure-img column-page-right" style="width:100.0%" alt="Mother-daughter regression for standardized social rank in spotted hyenas.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hyena-mat-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.14: Mother-daughter regression for standardized social rank in spotted hyenas. The left panel shows 13 pairs of biological mothers and their daughters. In the middle panel there are 13 pairs of adopted daughters and their biological mothers. In the right panel the 13 adopted daughters are shown paired with their adopted mothers. The red line shows the best fitting slope, whose slope is reported on the graph. The slope of the middle plot not significantly different from zero (p=<span class="math inline">\(0.7\)</span>). The grey line is the <span class="math inline">\(x=y\)</span> line. Data from <span class="citation" data-cites="east2009maternal">East et al. (<a href="references.html#ref-east2009maternal" role="doc-biblioref">2009</a>)</span>, Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/hyena_mat_effects/hyena_mat_effects.pdf">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>Spotted hyenas (<em>Crocuta crocuta</em>) live in female dominated groups (‘clans’) that are highly social, with some clans having over a hundred members. The social rank of a hyena determines many aspects of their lives. Daughters usually achieve similar rank to their mothers, i.e.&nbsp;mother and daughter ranks are highly correlated (Left panel, <a href="#fig-hyena-mat-effects" class="quarto-xref">Figure&nbsp;<span>7.14</span></a>). This could suggest that social rank has a high heritability, as could be the case if rank is determined by body size and body size has a high additive genetic variance.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-spotted-hyena" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Spotted hyenas (Crocuta crocuta).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spotted-hyena-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Quant_gen/Hyena/Hyena.png" class="img-fluid figure-img" style="width:100.0%" alt="Spotted hyenas (Crocuta crocuta).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spotted-hyena-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.15: Spotted hyenas (<em>Crocuta crocuta</em>). See the <a href="https://hyena-project.com/">hyena-project</a> for the long term study that enabled this work and <span class="citation" data-cites="ilany2021rank">Ilany et al. (<a href="references.html#ref-ilany2021rank" role="doc-biblioref">2021</a>)</span> for more on the social inheritance of rank. <span class="attribution">The wonders of the animal kingdom (1830). Huish, R. Image from the <a href="https://www.biodiversitylibrary.org/page/40407344#page/36/mode/1up">Biodiversity Heritage Library</a>. Contributed by Smithsonian Libraries. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p>Alternatively, social rank could be partially determined by daughters sharing their social rank with their mothers through gaining access to their mother’s social connections. To test between these ideas, <span class="citation" data-cites="east2009maternal">East et al. (<a href="references.html#ref-east2009maternal" role="doc-biblioref">2009</a>)</span> made use natural cases of adoption, when a female takes unrelated pups into her family. <span class="citation" data-cites="east2009maternal">East et al. (<a href="references.html#ref-east2009maternal" role="doc-biblioref">2009</a>)</span> found that in such cases the daughter’s rank was uncorrelated with her biological mother’s rank (middle panel, <a href="#fig-hyena-mat-effects" class="quarto-xref">Figure&nbsp;<span>7.14</span></a>) but strongly correlated with the adopted mother’s rank (right panel, <a href="#fig-hyena-mat-effects" class="quarto-xref">Figure&nbsp;<span>7.14</span></a>). Thus the resemblance between mother and child for non-adopted hyenas seems to be almost entirely due to the non-genetic inheritance of social rank through the shared environment of daughters with their mothers (biological or adopted).</p>
+<p>However, such manipulations or common gardens are often impossible in many systems, and issues of shared environmental covariance due to maternal resources from egg (or seed) can still present in measures of heritability from parents and child. Thus researchers often make use of a variety of different biological relationships to estimate heritability.</p>
+<p><strong>The covariance between general pairs of relatives under an additive model.</strong></p>
+<p>The above examples make clear that to understand the covariance between phenotypes of relatives, we simply need to think about the alleles they share IBD. Consider a pair of relatives (<span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>) with a probability <span class="math inline">\(r_0\)</span>, <span class="math inline">\(r_1\)</span>, and <span class="math inline">\(r_2\)</span> of sharing zero, one, or two alleles IBD respectively. When they share zero alleles <span class="math inline">\(Cov((X_{1M}+X_{1P}),(X_{2M}+X_{2P}))=0\)</span>, when they share one allele <span class="math inline">\(Cov((X_{1M}+X_{1P}),(X_{2M}+X_{2P}))=
+Var(X_{1M})=\frac{1}{2}V_A\)</span>, and when they share two alleles <span class="math inline">\(Cov((X_{1M}+X_{1P}),(X_{2M}+X_{2P}))=
+V_A\)</span>. Therefore, the general covariance between two relatives is</p>
+<p><span id="eq-additive-covar-general-rellys"><span class="math display">\[Cov(X_1,X_2) = r_0 \times 0 + r_1 \frac{1}{2}V_A + r_2  V_A =
+2 F_{1,2} V_A \tag{7.16}\]</span></span></p>
+<p><br>
+where <span class="math inline">\(F_{1,2}\)</span> is our coefficient of kinship, i.e.&nbsp;the probability that two alleles sampled at random from our pair individuals <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> are IBD (see <a href="allele-and-genotype-frequencies.html#eq-coeffkinship" class="quarto-xref">Equation&nbsp;<span>2.4</span></a>). So under a simple additive model of the genetic basis of a phenotype, to measure the narrow sense heritability we need to measure the covariance between pairs of relatives (assuming that we can remove the effect of shared environmental noise). From the covariance between relatives we can calculate <span class="math inline">\(V_A\)</span>, and we can then divide this by the total phenotypic variance to get <span class="math inline">\(h^2\)</span>.</p>
+<div id="exr-phenotypic-variation-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 7.2</strong></span> <strong>A)</strong> In polygynous red-winged blackbird populations (i.e.&nbsp;males mate with several females), paternal half-sibs can be identified. Suppose that the covariance of tarsus lengths among half-sibs is 0.25 <span class="math inline">\(cm^2\)</span> and that the total phenotypic variance is 4 <span class="math inline">\(cm^2\)</span>. Use these data to estimate <span class="math inline">\(h^2\)</span> for tarsus length in this population.</p>
+<p><strong>B)</strong> Why might paternal half-sibs be preferable for measuring heritability than maternal half-sibs?</p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-RW-blackbird" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Red-winged blackbird and tricoloured blackbirds (it Agelaius phoeniceus and Agelaius tricolor).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-RW-blackbird-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Quant_gen/red_winged_blackbirds/Red_wing_blackbirds.png" class="img-fluid figure-img" style="width:100.0%" alt="Red-winged blackbird and tricoloured blackbirds (it Agelaius phoeniceus and Agelaius tricolor).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RW-blackbird-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.16: Red-winged blackbird and tricoloured blackbirds (it Agelaius phoeniceus and <em>Agelaius tricolor</em>). <span class="attribution">Bird-lore (1899). National Association of Audubon Societies for the Protection of Wild Birds and Animals. Image from the <a href="https://archive.org/stream/birdlore24nati/birdlore24nati#page/n89/mode/1up">Biodiversity Heritage Library</a>. Contributed by American Museum of Natural History Library. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p><strong>Estimating additive genetic variance across a variety of different relationships (The animal model).</strong></p>
+<p>In many natural populations we may have access to individuals with a range of different relationships to each other (e.g.&nbsp;through monitoring of the paternity of individuals), but relatively few pairs of individuals for a specific relationship (e.g.&nbsp;sibs). We can try and use this information on various relatives as fully as possible in a mixed model framework. Building from <a href="#eq-pheno-geno-environ" class="quarto-xref">Equation&nbsp;<span>7.3</span></a>, we can write an individual’s phenotype <span class="math inline">\(X_i\)</span> as</p>
+<p><span id="eq-phenotypic-variation-8"><span class="math display">\[X_i =  \mu  + X_{A,i} + X_{E,i} \tag{7.17}\]</span></span></p>
+<p>where <span class="math inline">\(X_{E,i} \sim N(0,V_E)\)</span> and <span class="math inline">\(X_{A,i}\)</span> is normally distributed across individuals with covariance matrix <span class="math inline">\(V_A A\)</span>, where the the entries for a pair of individuals i and j are <span class="math inline">\(A_{ij}= 2 F_{i,j}\)</span> and <span class="math inline">\(A_{ii}= 1\)</span>. Given the matrix <span class="math inline">\(A\)</span> we can estimate <span class="math inline">\(V_A\)</span>. We can also add fixed effects into this model to account for generation effects, additional mixed effects could also be included to account for shared environments between particular individuals (e.g.&nbsp;a shared nest). This approach is sometimes called the “animal model”, and is widely used to in modern quantitative genetics to estimate genetic variances and heritabilities.</p>
+</section>
+<section id="sec-nonAddVar" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-nonAddVar">Non-additive variation.</h3>
+<p>Up to now we’ve assumed that our alleles contribute to our phenotype in an additive fashion. However, that does not have to be the case as there may be non-additivity among the alleles present at a locus (<em>dominance</em>) or among alleles at different loci (<em>epistasis</em>). We can accommodate these complications into our models. We do this by partitioning our total genetic variance into independent variance components. We’ll see that dominant and epistatically interacting loci can contribute to the additive genetic variance. In constructing these variance components models we’ll assume that we know the alleles contributing to variation in our trait and their effects, but in reality we rarely know these. However, as we’ll see we don’t need to know these details and we can partition our variance and estimate additive variance and other forms of non-additive variation using the resemblance between various types of relatives.</p>
+<p><strong>Dominance.</strong> To understand the effect of dominance, let’s consider how the allele that a parent transmits influences their offspring’s phenotype. A parent transmits one of their two alleles at a locus to their offspring. Assuming that individuals mate at random, this allele is paired with another allele drawn at random from the population. For example, assume your mother transmitted an allele 1 to you: with probability <span class="math inline">\(p\)</span> it would be paired with another allele 1, and you would be a homozygote; and with probability <span class="math inline">\(q\)</span> it’s paired with a 2 allele and you’re a heterozygote.</p>
+<p>Now consider an autosomal biallelic locus <span class="math inline">\(\ell\)</span>, with frequency <span class="math inline">\(p\)</span> for allele 1, and genotypes <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, and <span class="math inline">\(2\)</span> corresponding to how many copies of allele <span class="math inline">\(1\)</span> individuals carry. We’ll denote the mean phenotype of an individual with genotype <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, and <span class="math inline">\(2\)</span> as <span class="math inline">\(\overline{X}_{\ell,0}\)</span>, <span class="math inline">\(\overline{X}_{\ell,1}\)</span>, <span class="math inline">\(\overline{X}_{\ell,2}\)</span> respectively. This mean is taking an average phenotype over all the environments and genetic backgrounds the alleles are present on. We’ll mean center (MC) these phenotypic values, setting <span class="math inline">\(\overline{X}'_{\ell,0} = \overline{X}_{\ell,0} - \mu\)</span>, and likewise for the other genotypes.</p>
+<p>We can think about the average (marginal) MC phenotype of an individual who received an allele 1 from their parent as the average of the MC phenotype for heterozygotes and 11 homozygotes, weighted by the probability that the individual has these genotypes, i.e.&nbsp;the probability they receive an additional allele <span class="math inline">\(1\)</span> or an allele <span class="math inline">\(2\)</span> from their other parent:</p>
+<p><span id="eq-add-effect1"><span class="math display">\[a_{\ell, 1} = p\overline{X}'_{\ell,2}  + q\overline{X}'_{\ell,1}, \tag{7.18}\]</span></span></p>
+<p>Similarly, if your parent transmitted an 2 allele to you, your average MC phenotype would be</p>
+<p><span id="eq-add-effect2"><span class="math display">\[~~ a_{\ell, 2} = p\overline{X}'_{\ell,1}  + q\overline{X}'_{\ell,0} \tag{7.19}\]</span></span></p>
+<p>Let’s now consider the average phenotype of an offspring by how many copies of the allele <span class="math inline">\(1\)</span> they carry</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 26%">
+<col style="width: 25%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">genotype:</th>
+<th style="text-align: center;">0,</th>
+<th style="text-align: center;">1,</th>
+<th style="text-align: center;">2.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">additive genetic value:</td>
+<td style="text-align: center;"><span class="math inline">\(a_{\ell,2}+ a_{\ell,2}\)</span>,</td>
+<td style="text-align: center;"><span class="math inline">\(a_{\ell,1}+a_{\ell,2}\)</span>,</td>
+<td style="text-align: center;"><span class="math inline">\(a_{\ell,1}+a_{\ell,1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>i.e.&nbsp;the mean phenotype of each genotypes’ offspring averaged over all possible matings to other individuals in the population (assuming individuals mate at random). These are the additive MC genetic values (breeding values) of our genotypes. Here we are simply adding up the additive contributions of the alleles present in each genotype and ignoring any non-additive effects of genotype.</p>
+<div id="fig-add-dom" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The average mean-centered (MC) phenotypes plotted against the number of allele 1 carried (from 0 for 22 to 2 for 11).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-add-dom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/figures/additive_effect.png" class="img-fluid figure-img" style="width:100.0%" alt="The average mean-centered (MC) phenotypes plotted against the number of allele 1 carried (from 0 for 22 to 2 for 11).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-add-dom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.17: The average mean-centered (MC) phenotypes plotted against the number of allele <span class="math inline">\(1\)</span> carried (from <span class="math inline">\(0\)</span> for <span class="math inline">\(22\)</span> to <span class="math inline">\(2\)</span> for <span class="math inline">\(11\)</span>). <strong>Top Row:</strong> Additive relationship between genotype and phenotype. <strong>Bottom Row:</strong> Allele 1 is dominant over allele 2, such that the heterozygote has the same phenotype as the <span class="math inline">\(11\)</span> genotype. The area of each circle is proportional to the fraction of the population in each genotypic class (<span class="math inline">\(p^2\)</span>, <span class="math inline">\(2pq\)</span>, and <span class="math inline">\(q^2\)</span>). One the left column <span class="math inline">\(p=0.1\)</span> and the right column is <span class="math inline">\(p=0.9\)</span>. The additive genetic values of the genotypes are shown as red dots. The regression between phenotype and additive genotype is shown as a red line. The black vertical arrows show the difference between the average MC phenotype and additive genetic value for each genotype. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/additive_effect.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>To illustrate this, in <a href="#fig-add-dom" class="quarto-xref">Figure&nbsp;<span>7.17</span></a> we plot two different cases of dominance relationships; in the top row an additive polymorphism and in the second row a fully dominant allele. The additive genetic values of the genotypes are shown as red dots. Note that the additive values of the genotypes line up with the observed MC phenotypic means in the top row, when our alleles interact in a completely additive manner. Our additive genetic values always fall along a linear line (the red line in our figure). The additive values are falling along the best fitting line of linear regression for our population, when phenotype is regressed against the additive genotype (<span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span> copies of allele 1) across all individuals in our population. Note in the dominant case the additive genetic values differ from the observed phenotypic means, and are closer to the observed values for the genotypes that are most common in the population.</p>
+<p>The difference in the additive effect of the two alleles <span class="math inline">\(a_{\ell, 2}-a_{\ell,
+1}\)</span> can be interpreted as an average effect of swapping an allele 1 for an allele 2; we’ll call this difference <span class="math inline">\(\alpha_{\ell}=a_{\ell, 2}-a_{\ell, 1}\)</span>. Our <span class="math inline">\(\alpha_{\ell}\)</span> is also the slope of the regression of phenotype against genotype (the red line in <a href="#fig-add-dom" class="quarto-xref">Figure&nbsp;<span>7.17</span></a>). Note that the slope of our regression of phenotype on genotype (<span class="math inline">\(\alpha_{\ell}\)</span>) does not depend on the population allele frequency for our completely additive locus (top row of <a href="#fig-add-dom" class="quarto-xref"><span>7.17</span></a>). In contrast, when there is dominance, the slope between genotype and phenotype (<span class="math inline">\(\alpha_{\ell}\)</span>) is a function of allele frequency (bottom row of <a href="#fig-add-dom" class="quarto-xref"><span>7.17</span></a>). When a dominant allele (1) is rare there is a strong slope of phenotype on genotype, bottom left <a href="#fig-add-dom" class="quarto-xref">Figure&nbsp;<span>7.17</span></a>. This strong slope is because replacing a single copy of the 2 allele with a 1 allele in an individual has a big effect on average phenotype, as it will most likely move an individual from being a 22 homozygote to being a 12 heterozygote. In contrast, when the dominant allele (1) is common in the population, replacing a 2 allele by a 1 allele in an individual on average has little phenotypic effect, leading to a weak slope (bottom right <a href="#fig-add-dom" class="quarto-xref">Figure&nbsp;<span>7.17</span></a>). This small effect is because as we are mainly turning heterozygotes into homozygotes (11), who have the same mean phenotype as each other.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-Salmon" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Atlantic salmon (Salmo salar).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Salmon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/illustration_images/Quant_gen/Salmon/6918368208_5353868a88_z.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Atlantic salmon (Salmo salar).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Salmon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.18: Atlantic salmon (<em>Salmo salar</em>). <span class="attribution">Histoire naturelle des poissons. 1796. Bloch, M. E. Image from the <a href="https://www.biodiversitylibrary.org/page/4786765#page/197/mode/1up">Biodiversity Heritage Library</a>. Contributed by Ernst Mayr Library , Museum of Comparative Zoology. Not in copyright.</span>
+</figcaption>
+</figure>
+</div></div><p>As an example of how dominance and population allele frequencies can change the additive effect of an allele, let’s consider the genetics of the age of sexual maturity in Atlantic Salmon. A single allele of large effect segregates in Atlantic Salmon that influences the sexual maturation rate in salmon <span class="citation" data-cites="ayllon2015vgll3 barson2015sex">(<a href="references.html#ref-ayllon2015vgll3" role="doc-biblioref">Ayllon et al. 2015</a>; <a href="references.html#ref-barson2015sex" role="doc-biblioref">Barson et al. 2015</a>)</span>, and hence the timing of their return from the sea to spawn (sea age). The allele falls close to the autosomal gene VGLL3 <span class="citation" data-cites="cousminer2013genome">(<a href="references.html#ref-cousminer2013genome" role="doc-biblioref">Cousminer et al. 2013</a> variation at this gene in humans also influences the timing of puberty)</span>. The left side of <a href="#fig-salmon-add-dom" class="quarto-xref">Figure&nbsp;<span>7.19</span></a> shows the age at sexual maturity in males. The L allele associated with slower sexual maturity is recessive in males. While the LL homozygotes mature on average a whole year later, the additive effect of the allele is weak while the L allele is rare in the population. The right panel shows the effect of the L allele in females. Note how the allele is much more dominant in females, and has a much more pronounced additive effect. The dominance of an allele is not a fixed property of the allele but rather a statement of the relationship of genotype to phenotype, such that the dominance relationship between alleles may vary across phenotypes and contexts (e.g.&nbsp;sexes).</p>
+<div id="fig-salmon-add-dom" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The average age at sexual maturity for each genotype, broken down by sex.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-salmon-add-dom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Journal_figs/Quant_gen/salmon_age/Salmon_age_dom.png" class="img-fluid figure-img" style="width:100.0%" alt="The average age at sexual maturity for each genotype, broken down by sex.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-salmon-add-dom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.19: The average age at sexual maturity for each genotype, broken down by sex. The area of each circle is proportional to the fraction of the population in each genotypic class. The regression between phenotype and additive genotype is shown as a red line. Data from <span class="citation" data-cites="barson2015sex">Barson et al. (<a href="references.html#ref-barson2015sex" role="doc-biblioref">2015</a>)</span>. Code <a href="https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/salmon_age/Salmon_age.R">here</a>.
+</figcaption>
+</figure>
+</div>
+<p>The variance in the population phenotype due to these additive breeding values at locus <span class="math inline">\(\ell\)</span>, assuming HW proportions, is</p>
+<p><span id="eq-additive-var-additive-effect"><span class="math display">\[\begin{aligned}
+V_{A, \ell} &amp;= p^2 (2a_{\ell,2})^2 + 2pq (a_{\ell,1}+a_{\ell,1})^2 + q^2
+(2a_{\ell,0})^2  \\
+&amp; = 2(p a_{\ell, 1}^2 + q a_{\ell, 2}^2 )  \\
+&amp; = 2pq \alpha_{\ell}^2
+\end{aligned} \tag{7.20}\]</span></span></p>
+<p>The total additive variance for the whole genotype can be found by summing the individual additive genetic variances over loci</p>
+<p><span id="eq-phenotypic-variation-9"><span class="math display">\[V_A = \sum_{\ell=1}^{L} V_{A, \ell} = \sum_{\ell=1}^{L}
+2p_{\ell}q_{\ell} \alpha_{\ell}^2. \tag{7.21}\]</span></span></p>
+<p>Having assigned the additive genetic variance to be the variance explained by the additive contribution of the alleles at a locus, we define the dominance variance as the population variance among genotypes at a locus due to their deviation from additivity. We can calculate how much each genotypic mean deviates away from its additive prediction at locus <span class="math inline">\(\ell\)</span> (the length of the arrows in <a href="#fig-add-dom" class="quarto-xref">Figure&nbsp;<span>7.17</span></a>). For example, the heterozygote deviates</p>
+<p><span id="eq-phenotypic-variation-10"><span class="math display">\[d_{\ell,1} =\overline{X}'_{\ell,1}  - (a_{\ell,1}+ a_{\ell,2}) \tag{7.22}\]</span></span></p>
+<p>away from its additive genetic value, with similar expressions for each of the homozygotes (<span class="math inline">\(d_{\ell,0}\)</span> and <span class="math inline">\(d_{\ell,2}\)</span>). We can then write the dominance variance at our locus as the genotype-frequency weighted sum of our squared dominance deviations</p>
+<p><span id="eq-phenotypic-variation-11"><span class="math display">\[V_{D,\ell} = p^2 d_{\ell,0}^2+ 2pq d_{\ell,1}^2+ q^2 d_{\ell,2}^2. \tag{7.23}\]</span></span></p>
+<p>Writing our total dominance variance as the sum across loci</p>
+<p><span id="eq-phenotypic-variation-12"><span class="math display">\[V_D = \sum_{\ell=1}^{L}  V_{D,\ell}. \tag{7.24}\]</span></span></p>
+<p>Having now partitioned all of the genetic variance into additive and dominant terms, we can write our total genetic variance as</p>
+<p><span id="eq-phenotypic-variation-13"><span class="math display">\[V_{G} = V_A+V_D. \tag{7.25}\]</span></span></p>
+<p>We can do this because by construction the covariance between our additive and dominant deviations for the genotypes is zero. We can define the narrow sense heritability as before <span class="math inline">\(h^2=V_A/V_P=V_A/(V_G+V_E)\)</span>, which is the proportion of phenotypic variance due to additive genetic variance. We can also define the total proportion of the phenotypic variance due to genetic differences among individuals, as the broad-sense heritability <span class="math inline">\(H^2 =
+V_G/(V_G+V_E)\)</span>.</p>
+<div id="tbl-domcovar" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-domcovar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7.1: Phenotypic covariance between some pairs of relatives, include the dominance variation. <span class="math inline">\(^{*}\)</span>Assuming this is the only relationship the pair of individuals share (above that expected from randomly sampling individuals from the population).
+</figcaption>
+<div aria-describedby="tbl-domcovar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Relationship (i,j)<span class="math inline">\(^{*}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Cov(X_i,X_j)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">parent–child</td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{2} V_A\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">full siblings</td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{2} V_A +{}^{1}\!/\!{}_{4} V_D\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">identical (monzygotic) twins</td>
+<td style="text-align: center;"><span class="math inline">\(V_A+V_D\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(1^{st}\)</span> cousins</td>
+<td style="text-align: center;"><span class="math inline">\({}^{1}\!/\!{}_{8} V_A\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The additive and dominance variance can be estimated by the resemblance among relatives. When dominance is present in the loci influencing our trait (<span class="math inline">\(V_D&gt;0\)</span>), we need to modify our phenotype covariance among relatives to account for this non-additivity. Specifically, our equation for the covariance among a general pair of relatives (<a href="#eq-additive-covar-general-rellys" class="quarto-xref">Equation&nbsp;<span>7.16</span></a> for additive variation) becomes</p>
+<p><span id="eq-relly-covar-add-dom"><span class="math display">\[Cov(X_1,X_2) = 2 F_{1,2} V_A + r_2 V_D \tag{7.26}\]</span></span></p>
+<p>where <span class="math inline">\(r_2\)</span> is the probability that the pair of individuals share 2 alleles identical by descent, making the same assumptions (other than additivity) that we made in deriving <a href="#eq-additive-covar-general-rellys" class="quarto-xref">Equation&nbsp;<span>7.16</span></a>. In table <a href="#tbl-domcovar" class="quarto-xref"><span>7.1</span></a> we show the phenotypic covariance for some common pairs of relatives. Importantly, in the presence of dominance variance, the regression of offspring phenotype on parental midpoint still has a slope <span class="math inline">\(V_A/V_P\)</span>, as a parent and offspring share precisely one of their autosomal alleles IBD but never their genotype IBD (assuming no inbreeding).</p>
+<p>Full sibs and parent-offspring have the same covariance if there is no dominance variance (as they have the same kinship coefficient <span class="math inline">\(F_{1,2}\)</span>). However, when dominance effects are present (<span class="math inline">\(V_D&gt;0\)</span>), full-sibs resemble each other more than parent-offspring pairs. That’s because full-sibs can share both alleles (i.e.&nbsp;the full genotype at a locus) identical by descent. We can attempt to estimate <span class="math inline">\(V_D\)</span> by comparing different sets of relationships. For example, non-identical twins (full sibs born at same time) should have <span class="math inline">\(1/2\)</span> the phenotypic covariance of identical twins if <span class="math inline">\(V_D=0\)</span>. Therefore, we can attempt to estimate <span class="math inline">\(V_D\)</span> by looking at whether identical twins have more than twice the phenotypic covariance than non-identical twins.</p>
+<p>The most important aspect of this discussion for thinking about evolutionary genetics is that the parent-offspring covariance is still only a function of <span class="math inline">\(V_A\)</span>. This is because our parent (e.g.&nbsp;the mother) transmits only a single allele, at each locus, to its offspring. The other allele the offspring receives is random (assuming random mating), as it comes from the other unrelated parent (the father). Therefore, the average effect on the child’s phenotype of an allele the child receives from their mother is averaged over all possible random alleles the child could receive from their father (weighted by their frequency in the population). Thus we only care about the additive effect of the allele, as parents transmit only alleles (not genotypes) to their offspring. This means that the short-term response to selection, as described by the breeder’s equation, depends only on <span class="math inline">\(V_A\)</span> and the additive effect of alleles. Therefore, if we can estimate the narrow-sense heritability we can predict the short-term response.</p>
+<p>While our <span class="math inline">\(V_A\)</span> predicts the short term response to selection, if alleles display dominance, our value of <span class="math inline">\(V_A\)</span> will change as alleles at our loci change in frequency. For, example as dominant alleles become common in the population their contribution to <span class="math inline">\(V_A\)</span> decreases, we can see this in <a href="#fig-add-dom" class="quarto-xref">Figure&nbsp;<span>7.17</span></a> our rare dominant allele (bottom left) contributes to the additive variance far more than when it is at high frequency (bottom right). So if selection favours higher values of our trait, the response to selection will push the dominant allele to higher frequency decreasing <span class="math inline">\(V_A\)</span>. Therefore, if there is dominance our value of <span class="math inline">\(V_A\)</span> will not be constant across generations.</p>
+<p>Up to this point we have only considered dominance and not epistasis. However, we can include epistasis in a similar manner (for example among pairs of loci). This gets a little tricky to think about, so we will only briefly explain it. We can first estimate the additive effect of the alleles by considering the effect of the alleles averaging over their possible genetic backgrounds (including the other interacting alleles they are possibly paired with), just as before. We can then calculate the additive genetic variance from this. We can estimate the dominance variance, by calculating the residual variance among genotypes at a locus unexplained by the additive effect of the loci. We can then estimate the epistatic variance by estimating the residual variance left unexplained among the two locus genotypes after accounting for the additive and dominant deviations calculated from each locus separately. In practice these high variance components are hard to estimate, and usually small as much of our variance is assigned to the additive effect. Again we would find that we mostly care about <span class="math inline">\(V_A\)</span> for predicting short-term evolution, but that the contribution of loci to the additive genetic variance will depend on the epistatic relationships among loci.</p>
+<div id="exr-phenotypic-variation-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 7.3</strong></span> How could you use 1/2 sibs vs.&nbsp;full-sibs to estimate <span class="math inline">\(V_D\)</span>? Why might this be difficult in practice? Why are identical vs.&nbsp;non-identical twins better suited for this?</p>
+</div>
+<div class="chapter-summary">
+<p><strong>Chapter summary.</strong></p>
+<ul>
+<li><p>A key concern of quantitative genetics is how phenotypic variation within populations is partitioned into environmental and genetic components of the variance.</p></li>
+<li><p>The additive genetic variance (<span class="math inline">\(V_A\)</span>) is the component of phenotypic variance that can be attributed to the additive action of alleles. The proportion of phenotypic variance due to <span class="math inline">\(V_A\)</span> is the narrow-sense heritability <span class="math inline">\(h^2 = {}^{V_A}\!/\!{}_{V_P}\)</span>. These quantities are both measurements of the contribution of the current standing genetic variation in a particular set of environments and should not be thought of as fixed quantities of the population or trait.</p></li>
+<li><p>We can estimate the additive genetic variance and the heritability by using the resemblance of relatives, if we can experimentally remove or statistically partition out the effect of the shared environment among relatives.</p></li>
+<li><p>The genetic basis of variation in traits can genetically covary due to pleiotropy, assortative mating, and linkage. We can estimate the genetic covariance between traits by using the covariance in different traits among relatives.</p></li>
+<li><p>Alleles with dominance and epistatic effects can and do contribute to <span class="math inline">\(V_A\)</span> to the extent to which transmitting an additional copy of the allele to an offspring changes their expected phenotype. These alleles and combinations of alleles also contribute to higher order genetic variance components, the dominance and epistatic covariance.</p></li>
+<li><p>The magnitude of the additive, dominance, and epistatic genetic variance can change as allele frequency change and recombination changes the context in which alleles are expressed.</p></li>
+</ul>
+</div>
+<div id="exr-phenotypic-variation-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 7.4</strong></span> The additive genetic variance for leg length on mice is <span class="math inline">\(10mm^2\)</span>. What is the expected covariance of mice who are first cousins?</p>
+</div>
+<div id="exr-phenotypic-variation-5" class="theorem exercise">
+<p><span class="theorem-title"><strong>Question 7.5</strong></span> Can you construct a case where <span class="math inline">\(V_A=0\)</span> and <span class="math inline">\(V_D&gt;0\)</span>? You need just describe it qualitatively; you don’t need to work out the math. (tricker question).</p>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-ayllon2015vgll3" class="csl-entry" role="listitem">
+Ayllon, F., E. Kjærner-Semb, T. Furmanek, V. Wennevik, M. F. Solberg, G. Dahle, G. L. Taranger, K. A. Glover, M. S. Almén, C. J. Rubin, and others. 2015. The vgll3 locus controls age at maturity in wild and domesticated atlantic salmon (salmo salar l.) males. PLoS genetics 11:e1005628. Public Library of Science.
+</div>
+<div id="ref-barson2015sex" class="csl-entry" role="listitem">
+Barson, N. J., T. Aykanat, K. Hindar, M. Baranski, G. H. Bolstad, P. Fiske, C. Jacq, A. J. Jensen, S. E. Johnston, S. Karlsson, and others. 2015. Sex-dependent dominance at a single locus maintains variation in age at maturity in salmon. Nature 528:405. Nature Publishing Group.
+</div>
+<div id="ref-cousminer2013genome" class="csl-entry" role="listitem">
+Cousminer, D. L., D. J. Berry, N. J. Timpson, W. Ang, E. Thiering, E. M. Byrne, H. R. Taal, V. Huikari, J. P. Bradfield, M. Kerkhof, and others. 2013. Genome-wide association and longitudinal analyses reveal genetic loci linking pubertal height growth, pubertal timing and childhood adiposity. Human molecular genetics 22:2735–2747. Oxford University Press.
+</div>
+<div id="ref-east2009maternal" class="csl-entry" role="listitem">
+East, M. L., O. P. Höner, B. Wachter, K. Wilhelm, T. Burke, and H. Hofer. 2009. Maternal effects on offspring social status in spotted hyenas. Behavioral Ecology 20:478–483. Oxford University Press.
+</div>
+<div id="ref-faith1999evidence" class="csl-entry" role="listitem">
+Faith, M. S., A. Pietrobelli, C. Nunez, M. Heo, S. B. Heymsfield, and D. B. Allison. 1999. Evidence for independent genetic influences on fat mass and body mass index in a pediatric twin sample. Pediatrics 104:61–67. Am Acad Pediatrics.
+</div>
+<div id="ref-Fisher:1918" class="csl-entry" role="listitem">
+Fisher, R. A. 1918. The correlation between relatives on the supposition of mendelian inheritance. Trans. R. Soc. 52:399–433.
+</div>
+<div id="ref-ilany2021rank" class="csl-entry" role="listitem">
+Ilany, A., K. E. Holekamp, and E. Akçay. 2021. Rank-dependent social inheritance determines social network structure in spotted hyenas. Science 373:348–352. American Association for the Advancement of Science.
+</div>
+<div id="ref-Johannsen:1911" class="csl-entry" role="listitem">
+Johannsen, W. 1911. <a href="https://doi.org/10.1086/279202">The genotype conception of heredity</a>. The American Naturalist 45:129–159.
+</div>
+<div id="ref-provine:01" class="csl-entry" role="listitem">
+Provine, W. B. 2001. The origins of theoretical population genetics: With a new afterword. University of Chicago Press.
+</div>
+<div id="ref-smith1980experimental" class="csl-entry" role="listitem">
+Smith, J. N., and A. A. Dhondt. 1980. Experimental confirmation of heritable morphological variation in a natural population of song sparrows. Evolution 1155–1158. JSTOR.
+</div>
+<div id="ref-smith1979heritability" class="csl-entry" role="listitem">
+Smith, J. N., and R. Zach. 1979. Heritability of some morphological characters in a song sparrow population. Evolution 33:460–467. Wiley Online Library.
+</div>
+<div id="ref-sturtevant:15" class="csl-entry" role="listitem">
+Sturtevant, A. H. 1915. The behavior of the chromosomes as studied through linkage. Zeitschrift f<span>ü</span>r induktive Abstammungs-und Vererbungslehre 13:234–287. Springer.
+</div>
+<div id="ref-wang:18" class="csl-entry" role="listitem">
+Wang, J., J. Ding, B. Tan, K. M. Robinson, I. H. Michelson, A. Johansson, B. Nystedt, D. G. Scofield, O. Nilsson, S. Jansson, and others. 2018. A major locus controls local adaptation and adaptive life history variation in a perennial plant. Genome biology 19:72. BioMed Central.
+</div>
+</div>
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./neutral-diversity-and-structure.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Neutral Diversity and Population Structure</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./response-to-selection.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Response to Phenotypic Selection</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script id="popgen-scroll-focus">
+(function(){function f(){document.querySelectorAll('figure.quarto-float-tbl > div, .column-page-right > div').forEach(function(d){
+ var s=d.scrollWidth>d.clientWidth+1; if(s){d.setAttribute('tabindex','0');d.setAttribute('role','region');d.setAttribute('aria-label','Scrollable table');}
+ else{d.removeAttribute('tabindex');}});}
+ window.addEventListener('load',f);window.addEventListener('resize',f);})();
+</script><script id="popgen-no-overlap">
+(function(){
+ var SEL='.column-margin.column-container > *, .margin-caption, .aside';
+ function R(e){var r=e.getBoundingClientRect();return {t:r.top+scrollY,b:r.bottom+scrollY,l:r.left,r:r.right};}
+ function run(){
+  var root=document.getElementById('quarto-document-content'); if(!root) return;
+  var items=[].filter.call(root.querySelectorAll(SEL),function(e){return e.offsetParent!==null && !e.parentElement.closest(SEL);});
+  items.forEach(function(e){e.style.marginTop='';});
+  var blk=[].filter.call(root.querySelectorAll('figure, table, pre, .column-page-right, .column-page, .column-screen, mjx-container[display="true"], .callout, .chapter-summary, blockquote'),
+    function(e){return e.offsetParent!==null && !e.closest(SEL) && !(e.parentElement.closest('figure,.column-page-right,.column-page,.callout') && e.tagName!=='FIGURE' && false);});
+  var last=0;
+  for(var pass=0;pass<3;pass++){
+   last=0; var moved=false;
+   items.forEach(function(it){
+    var r=R(it), top=r.t, h=r.b-r.t, need=Math.max(top,last), gap=8, again=true, n=0;
+    while(again && n++<40){
+     again=false;
+     blk.forEach(function(b){
+      if(it.contains(b)||b.contains(it)) return;
+      var q=R(b); if(q.r<=r.l+1||q.l>=r.r-1) return;
+      if(need<q.b+gap && need+h>q.t-1 && q.b>q.t){ if(need<q.b+gap){need=q.b+gap;again=true;} }
+     });
+    }
+    if(need>top+1){var cur=parseFloat(getComputedStyle(it).marginTop)||0; it.style.marginTop=(cur+need-top)+'px'; moved=true;}
+    var r2=R(it); last=r2.b+ (parseFloat(getComputedStyle(it).marginBottom)||0);
+   });
+   if(!moved) break;
+  }
+ }
+ var tm; function later(){clearTimeout(tm);tm=setTimeout(run,120);}
+ window.addEventListener('load',function(){later();
+   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(later);
+   if(window.MathJax&&MathJax.startup&&MathJax.startup.promise) MathJax.startup.promise.then(later);
+   [].forEach.call(document.images,function(i){if(!i.complete) i.addEventListener('load',later);});
+   setTimeout(later,1500);});
+ window.addEventListener('resize',later);
+ if(window.ResizeObserver) new ResizeObserver(later).observe(document.body);
+})();
+</script></body></html>
